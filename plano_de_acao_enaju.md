@@ -26,3 +26,8 @@ O foco central de nossas análises recairá sobre a **Coordenação de Desenvolv
 - [ ] **Análise de Conformidade:** Cruzar os atuais programas e processos da ENAJU com os princípios centrais exigidos pelo CNJ.
 - [ ] **Análise de Recursos e Modalidades:** Avaliar a distribuição entre formação inicial e continuada (presencial, EAD, seminários) e a utilização de instrutores internos.
 - [ ] **Estruturação do Plano de Capacitação:** Iniciar o rascunho de um plano que atenda à responsabilidade compartilhada entre servidor, gestor e unidade de formação.
+
+## 5. Ecossistema de Projetos (Repositórios Relacionados)
+Para garantir a visão integrada da estratégia, este plano articula-se com os seguintes projetos/repositórios da ENAJU:
+- [radar-competencias-enaju](https://github.com/cairesmachado-svg/radar-competencias-enaju) - *Mapeamento e diagnóstico das competências da ENAJU, vinculado à frente de Diagnósticos e Mapeamento (Art. 19, II).*
+- [enaju-gcpj](https://github.com/cairesmachado-svg/enaju-gcpj) - *Projeto focado na Gestão de Competências do Poder Judiciário, vinculado às diretrizes centrais de formação e capacitação do CNJ.*
