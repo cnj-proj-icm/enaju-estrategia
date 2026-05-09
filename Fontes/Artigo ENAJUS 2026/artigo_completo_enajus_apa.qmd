@@ -1,5 +1,5 @@
 ---
-title: "A Criação da ENAJU e a Consolidação da Educação Corporativa no Poder Judiciário Brasileiro"
+title: "ENAJU e Institucionalização da Educação Corporativa Judicial"
 author:
   - "Igor Caires Machado"
   - "Fabio Lopes Fernandes"
@@ -21,15 +21,15 @@ fig-cap-location: top
 tbl-cap-location: top
 ---
 
-**A Criação da ENAJU e a Consolidação da Educação Corporativa no Poder Judiciário Brasileiro**
+**ENAJU e Institucionalização da Educação Corporativa Judicial**
+
+**Igor Caires Machado**
+
+**Fabio Lopes Fernandes**
 
 **Daniel Ribeiro Surdi Avelar**
 
 **Paulo Marcus de Farias**
-
-**Fabio Lopes Fernandes**
-
-**Igor Caires Machado**
 
 *Conselho Nacional de Justiça*
 
@@ -37,58 +37,50 @@ Eixo Temático: Formação e Desenvolvimento de Pessoas no Judiciário
 
 **Resumo**
 
-Este relatório técnico reconstrói a trajetória de institucionalização da educação corporativa no Poder Judiciário brasileiro, do voluntarismo associativo dos anos 1970 à criação da Escola Nacional do Judiciário (ENAJU) pela Resolução CNJ n. 643/2025. A análise histórico-documental identifica cinco fases: era pré-institucional (1977--2003), constitucionalização com a EC 45/2004 e a ENFAM (2004--2008), expansão para servidores com o CEAJud (2009--2011), consolidação normativa com as Resoluções CNJ n. 159/2012 e 192/2014 (2012--2024), e maturidade sistêmica com a ENAJU (2025). Em perspectiva comparada com cinco sistemas internacionais --- França (ENM), EUA (FJC), União Europeia (EJTN), Reino Unido (Judicial College) e América Latina ---, o modelo brasileiro distingue-se pela combinação única de ancoragem constitucional, arquitetura dual-regulada (ENFAM para magistrados; ENAJU para servidores) e cooperação em rede via RENEJUM. Os resultados indicam que os principais fatores de sucesso foram a reforma constitucional estruturante de 2004, a capacidade regulatória do CNJ e o alinhamento entre formação e planejamento estratégico. Como impactos mensuráveis destacam-se: mais de 420 mil pessoas capacitadas pela plataforma EAD do CNJ, regulação de cursos para 18 mil magistrados e articulação de dezenas de escolas credenciadas. O caso oferece lições replicáveis para outros poderes e esferas da administração pública, especialmente quanto à articulação entre norma constitucional, órgão regulador central e rede descentralizada de execução como modelo de governança para políticas de formação em organizações complexas.
+Este relatório técnico reconstrói a trajetória de institucionalização da educação corporativa no Poder Judiciário brasileiro, das primeiras escolas judiciais à criação da Escola Nacional do Judiciário (ENAJU) pela Resolução CNJ n. 643/2025. A análise histórico-documental identifica cinco fases: era pré-institucional (1977--2003), constitucionalização com a EC 45/2004 e a ENFAM (2004--2008), expansão para servidores com o CEAJud (2009--2011), consolidação normativa com as Resoluções CNJ n. 159/2012 e 192/2014 (2012--2024), e maturidade sistêmica com a ENAJU (2025). Os resultados indicam que a consolidação da política foi favorecida pela capacidade regulatória do CNJ, pelo legado das escolas judiciais e pelo alinhamento entre formação, gestão por competências e planejamento estratégico. Como produtos e alcance destacam-se a plataforma de educação a distância do CNJ, a regulação de cursos para magistrados, a articulação de escolas judiciais e a disponibilização de capacitações em portal unificado. O relatório também identifica desafios de financiamento, heterogeneidade entre tribunais, resistência à padronização e fragilidade das métricas de impacto. O caso oferece implicações práticas para a consolidação da ENAJU e para a replicação de arranjos de governança educacional em organizações públicas complexas.
 
 **Palavras-chave:** educação corporativa judicial; ENAJU; institucionalização; formação de servidores; gestão por competências.
 
 **Abstract**
 
-This technical report reconstructs the trajectory of institutionalization of corporate education in the Brazilian Judiciary, from the associative voluntarism of the 1970s to the creation of the National School of the Judiciary (ENAJU) by CNJ Resolution n. 643/2025. The historical-documentary analysis identifies five phases: pre-institutional era (1977--2003), constitutionalization with EC 45/2004 and ENFAM (2004--2008), expansion to civil servants with CEAJud (2009--2011), normative consolidation with CNJ Resolutions n. 159/2012 and 192/2014 (2012--2024), and systemic maturity with ENAJU (2025). In comparative perspective with five international systems, the Brazilian model stands out for its unique combination of constitutional anchorage, dual-regulated architecture, and network cooperation via RENEJUM. Measurable impacts include over 420,000 people trained through the CNJ\'s distance learning platform and regulation of courses for 18,000 magistrates.
+This technical report reconstructs the institutionalization of corporate education in the Brazilian Judiciary, from early judicial schools to the creation of the National School of the Judiciary (ENAJU) by CNJ Resolution n. 643/2025. The historical-documentary analysis identifies five phases: pre-institutional development, constitutionalization, expansion to civil servants, normative consolidation, and systemic maturity with ENAJU. The results indicate that the policy was strengthened by CNJ regulatory capacity, the legacy of judicial schools, and the alignment between training, competency-based management, and strategic planning. The report also identifies challenges related to funding, institutional heterogeneity, standardization, and impact assessment.
 
 **Keywords:** judicial corporate education; ENAJU; institutionalization; civil servant training; competency-based management.
 
 **1. INTRODUÇÃO**
 
-O Poder Judiciário brasileiro emprega cerca de 300 mil servidores e 18 mil magistrados distribuídos por mais de 90 tribunais em todas as unidades da federação (CNJ, 2024). Gerir o desenvolvimento profissional desse contingente --- com a heterogeneidade de competências, a capilaridade territorial e a complexidade funcional inerentes à prestação jurisdicional --- constitui um dos desafios mais sofisticados da administração pública nacional.
+O Poder Judiciário brasileiro emprega cerca de 300 mil servidores e 18 mil magistrados distribuídos por mais de 90 tribunais em todas as unidades da federação (CNJ, 2024). Gerir o desenvolvimento profissional desse contingente --- com a heterogeneidade de competências, a capilaridade territorial e a complexidade funcional inerentes à prestação jurisdicional --- constitui um desafio relevante da administração pública nacional.
 
-Este relatório técnico reconstrói a trajetória institucional da educação corporativa no Poder Judiciário brasileiro, desde as primeiras escolas de magistratura do voluntarismo associativo dos anos 1970 até a criação da Escola Nacional do Judiciário (ENAJU) em 2025. O recorte analítico privilegia o processo de institucionalização --- entendida como o movimento pelo qual práticas informais e iniciativas fragmentadas se convertem em estruturas duráveis, dotadas de normas, recursos e legitimidade (Selznick, 1957; North, 1990) --- e situa o caso brasileiro em perspectiva comparada internacional.
+Este relatório técnico reconstrói a trajetória institucional da educação corporativa no Poder Judiciário brasileiro, desde as primeiras escolas de magistratura dos anos 1970 até a criação da Escola Nacional do Judiciário (ENAJU) em 2025. O recorte analítico privilegia o processo pelo qual iniciativas formativas fragmentadas se converteram em estruturas permanentes, dotadas de normas, recursos, instâncias de coordenação e instrumentos de gestão.
 
-A hipótese estruturante do trabalho é que a educação corporativa judicial brasileira percorreu um caminho de path dependence com dois critical junctures (Mahoney & Thelen, 2010): o primeiro, representado pela Emenda Constitucional n. 45/2004, que constitucionalizou a formação como requisito de carreira e criou o CNJ e a ENFAM; o segundo, representado pela Resolução CNJ n. 643/2025, que transformou o CEAJud na ENAJU e completou a arquitetura dual do sistema nacional. Entre esses dois pontos de ruptura, um denso ciclo normativo --- composto pelas Resoluções CNJ n. 111/2010, 126/2011, 159/2012 e 192/2014 e pela Resolução ENFAM n. 1/2023 --- sedimentou progressivamente a política de formação como política de Estado, e não como iniciativa voluntária de gestores iluminados.
+O eixo interpretativo do trabalho é que a educação corporativa judicial percorreu uma trajetória de institucionalização marcada por dois marcos principais: a Emenda Constitucional n. 45/2004, que criou o CNJ e a ENFAM e vinculou a formação à carreira da magistratura; e a Resolução CNJ n. 643/2025, que transformou o CEAJud na ENAJU e fortaleceu a coordenação nacional da formação de servidores. Entre esses marcos, as Resoluções CNJ n. 111/2010, 126/2011, 159/2012 e 192/2014 e a Resolução ENFAM n. 1/2023 sedimentaram progressivamente a política de formação como componente da governança judicial.
 
-A relevância deste estudo reside em três contribuições: (a) sistematiza, com base documental robusta, uma trajetória institucional de cinquenta anos raramente tratada de forma integrada na literatura; (b) situa o caso brasileiro em benchmarking com cinco sistemas internacionais, identificando especificidades e convergências; e (c) oferece aos gestores e pesquisadores da área um modelo analítico replicável para diagnóstico de maturidade institucional em outras esferas da administração pública.
+A relevância deste estudo reside em três contribuições: (a) sistematiza, com base documental, uma trajetória institucional de cinquenta anos; (b) descreve o processo de desenvolvimento da política, seus fatores facilitadores e dificultadores; e (c) oferece aos gestores públicos um modelo analítico para compreender produtos, alcance, impactos potenciais, riscos e possibilidades de replicação.
 
-**2. REFERENCIAL TEÓRICO**
+**2. FUNDAMENTOS ANALÍTICOS DA EDUCAÇÃO CORPORATIVA JUDICIAL**
 
-***2.1 Institucionalização e path dependence***
+A educação corporativa corresponde à organização sistemática de processos de aprendizagem orientados às estratégias institucionais. Diferentemente de treinamentos pontuais, ela pressupõe continuidade, alinhamento com objetivos organizacionais e integração entre competências técnicas, comportamentais e éticas (Allen, 2002; Meister, 1998). No setor público, essa abordagem ganha relevância quando vinculada ao desenvolvimento de capacidades estatais e à melhoria de serviços entregues à sociedade (OCDE, 2008).
 
-A teoria neo-institucionalista fornece o principal arcabouço para compreender a trajetória aqui analisada. Para Selznick (1957), institucionalização é o processo pelo qual uma organização transcende sua condição de instrumento técnico e adquire valor intrínseco, tornando-se depositária de missão, identidade e legitimidade social. North (1990) amplia essa perspectiva ao enfatizar o papel das instituições como \"regras do jogo\" que reduzem incertezas e estruturam incentivos para organizações e indivíduos.
+A gestão por competências é o referencial mais diretamente associado à política de formação dos servidores do Poder Judiciário. A noção de competência articula conhecimentos, habilidades e atitudes mobilizados em situações concretas de trabalho, permitindo relacionar desenvolvimento profissional, desempenho organizacional e objetivos estratégicos (Fleury & Fleury, 2001). No setor público brasileiro, esse enfoque também aparece associado à profissionalização da gestão de pessoas e à construção de trilhas formativas mais aderentes às necessidades institucionais (Dutra, 2004; Pantoja et al., 2010).
 
-O conceito de *path dependence* --- dependência de trajetória --- explica por que escolhas feitas em momentos anteriores constrangem opções futuras e por que reformas institucionais raramente partem do zero (Pierson, 2004). No caso da educação corporativa judicial brasileira, o legado das escolas associativas dos anos 1970--1980 criou competências, redes e expectativas que moldaram --- sem determinar --- o desenho das instituições nacionais criadas após 2004. Os *critical junctures* são os momentos em que essa dependência é quebrada ou redirecionada por escolhas deliberadas de atores políticos (Mahoney & Thelen, 2010).
+No Judiciário, a educação corporativa tem uma dimensão adicional: precisa articular independência institucional, diversidade de ramos de justiça, capilaridade territorial e padrões mínimos de qualidade. Por isso, a formação de magistrados e servidores não se limita à oferta de cursos. Ela envolve governança, financiamento, credenciamento, redes de escolas, tecnologias educacionais, avaliação e mecanismos de coordenação nacional.
 
-***2.2 Educação corporativa e gestão por competências no setor público***
-
-O conceito de universidade corporativa emergiu como resposta às limitações dos modelos tradicionais de treinamento, propondo o alinhamento da formação às estratégias organizacionais e a integração de competências técnicas, comportamentais e éticas em estruturas permanentes de aprendizagem (Meister, 1998; Allen, 2002). No setor público, esse modelo dialoga com a tradição do *capacity development* --- desenvolvimento de capacidades ---, que distingue três níveis interdependentes: individual (servidores), organizacional (agências) e sistêmico (políticas e instituições) (OCDE, 2008).
-
-A gestão por competências (GPC), adotada como paradigma pela Resolução CNJ n. 192/2014, representa a síntese operacional desses referenciais no contexto judicial: pressupõe que a identificação, o desenvolvimento e a avaliação de competências devem estar explicitamente articulados com os objetivos estratégicos da organização e com as demandas da prestação jurisdicional (Fleury & Fleury, 2001). A andragogia --- teoria da aprendizagem de adultos --- fundamenta as diretrizes pedagógicas da ENFAM e da ENAJU ao valorizar a experiência prévia, a orientação para problemas reais e a autonomia do aprendente (Knowles, 1980).
-
-***2.3 Educação judicial comparada***
-
-A formação de magistrados e servidores do Judiciário constitui subcampo específico, articulado à independência judicial, ao estado de direito e à qualidade da prestação jurisdicional (Geyh, 2006; Piana, 2010). Organismos internacionais como a International Organization for Judicial Training (IOJT) e a European Judicial Training Network (EJTN) têm promovido a sistematização de práticas comparadas, identificando que os sistemas nacionais variam em ao menos quatro dimensões: grau de centralização, vinculação à carreira, cobertura (magistrados versus servidores) e modelo de financiamento (IOJT, 2022). Esse campo, ainda incipiente na produção acadêmica global, apresenta crescimento acelerado a partir de 2010, com a educação judiciária representando parcela modesta --- porém estratégica --- da literatura sobre educação corporativa pública (Machado et al., 2026).
+A institucionalização é utilizada neste relatório como noção auxiliar para compreender a passagem de iniciativas dispersas para estruturas estáveis de formação. O foco, portanto, não é desenvolver uma discussão teórica extensa, mas explicar como normas, órgãos, redes e instrumentos de gestão contribuíram para consolidar a educação corporativa judicial como prática de governança.
 
 **3. METODOLOGIA**
 
-Esta pesquisa adota o delineamento histórico-documental com análise institucional (neo-institucionalismo histórico). O corpus primário é composto por 14 documentos normativos federais --- emenda constitucional, resoluções do CNJ e da ENFAM e instrução normativa --- selecionados por relevância direta para o processo de institucionalização da educação corporativa judicial entre 1977 e 2025. O corpus secundário inclui literatura científica coletada nas bases SciELO e OpenAlex, documentos institucionais do CNJ, da ENFAM e da ENAJU, e relatórios de organismos internacionais (IOJT, EJTN, OCDE).
+Esta pesquisa adota delineamento histórico-documental, com análise descritivo-institucional da política de formação no Poder Judiciário. O corpus primário é composto por 14 documentos normativos federais --- emenda constitucional, resoluções do CNJ e da ENFAM e instrução normativa --- selecionados por relevância direta para o processo de institucionalização da educação corporativa judicial entre 1977 e 2025. O corpus secundário inclui literatura científica, documentos institucionais do CNJ, da ENFAM e da ENAJU e dados administrativos disponíveis sobre formação judicial.
 
-A análise segue três etapas: (1) periodização em fases com base nos marcos institucionais identificados; (2) análise de conteúdo temática dos normativos, com categorias dedutivo-indutivas derivadas do referencial neo-institucionalista --- especialmente os conceitos de critical junctures, path dependence e isomorfismo institucional; e (3) benchmarking internacional com cinco sistemas selecionados por critérios de relevância comparada (maturidade institucional, diversidade de modelos e disponibilidade de dados).
+A análise segue três etapas: (1) periodização em fases com base nos marcos institucionais identificados; (2) análise de conteúdo temática dos normativos, com categorias relacionadas a criação de órgãos, definição de políticas nacionais, autonomia das escolas, gestão por competências, redes de cooperação e governança; e (3) sistematização dos produtos, alcance, impactos potenciais, riscos e possibilidades de replicação.
 
-A validade interna é assegurada pela triangulação entre fontes normativas, literatura científica e dados administrativos do CNJ. Trata-se de pesquisa qualitativa de natureza descritivo-analítica, compatível com a modalidade de relatório técnico do EnAJUS e com os padrões da administração pública comparada. As limitações incluem a ausência de dados primários de avaliação de impacto e a assimetria de informações entre os sistemas internacionais comparados.
+A validade interna é assegurada pela triangulação entre fontes normativas, literatura científica e dados administrativos do CNJ. Trata-se de pesquisa qualitativa de natureza descritivo-analítica, compatível com a modalidade de relatório técnico do EnAJUS. As limitações incluem a ausência de dados primários de avaliação de impacto, a dependência de fontes documentais e a impossibilidade de inferir efeitos causais da formação sobre a qualidade ou a celeridade da prestação jurisdicional.
 
 | Dimensão metodológica | Especificação no estudo | Função no relatório técnico |
 |---|---|---|
 | Delineamento | Pesquisa histórico-documental com análise institucional | Reconstruir a trajetória de institucionalização da educação corporativa judicial |
 | Corpus primário | 14 documentos normativos federais, incluindo emenda constitucional, resoluções do CNJ e da ENFAM e instrução normativa | Identificar marcos formais de criação, regulação, coordenação e financiamento |
-| Corpus secundário | Literatura científica, documentos institucionais e relatórios de organismos internacionais | Sustentar a interpretação conceitual e a comparação internacional |
-| Estratégia analítica | Periodização, análise temática dos normativos e benchmarking internacional | Organizar a experiência institucional por fases, categorias e dimensões comparáveis |
+| Corpus secundário | Literatura científica, documentos institucionais e dados administrativos disponíveis | Sustentar a interpretação conceitual e a descrição da experiência |
+| Estratégia analítica | Periodização, análise temática dos normativos e sistematização de resultados | Organizar a experiência institucional por fases, categorias e evidências disponíveis |
 | Validade interna | Triangulação entre normas, literatura e dados administrativos do CNJ | Reduzir dependência de fonte única e qualificar a inferência descritivo-analítica |
 | Limitações | Ausência de dados primários de impacto e assimetria de informações internacionais | Delimitar o alcance das conclusões sobre efetividade e causalidade |
 
@@ -99,11 +91,15 @@ A validade interna é assegurada pela triangulação entre fontes normativas, li
 ```{mermaid}
 %%| label: fig-linha-tempo
 %%| fig-cap: "Linha do tempo da institucionalização da educação corporativa judicial"
+%%| fig-width: 6.8
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Arial", "primaryColor": "#F7F8FA", "primaryBorderColor": "#2F5597", "primaryTextColor": "#1F1F1F", "lineColor": "#2F5597"}} }%%
 flowchart LR
-  A["1977-2003<br/>Era pré-institucional<br/>Escolas pioneiras e voluntarismo"] --> B["2004-2008<br/>Constitucionalização<br/>EC 45, CNJ e ENFAM"]
-  B --> C["2009-2011<br/>Expansão para servidores<br/>PEC, CEAJud e PNCJ"]
-  C --> D["2012-2024<br/>Consolidação normativa<br/>Autonomia, competências e RENEJUM"]
-  D --> E["2025<br/>Maturidade sistêmica<br/>ENAJU como órgão central"]
+  A["1977-2003<br/><b>Pré-institucional</b><br/>escolas pioneiras"]
+  B["2004-2008<br/><b>Constitucionalização</b><br/>EC 45, CNJ e ENFAM"]
+  C["2009-2011<br/><b>Servidores</b><br/>PEC, CEAJud e PNCJ"]
+  D["2012-2024<br/><b>Consolidação</b><br/>autonomia, GPC e RENEJUM"]
+  E["2025<br/><b>ENAJU</b><br/>órgão central"]
+  A --> B --> C --> D --> E
 ```
 
 **4.1 Fase 1 --- Era Pré-Institucional (1977--2003): o voluntarismo como semente**
@@ -112,23 +108,23 @@ A história da educação no Poder Judiciário brasileiro não começa com qualq
 
 A Escola Judicial Desembargador Edésio Fernandes, criada pelo Tribunal de Justiça de Minas Gerais em 1977, é considerada a pioneira nacional. Ao longo das décadas seguintes, o movimento se expandiu de forma orgânica e descentralizada: o Rio Grande do Sul criou a Escola da Associação dos Juízes do Rio Grande do Sul (AJURIS), que se tornou referência pedagógica nacional; outros estados seguiram trajetórias similares. No plano federal, o Conselho da Justiça Federal criou o Centro de Estudos Judiciários (CEJ), e os Tribunais Regionais Federais foram fundando suas próprias escolas --- a ESMAF (1ª Região), a EMARF (2ª Região), a EMAG (3ª Região) e a EMAGIS (4ª Região). Na Justiça do Trabalho, as escolas dos Tribunais Regionais do Trabalho percorreram caminho semelhante.
 
-Esse processo espontâneo demonstrava consciência coletiva sobre a necessidade de formação contínua, mas sem uma política nacional coordenada o resultado era inevitavelmente desigual: escolas bem estruturadas nos grandes centros coexistiam com ausência institucional em regiões mais vulneráveis. A formação era um projeto de alguns tribunais iluminados, não uma política de Estado; e seu foco era exclusivamente nos magistrados --- a formação dos servidores estava completamente ausente da agenda. Esta fase configura o que Mahoney e Thelen (2010) denominam \"legado institucional de sedimentação\": camadas sucessivas de iniciativas que, sem coordenação central, criam trajetórias diferenciadas com potencial de lock-in.
+Esse processo espontâneo demonstrava consciência coletiva sobre a necessidade de formação contínua, mas sem uma política nacional coordenada o resultado era desigual: escolas bem estruturadas nos grandes centros coexistiam com ausência institucional em regiões mais vulneráveis. A formação dependia da iniciativa de determinados tribunais e lideranças institucionais, sem coordenação nacional estável; e seu foco era exclusivamente nos magistrados --- a formação dos servidores estava ausente da agenda nacional. Esta fase formou repertórios, redes e práticas que seriam posteriormente aproveitados na construção de uma política nacional.
 
 **4.2 Fase 2 --- Constitucionalização (2004--2008): a ruptura de paradigma**
 
-A virada histórica veio com a Emenda Constitucional n. 45, promulgada em 8 de dezembro de 2004, fruto de mais de uma década de debates sobre a chamada \"Reforma do Judiciário\". Para a educação corporativa judicial, a EC 45 operou três transformações fundamentais que configuram o primeiro *critical juncture* da trajetória.
+A virada histórica veio com a Emenda Constitucional n. 45, promulgada em 8 de dezembro de 2004, fruto de mais de uma década de debates sobre a chamada \"Reforma do Judiciário\". Para a educação corporativa judicial, a EC 45 operou três transformações fundamentais.
 
 Primeira: instituiu o Conselho Nacional de Justiça (CNJ) como órgão de controle da atuação administrativa e financeira do Poder Judiciário, dotando o sistema de um ente com capacidade de formular políticas nacionais vinculantes para todos os tribunais. Segunda: alterou o art. 93 da Constituição Federal, que passou a exigir que a promoção por merecimento pressupusesse \"frequência e aproveitamento em cursos reconhecidos por escola judicial ou de aperfeiçoamento\" --- elevando a formação continuada a dever constitucional, e não mais iniciativa voluntária. Terceira: criou a Escola Nacional de Formação e Aperfeiçoamento de Magistrados (ENFAM), vinculada ao Superior Tribunal de Justiça, com missão de regulamentar, autorizar e fiscalizar os cursos oficiais para ingresso, vitaliciamento e promoção na carreira da magistratura.
 
-A ENFAM foi instalada em 30 de novembro de 2006, com estrutura de governança que reúne o diretor-geral, o vice-diretor, dois ministros do STJ e quatro magistrados representando a Justiça Estadual e a Federal. Essa composição garante representatividade de toda a magistratura nacional e ancora institucionalmente a escola no coração do Judiciário. No mesmo ano, o Tribunal Superior do Trabalho instituiu a Escola Nacional de Formação e Aperfeiçoamento de Magistrados do Trabalho (ENAMAT) pela Resolução Administrativa TST n. 1.140/2006, consolidando um modelo de especialização por ramo de justiça.
+A ENFAM foi instalada em 30 de novembro de 2006, com estrutura de governança que reúne o diretor-geral, o vice-diretor, dois ministros do STJ e quatro magistrados representando a Justiça Estadual e a Federal. Essa composição vincula a escola a uma instância central da governança judicial nacional. No mesmo ano, o Tribunal Superior do Trabalho instituiu a Escola Nacional de Formação e Aperfeiçoamento de Magistrados do Trabalho (ENAMAT) pela Resolução Administrativa TST n. 1.140/2006, consolidando um modelo de especialização por ramo de justiça.
 
-O modelo adotado pela ENFAM é o de regulador de rede: não oferece cursos diretamente a todos os juízes, mas regula, credencia e fiscaliza as escolas dos tribunais, que executam os programas formativos segundo as diretrizes nacionais. Esse modelo descentralizado-regulado articula a autonomia dos tribunais com a padronização mínima nacional. A EC 45 produziu assim uma ruptura paradigmática: a formação judicial deixou de ser um projeto de alguns tribunais iluminados e passou a ser política de Estado, com marcos constitucionais explícitos e um ente regulador nacional.
+O modelo adotado pela ENFAM é o de regulador de rede: não oferece cursos diretamente a todos os juízes, mas regula, credencia e fiscaliza as escolas dos tribunais, que executam os programas formativos segundo as diretrizes nacionais. Esse modelo descentralizado-regulado articula a autonomia dos tribunais com a padronização mínima nacional. A EC 45 produziu assim uma mudança institucional: a formação judicial deixou de depender apenas de iniciativas locais e passou a contar com marcos constitucionais explícitos e ente regulador nacional.
 
 **4.3 Fase 3 --- Expansão para Servidores (2009--2011): o CEAJud como resposta sistêmica**
 
 Com a ENFAM ocupando o espaço da formação de magistrados, o CNJ voltou seu olhar para o segmento que compõe a imensa maioria do funcionalismo judicial: os servidores. Em 2009, a Instrução Normativa CNJ n. 25 instituiu o Programa de Educação Corporativa (PEC), primeiro ensaio de uma política coordenada de capacitação de servidores. No mesmo período, o CNJ promoveu seu primeiro ciclo de planejamento estratégico nacional, com metas anuais vinculantes para todos os tribunais que incorporaram a formação como vetor de desempenho institucional.
 
-O 3º Encontro Nacional do Poder Judiciário, em 2010, aprovou como ação estratégica a criação de um centro nacional voltado à capacitação de servidores. Em resposta, foi editada a Resolução CNJ n. 111, de 6 de abril de 2010, que instituiu o Centro de Formação e Aperfeiçoamento de Servidores do Poder Judiciário (CEAJud) como unidade administrativa do CNJ. A mesma resolução determinava que tribunais sem unidade de educação corporativa as constituíssem em até 60 dias --- sinal de que o CNJ pretendia não apenas criar um órgão central, mas induzir isomorficamente a constituição de uma rede nacional de formação (DiMaggio & Powell, 1983).
+O 3º Encontro Nacional do Poder Judiciário, em 2010, aprovou como ação estratégica a criação de um centro nacional voltado à capacitação de servidores. Em resposta, foi editada a Resolução CNJ n. 111, de 6 de abril de 2010, que instituiu o Centro de Formação e Aperfeiçoamento de Servidores do Poder Judiciário (CEAJud) como unidade administrativa do CNJ. A mesma resolução determinava que tribunais sem unidade de educação corporativa as constituíssem em até 60 dias, sinalizando a intenção de criar um órgão central e induzir a constituição de uma rede nacional de formação.
 
 A Resolução CNJ n. 126/2011 avançou ao criar o Plano Nacional de Capacitação Judicial (PNCJ) e o Sistema Nacional de Capacitação Judicial, estabelecendo mecanismos de integração entre o CEAJud e as escolas judiciais dos tribunais. Era o primeiro esboço de uma arquitetura sistêmica: uma rede, não apenas um centro. O CEAJud desempenhou papel vital na disseminação de sistemas nacionais --- como o Banco Nacional de Medidas Penais e Prisões (BNMP) --- por meio de cursos autoinstrucionais que permitiram o treinamento rápido de toda a força de trabalho judiciária em novos instrumentos de gestão.
 
@@ -138,15 +134,15 @@ O ciclo normativo de 2012 a 2024 densificou a arquitetura institucional em três
 
 A Resolução CNJ n. 159, de 12 de novembro de 2012, garantiu às escolas judiciais autonomia orçamentária e status de unidade gestora responsável, com dotação específica e competência para ordenação de despesas. Antes dela, muitas escolas judiciais eram meras extensões das secretarias de recursos humanos, sem orçamento próprio ou autonomia de decisão. A norma também padronizou critérios de pontuação para promoção e vitaliciamento baseados em carga horária e aproveitamento, e regulamentou a remuneração da docência interna --- reconhecendo o magistrado-professor como figura institucional com direitos e responsabilidades definidos.
 
-A Resolução CNJ n. 192, de 8 de maio de 2014, foi o marco normativo mais estruturante do período. Ela instituiu a Política Nacional de Formação e Aperfeiçoamento dos Servidores do Poder Judiciário, incorporando o paradigma da gestão por competências e vinculando normativamente a capacitação ao planejamento estratégico do Judiciário. Seus princípios orientadores --- educação permanente, responsabilidade compartilhada entre servidor, gestor e unidade formadora, integração entre formação e planejamento estratégico --- representam a síntese mais sofisticada da teoria da educação corporativa pública aplicada ao Judiciário. Com ela, a capacitação de servidores se converteu de iniciativa administrativa pontual em política de Estado dentro do Judiciário.
+A Resolução CNJ n. 192, de 8 de maio de 2014, foi o marco normativo mais estruturante do período. Ela instituiu a Política Nacional de Formação e Aperfeiçoamento dos Servidores do Poder Judiciário, incorporando o paradigma da gestão por competências e vinculando normativamente a capacitação ao planejamento estratégico do Judiciário. Seus princípios orientadores --- educação permanente, responsabilidade compartilhada entre servidor, gestor e unidade formadora, integração entre formação e planejamento estratégico --- aproximaram a formação de servidores do planejamento institucional. Com ela, a capacitação de servidores se converteu de iniciativa administrativa pontual em política estruturada no Judiciário.
 
 No plano da ENFAM, a Resolução n. 2/2016 regulamentou em detalhes os programas de formação inicial e continuada de magistrados, definindo estrutura de cursos, cargas horárias e requisitos de credenciamento. O Banco Nacional de Formadores (BNF), mantido pela ENFAM, reforçou o controle de qualidade pedagógica com um cadastro de profissionais certificados para atuar em cursos oficiais.
 
-O coroamento desta fase foi a Rede Nacional de Escolas Judiciais e da Magistratura (RENEJUM), instituída pela Resolução ENFAM n. 1/2023. A RENEJUM permite o compartilhamento de calendários, cursos e tecnologias entre as dezenas de escolas estaduais, federais e especializadas, evitando a redundância de esforços e otimizando o uso de recursos públicos. Sob coordenação da ENFAM, a rede socializa práticas pedagógicas inovadoras e promove excelência de forma convergente --- expressão máxima do modelo descentralizado-colaborativo que caracteriza o Judiciário federativo brasileiro.
+A criação da Rede Nacional de Escolas Judiciais e da Magistratura (RENEJUM), instituída pela Resolução ENFAM n. 1/2023, representou um desdobramento relevante dessa fase. A RENEJUM permite o compartilhamento de calendários, cursos e tecnologias entre as escolas estaduais, federais e especializadas, evitando redundâncias e otimizando o uso de recursos públicos. Sob coordenação da ENFAM, a rede favorece a circulação de práticas pedagógicas e reforça o modelo descentralizado-colaborativo do Judiciário brasileiro.
 
 **4.5 Fase 5 --- Maturidade Sistêmica (2025): a ENAJU como órgão central**
 
-O ciclo se completa em 22 de setembro de 2025, quando o Plenário do CNJ aprovou, por 14 votos a 1, a Resolução CNJ n. 643/2025, que transformou o CEAJud na Escola Nacional do Judiciário (ENAJU). Esse é o segundo *critical juncture* identificado: não uma ruptura com o passado, mas uma elevação qualitativa de patamar --- a passagem do modelo de centro administrativo de capacitação para o modelo de escola nacional com missão estratégica definida.
+O ciclo se completa em 22 de setembro de 2025, quando o Plenário do CNJ aprovou, por 14 votos a 1, a Resolução CNJ n. 643/2025, que transformou o CEAJud na Escola Nacional do Judiciário (ENAJU). A mudança não rompe com o passado, mas eleva o patamar institucional da política: passa-se do modelo de centro administrativo de capacitação para o modelo de escola nacional com missão estratégica definida.
 
 A ENAJU assume o papel de órgão central do Sistema Nacional de Formação e Aperfeiçoamento de Servidores do Poder Judiciário, com atribuições explicitamente elencadas na Resolução n. 643/2025: formular, implementar e revisar --- em conjunto com tribunais e escolas judiciais --- a Política Nacional de Formação e Aperfeiçoamento de Servidores; promover a articulação com as escolas judiciais e centros de formação dos tribunais, incentivando cooperação técnica e compartilhamento de conteúdos; oferecer cursos presenciais, a distância e híbridos orientados ao desenvolvimento de competências; desenvolver projetos de transformação digital voltados à inovação na gestão judicial; e promover eventos, pesquisas e intercâmbio de boas práticas entre tribunais de todo o Brasil.
 
@@ -179,80 +175,35 @@ O Quadro 1 sintetiza a arquitetura dual resultante, que representa o estado atua
 ```{mermaid}
 %%| label: fig-arquitetura-dual
 %%| fig-cap: "Arquitetura institucional do sistema nacional de educação corporativa judicial"
-flowchart TB
-  CNJ["Conselho Nacional de Justiça<br/>(governança judicial nacional)"] --> ENAJU["ENAJU<br/>formação de servidores"]
-  STJ["Superior Tribunal de Justiça"] --> ENFAM["ENFAM<br/>formação de magistrados"]
-  ENAJU --> SERV["Servidores do Poder Judiciário"]
-  ENFAM --> MAG["Magistrados federais e estaduais"]
-  ENAJU --> ESCOLAS["Escolas judiciais e centros de formação dos tribunais"]
+%%| fig-width: 6.8
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Arial", "primaryColor": "#F7F8FA", "primaryBorderColor": "#2F5597", "primaryTextColor": "#1F1F1F", "lineColor": "#2F5597"}} }%%
+flowchart LR
+  CNJ["CNJ<br/>governança nacional"]
+  STJ["STJ"]
+  ENAJU["ENAJU<br/>servidores"]
+  ENFAM["ENFAM<br/>magistrados"]
+  RENEJUM["RENEJUM<br/>cooperação"]
+  ESCOLAS["Escolas judiciais<br/>e centros de formação"]
+  TRIB["Tribunais e<br/>unidades judiciárias"]
+  CNJ --> ENAJU
+  STJ --> ENFAM
+  ENAJU --> ESCOLAS
   ENFAM --> ESCOLAS
-  RENEJUM["RENEJUM<br/>cooperação entre escolas"] --> ESCOLAS
-  ESCOLAS --> TRIB["Tribunais e unidades judiciárias"]
+  RENEJUM --> ESCOLAS
+  ESCOLAS --> TRIB
 ```
 
-**5. PERSPECTIVA COMPARADA INTERNACIONAL**
+**5. IMPLICAÇÕES INSTITUCIONAIS DA ARQUITETURA ATUAL**
 
-O benchmarking com cinco sistemas internacionais revela a singularidade e as potencialidades do modelo brasileiro, situando-o em um espectro que vai do modelo unitário-centralizado ao modelo de rede supranacional.
+A arquitetura atual da educação corporativa judicial combina coordenação nacional e execução descentralizada. A ENFAM regula a formação de magistrados, a ENAJU assume a coordenação da formação de servidores e as escolas judiciais dos tribunais preservam papel central na oferta, adaptação e capilarização das ações educacionais. Essa combinação responde a uma característica estrutural do Judiciário brasileiro: a necessidade de produzir padrões mínimos nacionais sem eliminar a autonomia administrativa e a diversidade regional dos tribunais.
 
-| Dimensão de comparação | Pergunta orientadora | Aplicação no benchmarking |
-|---|---|---|
-| Centralização | A formação é conduzida por escola única, órgão regulador ou rede cooperativa? | Diferencia modelos unitários, regulados e supranacionais |
-| Público-alvo | O sistema alcança magistrados, servidores ou ambos? | Permite avaliar abrangência funcional da política |
-| Vínculo à carreira | A formação condiciona ingresso, promoção, vitaliciamento ou progressão? | Indica o grau de compulsoriedade institucional |
-| Órgão coordenador | A governança está no Judiciário, no Executivo ou em arranjo misto? | Relaciona formação judicial e independência institucional |
-| Articulação territorial | Há escolas locais, rede nacional ou cooperação internacional? | Mede capilaridade e capacidade de adaptação federativa |
-
-: Dimensões utilizadas na comparação internacional {#tbl-dimensoes-comparacao}
-
-***5.1 França --- École Nationale de la Magistrature (ENM)***
-
-Criada em 1958, a ENM representa o modelo unitário-centralizado por excelência: escola única que concentra a formação inicial (31 meses obrigatórios) e continuada de todos os magistrados franceses, com sede em Bordeaux, autonomia orçamentária robusta e poder de seleção. A ENM não segrega a formação por ramo de justiça e opera com corpo docente próprio significativo. O modelo tem alta uniformidade pedagógica e padronização curricular, mas menor capilaridade e participação dos tribunais na definição dos conteúdos. Para candidatos ao concurso de acesso, a ENM é tanto escola de formação quanto filtro de seleção --- o que confere ao sistema coerência mas também rigidez.
-
-***5.2 Estados Unidos --- Federal Judicial Center (FJC)***
-
-O FJC, criado em 1967 junto à Suprema Corte, combina funções de pesquisa, educação e suporte técnico em uma instituição única. Diferentemente dos modelos europeus, o FJC não vincula a formação à carreira --- não há requisito de frequência para promoção. Seu foco é a educação continuada voluntária, com produção de conteúdo de alta qualidade e alcance federal. A ausência de vínculo compulsório preserva a liberdade acadêmica e a autonomia dos juízes, mas reduz a adesão sistemática. O FJC é a referência mundial em pesquisa sobre administração judiciária e em desenvolvimento de materiais sobre prova científica, sendo frequentemente citado pelas escolas judiciais de todo o mundo.
-
-***5.3 União Europeia --- European Judicial Training Network (EJTN)***
-
-Criada em 2000, a EJTN articula as escolas judiciais dos 27 países membros da UE, promovendo intercâmbio de juízes, programas de mobilidade e harmonização de conteúdos em matérias de direito europeu. A EJTN não tem poder regulatório sobre os sistemas nacionais --- é uma plataforma de cooperação, não um órgão de supervisão. Seu maior legado é a integração cultural e o multilateralismo judicial: juízes de diferentes sistemas jurídicos aprendendo uns com os outros. O modelo europeu demonstra que a cooperação em rede pode produzir padronização sem hierarquia --- lição particularmente relevante para sistemas federativos.
-
-***5.4 Reino Unido --- Judicial College***
-
-O Judicial Studies Board, criado em 1979 e sucedido pelo Judicial College em 2011, é responsável pela formação de juízes e magistrados leigos, com ênfase em competências comportamentais, ética judicial e formação para lidar com grupos vulneráveis. O modelo britânico valoriza o peer learning --- juízes ensinando juízes --- e mantém forte vínculo com a independência judicial como princípio pedagógico: quem define os conteúdos é o Judiciário, não o Executivo. Esse princípio tem influência crescente nas diretrizes da ENFAM, que também prioriza a participação de magistrados ativos na formulação dos currículos de formação.
-
-***5.5 América Latina --- Heterogeneidade e desafios comuns***
-
-Na América Latina, iniciativas como a Escuela Judicial Centroamericana (EJCA) e as escolas nacionais de países como Argentina, México e Colômbia revelam o desafio da heterogeneidade institucional: países com sistemas bem estruturados convivem com outros em estágios embrionários. O Brasil destaca-se como o caso de maior formalização normativa e capilaridade institucional da região, sendo frequentemente citado como referência pelo PNUD e pela IOJT. A principal fragilidade regional é a ausência de um mecanismo supranacional de coordenação análogo à EJTN europeia.
-
-O Quadro 2 sintetiza as principais dimensões dos cinco sistemas em perspectiva comparada:
-
-**Quadro 2 --- Comparação Internacional de Sistemas de Educação Judicial**
-
-  ------------------------------------- ------------- ------------------------------------------- ---------------------------------- ---------------------------------------- -----------------------------------
-  **País / Sistema**                    **Criação**   **Modelo**                                  **Cobertura**                      **Vínculo à carreira**                   **Órgão regulador**
-
-  Brasil --- ENFAM + ENAJU              2006 / 2025   Dual-regulado descentralizado               Magistrados e servidores           Sim --- constitucional                   CNJ + STJ
-
-  França --- ENM                        1958          Unitário-centralizado                       Magistrados (todos os ramos)       Sim --- seleção+formação integradas      Ministério da Justiça
-
-  EUA --- Federal Judicial Center       1967          Pesquisa + educação voluntária              Juízes federais                    Não --- participação voluntária          Suprema Corte
-
-  UE --- EJTN                           2000          Rede supranacional cooperativa              Magistrados (27 países membros)    Não --- sem poder regulatório nacional   Autorregulação EJTN
-
-  Reino Unido --- Judicial College      2011          Peer learning --- juízes ensinando juízes   Juízes e magistrados leigos        Parcial                                  Judiciary Board
-
-  América Latina --- EJCA e similares   Variável      Cooperação regional heterogênea             Magistrados (cobertura variável)   Variável por país                        Sem regulação regional vinculante
-  ------------------------------------- ------------- ------------------------------------------- ---------------------------------- ---------------------------------------- -----------------------------------
-
-*Fonte: elaboração própria com base em IOJT (2022), EJTN (2023) e fontes primárias dos sistemas nacionais.*
-
-Em síntese, o modelo brasileiro distingue-se pela combinação de três características únicas no cenário internacional: (a) ancoragem constitucional da formação como requisito de carreira, o que confere ao sistema uma legitimidade e uma durabilidade que normas infralegais não garantem; (b) arquitetura dual-regulada com dois órgãos nacionais para públicos distintos, que respeita a especificidade da magistratura sem negligenciar a maioria do funcionalismo; e (c) articulação em rede com dezenas de escolas dos tribunais sob coordenação nacional, que preserva a autonomia institucional sem abrir mão de padrões mínimos. Essa arquitetura representa uma solução original ao problema da formação em um sistema judiciário federativo complexo --- solução que emerge de cinquenta anos de aprendizado institucional acumulado.
+Em perspectiva complementar, a experiência brasileira diferencia-se de modelos mais centralizados e de arranjos predominantemente voluntários ou cooperativos. Sua especificidade reside menos em uma excepcionalidade internacional e mais na solução institucional construída para um Judiciário federativo, com múltiplos tribunais, públicos profissionais distintos e necessidade de coordenação nacional. Essa leitura reforça o foco técnico do relatório: compreender como a criação da ENAJU consolida uma política de formação com alcance sistêmico, mas ainda dependente de governança, financiamento, avaliação e cooperação em rede.
 
 **6. FATORES FACILITADORES E DIFICULTADORES**
 
 ***6.1 Fatores facilitadores***
 
-O principal fator facilitador foi a existência de uma reforma constitucional estruturante --- a EC 45/2004 --- que criou simultaneamente o órgão regulador (CNJ), a escola nacional de magistrados (ENFAM) e o requisito constitucional de formação. Esse tripé normativo de hierarquia constitucional conferiu legitimidade e irreversibilidade ao processo: a educação corporativa judicial tornou-se política de Estado imune a alternâncias de gestão.
+O principal fator facilitador foi a existência de uma reforma constitucional estruturante --- a EC 45/2004 --- que criou simultaneamente o órgão regulador (CNJ), a escola nacional de magistrados (ENFAM) e o requisito constitucional de formação. Esse tripé normativo conferiu maior estabilidade institucional ao processo, reduzindo sua dependência de agendas administrativas episódicas.
 
 O segundo fator foi a capacidade regulatória e de planejamento do CNJ, que a partir de 2009 desenvolveu ciclos sucessivos de planejamento estratégico nacional com metas anuais vinculantes, incorporando progressivamente a formação como indicador de desempenho institucional. A articulação entre educação corporativa e estratégia organizacional --- consolidada pela Resolução CNJ n. 192/2014 --- transformou a capacitação de custo em investimento estratégico mensurável.
 
@@ -266,9 +217,13 @@ O segundo dificultador foi a resistência à padronização em contexto de auton
 
 O terceiro dificultador foi a necessidade de financiamento específico para escolas sem tradição orçamentária própria. A Resolução CNJ n. 159/2012 foi precisamente a resposta normativa a esse obstáculo, mas sua implementação efetiva variou significativamente entre tribunais, criando assimetrias persistentes na capacidade de execução.
 
-**7. IMPACTOS E POSSIBILIDADES DE REPLICAÇÃO**
+**7. PRODUTOS, ALCANCE, IMPACTOS POTENCIAIS E RISCOS**
 
-Os impactos mensuráveis do sistema nacional de educação corporativa judicial são expressivos. O portal de EaD do CNJ --- operado pelo CEAJud e herdado pela ENAJU --- capacitou mais de 420 mil pessoas entre servidores e cidadãos ao longo de quinze anos de operação. A ENFAM regula cursos para aproximadamente 18 mil magistrados distribuídos por dezenas de escolas credenciadas. A RENEJUM articula em rede escolas estaduais, federais e especializadas de todo o país, eliminando redundâncias e ampliando o alcance da formação com os mesmos recursos. Com o novo portal da ENAJU, mais de 200 capacitações de escolas judiciais de todo o Brasil estão disponíveis em plataforma unificada, democratizando o acesso ao conhecimento dentro do Judiciário (CNJ, 2025).
+Para evitar a leitura dos resultados apenas como sequência normativa, a Figura 3 sintetiza o modelo lógico da institucionalização analisada, distinguindo legado, mecanismos de coordenação, produtos, alcance, impactos potenciais e condições críticas de efetividade.
+
+![Modelo lógico da institucionalização da educação corporativa judicial](figuras/modelo-logico-institucionalizacao.png){#fig-modelo-logico width="100%"}
+
+Os dados disponíveis demonstram produtos e alcance relevantes do sistema nacional de educação corporativa judicial. O portal de EaD do CNJ --- operado pelo CEAJud e herdado pela ENAJU --- capacitou mais de 420 mil pessoas entre servidores e cidadãos ao longo de quinze anos de operação. A ENFAM regula cursos para aproximadamente 18 mil magistrados distribuídos por dezenas de escolas credenciadas. A RENEJUM articula em rede escolas estaduais, federais e especializadas de todo o país, reduzindo redundâncias e ampliando o alcance da formação com os mesmos recursos. Com o novo portal da ENAJU, mais de 200 capacitações de escolas judiciais de todo o Brasil estão disponíveis em plataforma unificada, ampliando o acesso ao conhecimento dentro do Judiciário (CNJ, 2025).
 
 | Nível de evidência | Indicadores mencionados no estudo | Leitura metodológica |
 |---|---|---|
@@ -279,6 +234,8 @@ Os impactos mensuráveis do sistema nacional de educação corporativa judicial 
 
 : Distinção analítica entre produtos, alcance e impactos potenciais {#tbl-produtos-alcance-impactos}
 
+Os principais riscos associados à política não decorrem da ausência de oferta, mas da conversão de escala em efetividade. A ampliação de cursos e plataformas precisa ser acompanhada por critérios de qualidade pedagógica, mecanismos de avaliação, financiamento estável e estratégias para reduzir assimetrias entre tribunais.
+
 No plano qualitativo, a principal transformação foi a passagem do paradigma da \"capacitação pontual\" --- treinamentos isolados sem vínculo estratégico --- para a \"gestão por competências\" --- formação articulada aos objetivos institucionais e ao planejamento estratégico. Essa mudança de paradigma, consolidada pela Resolução CNJ n. 192/2014, alterou a lógica de atuação das escolas judiciais e dos gestores de pessoas nos tribunais: de executores de demandas pontuais a formuladores de política de formação orientada por competências e resultados.
 
 O caso da educação corporativa judicial brasileira oferece lições replicáveis para outros poderes e esferas da administração pública. Três elementos do modelo são especialmente transferíveis: (a) a criação de um órgão central com mandato normativo explícito --- o equivalente da ENAJU para o Executivo federal é a Escola Nacional de Administração Pública (ENAP), que passou por processo similar de fortalecimento; (b) a articulação entre norma nacional e rede descentralizada de execução, que preserva a autonomia institucional sem abrir mão de padrões mínimos de qualidade; e (c) o vínculo normativo entre formação e planejamento estratégico, que transforma a educação corporativa de custo administrativo em investimento de valor estratégico mensurável e avaliável.
@@ -287,11 +244,11 @@ Para sistemas judiciários de países em desenvolvimento --- especialmente na Am
 
 **8. CONCLUSÕES**
 
-O percurso que vai das primeiras escolas de magistratura dos anos 1970 até a ENAJU de 2025 é a trajetória de uma instituição que aprendeu, ao longo de cinco décadas, que a qualidade da Justiça depende da qualidade permanente de quem a exerce. Cada norma editada ao longo desse caminho --- a EC 45, as Resoluções CNJ n. 111, 126, 159, 192 e 643, as Resoluções ENFAM n. 2/2016 e 2/2025 --- não foi apenas um ato administrativo: foi o registro formal de uma escolha coletiva pelo investimento em pessoas como condição para a melhoria da prestação jurisdicional.
+A trajetória analisada indica que a qualificação continuada de magistrados e servidores passou a ser tratada como componente estratégico da capacidade institucional do Judiciário. Cada norma editada ao longo desse caminho --- a EC 45, as Resoluções CNJ n. 111, 126, 159, 192 e 643, as Resoluções ENFAM n. 2/2016 e 2/2025 --- formalizou etapas de uma política progressivamente orientada ao desenvolvimento de pessoas e à melhoria da prestação jurisdicional.
 
-O modelo atual, com a ENFAM regulando a formação dos magistrados e a ENAJU coordenando a educação dos servidores, apoiado por uma rede capilar de escolas nos tribunais articuladas pela RENEJUM, representa a maturidade institucional desse processo. Em perspectiva comparada, o Brasil desenvolveu uma solução original ao problema da formação em um sistema judiciário federativo complexo, que combina ancoragem constitucional, arquitetura dual-regulada e cooperação em rede de forma única na experiência internacional.
+O modelo atual, com a ENFAM regulando a formação dos magistrados e a ENAJU coordenando a educação dos servidores, apoiado por uma rede capilar de escolas nos tribunais articuladas pela RENEJUM, representa a maturidade institucional desse processo. A arquitetura resultante combina coordenação nacional, especialização por público-alvo e execução descentralizada em rede.
 
-O desafio que permanece --- e que a Portaria CNJ n. 362/2025 já sinalizou ao criar o grupo de trabalho para estruturar a governança da ENAJU --- é consolidar essa arquitetura em uma escola verdadeiramente nacional, com estrutura robusta, financiamento adequado, projeto pedagógico inovador e capacidade de responder com agilidade a um cenário judicial em transformação acelerada pela inteligência artificial e pela digitalização dos processos. A educação corporativa deixou de ser um custo para tornar-se o investimento mais estratégico do Poder Judiciário nacional --- e a criação da ENAJU é a expressão institucional mais acabada dessa convicção.
+O desafio que permanece --- e que a Portaria CNJ n. 362/2025 já sinalizou ao criar o grupo de trabalho para estruturar a governança da ENAJU --- é consolidar essa arquitetura em uma escola nacional com estrutura robusta, financiamento adequado, projeto pedagógico consistente e capacidade de responder a um cenário judicial em transformação pela inteligência artificial e pela digitalização dos processos. A criação da ENAJU é, nesse sentido, uma etapa relevante de consolidação institucional, mas sua efetividade dependerá de governança, avaliação, inovação pedagógica e redução das assimetrias entre tribunais.
 
 Para a agenda de pesquisa, os achados deste trabalho apontam quatro prioridades: (a) desenvolvimento de avaliações de impacto com desenho quasi-experimental para programas de formação judicial; (b) estudos de caso comparados sobre o uso de learning analytics em escolas judiciais; (c) análise da efetividade da RENEJUM como mecanismo de redução de desigualdades formativas entre tribunais; e (d) avaliação do impacto da formação de servidores na qualidade e celeridade da prestação jurisdicional --- relação ainda inexplorada empiricamente na literatura brasileira.
 
@@ -305,30 +262,12 @@ Para a agenda de pesquisa, os achados deste trabalho apontam quatro prioridades:
 
 **CNJ.** (2025). *Escola Nacional do Judiciário promoverá capacitação profissional em novo portal.* https://www.cnj.jus.br/escola-nacional-do-judiciario-promovera-capacitacao-profissional-em-novo-portal/
 
-**DiMaggio, P. J., & Powell, W. W.** (1983). The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields. *American Sociological Review, 48*(2), 147--160.
+**Dutra, J. S.** (2004). *Competências: conceitos e instrumentos para a gestão de pessoas na empresa moderna.* Atlas.
 
 **Fleury, M. T. L., & Fleury, A.** (2001). Construindo o conceito de competência. *Revista de Administração Contemporânea, 5*(spe), 183--196.
 
-**Geyh, C. G.** (2006). *When courts and congress collide: The struggle for control of America\'s judicial system.* University of Michigan Press.
-
-**IOJT.** (2022). *Global report on judicial education and training.* International Organization for Judicial Training. https://www.iojt.org
-
-**Knowles, M.** (1980). *The modern practice of adult education: From pedagogy to andragogy.* Association Press.
-
-**Machado, I. C., Fernandes, F. L., Avelar, D. R. S., & Farias, P. M.** (2026). Educação corporativa pública e judiciária: um mapeamento bibliométrico global. *Manuscrito em preparação.* Conselho Nacional de Justiça.
-
-**Mahoney, J., & Thelen, K.** (2010). A theory of gradual institutional change. In J. Mahoney & K. Thelen (Eds.), *Explaining institutional change: Ambiguity, agency, and power* (pp. 1--37). Cambridge University Press.
-
 **Meister, J. C.** (1998). *Corporate universities: Lessons in building a world-class work force* (rev. ed.). McGraw-Hill.
-
-**North, D. C.** (1990). *Institutions, institutional change and economic performance.* Cambridge University Press.
 
 **OCDE.** (2008). *The challenge of capacity development: Working towards good practice.* OECD Publishing.
 
-**Pierson, P.** (2004). *Politics in time: History, institutions, and social analysis.* Princeton University Press.
-
-**Piana, D.** (2010). *Judicial accountabilities in new Europe: From rule of law to quality of justice.* Ashgate.
-
-**Selznick, P.** (1957). *Leadership in administration: A sociological interpretation.* Harper & Row.
-
-**Siemens, G., & Baker, R. S. J. D.** (2013). Learning analytics and educational data mining. *Proceedings of the 2nd International Conference on Learning Analytics and Knowledge,* 252--254.
+**Pantoja, M. J., Camões, M. R. S., & Bergue, S. T.** (Orgs.). (2010). *Gestão de pessoas: bases teóricas e experiências no setor público.* ENAP.
