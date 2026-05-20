@@ -14,6 +14,7 @@ Este repositorio pode funcionar como o ponto unico de organizacao dos projetos d
 | Criar ou acompanhar projetos | [03_ROTINA_DE_TRABALHO.md](03_ROTINA_DE_TRABALHO.md) | Fluxo de trabalho |
 | Abrir um novo projeto | [templates/FICHA_PROJETO.md](templates/FICHA_PROJETO.md) | Modelo de ficha |
 | Entender os repositorios vinculados | [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md) | Submodulos e remotos |
+| Retomar pendencias e proximas acoes | [06_PROXIMOS_PASSOS.md](06_PROXIMOS_PASSOS.md) | Painel de bordo diario |
 
 ## Mapa Visual do Portfolio
 
