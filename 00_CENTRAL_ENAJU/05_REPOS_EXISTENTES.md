@@ -2,15 +2,20 @@
 
 Este workspace usa o repositorio `ENAJU` como central e mantem alguns projetos como repositorios vinculados. Assim, cada projeto preserva seu historico, issues, workflows e publicacoes proprias, enquanto a ENAJU ganha uma porta de entrada unica.
 
-## Repositorios
+## Repositorios do Nucleo ENAJU
 
 | Pasta no workspace | Repositorio remoto | Papel |
 | --- | --- | --- |
 | `design-futuros` | `https://github.com/enap-proj-ic/design-futuros` | Programa de foresight, futurismo publico, oficinas, produtos e bibliometria |
 | `enaju-gcpj` | `https://github.com/cnj-proj-icm/enaju-gcpj` | Pesquisa bibliometrica sobre educacao corporativa publica e judiciaria |
 | `futuros-da-justica` | `https://github.com/cnj-proj-icm/futuros-da-justica` | Simulador de cenarios, competencias, trilhas e acoes |
-| `balanco-socio-10` | `https://github.com/cnj-proj-icm/balanco-socio-10` | Revisao e producao do 10 Balanco da Sustentabilidade do Poder Judiciario |
 | `radar-competencias-enaju` | `https://github.com/cnj-proj-icm/radar-competencias-enaju` | Radar nacional de competencias e dashboard de inteligencia educacional |
+
+## Repositorios Relacionados
+
+| Pasta no workspace | Repositorio remoto | Situacao |
+| --- | --- | --- |
+| `balanco-socio-10` | `https://github.com/cnj-proj-icm/balanco-socio-10` | Projeto CNJ relacionado; validar se deve permanecer como submodulo da central ENAJU ou virar apenas link de referencia |
 
 ## Como Clonar Tudo
 

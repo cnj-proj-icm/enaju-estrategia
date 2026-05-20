@@ -32,12 +32,12 @@ git status
 
 | | Prioridade | Pendencia | Onde mexer | Resultado esperado | Status |
 | --- | --- | --- | --- | --- | --- |
-| 🔴 | Alta | Revisar a central ENAJU no GitHub e confirmar se a navegacao esta clara | `00_CENTRAL_ENAJU/` | Central facil de explicar para outras pessoas | Pendente |
-| 🔴 | Alta | Criar fichas curtas dos projetos ativos | `Projetos/` ou pasta de cada projeto | Cada frente com objetivo, responsavel, status e proximo marco | Pendente |
-| 🔴 | Alta | Decidir quais projetos ficam como submodulos e quais ficam apenas como links | `.gitmodules` e `05_REPOS_EXISTENTES.md` | Carteira sem duplicidade ou confusao | Pendente |
-| 🟡 | Media | Atualizar o inventario depois de cada mudanca relevante | `04_INVENTARIO_ATUAL.md` | Mapa sempre confiavel do workspace | Continuo |
+| 🟢 | Alta | Revisar a central ENAJU no GitHub e confirmar se a navegacao esta clara | `00_CENTRAL_ENAJU/` | Central facil de explicar para outras pessoas | Feito - manter revisao continua |
+| 🟢 | Alta | Criar fichas curtas dos projetos ativos | `Projetos/` ou pasta de cada projeto | Cada frente com objetivo, responsavel, status e proximo marco | Feito - primeira versao |
+| 🟡 | Alta | Decidir quais projetos ficam como submodulos e quais ficam apenas como links | `.gitmodules` e `05_REPOS_EXISTENTES.md` | Carteira sem duplicidade ou confusao | Parcial - `balanco-socio-10` classificado como relacionado |
+| 🟢 | Media | Atualizar o inventario depois de cada mudanca relevante | `04_INVENTARIO_ATUAL.md` | Mapa sempre confiavel do workspace | Atualizado |
 | 🟡 | Media | Organizar novos documentos em `Inputs`, `Fontes` e `Outputs` | Pastas estruturais | Separar insumos, fontes editaveis e entregaveis finais | Continuo |
-| 🟡 | Media | Criar backlog de oportunidades derivado dos 13 projetos do Art. 19 | `Backlog/` | Lista priorizada de proximas iniciativas | Pendente |
+| 🟢 | Media | Criar backlog de oportunidades derivado dos 13 projetos do Art. 19 | `Backlog/` | Lista priorizada de proximas iniciativas | Feito - primeira versao |
 
 ## 🧭 Frentes de Trabalho
 
@@ -63,8 +63,8 @@ Proximas acoes:
 | | Acao | Arquivo/pasta |
 | --- | --- | --- |
 | 📚 | Revisar os planos ja movidos para `Inputs/Planos` | `Inputs/Planos/` |
-| 📌 | Converter os 13 projetos estrategicos em backlog priorizado | `Backlog/` |
-| 🧾 | Criar fichas para os projetos mais importantes | `Projetos/` |
+| ✅ | Converter os 13 projetos estrategicos em backlog priorizado | `Backlog/2026-05-carteira-art19-enaju.md` |
+| ✅ | Criar fichas para os projetos mais importantes | `Projetos/` |
 | 🎯 | Definir status, responsavel e proximo marco de cada projeto | `Projetos/*/ficha-projeto.md` |
 
 ### 🔗 3. Projetos Vinculados
@@ -77,7 +77,7 @@ Objetivo: manter cada repositorio proprio organizado e conectado a central.
 | 📊 | `enaju-gcpj` | Ver pipeline, artigo e outputs bibliometricos | `git -C enaju-gcpj status` |
 | 💻 | `futuros-da-justica` | Ver app, dados YAML e testes | `git -C futuros-da-justica status` |
 | 📡 | `radar-competencias-enaju` | Ver dashboard, pipeline e relatorios | `git -C radar-competencias-enaju status` |
-| 📘 | `balanco-socio-10` | Ver revisoes, manuscrito e outputs | `git -C balanco-socio-10 status` |
+| 📘 | `balanco-socio-10` | Projeto relacionado ao CNJ; validar se deve permanecer no workspace ENAJU | `git -C balanco-socio-10 status` |
 
 Quando atualizar um submodulo:
 
@@ -138,7 +138,7 @@ Checklist:
 | | Decisao | Por que importa | Status |
 | --- | --- | --- | --- |
 | 👤 | Quem sera o dono institucional de cada frente | Evita projetos sem responsavel claro | Pendente |
-| 🧩 | Quais projetos devem ter repositorio proprio | Evita mistura entre central e execucao tecnica | Pendente |
+| 🧩 | Se `balanco-socio-10` deve continuar como submodulo da central ENAJU | Evita mistura entre projetos ENAJU e projetos CNJ relacionados | Pendente |
 | 🗓️ | Qual cadencia de revisao da carteira | Mantem o portfolio vivo | Pendente |
 | 📦 | Onde publicar entregaveis finais oficiais | Facilita acesso e evita versoes concorrentes | Pendente |
 

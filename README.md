@@ -21,6 +21,8 @@ Ela contem:
 | [Rotina de trabalho](00_CENTRAL_ENAJU/03_ROTINA_DE_TRABALHO.md) | Como criar, revisar e publicar projetos |
 | [Inventario atual](00_CENTRAL_ENAJU/04_INVENTARIO_ATUAL.md) | Mapa do que ja existe no workspace |
 | [Repositorios existentes](00_CENTRAL_ENAJU/05_REPOS_EXISTENTES.md) | Projetos vinculados como submodulos |
+| [Proximos passos](00_CENTRAL_ENAJU/06_PROXIMOS_PASSOS.md) | Pendencias e fluxo de retomada |
+| [Mapa visual de pastas](00_CENTRAL_ENAJU/07_MAPA_VISUAL_DE_PASTAS.md) | Legenda de icones e pastas |
 
 Para abrir tudo no VS Code, use:
 

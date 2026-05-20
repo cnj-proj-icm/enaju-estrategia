@@ -36,3 +36,13 @@ Copie o modelo:
 
 Depois preencha objetivo, status, entregaveis, responsavel e proximos passos.
 
+## Fichas Ativas
+
+| Projeto | Ficha |
+| --- | --- |
+| Carteira Estrategica ENAJU | [carteira-estrategica-enaju/ficha-projeto.md](carteira-estrategica-enaju/ficha-projeto.md) |
+| Radar de Competencias ENAJU | [radar-competencias-enaju/ficha-projeto.md](radar-competencias-enaju/ficha-projeto.md) |
+| Futuros da Justica | [futuros-da-justica/ficha-projeto.md](futuros-da-justica/ficha-projeto.md) |
+| Design Futuros | [design-futuros/ficha-projeto.md](design-futuros/ficha-projeto.md) |
+| ENAJU GCPJ | [enaju-gcpj/ficha-projeto.md](enaju-gcpj/ficha-projeto.md) |
+| Artigo ENAJUS 2026 | [artigo-enajus-2026/ficha-projeto.md](artigo-enajus-2026/ficha-projeto.md) |

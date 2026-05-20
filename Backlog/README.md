@@ -42,3 +42,8 @@ Exemplo:
 | Entregavel | Pode gerar produto, relatorio, artigo, guia ou ferramenta? |
 | Esforco | Cabe em um ciclo curto de trabalho? |
 
+## Backlogs Ativos
+
+| Backlog | Uso |
+| --- | --- |
+| [2026-05-carteira-art19-enaju.md](2026-05-carteira-art19-enaju.md) | Priorizacao inicial dos 13 projetos estrategicos derivados do Art. 19 |

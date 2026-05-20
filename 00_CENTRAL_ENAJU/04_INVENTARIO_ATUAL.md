@@ -25,13 +25,14 @@ Ele contem uma carteira inicial de projetos da ENAJU com foco em:
 
 | Projeto/pasta | Natureza | Status observado | Onde comecar |
 | --- | --- | --- | --- |
-| `plano_de_acao_enaju.md` | Diretriz estrategica | Documento estruturado | Abrir arquivo na raiz |
-| `projetos_estrategicos_coordenacao.md` | Carteira Art. 19 | Documento estruturado com 13 projetos | Abrir arquivo na raiz |
+| `Inputs/Planos/plano_de_acao_enaju.md` | Diretriz estrategica | Documento estruturado | Abrir arquivo em `Inputs/Planos/` |
+| `Inputs/Planos/projetos_estrategicos_coordenacao.md` | Carteira Art. 19 | Documento estruturado com 13 projetos | Abrir arquivo em `Inputs/Planos/` |
+| `Projetos/carteira-estrategica-enaju` | Governanca da carteira | Ficha inicial criada | `Projetos/carteira-estrategica-enaju/ficha-projeto.md` |
 | `design-futuros` | Programa de foresight e futurismo publico | Repositorio vinculado como submodulo | `design-futuros/README.md` |
 | `radar-competencias-enaju` | Inteligencia de competencias | Repositorio vinculado como submodulo | `radar-competencias-enaju/README.md` |
 | `futuros-da-justica` | Produto digital | Repositorio vinculado como submodulo | `futuros-da-justica/README.md` |
 | `enaju-gcpj` | Pesquisa bibliometrica | Repositorio vinculado como submodulo | `enaju-gcpj/README.md` |
-| `balanco-socio-10` | Relatorio e revisao socioambiental | Repositorio vinculado como submodulo | `balanco-socio-10/README.md` |
+| `balanco-socio-10` | Relatorio e revisao socioambiental | Projeto relacionado; validar permanencia no workspace ENAJU | `balanco-socio-10/README.md` |
 | `Artigo ENAJUS 2026` | Publicacao | Inputs, fontes e outputs distribuidos em pastas | `Inputs/Artigo ENAJUS 2026/` e `Fontes/Artigo ENAJUS 2026/` |
 
 ## Pastas Estruturais
@@ -39,8 +40,8 @@ Ele contem uma carteira inicial de projetos da ENAJU com foco em:
 | Pasta | Papel recomendado | Observacao |
 | --- | --- | --- |
 | `00_CENTRAL_ENAJU` | Porta de entrada do workspace | Criada para orientar acesso, organizacao e rotina |
-| `Backlog` | Ideias e demandas futuras | Atualmente sem arquivos listados |
-| `Projetos` | Novos projetos em estruturacao | Atualmente sem arquivos listados |
+| `Backlog` | Ideias e demandas futuras | Contem backlog priorizado da carteira Art. 19 |
+| `Projetos` | Novos projetos em estruturacao | Contem fichas iniciais dos projetos ativos |
 | `Inputs` | Insumos, textos-base, dados e referencias | Ja contem materiais do Artigo ENAJUS e documentos de competencias |
 | `Fontes` | Fontes editaveis de produtos | Ja contem artigo Quarto e figuras |
 | `Outputs` | Entregaveis finais | Ja contem versoes e figuras do Artigo ENAJUS |
@@ -84,8 +85,8 @@ flowchart TB
 
 | Prioridade | Acao |
 | --- | --- |
-| Alta | Criar fichas resumidas para cada projeto ativo em `Projetos/` ou nas pastas existentes. |
-| Alta | Definir status, responsavel e proximo marco de cada frente. |
-| Media | Mover novas iniciativas para `Projetos/` antes de virarem pastas de primeiro nivel. |
+| Alta | Validar os responsaveis de cada ficha criada em `Projetos/`. |
+| Alta | Decidir se `balanco-socio-10` permanece como submodulo ou apenas como link relacionado. |
+| Media | Detalhar os projetos P1 do backlog Art. 19 em fichas completas. |
 | Media | Padronizar `Inputs`, `Fontes` e `Outputs` nos projetos maiores. |
-| Media | Criar um backlog de oportunidades a partir dos 13 projetos estrategicos do Art. 19. |
+| Media | Atualizar o backlog Art. 19 apos decisao da gestao. |
