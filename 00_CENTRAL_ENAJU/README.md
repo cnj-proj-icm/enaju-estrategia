@@ -15,6 +15,7 @@ Este repositorio pode funcionar como o ponto unico de organizacao dos projetos d
 | 📝 | Abrir um novo projeto | [templates/FICHA_PROJETO.md](templates/FICHA_PROJETO.md) | Modelo de ficha |
 | 🔗 | Entender os repositorios vinculados | [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md) | Submodulos e remotos |
 | ✅ | Retomar pendencias e proximas acoes | [06_PROXIMOS_PASSOS.md](06_PROXIMOS_PASSOS.md) | Painel de bordo diario |
+| 🧱 | Diferenciar visualmente as pastas | [07_MAPA_VISUAL_DE_PASTAS.md](07_MAPA_VISUAL_DE_PASTAS.md) | Legenda de icones |
 
 ## 🧩 Mapa Visual do Portfolio
 
@@ -43,17 +44,20 @@ flowchart LR
 
 ```text
 ENAJU/
-├── 00_CENTRAL_ENAJU/          # porta de entrada, tutoriais e modelos
-├── Backlog/                   # ideias, demandas e proximas frentes
-├── Projetos/                  # novos projetos consolidados daqui em diante
-├── Inputs/                    # materiais de entrada, bases, referencias e notas
-├── Outputs/                   # entregaveis finais e versoes publicaveis
-├── Fontes/                    # arquivos-fonte editaveis de produtos especificos
-├── design-futuros/            # programa de foresight e futurismo publico
-├── futuros-da-justica/        # simulador de cenarios e competencias
-├── radar-competencias-enaju/  # radar nacional de competencias
-└── enaju-gcpj/                # bibliometria sobre educacao corporativa publica/judiciaria
+├── 🧭 00_CENTRAL_ENAJU/          # porta de entrada, tutoriais e modelos
+├── 🧠 Backlog/                   # ideias, demandas e proximas frentes
+├── 🧱 Projetos/                  # novos projetos consolidados daqui em diante
+├── 📥 Inputs/                    # materiais de entrada, bases, referencias e notas
+├── 📦 Outputs/                   # entregaveis finais e versoes publicaveis
+├── ✍️ Fontes/                    # arquivos-fonte editaveis de produtos especificos
+├── 🔮 design-futuros/            # programa de foresight e futurismo publico
+├── 💻 futuros-da-justica/        # simulador de cenarios e competencias
+├── 📡 radar-competencias-enaju/  # radar nacional de competencias
+├── 📊 enaju-gcpj/                # bibliometria sobre educacao corporativa publica/judiciaria
+└── 📘 balanco-socio-10/          # relatorio institucional socioambiental
 ```
+
+Veja a legenda completa em [07_MAPA_VISUAL_DE_PASTAS.md](07_MAPA_VISUAL_DE_PASTAS.md).
 
 ## ✅ Principios
 
