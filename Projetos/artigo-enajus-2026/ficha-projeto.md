@@ -8,7 +8,7 @@
 | Eixo | Publicacao / Institucionalizacao da educacao corporativa judicial |
 | Responsavel | A definir |
 | Status | Em revisao |
-| Proximo marco | Definir versao corrente e pendencias editoriais |
+| Proximo marco | Validar proposta revisada e adequacao ao edital ENAJUS 2026 |
 
 ## Objetivo
 
@@ -21,12 +21,12 @@ Consolidar manuscrito, resumo expandido e entregaveis relacionados ao ENAJUS 202
 | Inputs | `Inputs/Artigo ENAJUS 2026/` |
 | Fontes | `Fontes/Artigo ENAJUS 2026/` |
 | Outputs | `Outputs/Artigo ENAJUS 2026/` |
+| Proposta revisada | `Projetos/publicacoes/proposta-enajus-revisada.md` |
 
 ## Proximos Passos
 
 | Prioridade | Acao |
 | --- | --- |
-| Alta | Identificar qual arquivo e a versao mais atual |
-| Alta | Registrar pendencias de revisao textual e normativa |
+| Alta | Validar resumo expandido revisado com autores |
+| Alta | Conferir adequacao final ao edital ENAJUS 2026 |
 | Media | Criar README dentro da pasta do artigo com historico de versoes |
-

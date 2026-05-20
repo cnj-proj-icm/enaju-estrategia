@@ -9,7 +9,7 @@
 | Responsavel | A definir |
 | Repositorio vinculado | `enaju-gcpj` |
 | Status | Pipeline e manuscrito existentes |
-| Proximo marco | Revisar outputs e status do artigo |
+| Proximo marco | Validar proposta revisada para COBPIT |
 
 ## Objetivo
 
@@ -23,12 +23,12 @@ Mapear a producao cientifica global sobre educacao corporativa publica e judicia
 | Manuscrito Quarto | `enaju-gcpj/manuscripts/` | Existente |
 | Figuras e tabelas | `enaju-gcpj/results/` | Existente |
 | Nota executiva ENAJU | `Projetos/enaju-gcpj/` | Pendente |
+| Proposta COBPIT revisada | `Projetos/publicacoes/proposta-cobpit-revisada.md` | Criada |
 
 ## Proximos Passos
 
 | Prioridade | Acao |
 | --- | --- |
-| Alta | Conferir estado atual do manuscrito e outputs |
+| Alta | Validar enquadramento da proposta COBPIT com autores |
 | Media | Criar resumo executivo para uso institucional |
 | Media | Registrar pendencias de dados, referencias e submissao |
-

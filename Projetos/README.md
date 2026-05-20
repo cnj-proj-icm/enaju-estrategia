@@ -46,3 +46,11 @@ Depois preencha objetivo, status, entregaveis, responsavel e proximos passos.
 | Design Futuros | [design-futuros/ficha-projeto.md](design-futuros/ficha-projeto.md) |
 | ENAJU GCPJ | [enaju-gcpj/ficha-projeto.md](enaju-gcpj/ficha-projeto.md) |
 | Artigo ENAJUS 2026 | [artigo-enajus-2026/ficha-projeto.md](artigo-enajus-2026/ficha-projeto.md) |
+
+## Revisoes de Publicacoes
+
+| Material | Uso |
+| --- | --- |
+| [publicacoes/revisao-propostas-cobpit-enajus.md](publicacoes/revisao-propostas-cobpit-enajus.md) | Parecer comparativo das propostas COBPIT e ENAJUS |
+| [publicacoes/proposta-cobpit-revisada.md](publicacoes/proposta-cobpit-revisada.md) | Proposta revisada para COBPIT |
+| [publicacoes/proposta-enajus-revisada.md](publicacoes/proposta-enajus-revisada.md) | Proposta revisada para ENAJUS 2026 |
