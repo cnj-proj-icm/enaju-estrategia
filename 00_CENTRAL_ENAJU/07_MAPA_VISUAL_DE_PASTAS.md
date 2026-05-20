@@ -35,6 +35,26 @@ ENAJU/
 └── 📘 balanco-socio-10/          relatorio socioambiental
 ```
 
+## 💻 Como isso aparece no VS Code
+
+O arquivo `ENAJU.code-workspace` mostra as pastas principais como raizes separadas no Explorer:
+
+```text
+🧭 00_CENTRAL_ENAJU
+🧠 Backlog
+🧱 Projetos
+📥 Inputs
+✍️ Fontes
+📦 Outputs
+🔮 design-futuros
+💻 futuros-da-justica
+📡 radar-competencias-enaju
+📊 enaju-gcpj
+📘 balanco-socio-10
+```
+
+Os nomes reais das pastas continuam sem icones. Os icones aparecem no workspace para melhorar a leitura sem quebrar caminhos.
+
 ## 🔁 Fluxo por Icones
 
 ```text

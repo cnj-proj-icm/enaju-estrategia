@@ -1,27 +1,47 @@
 {
   "folders": [
     {
-      "name": "🧭 Central e Governanca",
-      "path": "."
+      "name": "🧭 00_CENTRAL_ENAJU",
+      "path": "00_CENTRAL_ENAJU"
     },
     {
-      "name": "🔮 Design Futuros",
+      "name": "🧠 Backlog",
+      "path": "Backlog"
+    },
+    {
+      "name": "🧱 Projetos",
+      "path": "Projetos"
+    },
+    {
+      "name": "📥 Inputs",
+      "path": "Inputs"
+    },
+    {
+      "name": "✍️ Fontes",
+      "path": "Fontes"
+    },
+    {
+      "name": "📦 Outputs",
+      "path": "Outputs"
+    },
+    {
+      "name": "🔮 design-futuros",
       "path": "design-futuros"
     },
     {
-      "name": "💻 Futuros da Justica",
+      "name": "💻 futuros-da-justica",
       "path": "futuros-da-justica"
     },
     {
-      "name": "📘 Balanco Socioambiental 10",
+      "name": "📘 balanco-socio-10",
       "path": "balanco-socio-10"
     },
     {
-      "name": "📡 Radar Competencias ENAJU",
+      "name": "📡 radar-competencias-enaju",
       "path": "radar-competencias-enaju"
     },
     {
-      "name": "📊 ENAJU GCPJ",
+      "name": "📊 enaju-gcpj",
       "path": "enaju-gcpj"
     }
   ],
