@@ -1,22 +1,22 @@
-# Central de Projetos ENAJU
+# 🧭 Central de Projetos ENAJU
 
 Este repositorio pode funcionar como o ponto unico de organizacao dos projetos da ENAJU: pesquisas, produtos digitais, artigos, diagnosticos, materiais de formacao, entregaveis e backlog.
 
-> Proposta de uso: tratar este GitHub como uma "mesa de trabalho institucional", com uma porta de entrada simples para qualquer pessoa entender o que existe, onde encontrar cada projeto e como contribuir.
+> 💡 Proposta de uso: tratar este GitHub como uma "mesa de trabalho institucional", com uma porta de entrada simples para qualquer pessoa entender o que existe, onde encontrar cada projeto e como contribuir.
 
-## Entrada Rapida
+## 🚀 Entrada Rapida
 
-| Preciso de... | Comece por aqui | Uso principal |
-| --- | --- | --- |
-| Entender o conjunto do workspace | [04_INVENTARIO_ATUAL.md](04_INVENTARIO_ATUAL.md) | Mapa do que ja existe |
-| Acessar pelo GitHub ou pelo computador | [01_COMO_ACESSAR.md](01_COMO_ACESSAR.md) | Tutorial passo a passo |
-| Saber onde colocar cada tipo de trabalho | [02_ORGANIZACAO_VISUAL.md](02_ORGANIZACAO_VISUAL.md) | Arquitetura de pastas |
-| Criar ou acompanhar projetos | [03_ROTINA_DE_TRABALHO.md](03_ROTINA_DE_TRABALHO.md) | Fluxo de trabalho |
-| Abrir um novo projeto | [templates/FICHA_PROJETO.md](templates/FICHA_PROJETO.md) | Modelo de ficha |
-| Entender os repositorios vinculados | [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md) | Submodulos e remotos |
-| Retomar pendencias e proximas acoes | [06_PROXIMOS_PASSOS.md](06_PROXIMOS_PASSOS.md) | Painel de bordo diario |
+| | Preciso de... | Comece por aqui | Uso principal |
+| --- | --- | --- | --- |
+| 🗺️ | Entender o conjunto do workspace | [04_INVENTARIO_ATUAL.md](04_INVENTARIO_ATUAL.md) | Mapa do que ja existe |
+| 🔑 | Acessar pelo GitHub ou pelo computador | [01_COMO_ACESSAR.md](01_COMO_ACESSAR.md) | Tutorial passo a passo |
+| 🗂️ | Saber onde colocar cada tipo de trabalho | [02_ORGANIZACAO_VISUAL.md](02_ORGANIZACAO_VISUAL.md) | Arquitetura de pastas |
+| 🔁 | Criar ou acompanhar projetos | [03_ROTINA_DE_TRABALHO.md](03_ROTINA_DE_TRABALHO.md) | Fluxo de trabalho |
+| 📝 | Abrir um novo projeto | [templates/FICHA_PROJETO.md](templates/FICHA_PROJETO.md) | Modelo de ficha |
+| 🔗 | Entender os repositorios vinculados | [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md) | Submodulos e remotos |
+| ✅ | Retomar pendencias e proximas acoes | [06_PROXIMOS_PASSOS.md](06_PROXIMOS_PASSOS.md) | Painel de bordo diario |
 
-## Mapa Visual do Portfolio
+## 🧩 Mapa Visual do Portfolio
 
 ```mermaid
 flowchart LR
@@ -39,7 +39,7 @@ flowchart LR
     G --> G1[Outputs]
 ```
 
-## Organizacao Recomendada
+## 🗂️ Organizacao Recomendada
 
 ```text
 ENAJU/
@@ -55,31 +55,31 @@ ENAJU/
 └── enaju-gcpj/                # bibliometria sobre educacao corporativa publica/judiciaria
 ```
 
-## Principios
+## ✅ Principios
 
-| Principio | Como aplicar |
-| --- | --- |
-| Uma porta de entrada | Toda pessoa nova comeca por esta pasta. |
-| Projetos com ficha curta | Cada projeto deve ter objetivo, responsavel, status e proximos passos. |
-| Inputs separados de Outputs | Insumos, rascunhos e bases ficam longe de produtos finais. |
-| Decisoes registradas | Mudancas relevantes entram na ficha do projeto ou em notas de governanca. |
-| Nomes previsiveis | Pastas e arquivos devem permitir busca facil no GitHub. |
+| | Principio | Como aplicar |
+| --- | --- | --- |
+| 🚪 | Uma porta de entrada | Toda pessoa nova comeca por esta pasta. |
+| 🧾 | Projetos com ficha curta | Cada projeto deve ter objetivo, responsavel, status e proximos passos. |
+| 📥 | Inputs separados de Outputs | Insumos, rascunhos e bases ficam longe de produtos finais. |
+| 📌 | Decisoes registradas | Mudancas relevantes entram na ficha do projeto ou em notas de governanca. |
+| 🔎 | Nomes previsiveis | Pastas e arquivos devem permitir busca facil no GitHub. |
 
-## Status Inicial do Workspace
+## 📊 Status Inicial do Workspace
 
-Este workspace ja contem projetos estruturados em quatro familias:
+Este workspace ja contem projetos estruturados em cinco familias:
 
-| Familia | Projetos/pastas atuais |
-| --- | --- |
-| Estrategia ENAJU | `plano_de_acao_enaju.md`, `projetos_estrategicos_coordenacao.md` |
-| Pesquisa e inteligencia | `enaju-gcpj`, `radar-competencias-enaju`, `design-futuros` |
-| Produtos digitais | `futuros-da-justica` |
-| Relatorios institucionais | `balanco-socio-10` |
-| Publicacoes e entregaveis | `Inputs/Artigo ENAJUS 2026`, `Fontes/Artigo ENAJUS 2026`, `Outputs/Artigo ENAJUS 2026` |
+| | Familia | Projetos/pastas atuais |
+| --- | --- | --- |
+| 🏛️ | Estrategia ENAJU | `plano_de_acao_enaju.md`, `projetos_estrategicos_coordenacao.md` |
+| 🔬 | Pesquisa e inteligencia | `enaju-gcpj`, `radar-competencias-enaju`, `design-futuros` |
+| 💻 | Produtos digitais | `futuros-da-justica` |
+| 📘 | Relatorios institucionais | `balanco-socio-10` |
+| 📣 | Publicacoes e entregaveis | `Inputs/Artigo ENAJUS 2026`, `Fontes/Artigo ENAJUS 2026`, `Outputs/Artigo ENAJUS 2026` |
 
 Os projetos com repositorio proprio ficam vinculados como submodulos. Veja [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md).
 
-## Como usar esta pasta
+## 🛠️ Como usar esta pasta
 
 1. Leia o tutorial de acesso.
 2. Consulte o inventario para localizar o projeto certo.
