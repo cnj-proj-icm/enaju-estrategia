@@ -73,6 +73,7 @@ Este workspace ja contem projetos estruturados em quatro familias:
 | Estrategia ENAJU | `plano_de_acao_enaju.md`, `projetos_estrategicos_coordenacao.md` |
 | Pesquisa e inteligencia | `enaju-gcpj`, `radar-competencias-enaju`, `design-futuros` |
 | Produtos digitais | `futuros-da-justica` |
+| Relatorios institucionais | `balanco-socio-10` |
 | Publicacoes e entregaveis | `Inputs/Artigo ENAJUS 2026`, `Fontes/Artigo ENAJUS 2026`, `Outputs/Artigo ENAJUS 2026` |
 
 Os projetos com repositorio proprio ficam vinculados como submodulos. Veja [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md).

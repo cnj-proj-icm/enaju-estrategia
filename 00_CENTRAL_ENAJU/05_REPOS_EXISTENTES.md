@@ -9,6 +9,7 @@ Este workspace usa o repositorio `ENAJU` como central e mantem alguns projetos c
 | `design-futuros` | `https://github.com/enap-proj-ic/design-futuros` | Programa de foresight, futurismo publico, oficinas, produtos e bibliometria |
 | `enaju-gcpj` | `https://github.com/cnj-proj-icm/enaju-gcpj` | Pesquisa bibliometrica sobre educacao corporativa publica e judiciaria |
 | `futuros-da-justica` | `https://github.com/cnj-proj-icm/futuros-da-justica` | Simulador de cenarios, competencias, trilhas e acoes |
+| `balanco-socio-10` | `https://github.com/cnj-proj-icm/balanco-socio-10` | Revisao e producao do 10 Balanco da Sustentabilidade do Poder Judiciario |
 | `radar-competencias-enaju` | `https://github.com/cnj-proj-icm/radar-competencias-enaju` | Radar nacional de competencias e dashboard de inteligencia educacional |
 
 ## Como Clonar Tudo

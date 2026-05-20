@@ -31,8 +31,8 @@ Ele contem uma carteira inicial de projetos da ENAJU com foco em:
 | `radar-competencias-enaju` | Inteligencia de competencias | Repositorio vinculado como submodulo | `radar-competencias-enaju/README.md` |
 | `futuros-da-justica` | Produto digital | Repositorio vinculado como submodulo | `futuros-da-justica/README.md` |
 | `enaju-gcpj` | Pesquisa bibliometrica | Repositorio vinculado como submodulo | `enaju-gcpj/README.md` |
+| `balanco-socio-10` | Relatorio e revisao socioambiental | Repositorio vinculado como submodulo | `balanco-socio-10/README.md` |
 | `Artigo ENAJUS 2026` | Publicacao | Inputs, fontes e outputs distribuidos em pastas | `Inputs/Artigo ENAJUS 2026/` e `Fontes/Artigo ENAJUS 2026/` |
-| `balanco-socio-10` | Revisao de relatorio | Subprojeto dentro de `futuros-da-justica` | `futuros-da-justica/balanco-socio-10/README.md` |
 
 ## Pastas Estruturais
 

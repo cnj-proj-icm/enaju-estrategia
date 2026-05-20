@@ -13,6 +13,10 @@
       "path": "futuros-da-justica"
     },
     {
+      "name": "Balanco Socioambiental 10",
+      "path": "balanco-socio-10"
+    },
+    {
       "name": "Radar Competencias ENAJU",
       "path": "radar-competencias-enaju"
     },
@@ -36,4 +40,3 @@
     }
   }
 }
-

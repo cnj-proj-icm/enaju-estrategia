@@ -17,3 +17,7 @@
 	path = radar-competencias-enaju
 	url = https://github.com/cnj-proj-icm/radar-competencias-enaju.git
 	ignore = untracked
+[submodule "balanco-socio-10"]
+	path = balanco-socio-10
+	url = https://github.com/cnj-proj-icm/balanco-socio-10.git
+	ignore = untracked
