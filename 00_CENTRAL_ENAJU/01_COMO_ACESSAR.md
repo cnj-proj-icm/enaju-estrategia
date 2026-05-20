@@ -7,7 +7,7 @@ Este guia mostra tres formas de acesso: pelo navegador, pelo computador com Git 
 1. Abra o GitHub em `https://github.com`.
 2. Entre na conta autorizada a acessar o repositorio.
 3. Acesse o repositorio:
-   `https://github.com/cairesmachado-svg/enaju-estrategia`
+   `https://github.com/cnj-proj-icm/enaju-estrategia`
 4. Clique na pasta `00_CENTRAL_ENAJU`.
 5. Abra o arquivo `README.md` para ver a pagina inicial da central.
 
@@ -26,7 +26,7 @@ Use esta opcao para leitura, consulta ou compartilhamento rapido. Para editar co
 No PowerShell, escolha uma pasta de trabalho e rode:
 
 ```powershell
-git clone https://github.com/cairesmachado-svg/enaju-estrategia.git
+git clone https://github.com/cnj-proj-icm/enaju-estrategia.git
 cd enaju-estrategia
 ```
 
@@ -86,4 +86,3 @@ Boas praticas:
 3. Identificar o projeto de interesse.
 4. Abrir o README da pasta do projeto.
 5. Registrar duvidas ou demandas no `Backlog/`.
-

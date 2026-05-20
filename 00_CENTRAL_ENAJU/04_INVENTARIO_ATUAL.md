@@ -7,7 +7,7 @@ Leitura realizada a partir da estrutura e dos documentos principais do repositor
 O workspace ja e um repositorio Git e esta conectado ao GitHub em:
 
 ```text
-https://github.com/cairesmachado-svg/enaju-estrategia
+https://github.com/cnj-proj-icm/enaju-estrategia
 ```
 
 Ele contem uma carteira inicial de projetos da ENAJU com foco em:
@@ -89,4 +89,3 @@ flowchart TB
 | Media | Mover novas iniciativas para `Projetos/` antes de virarem pastas de primeiro nivel. |
 | Media | Padronizar `Inputs`, `Fontes` e `Outputs` nos projetos maiores. |
 | Media | Criar um backlog de oportunidades a partir dos 13 projetos estrategicos do Art. 19. |
-
