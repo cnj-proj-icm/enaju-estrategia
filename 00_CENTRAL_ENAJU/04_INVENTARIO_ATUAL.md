@@ -7,7 +7,7 @@ Leitura realizada a partir da estrutura e dos documentos principais do repositor
 O workspace ja e um repositorio Git e esta conectado ao GitHub em:
 
 ```text
-https://github.com/cnj-proj-icm/enaju-estrategia
+https://github.com/cairesmachado-svg/ENAJU
 ```
 
 Ele contem uma carteira inicial de projetos da ENAJU com foco em:
@@ -27,10 +27,10 @@ Ele contem uma carteira inicial de projetos da ENAJU com foco em:
 | --- | --- | --- | --- |
 | `plano_de_acao_enaju.md` | Diretriz estrategica | Documento estruturado | Abrir arquivo na raiz |
 | `projetos_estrategicos_coordenacao.md` | Carteira Art. 19 | Documento estruturado com 13 projetos | Abrir arquivo na raiz |
-| `design-futuros` | Programa de foresight e futurismo publico | Estruturado com produtos, governanca, roadmap e pipelines | `design-futuros/README.md` |
-| `radar-competencias-enaju` | Inteligencia de competencias | MVP Python com pipeline, dashboard, docs e relatorios | `radar-competencias-enaju/README.md` |
-| `futuros-da-justica` | Produto digital | MVP Streamlit com dados YAML, testes e documentacao | `futuros-da-justica/README.md` |
-| `enaju-gcpj` | Pesquisa bibliometrica | Pipeline R/Quarto com scripts, manuscrito, outputs e guia | `enaju-gcpj/README.md` |
+| `design-futuros` | Programa de foresight e futurismo publico | Repositorio vinculado como submodulo | `design-futuros/README.md` |
+| `radar-competencias-enaju` | Inteligencia de competencias | Repositorio vinculado como submodulo | `radar-competencias-enaju/README.md` |
+| `futuros-da-justica` | Produto digital | Repositorio vinculado como submodulo | `futuros-da-justica/README.md` |
+| `enaju-gcpj` | Pesquisa bibliometrica | Repositorio vinculado como submodulo | `enaju-gcpj/README.md` |
 | `Artigo ENAJUS 2026` | Publicacao | Inputs, fontes e outputs distribuidos em pastas | `Inputs/Artigo ENAJUS 2026/` e `Fontes/Artigo ENAJUS 2026/` |
 | `balanco-socio-10` | Revisao de relatorio | Subprojeto dentro de `futuros-da-justica` | `futuros-da-justica/balanco-socio-10/README.md` |
 

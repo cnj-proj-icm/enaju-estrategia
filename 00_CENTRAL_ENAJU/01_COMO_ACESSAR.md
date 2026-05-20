@@ -7,7 +7,7 @@ Este guia mostra tres formas de acesso: pelo navegador, pelo computador com Git 
 1. Abra o GitHub em `https://github.com`.
 2. Entre na conta autorizada a acessar o repositorio.
 3. Acesse o repositorio:
-   `https://github.com/cnj-proj-icm/enaju-estrategia`
+   `https://github.com/cairesmachado-svg/ENAJU`
 4. Clique na pasta `00_CENTRAL_ENAJU`.
 5. Abra o arquivo `README.md` para ver a pagina inicial da central.
 
@@ -26,14 +26,15 @@ Use esta opcao para leitura, consulta ou compartilhamento rapido. Para editar co
 No PowerShell, escolha uma pasta de trabalho e rode:
 
 ```powershell
-git clone https://github.com/cnj-proj-icm/enaju-estrategia.git
-cd enaju-estrategia
+git clone --recurse-submodules https://github.com/cairesmachado-svg/ENAJU.git
+cd ENAJU
 ```
 
 Para atualizar a copia local depois:
 
 ```powershell
 git pull
+git submodule update --init --recursive
 ```
 
 Para verificar o que mudou antes de enviar ao GitHub:
@@ -79,7 +80,21 @@ Boas praticas:
 | Arquivo sensivel ou credencial | Nao enviar ao GitHub. Usar `.env` local quando necessario. |
 | Entregavel final | Colocar em `Outputs/` ou em `outputs/` dentro do projeto. |
 
-## 6. Caminho recomendado para novas pessoas
+## 6. Atualizar projetos vinculados
+
+Alguns projetos sao repositorios proprios dentro da central. Para baixar ou atualizar esses projetos:
+
+```powershell
+git submodule update --init --recursive
+```
+
+Para trazer a versao mais recente dos repositorios vinculados:
+
+```powershell
+git submodule update --init --recursive --remote
+```
+
+## 7. Caminho recomendado para novas pessoas
 
 1. Abrir `00_CENTRAL_ENAJU/README.md`.
 2. Ler `04_INVENTARIO_ATUAL.md`.

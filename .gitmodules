@@ -1,0 +1,19 @@
+[submodule "design-futuros"]
+	path = design-futuros
+	url = https://github.com/enap-proj-ic/design-futuros.git
+	ignore = untracked
+
+[submodule "enaju-gcpj"]
+	path = enaju-gcpj
+	url = https://github.com/cnj-proj-icm/enaju-gcpj.git
+	ignore = untracked
+
+[submodule "futuros-da-justica"]
+	path = futuros-da-justica
+	url = https://github.com/cnj-proj-icm/futuros-da-justica.git
+	ignore = untracked
+
+[submodule "radar-competencias-enaju"]
+	path = radar-competencias-enaju
+	url = https://github.com/cnj-proj-icm/radar-competencias-enaju.git
+	ignore = untracked

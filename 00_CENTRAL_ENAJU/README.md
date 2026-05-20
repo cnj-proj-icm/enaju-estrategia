@@ -13,6 +13,7 @@ Este repositorio pode funcionar como o ponto unico de organizacao dos projetos d
 | Saber onde colocar cada tipo de trabalho | [02_ORGANIZACAO_VISUAL.md](02_ORGANIZACAO_VISUAL.md) | Arquitetura de pastas |
 | Criar ou acompanhar projetos | [03_ROTINA_DE_TRABALHO.md](03_ROTINA_DE_TRABALHO.md) | Fluxo de trabalho |
 | Abrir um novo projeto | [templates/FICHA_PROJETO.md](templates/FICHA_PROJETO.md) | Modelo de ficha |
+| Entender os repositorios vinculados | [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md) | Submodulos e remotos |
 
 ## Mapa Visual do Portfolio
 
@@ -74,6 +75,8 @@ Este workspace ja contem projetos estruturados em quatro familias:
 | Produtos digitais | `futuros-da-justica` |
 | Publicacoes e entregaveis | `Inputs/Artigo ENAJUS 2026`, `Fontes/Artigo ENAJUS 2026`, `Outputs/Artigo ENAJUS 2026` |
 
+Os projetos com repositorio proprio ficam vinculados como submodulos. Veja [05_REPOS_EXISTENTES.md](05_REPOS_EXISTENTES.md).
+
 ## Como usar esta pasta
 
 1. Leia o tutorial de acesso.
@@ -81,4 +84,3 @@ Este workspace ja contem projetos estruturados em quatro familias:
 3. Use a organizacao visual para decidir onde criar novos materiais.
 4. Para qualquer projeto novo, copie o modelo de ficha de projeto.
 5. Registre os entregaveis finais em `Outputs/` ou na pasta propria do projeto.
-
