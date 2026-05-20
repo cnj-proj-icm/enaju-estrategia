@@ -1,0 +1,39 @@
+{
+  "folders": [
+    {
+      "name": "Central e Governanca",
+      "path": "."
+    },
+    {
+      "name": "Design Futuros",
+      "path": "design-futuros"
+    },
+    {
+      "name": "Futuros da Justica",
+      "path": "futuros-da-justica"
+    },
+    {
+      "name": "Radar Competencias ENAJU",
+      "path": "radar-competencias-enaju"
+    },
+    {
+      "name": "ENAJU GCPJ",
+      "path": "enaju-gcpj"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.quarto": true
+    },
+    "search.exclude": {
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.quarto": true,
+      "**/*_cache": true,
+      "**/*_files": true
+    }
+  }
+}
+
