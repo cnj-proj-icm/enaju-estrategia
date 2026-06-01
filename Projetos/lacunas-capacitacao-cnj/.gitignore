@@ -1,0 +1,25 @@
+# Artefatos gerados pelo pipeline
+data/raw_html/*
+!data/raw_html/.gitkeep
+data/raw_pdf/*
+!data/raw_pdf/.gitkeep
+data/text/raw/*
+!data/text/raw/.gitkeep
+data/text/clean/*
+!data/text/clean/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+outputs/*
+!outputs/README.md
+
+# Ambiente local
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+# OCR opcional
+data/ocr_cache/

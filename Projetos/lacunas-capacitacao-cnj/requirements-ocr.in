@@ -1,0 +1,3 @@
+# Instalar somente quando o piloto identificar PDFs sem camada de texto.
+pdf2image
+pytesseract

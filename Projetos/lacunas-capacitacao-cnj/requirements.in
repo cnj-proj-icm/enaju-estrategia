@@ -1,0 +1,11 @@
+beautifulsoup4
+pandas
+pyarrow
+pymupdf
+pdfplumber
+pytest
+pyyaml
+rapidfuzz
+requests
+tqdm
+unidecode

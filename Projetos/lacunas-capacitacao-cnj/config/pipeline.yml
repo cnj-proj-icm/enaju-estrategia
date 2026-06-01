@@ -1,0 +1,92 @@
+projeto:
+  nome: lacunas-capacitacao-cnj
+  data_desenho: "2026-05-31"
+  modo: ciclo_fechado
+  baseline_run_id: baseline-2026-05-31
+  data_corte: "2026-05-31"
+
+fonte:
+  url: "https://www.cnj.jus.br/pesquisas-judiciarias/"
+  secao_prioritaria: "Producao Interna"
+  secoes_editoriais:
+    - "Producao Interna"
+    - "Parcerias Institucionais"
+  ano_inicial: 2022
+  ano_final: "data_da_execucao"
+  coletar_todos_pdfs_da_pagina_antes_de_filtrar: true
+  registrar_snapshot_html: true
+
+catalogo:
+  normalizar_url: true
+  remover_fragmento_url: true
+  ordenar_query_string: true
+  registrar_contexto_dom: true
+  registrar_ano_url: true
+  inferir_ano_documento: true
+  revisar_divergencia_de_anos: true
+
+priorizacao:
+  idiomas_preferidos:
+    - pt
+    - indeterminado
+  tipos_preferidos:
+    - relatorio
+    - diagnostico
+    - pesquisa
+  tipos_relacionados:
+    - sumario
+    - apresentacao
+  tipos_fora_do_corpus_textual:
+    - base_de_dados
+    - painel
+    - pagina_web
+
+deduplicacao:
+  ordem:
+    - url_normalizada
+    - sha256
+    - familia_documental
+  similaridade_titulo_minima: 90
+  manter_no_catalogo_documentos_excluidos: true
+  regras:
+    - manter_relatorio_completo_em_portugues
+    - relacionar_sumario_a_versao_completa
+    - excluir_traducao_quando_houver_original_em_portugues
+    - relacionar_apresentacao_ao_documento_principal
+
+download:
+  timeout_segundos: 60
+  tentativas: 3
+  validar_content_type: true
+  validar_assinatura_pdf: true
+  calcular_sha256: true
+
+extracao:
+  ordem:
+    - pymupdf
+    - pdfplumber
+    - ocr_excecao
+  minimo_caracteres_por_pagina: 40
+  preservar_marcador_pagina: "===PAGE_BREAK==="
+  ocr_habilitado_por_padrao: false
+
+limpeza:
+  remover_cabecalhos_rodapes_repetidos: true
+  normalizar_espacos: true
+  corrigir_hifenizacao_quebra_linha: true
+  preservar_arquivo_texto_bruto: true
+  preservar_separacao_por_pagina: true
+
+segmentacao:
+  gerar_por_pagina: true
+  gerar_por_paragrafo: true
+  gerar_janela_deslizante: true
+  janela_caracteres: 1000
+  sobreposicao_caracteres: 200
+
+persistencia:
+  formatos_tabulares:
+    - csv
+    - parquet
+  encoding_csv: "utf-8-sig"
+  logs_por_etapa: true

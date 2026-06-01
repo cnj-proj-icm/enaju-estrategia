@@ -32,6 +32,7 @@ Ele contem uma carteira inicial de projetos da ENAJU com foco em:
 | `radar-competencias-enaju` | Inteligencia de competencias | Repositorio vinculado como submodulo | `radar-competencias-enaju/README.md` |
 | `futuros-da-justica` | Produto digital | Repositorio vinculado como submodulo | `futuros-da-justica/README.md` |
 | `enaju-gcpj` | Pesquisa bibliometrica | Repositorio vinculado como submodulo | `enaju-gcpj/README.md` |
+| `Projetos/lacunas-capacitacao-cnj` | Pesquisa aplicada sobre evidencias formativas | Pipeline implementado; linha de base preliminar em curadoria humana | `Projetos/lacunas-capacitacao-cnj/ALERTA_PROXIMOS_PASSOS.md` |
 | `balanco-socio-10` | Relatorio e revisao socioambiental | Projeto relacionado; validar permanencia no workspace ENAJU | `balanco-socio-10/README.md` |
 | `Artigo ENAJUS 2026` | Publicacao | Inputs, fontes e outputs distribuidos em pastas | `Inputs/Artigo ENAJUS 2026/` e `Fontes/Artigo ENAJUS 2026/` |
 
@@ -74,6 +75,7 @@ flowchart TB
     C --> C1[enaju-gcpj]
     C --> C2[radar-competencias-enaju]
     C --> C3[design-futuros]
+    C --> C4[lacunas-capacitacao-cnj]
     D --> D1[futuros-da-justica]
     E --> E1[Artigo ENAJUS 2026]
     E --> E2[Relatorios e policy papers]

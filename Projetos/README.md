@@ -46,6 +46,7 @@ Depois preencha objetivo, status, entregaveis, responsavel e proximos passos.
 | Design Futuros | [design-futuros/ficha-projeto.md](design-futuros/ficha-projeto.md) |
 | ENAJU GCPJ | [enaju-gcpj/ficha-projeto.md](enaju-gcpj/ficha-projeto.md) |
 | Artigo ENAJUS 2026 | [artigo-enajus-2026/ficha-projeto.md](artigo-enajus-2026/ficha-projeto.md) |
+| Lacunas de Capacitacao em Producoes do CNJ | [lacunas-capacitacao-cnj/ficha-projeto.md](lacunas-capacitacao-cnj/ficha-projeto.md) |
 
 ## Revisoes de Publicacoes
 

@@ -1,0 +1,153 @@
+versao: "0.1.0"
+
+normalizacao:
+  case_insensitive: true
+  remover_acentos: true
+  score_por_termo_distinto_no_trecho: true
+
+grupos:
+  A_lacuna_direta:
+    peso: 3
+    termos:
+      - lacuna
+      - gargalo
+      - deficiencia
+      - insuficiencia
+      - fragilidade
+      - carencia
+      - ausencia
+      - falta de
+      - necessidade de
+      - desafio
+      - desafios
+      - dificuldade
+      - dificuldades
+      - limitacao
+      - limitacoes
+      - obstaculo
+      - entrave
+
+  B_necessidade_formativa:
+    peso: 2
+    termos:
+      - capacitacao
+      - formacao
+      - aperfeicoamento
+      - treinamento
+      - qualificacao
+      - desenvolvimento de competencias
+      - gestao por competencias
+      - educacao corporativa
+      - formacao continuada
+      - trilha formativa
+      - aprendizagem
+      - desenvolvimento gerencial
+
+  C_problema_organizacional:
+    peso: 1
+    termos:
+      - baixa adesao
+      - baixa participacao
+      - pouca participacao
+      - desconhecimento
+      - falta de conhecimento
+      - uso insuficiente
+      - baixo uso
+      - ausencia de protocolo
+      - ausencia de fluxo
+      - falta de padronizacao
+      - heterogeneidade
+      - assimetria
+      - nao implementacao
+      - implementacao parcial
+      - inexistencia
+      - subnotificacao
+      - baixa cobertura
+      - insuficiencia de pessoal
+      - equipe reduzida
+      - estrutura insuficiente
+      - governanca
+      - monitoramento
+      - avaliacao
+      - indicadores
+
+  D_tecnologia_dados_inovacao:
+    peso: 1
+    termos:
+      - qualidade dos dados
+      - saneamento de dados
+      - datajud
+      - inteligencia artificial
+      - ia generativa
+      - transformacao digital
+      - inovacao
+      - laboratorio
+      - automacao
+      - analitica
+      - ciencia de dados
+
+  E_inclusao_direitos_relacoes:
+    peso: 1
+    termos:
+      - acessibilidade
+      - assedio
+      - discriminacao
+      - equidade
+      - racial
+      - genero
+      - pessoas com deficiencia
+      - saude mental
+      - violencia
+
+bonus:
+  coocorrencia_A_B:
+    peso: 2
+  verbos_acao:
+    peso: 1
+    termos:
+      - aprimorar
+      - fortalecer
+      - desenvolver
+      - qualificar
+
+tipos_gap:
+  explicito:
+    regra: "contem termo do grupo A e contexto relacionado a capacidade, competencia, processo ou servico"
+  implicito:
+    regra: "contem sinal organizacional do grupo C com potencial de desenvolvimento institucional"
+  potencial:
+    regra: "contem termo tematico ou formativo, mas exige revisao humana para confirmar a lacuna"
+
+eixos:
+  dados_e_tecnologia:
+    termos: [dados, datajud, saneamento, analitica, automacao, inteligencia artificial]
+  gestao_e_governanca:
+    termos: [gestao, governanca, protocolo, fluxo, padronizacao, institucionalizacao]
+  formacao_de_liderancas:
+    termos: [lideranca, liderancas, gerencial, chefia, gestor, gestores]
+  saude_e_bem_estar:
+    termos: [saude mental, saude, bem-estar, adoecimento, qualidade de vida]
+  direitos_humanos_e_inclusao:
+    termos: [direitos humanos, discriminacao, equidade, racial, genero, violencia, assedio]
+  atendimento_e_servicos_judiciarios:
+    termos: [atendimento, servico, jurisdicionado, acesso a justica, prestacao jurisdicional]
+  inovacao_e_transformacao:
+    termos: [inovacao, laboratorio, transformacao digital, ia generativa]
+  avaliacao_e_monitoramento:
+    termos: [avaliacao, monitoramento, indicador, indicadores, cobertura]
+  comunicacao_e_acessibilidade:
+    termos: [comunicacao, acessibilidade, linguagem simples, pessoas com deficiencia]
+  equipes_multidisciplinares:
+    termos: [equipe multidisciplinar, equipes multidisciplinares, equipe reduzida, pessoal]
+
+hipoteses_competencia:
+  - gatilhos: [saneamento de dados, qualidade dos dados, datajud]
+    hipotese: governanca e qualidade de dados
+  - gatilhos: [assedio, discriminacao, fluxo, protocolo]
+    hipotese: prevencao, acolhimento e encaminhamento institucional
+  - gatilhos: [inovacao, laboratorio, transformacao digital]
+    hipotese: gestao da inovacao e transformacao organizacional
+  - gatilhos: [acessibilidade, pessoas com deficiencia, comunicacao]
+    hipotese: acessibilidade e comunicacao inclusiva
+  - gatilhos: [equipe multidisciplinar, equipes multidisciplinares, equipe reduzida]
+    hipotese: estruturacao e atuacao de equipes multidisciplinares
