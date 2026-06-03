@@ -1,0 +1,862 @@
+ChatGPT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Webinário - Precisamos Falar de Cuidados e Pessoas Idosas.srt
+Arquivo
+
+Webinário - Precisamos Falar de Cuidados e Pessoas Idosas.txt
+Documento
+
+relatorio_webinario_Webinário - Precisamos Falar de Cuidados e Pessoas Idosas.pdf
+PDF
+
+Texto colado.txt
+Documento
+Vamos criar um novo tipo de relatório para os eventos realizados pela ENAJU.
+A ideia é após cada evento gerar um relatório sintético dos temas tratados, da participação, e do problema que ele abordou e agenda que deixou. Também fazer uma conexão direta com a s capacidadesproporcionadas. Vamos fazer o piloto com o webnário ocorrido na segunda feira.
+Ele foi transmitido pelo you tube. consegui as legendas fiz uma pipeline de extração e gerei um relatório nno vscode, no entando as análises do notebooklm foram mais substanciais. veja tudo :
+
+anexo os produtos gerados pelo vscode e o chat com oo notebooklm
+
+Vou tratar os anexos como insumos de desenho do novo modelo: separar o que serve para prestação de contas, o que serve para curadoria pedagógica e o que precisa virar análise substantiva do evento. Em seguida, monto uma primeira versão-piloto já aplicada ao webinário.
+
+Pensou por 1m 7s
+Li os anexos e a conclusão é clara: o relatório do VS Code funciona bem como registro administrativo e rastreável, mas ainda não entrega o tipo de inteligência institucional que a ENAJU precisa. O NotebookLM capturou melhor o “problema público”, as tensões jurídicas e a agenda decorrente, mas falta padronização, rastreabilidade e conexão direta com capacidades formativas.
+
+1. Proposta: novo tipo de relatório da ENAJU
+Sugiro criar o Relatório ENAJU de Síntese, Capacidades e Agenda.
+
+Ele não seria apenas um relatório de produto. Seria um relatório curto, pós-evento, voltado a responder cinco perguntas:
+
+Que problema público ou institucional o evento enfrentou?
+
+Quais temas centrais foram tratados?
+
+Que capacidades o evento ajudou a desenvolver nos participantes?
+
+Que agenda técnica, normativa, pedagógica ou institucional o evento deixou?
+
+Que produtos derivados podem ser gerados pela ENAJU?
+
+O modelo aproveita o que o relatório automático já tem de útil — duração, metadados, timestamps, potencial de reaproveitamento e necessidade de revisão humana — mas corrige sua limitação principal: a categorização por palavras-chave foi superficial e chegou a gerar blocos como “Pessoa / Fazer / Questão” e nomes imprecisos, exigindo curadoria humana.
+
+Relatório-piloto ENAJU
+Webinário “Precisamos Falar de Cuidados e Pessoas Idosas”
+1. Identificação sintética
+Evento: Webinário – Precisamos Falar de Cuidados e Pessoas Idosas
+Canal: Conselho Nacional de Justiça
+Data de publicação registrada no relatório automático: 2 de junho de 2026
+Duração: 1h53min
+Vinculação institucional: CNJ, Grupo de Trabalho sobre Política de Cuidados no Poder Judiciário, com apoio da ENAJU.
+
+2. Problema público abordado
+O evento enfrentou o problema da insuficiência de redes públicas, familiares, jurídicas e comunitárias para assegurar cuidado digno às pessoas idosas, especialmente no contexto do envelhecimento populacional, da sobrecarga feminina, da violência intrafamiliar, da institucionalização em ILPIs e da ausência de serviços estruturados de cuidado de longa duração.
+
+A fala de abertura enquadrou o cuidado como tema de justiça social, igualdade de gênero, política pública e direitos fundamentais, destacando que o cuidado permanece invisível, naturalizado e sem reconhecimento social, econômico e institucional.
+
+Esse enquadramento é juridicamente consistente com a Constituição Federal, cujo art. 230 atribui à família, à sociedade e ao Estado o dever de amparar as pessoas idosas, e com a Lei nº 15.069/2024, que instituiu a Política Nacional de Cuidados. 
+ 
+
+3. Síntese substantiva dos temas tratados
+O primeiro eixo foi o cuidado como responsabilidade coletiva, e não como favor, destino privado ou obrigação exclusivamente familiar. A abertura destacou que a dignidade, a autonomia e a proteção da pessoa idosa só se concretizam quando há uma rede efetiva de cuidados.
+
+O segundo eixo foi a judicialização e desjudicialização do cuidado. A professora Guita Grin Debert apresentou pesquisa sobre Ministério Público, Defensoria Pública e delegacias especializadas, analisando como essas instituições redefinem obrigações familiares e responsabilidades estatais no cuidado da pessoa idosa.
+
+O terceiro eixo foi a crítica à conciliação automática em situações de violência ou abandono. A exposição trouxe o conceito de “harmonia coerciva”, de Laura Nader, para problematizar métodos conciliatórios quando há assimetria de poder, risco de controle social e responsabilização indevida da família pela ausência de políticas públicas.
+
+O quarto eixo foi a lacuna de serviços públicos de cuidado de longa duração. Foram apresentados dados do Paraná sobre ILPIs: 435 instituições visitadas, 436 inspeções em 137 municípios e 9.080 pessoas institucionalizadas em 2025. Também se destacou que muitas pessoas são retiradas de seus lares porque as redes de assistência social e saúde não oferecem apoio suficiente.
+
+O quinto eixo foi a predominância do setor privado nas ILPIs e a retirada do Estado. A fala registrou que 82,3% das instituições cobravam pelos serviços e que 64,4% tinham fins lucrativos, apontando a insuficiência de estrutura pública para atendimento digno e territorializado.
+
+O sexto eixo foi a diversidade no envelhecimento. O evento abordou a necessidade de respeitar identidade cultural, território, orientação sexual, vínculos comunitários e modos de vida das pessoas idosas, inclusive indígenas, rurais e LGBTQIA+.
+
+4. Participação e dinâmica do evento
+O relatório automático registrou 132 interações, sendo 66 perguntas e 66 comentários, com densidade estimada de 70,1 interações por hora. Esses números devem ser tratados com cautela, porque a classificação automática confundiu falas do evento com perguntas do público e o próprio relatório recomenda validação humana de falantes, trechos e interações.
+
+A análise do NotebookLM foi mais útil para compreender a qualidade do debate: identificou perguntas sobre etarismo, lei de racismo, idosos que moram sozinhos, famílias compostas por idosos cuidadores e a necessidade de colocar as pessoas idosas como protagonistas da discussão sobre seus direitos.
+
+5. Capacidades proporcionadas pela atividade
+O webinário fortaleceu ao menos seis capacidades institucionais e profissionais:
+
+Capacidade	Como o evento contribuiu
+Leitura jurídica do cuidado	Relacionou cuidado, direitos fundamentais, Estatuto da Pessoa Idosa, Constituição e Política Nacional de Cuidados.
+Diagnóstico de problemas públicos complexos	Mostrou que o cuidado envolve demografia, gênero, pobreza, violência familiar, ausência estatal e desenho institucional.
+Análise crítica do sistema de justiça	Problematizou conciliação, mediação e desjudicialização quando usadas sem considerar desigualdade de poder.
+Formulação de políticas públicas	Indicou a necessidade de serviços de cuidado domiciliar, centros-dia, suporte territorial e alternativas à institucionalização.
+Governança interinstitucional	Conectou Judiciário, Ministério Público, Defensoria, segurança pública, assistência social, saúde, municípios e União.
+Sensibilidade ética e antidiscriminatória	Reforçou o enfrentamento ao etarismo, à invisibilidade das mulheres cuidadoras e às desigualdades no envelhecimento.
+6. Agenda deixada pelo webinário
+A agenda técnica deixada pelo evento pode ser organizada em cinco frentes:
+
+1. Agenda normativa: acompanhar a implementação da Política Nacional de Cuidados e sua regulamentação. A Lei nº 15.069/2024 institui a Política Nacional de Cuidados e o Decreto nº 12.562/2025 regulamenta dispositivos sobre o Plano Nacional de Cuidados. 
+ 
+
+2. Agenda internacional: acompanhar a tramitação da Convenção Interamericana sobre a Proteção dos Direitos Humanos dos Idosos. Na Câmara dos Deputados, a MSC 412/2017 foi transformada no PDC 863/2017, proposição sujeita à apreciação do Plenário. 
+
+3. Agenda de serviços: mapear lacunas de cuidado domiciliar, centros-dia, atenção básica, SUAS, saúde mental, ILPIs, cuidadores sociais e alternativas comunitárias à institucionalização.
+
+4. Agenda do sistema de justiça: desenvolver protocolos para evitar que a conciliação familiar reproduza violência, abandono ou transferência indevida da responsabilidade estatal para famílias vulneráveis.
+
+5. Agenda pedagógica da ENAJU: transformar o webinário em trilha curta sobre cuidado, direitos da pessoa idosa e sistema de justiça; produzir cartilha de perguntas frequentes; criar estudo de caso sobre “harmonia coerciva”; e organizar matriz de competências para magistrados, servidores e equipes interinstitucionais.
+
+7. Produto pedagógico derivado recomendado
+A partir deste evento, a ENAJU pode gerar quatro produtos:
+
+Síntese executiva de 2 páginas para gestores.
+
+Mapa de problemas e capacidades para uso interno da Escola.
+
+Roteiro de aula ou oficina sobre cuidado, pessoa idosa e sistema de justiça.
+
+Banco de perguntas críticas para futuras formações: etarismo, ILPIs, cuidado domiciliar, mediação em conflitos familiares, violência contra pessoa idosa, interseccionalidade e atuação do Judiciário.
+
+8. Estrutura final recomendada para os próximos relatórios
+Para os próximos eventos da ENAJU, eu usaria este sumário-padrão:
+
+Identificação do evento
+
+Problema público/institucional abordado
+
+Tese central do evento
+
+Principais temas tratados
+
+Participação e dinâmica
+
+Capacidades proporcionadas
+
+Conexão com políticas públicas, normas ou agendas institucionais
+
+Agenda deixada
+
+Produtos derivados recomendados
+
+Pontos de atenção para curadoria humana
+
+Timestamps estratégicos
+
+Conclusão orientada a valor público
+
+9. Conclusão
+O novo relatório deve deixar de ser apenas um “registro do que aconteceu” e passar a ser um instrumento de inteligência pedagógica e institucional da ENAJU. Para este piloto, a tese central pode ser formulada assim:
+
+O cuidado de pessoas idosas é um problema público de justiça, governança e direitos humanos; não pode ser tratado como responsabilidade privada das famílias, nem resolvido apenas por conciliação, institucionalização ou proteção normativa abstrata. A formação promovida pela ENAJU deve capacitar o sistema de justiça para reconhecer vulnerabilidades, exigir políticas públicas, proteger autonomia e estruturar redes efetivas de cuidado.
+
+
+consegue ler os indicadores das polítcas judiciárias da COPJ do cnj nmo link abaixo e criar conexões e como o evento impulsionou?
+
+https://paineisanalytics.cnj.jus.br/single/?appid=8ca17761-32d1-4af4-8ace-3a04f40a1e96&sheet=7aeec0d1-6fb6-466a-a113-b4fb647136df&theme=classic&lang=pt-BR&opt=ctxmenu,currsel
+
+Vou cruzar o painel da COPJ com o relatório-piloto do webinário: primeiro identifico quais indicadores aparecem no painel e depois traduzo o impacto do evento em conexões mensuráveis para a ENAJU.
+
+O painel do link retornou bloqueio de acesso no meu ambiente, então não consigo afirmar valores exatos exibidos ali. Mesmo assim, consegui usar os atos e páginas oficiais do CNJ para reconstruir os eixos de indicadores e fazer a conexão com o evento.
+
+Pensou por 45s
+Consigo fazer a conexão, com uma ressalva: o painel do link retornou 403 – acesso bloqueado no meu ambiente, então não consegui ler os valores exatos exibidos no dashboard. Mas consegui reconstruir os eixos e indicadores relevantes a partir dos atos oficiais do CNJ sobre a COPJ/PJNP e conectar isso ao webinário.
+
+1. Leitura institucional do painel da COPJ
+O painel da COPJ deve ser entendido como instrumento de governança das Políticas Judiciárias Nacionais Programáticas — PJNP. A Instrução Normativa CNJ nº 112/2026 estabelece que essas políticas devem ter: problema estruturalmente delimitado, estrutura de governança específica e acompanhamento por indicadores e metas de desempenho. 
+
+A mesma norma determina que o sistema de PJNP deve disponibilizar dados do ciclo de gestão, relatórios gerenciais, formas de acesso e painel com identificação das políticas por eixos temáticos, planos de ação e resultados alcançados. Também deixa claro que o sistema serve para padronizar registros, garantir rastreabilidade, ampliar transparência e subsidiar decisões estratégicas com base em evidências. 
+
+Isso permite conectar o webinário não apenas como “evento realizado”, mas como entrega de política judiciária, produto formativo, ação de comunicação, insumo de monitoramento social e evidência de implementação.
+
+2. Conexão direta entre indicadores COPJ e o webinário
+Eixo/indicador da COPJ/PJNP	Como deve ser lido	Como o webinário impulsionou
+Diagnóstico do problema público	A política precisa partir de problema diagnosticado e delimitado.	O evento qualificou o problema do cuidado de pessoas idosas como tema de justiça, gênero, envelhecimento, violência, família, Estado e rede de proteção.
+Plano de ação da política	A PJNP deve registrar objetivos, iniciativas, responsáveis, prazos e resultados esperados.	O webinário gera insumos para um plano de ação da Política de Cuidados e da Política Judiciária sobre Pessoas Idosas.
+Produtos entregues	A COPJ monitora produtos concluídos e em execução.	O evento é produto em si: webinário, transcrição, relatório, síntese pedagógica, banco de perguntas, trilha formativa e material de apoio.
+Capacitação	A Resolução CNJ nº 520/2023 prevê cursos, palestras e eventos para capacitar juízes, servidores, auxiliares e atores externos.	O webinário cumpriu função formativa e pode ser registrado como ação de capacitação/sensibilização sobre cuidado, pessoa idosa e sistema de justiça. 
+Governança interinstitucional	As políticas devem estimular trabalho colaborativo, rede institucional e visão sistêmica.	O evento conectou CNJ, ENAJU, sistema de justiça, Ministério Público, Defensoria, delegacias, academia, assistência social, saúde e políticas de cuidado.
+Monitoramento operacional	Verifica entregas imediatas e obrigações normativas.	O evento pode alimentar indicador de ações realizadas, público alcançado, produtos publicados e temas abordados.
+Monitoramento estratégico	Mede se a política avança em seus objetivos.	O evento fortalece objetivos como enfrentamento ao etarismo, qualificação do atendimento, proteção da pessoa idosa e aprimoramento das redes.
+Monitoramento social	Mede impacto social e percepção da comunidade.	As perguntas do público e os temas recorrentes funcionam como evidências de demandas sociais: ILPIs, idosos sozinhos, violência familiar, cuidadoras, etarismo e mediação.
+Transparência e rastreabilidade	O painel deve divulgar resultados, produtos, ações e evidências.	O relatório pós-evento pode virar evidência rastreável para o painel da COPJ, com timestamps, síntese temática e conexão com capacidades.
+Inovação e gestão do conhecimento	A COPJ deve apoiar boas práticas, aprendizagem e aprimoramento das políticas.	O evento transforma conhecimento acadêmico e prático em agenda institucional para novas formações e protocolos.
+3. A política mais diretamente impulsionada: Pessoas Idosas
+A conexão mais forte é com a Resolução CNJ nº 520/2023, que institui a Política Judiciária sobre Pessoas Idosas e suas interseccionalidades. Ela define como princípios a dignidade da pessoa humana, autonomia da pessoa idosa, melhor interesse em conflitos familiares, solidariedade intergeracional, abordagem multidisciplinar e acesso à justiça. 
+
+O webinário impulsiona essa política porque tratou exatamente desses pontos: cuidado de longa duração, violência doméstica e familiar contra idosos, mediação/conciliação, redes de proteção, institucionalização em ILPIs, envelhecimento digno e autonomia.
+
+A Resolução também prevê que os tribunais promovam cursos, palestras e eventos para capacitar magistrados, servidores, auxiliares do Judiciário e atores externos. Nesse ponto, o webinário pode ser registrado como ação concreta de implementação da política, não apenas como atividade educacional isolada. 
+
+4. A segunda política impulsionada: Política de Cuidados no Poder Judiciário
+A Portaria CNJ nº 379/2025 instituiu Grupo de Trabalho para elaborar proposta de ato normativo sobre a Política de Cuidados no Poder Judiciário. A norma trata o cuidado como direito humano autônomo em três dimensões: direito de ser cuidado, direito de cuidar e direito ao autocuidado. 
+
+O webinário impulsionou diretamente essa agenda porque organizou o debate em torno das pessoas idosas como sujeitos que:
+
+precisam ser cuidadas;
+
+também cuidam de outras pessoas;
+
+têm direito ao autocuidado, à autonomia e à participação social.
+
+Essa formulação apareceu no próprio evento, quando se destacou que pessoas idosas podem ocupar os três lugares do cuidado: recebem cuidado, cuidam de outros e precisam exercer autocuidado.
+
+Além disso, o GT da Política de Cuidados deve propor diretrizes, instrumentos, medidas de apoio e parâmetros de monitoramento, avaliação e transparência. O webinário oferece material substantivo para esses quatro itens: conceitos, problemas, evidências, riscos e agenda de implementação. 
+
+5. Como registrar o impacto do evento no relatório ENAJU
+Sugiro incluir no relatório uma seção específica chamada:
+
+“Contribuição para indicadores das Políticas Judiciárias Nacionais”
+Texto sugerido:
+
+O webinário contribuiu para a implementação e o monitoramento das Políticas Judiciárias Nacionais acompanhadas pela COPJ/CNJ, especialmente a Política Judiciária sobre Pessoas Idosas e suas interseccionalidades e a agenda de construção da Política de Cuidados no Poder Judiciário. A atividade produziu evidências de capacitação, sensibilização, disseminação de diretrizes, articulação interinstitucional, identificação de problemas públicos e geração de insumos para produtos formativos e normativos.
+
+Depois, usar esta matriz:
+
+Indicador sugerido	Evidência gerada pelo evento	Forma de comprovação
+Ação de capacitação realizada	Webinário de 1h53min sobre cuidado e pessoas idosas	Link do vídeo, programação, relatório e transcrição
+Produto de conhecimento entregue	Relatório sintético, transcrição, síntese de temas e agenda	Relatório ENAJU pós-evento
+Tema estratégico trabalhado	Cuidado, envelhecimento, etarismo, violência, ILPIs, rede de proteção	Síntese temática
+Política judiciária relacionada	Resolução CNJ nº 520/2023 e Política de Cuidados	Mapa normativo
+Público sensibilizado	Participantes do webinário e audiência no YouTube	Dados de visualização, inscritos e interações
+Agenda gerada	Protocolos, cursos, oficinas, banco de perguntas, trilha formativa	Plano de encaminhamentos
+Evidência de demanda social	Perguntas sobre etarismo, idosos sozinhos, famílias cuidadoras e ILPIs	Mapa de perguntas e comentários
+Capacidade desenvolvida	Leitura jurídica, intersetorial, protetiva e antidiscriminatória do cuidado	Matriz de capacidades
+6. Formulação analítica: como o evento “impulsionou” a política
+O evento impulsionou as políticas judiciárias em quatro níveis.
+
+No nível operacional, gerou uma entrega concreta: um webinário formativo, com duração, tema, participantes, transcrição, relatório e possibilidade de reaproveitamento pedagógico. O relatório automático já registra duração de 1h53min, sete blocos temáticos estimados e potencial alto de reaproveitamento pedagógico, embora exija revisão humana.
+
+No nível estratégico, ajudou a traduzir o cuidado de pessoas idosas em problema público multidimensional. A abertura destacou que o cuidado não é questão privada, mas tema de justiça social, igualdade de gênero, política pública e direitos fundamentais.
+
+No nível de governança, conectou atores e políticas: CNJ, ENAJU, Política de Cuidados, Política Judiciária sobre Pessoas Idosas, sistema de justiça, academia, Ministério Público, Defensoria Pública, delegacias especializadas, saúde e assistência social.
+
+No nível de monitoramento social, revelou demandas e tensões que podem orientar novas ações: limites da conciliação familiar, risco de responsabilização excessiva das famílias, ausência de serviços públicos de cuidado, desafios das ILPIs, etarismo e sobrecarga das mulheres cuidadoras. A análise do NotebookLM captou esses pontos com mais profundidade que o relatório automático.
+
+7. Síntese para inserir no relatório final
+Conexão com a COPJ/CNJ:
+O webinário constitui evidência de implementação de políticas judiciárias nacionais, especialmente nos campos de capacitação, sensibilização, articulação interinstitucional, produção de conhecimento e monitoramento social. Sua contribuição está alinhada à lógica da COPJ de registrar planos de ação, iniciativas, produtos e resultados das PJNP, com rastreabilidade, transparência e tomada de decisão baseada em evidências.
+
+Contribuição substantiva:
+A atividade deslocou o cuidado de pessoas idosas do campo privado-familiar para o campo público-institucional, demonstrando que o Poder Judiciário precisa atuar não apenas na resolução de conflitos, mas também na indução de redes, protocolos, políticas públicas e capacidades institucionais.
+
+Frase-síntese:
+O webinário impulsionou as políticas judiciárias da COPJ ao transformar o tema do cuidado de pessoas idosas em evidência formativa, agenda de governança e insumo de monitoramento para políticas nacionais voltadas à proteção, autonomia, dignidade e acesso à justiça das pessoas idosas.
+
+
+inclua quem foi o apresentador, palestrantes, etc
+faça um cabeçalho logo no início temático com qual a políticas (as), etc
+
+Vou ajustar o modelo do relatório com duas mudanças: um cabeçalho temático logo no início, ligado às políticas judiciárias, e uma ficha de realização com mediação, abertura e palestrantes.
+
+Pensou por 25s
+Perfeito. Abaixo está uma versão revisada do início do relatório, já com cabeçalho temático, políticas relacionadas, ficha de realização e participantes/roles.
+
+Relatório ENAJU de Síntese, Capacidades e Agenda
+Webinário “Precisamos Falar de Cuidados e Pessoas Idosas”
+Cabeçalho temático
+Tema central:
+Cuidado, envelhecimento, pessoas idosas, acesso à justiça, violência intrafamiliar, etarismo, políticas públicas e redes de proteção.
+
+Problema público enfrentado:
+A insuficiência de redes públicas e institucionais de cuidado para pessoas idosas, com sobrecarga das famílias — especialmente das mulheres —, risco de violência e abandono, judicialização de conflitos familiares e ausência de respostas públicas estruturadas para o cuidado de longa duração.
+
+Políticas judiciárias diretamente relacionadas:
+
+Política Judiciária sobre Pessoas Idosas e suas Interseccionalidades — Resolução CNJ nº 520/2023
+Política voltada ao enfrentamento da violência contra pessoas idosas, à solução adequada de conflitos e à garantia de princípios como dignidade da pessoa humana, autonomia, melhor interesse da pessoa idosa, solidariedade intergeracional e abordagem multidisciplinar. 
+
+Agenda da Política de Cuidados no Poder Judiciário — Portaria CNJ nº 379/2025
+Grupo de Trabalho criado para elaborar proposta normativa sobre a Política de Cuidados no Poder Judiciário, considerando o cuidado como direito humano autônomo em três dimensões: direito de ser cuidado, direito de cuidar e direito ao autocuidado. 
+
+Gestão das Políticas Judiciárias Nacionais Programáticas — Instrução Normativa CNJ nº 112/2026
+Norma que estrutura o ciclo de gestão das políticas judiciárias nacionais programáticas em formulação, implementação, monitoramento e avaliação, com foco em resultados relevantes para a sociedade. 
+
+Governança das Políticas Judiciárias Nacionais — COPJ/CNJ
+A COPJ coordena o gerenciamento das Políticas Judiciárias Nacionais Programáticas, seus instrumentos de gestão, portfólio, divulgação, monitoramento e avaliação de indicadores estratégicos. 
+
+Política Judiciária Nacional de Tratamento Adequado dos Conflitos — Resolução CNJ nº 125/2010
+Relaciona-se ao evento porque o debate problematizou os limites da conciliação, mediação e desjudicialização em situações de violência, abandono ou forte assimetria familiar. 
+
+Conexão com indicadores da COPJ:
+O webinário pode ser registrado como ação de capacitação, sensibilização, produção de conhecimento, articulação interinstitucional, monitoramento social de demandas e impulso à implementação de política judiciária nacional.
+
+1. Identificação da atividade
+Título: Webinário – Precisamos Falar de Cuidados e Pessoas Idosas
+Formato: Webinário formativo transmitido pelo YouTube
+Canal: Conselho Nacional de Justiça
+Duração: 1h53min
+Data de publicação registrada no relatório automático: 2 de junho de 2026
+Instituição promotora: Conselho Nacional de Justiça — CNJ
+Vinculação temática: Grupo de Trabalho sobre Política de Cuidados no Poder Judiciário
+Apoio institucional: ENAJU
+Tipo de produto: Ação formativa, evento de sensibilização, produto de conhecimento e insumo para política judiciária.
+
+2. Realização, apresentação e participantes
+A identificação abaixo foi construída a partir da transcrição automática, do relatório gerado e da análise do NotebookLM. Como a transcrição possui erros de reconhecimento de voz, recomenda-se validação final dos nomes antes da publicação institucional. O próprio relatório automático alerta que nomes, falantes e instituições precisam de revisão humana.
+
+2.1 Realização institucional
+Promoção:
+Conselho Nacional de Justiça — CNJ.
+
+Apoio:
+ENAJU.
+
+Vinculação interna:
+Grupo de Trabalho relacionado à Política de Cuidados no Poder Judiciário.
+
+2.2 Abertura institucional
+Conselheira Noêmia Porto
+Responsável por fala de abertura, na qual enquadrou o cuidado de pessoas idosas como tema de justiça social, igualdade de gênero, política pública e efetivação de direitos fundamentais. A fala destacou o envelhecimento populacional, a sobrecarga feminina do cuidado, o combate ao etarismo e a necessidade de reconhecer o cuidado como responsabilidade coletiva.
+
+2.3 Apresentação/condução inicial
+Dra. Inês Virgínia Soares
+Participou da abertura e da condução inicial, contextualizando o evento, mencionando o documentário “Precisamos Falar de Cuidados” e ressaltando os três eixos do direito ao cuidado: direito ao autocuidado, direito de cuidar e direito de ser cuidado.
+
+2.4 Coordenação/mediação
+Dra. Franciele Nascimento
+Atuou na coordenação dos trabalhos, apresentou as expositoras e conduziu a dinâmica do webinário, incluindo a passagem de palavra às palestrantes e a mediação do debate.
+
+2.5 Palestrantes/expositoras
+Professora Guita Grin Debert — Unicamp
+Professora emérita da Unicamp, vinculada à área de Antropologia, apresentou pesquisa sobre a judicialização do cuidado da pessoa idosa, com foco na atuação do Ministério Público, Defensoria Pública e delegacias especializadas. Sua exposição tratou das formas de violência contra pessoas idosas, da centralidade da família nos conflitos e dos riscos de respostas institucionais baseadas apenas em conciliação ou desjudicialização.
+
+Dra. Mariana Dias — Ministério Público do Paraná
+Promotora de Justiça do MP/PR, abordou envelhecimento, política de cuidados, Instituições de Longa Permanência para Idosos — ILPIs, ausência de estrutura pública suficiente e desafios para garantir cuidado digno, territorializado e compatível com a autonomia da pessoa idosa. A análise do NotebookLM também destacou sua crítica à não ratificação, pelo Brasil, da Convenção Interamericana sobre os Direitos das Pessoas Idosas.
+
+2.6 Participações mencionadas no debate
+Dra. Luciana Ortiz
+Nome mencionado na abertura e no relatório como participante do evento. Como a transcrição apresenta instabilidade no reconhecimento do nome, recomenda-se confirmação do papel exato antes da versão final.
+
+Epitácio Luiz — Ministério dos Direitos Humanos
+Participação destacada na análise do NotebookLM, especialmente pela defesa de que pessoas idosas devem ser protagonistas das discussões sobre seus próprios direitos, e não apenas objeto de estudo ou intervenção institucional.
+
+3. Síntese executiva ajustada
+O webinário “Precisamos Falar de Cuidados e Pessoas Idosas” discutiu o cuidado como problema público de justiça, governança e direitos humanos. A atividade partiu do reconhecimento de que o envelhecimento populacional brasileiro exige respostas institucionais mais robustas, capazes de superar a naturalização do cuidado como dever privado das famílias.
+
+O evento conectou a agenda da pessoa idosa à Política de Cuidados no Poder Judiciário e à Política Judiciária sobre Pessoas Idosas e suas Interseccionalidades. A discussão destacou que pessoas idosas podem ocupar simultaneamente três posições: pessoas que precisam ser cuidadas, pessoas que cuidam de outras pessoas e sujeitos titulares do direito ao autocuidado.
+
+A atividade também impulsionou os indicadores das políticas judiciárias acompanhadas pela COPJ ao produzir evidências de capacitação, sensibilização, articulação interinstitucional, produção de conhecimento e identificação de demandas sociais relacionadas a etarismo, violência familiar, ILPIs, cuidado domiciliar, institucionalização e atuação do sistema de justiça.
+
+4. Conexão entre participantes, temas e políticas
+Participante/ator	Papel no evento	Tema impulsionado	Política judiciária relacionada
+CNJ	Promoção institucional	Política de cuidados, pessoas idosas e governança judiciária	COPJ/PJNP; Política de Cuidados; Política da Pessoa Idosa
+ENAJU	Apoio institucional	Formação, disseminação e produção de conhecimento	Capacitação e gestão do conhecimento
+Conselheira Noêmia Porto	Abertura institucional	Cuidado como responsabilidade coletiva; etarismo; sobrecarga feminina	Política de Cuidados; Resolução CNJ nº 520/2023
+Dra. Inês Virgínia Soares	Condução inicial/apresentação	Três dimensões do cuidado: cuidar, ser cuidado e autocuidado	Política de Cuidados no Poder Judiciário
+Dra. Franciele Nascimento	Coordenação/mediação	Organização do debate e integração das exposições	Capacitação e articulação institucional
+Profª Guita Grin Debert	Palestrante	Judicialização/desjudicialização; violência; conciliação; família e Estado	Política da Pessoa Idosa; Resolução CNJ nº 125/2010
+Dra. Mariana Dias	Palestrante	ILPIs, cuidado de longa duração, omissão estatal e redes públicas	Política da Pessoa Idosa; Política de Cuidados
+Epitácio Luiz	Participação no debate	Protagonismo das pessoas idosas e integração federativa	Direitos humanos e participação social
+5. Formulação para entrar no relatório final
+Sugiro inserir logo após o cabeçalho:
+
+Este webinário integra a agenda de implementação e fortalecimento das políticas judiciárias nacionais acompanhadas pelo CNJ, especialmente a Política Judiciária sobre Pessoas Idosas e suas Interseccionalidades, a agenda de formulação da Política de Cuidados no Poder Judiciário e o ciclo de gestão das Políticas Judiciárias Nacionais Programáticas coordenado pela COPJ. A atividade funcionou como ação de capacitação, sensibilização, produção de conhecimento e monitoramento social, ao transformar o tema do cuidado de pessoas idosas em problema público de justiça, governança, direitos humanos e articulação interinstitucional.
+
+E, para a ficha do evento:
+
+A atividade foi promovida pelo Conselho Nacional de Justiça, com apoio da ENAJU, e contou com abertura institucional da Conselheira Noêmia Porto, condução inicial de Dra. Inês Virgínia Soares, coordenação/mediação de Dra. Franciele Nascimento e exposições da Professora Guita Grin Debert e da Promotora de Justiça Mariana Dias. Também foram mencionadas participações no debate, como Dra. Luciana Ortiz e Epitácio Luiz, cuja identificação deve ser validada na revisão final da transcrição.
+
+
+
+Texto colado.txt
+Documento
+
+Texto colado (2).txt
+Documento
+
+Texto colado (3).txt
+Documento
+tenho mais informações geradas pelo notebooklm veja -os em anexo e proponha inclusão
+o foco desse primeiro relatório é ser um modelo para todos os outros portanto já me entregue com esse foco
+
+Vou incorporar os três novos textos como uma camada “analítica-editorial” do modelo, mas vou separar o que é aproveitável do que precisa de validação jurídica, porque há pequenas inconsistências nos números de leis nos anexos.
+
+Pensou por 25s
+Sim. Os novos anexos ajudam bastante porque trazem três camadas que faltavam ao modelo:
+
+Camada narrativa: transforma o relatório em leitura pública mais clara, com “revelações”, problema central e chamada para ação.
+
+Camada de briefing: organiza pontos críticos, marco legal, judicialização, ILPIs e desafios de implementação.
+
+Camada técnico-institucional: conecta evento, diagnóstico, atores, recomendações, interseccionalidade, envelhecimento no território e protagonismo da pessoa idosa.
+
+Há apenas uma correção importante: os anexos trazem variações como “Lei 14.852/2024”, “Lei 15.69/2024” e “Lei 1569/2024”. Para publicação, o correto é Lei nº 15.069/2024, que institui a Política Nacional de Cuidados. O Decreto nº 12.562/2025 regulamenta dispositivos ligados ao Plano Nacional de Cuidados. 
+
+Abaixo já entrego uma versão com foco de modelo-padrão para todos os relatórios da ENAJU, usando o webinário como piloto.
+
+Modelo ENAJU de Relatório Pós-Evento
+Síntese, Capacidades, Políticas Judiciárias e Agenda
+Cabeçalho temático
+Evento-piloto: Webinário “Precisamos Falar de Cuidados e Pessoas Idosas”
+Tema estruturante: cuidado, pessoas idosas, envelhecimento, acesso à justiça, etarismo, violência intrafamiliar, ILPIs, redes de proteção e políticas públicas.
+Problema público abordado: insuficiência de redes públicas, familiares, comunitárias e institucionais de cuidado para pessoas idosas, com sobrecarga das mulheres, risco de violência, abandono, institucionalização forçada e judicialização de conflitos familiares.
+
+Políticas judiciárias e agendas relacionadas:
+
+Política Judiciária sobre Pessoas Idosas e suas Interseccionalidades — Resolução CNJ nº 520/2023
+Relacionada ao enfrentamento da violência contra pessoas idosas, solução adequada de conflitos, autonomia, dignidade, interseccionalidade e abordagem multidisciplinar. 
+
+Política de Cuidados no Poder Judiciário — agenda em formulação pelo GT instituído pela Portaria CNJ nº 379/2025
+Relacionada ao direito de ser cuidado, direito de cuidar e direito ao autocuidado. 
+
+Política Nacional de Cuidados — Lei nº 15.069/2024
+Marco legal nacional que reconhece o cuidado como dimensão essencial da proteção social e promove a corresponsabilização entre Estado, família, sociedade e setor privado. 
+
+Gestão das Políticas Judiciárias Nacionais Programáticas — Instrução Normativa CNJ nº 112/2026
+Relacionada ao ciclo de formulação, implementação, monitoramento e avaliação das políticas judiciárias nacionais programáticas do CNJ. 
+
+Conexão com indicadores COPJ/CNJ:
+O evento pode ser registrado como ação de capacitação, sensibilização, produção de conhecimento, articulação interinstitucional, monitoramento social de demandas e impulso à implementação de política judiciária nacional.
+
+1. Ficha institucional do evento
+Esta seção deve aparecer em todos os relatórios.
+
+Campo	Preenchimento no piloto
+Título	Webinário “Precisamos Falar de Cuidados e Pessoas Idosas”
+Formato	Webinário transmitido pelo YouTube
+Duração	1h53min
+Promoção	Conselho Nacional de Justiça — CNJ
+Apoio	ENAJU
+Vinculação temática	Grupo de Trabalho de Política de Cuidados no Poder Judiciário
+Tipo de entrega	Evento formativo, ação de sensibilização, produto de conhecimento e insumo para política judiciária
+Público prioritário	Sistema de justiça, gestores, magistrados, servidores, atores de rede e público técnico interessado
+2. Realização, apresentação e participantes
+Esta seção deve ser padronizada para evitar que relatórios futuros fiquem sem memória institucional de quem conduziu e produziu o conhecimento.
+
+2.1 Abertura institucional
+Noêmia Porto — Conselheira do CNJ e responsável pelo tema da política de pessoas idosas no Conselho. Sua fala estruturou o cuidado como questão de justiça social, igualdade de gênero, política pública e efetivação de direitos fundamentais.
+
+2.2 Condução/apresentação inicial
+Inês Virgínia — Juíza Federal e integrante do CNJ. Contextualizou o evento e destacou a tríade do direito ao cuidado: direito de ser cuidado, direito de cuidar e direito ao autocuidado.
+
+2.3 Mediação
+Franciele Nascimento — Idealizadora do evento e mediadora. Atuou na organização da mesa, apresentação das expositoras e condução do debate.
+
+2.4 Palestrantes
+Guita Debert — Professora Emérita da Unicamp, pesquisadora em antropologia e judicialização do cuidado. Abordou a atuação do Ministério Público, Defensoria Pública e delegacias especializadas, com crítica à conciliação quando utilizada para devolver à família responsabilidades que deveriam contar com apoio estatal.
+
+Mariana Dias — Promotora de Justiça do Ministério Público do Paraná. Tratou de ILPIs, cuidado de longa duração, envelhecimento no território, ausência de serviços públicos, interseccionalidade e necessidade de políticas públicas estruturadas.
+
+2.5 Participação no debate
+Epitácio Luiz — Representante do Ministério dos Direitos Humanos e da Cidadania. Destacou o protagonismo das pessoas idosas, sintetizado na ideia de que decisões públicas sobre envelhecimento devem observar o princípio “Nada sobre nós sem nós”.
+
+3. Síntese executiva
+O webinário discutiu o cuidado de pessoas idosas como problema público de justiça, governança e direitos humanos. A atividade demonstrou que o envelhecimento populacional brasileiro é uma conquista civilizatória, mas também revela a fragilidade da infraestrutura estatal para garantir cuidado digno, especialmente quando a responsabilidade recai quase exclusivamente sobre famílias e mulheres cuidadoras.
+
+A tese central do evento foi que o cuidado não pode ser tratado como favor doméstico, destino individual ou obrigação privada. Deve ser compreendido como responsabilidade coletiva, com participação do Estado, da sociedade, das famílias, das redes comunitárias e do sistema de justiça.
+
+4. Problema público identificado
+O evento enfrentou cinco problemas conectados:
+
+Envelhecimento acelerado da população brasileira, com aumento da demanda por cuidado de longa duração.
+
+Feminização e invisibilidade do cuidado, com sobrecarga de filhas, esposas, noras, netas e mulheres idosas cuidadoras.
+
+Judicialização de conflitos familiares, muitas vezes tratados por mediação ou conciliação sem oferta pública suficiente de suporte.
+
+Déficit de serviços públicos de cuidado, como centros-dia, cuidado domiciliar, cuidadores sociais e apoio às famílias.
+
+Institucionalização por falta de alternativa, com expansão de ILPIs privadas e risco de afastamento da pessoa idosa de seu território, vínculos e autonomia.
+
+5. Principais achados do evento
+Para todos os relatórios futuros, recomendo usar a expressão “achados” em vez de apenas “temas abordados”. Isso torna o relatório mais analítico.
+
+Achado 1 — O cuidado saiu do campo privado para o campo dos direitos
+O cuidado foi apresentado como dimensão da proteção social e como tema de justiça, igualdade de gênero, política pública e direitos fundamentais. Esse enquadramento conecta diretamente o evento à Política Nacional de Cuidados e à agenda do CNJ sobre cuidado no Poder Judiciário.
+
+Achado 2 — A sobrecarga do cuidado tem gênero
+A ausência de serviços públicos desloca a responsabilidade para as famílias, especialmente para mulheres. O evento destacou renúncias profissionais, invisibilidade econômica, esgotamento mental e naturalização do trabalho feminino de cuidado.
+
+Achado 3 — A conciliação pode virar “harmonia coercitiva”
+A exposição da professora Guita Debert problematizou situações em que a mediação ou conciliação familiar pode funcionar como mecanismo de desoneração do Estado. Quando não há rede pública, a família é pressionada a cuidar mesmo sem estrutura, inclusive em contextos de violência, abandono ou vínculos rompidos.
+
+Achado 4 — Envelhecer no território exige rede concreta
+O princípio do aging in place, ou envelhecimento no lugar, depende de serviços reais: atenção domiciliar, assistência social, saúde, cuidadores, centros-dia, transporte, inclusão digital e apoio à família. Sem isso, a permanência no lar vira discurso sem capacidade operacional.
+
+Achado 5 — Nem todo mundo envelhece igual
+O evento trouxe a interseccionalidade como chave de leitura: gênero, raça, classe, deficiência, território, orientação sexual e vínculos familiares alteram profundamente a experiência do envelhecimento. O relatório técnico também destacou o risco de etarismo institucional, inclusive na digitalização forçada dos serviços.
+
+6. Capacidades proporcionadas
+Esta é a seção mais importante para transformar o relatório em modelo ENAJU.
+
+Capacidade desenvolvida	Evidência no evento	Aplicação para a ENAJU
+Leitura jurídica do cuidado	Constituição, Estatuto da Pessoa Idosa, Política Nacional de Cuidados e Resolução CNJ nº 520/2023	Formação sobre cuidado como direito e dever compartilhado
+Diagnóstico de problemas complexos	Cuidado aparece como tema jurídico, social, familiar, econômico e territorial	Capacitar gestores e operadores para leitura sistêmica
+Análise crítica da autocomposição	Debate sobre mediação, conciliação e harmonia coercitiva	Desenvolver protocolos para conflitos envolvendo pessoas idosas
+Governança interinstitucional	Integração entre Judiciário, MP, Defensoria, delegacias, saúde e assistência social	Criar trilhas formativas interinstitucionais
+Sensibilidade antidiscriminatória	Etarismo, gênero, raça, deficiência, LGBTQIA+ e exclusão digital	Formação em atendimento humanizado e acessível
+Formulação de políticas públicas	Necessidade de centros-dia, cuidado domiciliar, cuidadores sociais e apoio à família	Produzir oficinas de desenho de soluções e planos de ação
+Monitoramento social	Perguntas e demandas sobre ILPIs, idosos sozinhos, famílias cuidadoras e violência	Usar eventos como fonte de inteligência para políticas judiciárias
+7. Conexão com indicadores das políticas judiciárias
+Para todos os relatórios futuros, a ENAJU pode usar esta matriz.
+
+Dimensão COPJ/PJNP	Pergunta de monitoramento	Como o evento contribuiu
+Formulação	O evento qualificou um problema público?	Sim. Delimitou o cuidado da pessoa idosa como problema público e não apenas familiar.
+Implementação	O evento gerou ação concreta?	Sim. Webinário, transcrição, relatório, síntese, briefing e insumos pedagógicos.
+Capacitação	Houve formação ou sensibilização?	Sim. A atividade formou e sensibilizou sobre cuidado, envelhecimento, etarismo, ILPIs e sistema de justiça.
+Governança	Houve articulação de atores?	Sim. CNJ, ENAJU, MP, academia, sistema de justiça, direitos humanos e redes públicas.
+Monitoramento social	O evento revelou demandas da sociedade?	Sim. Violência familiar, idosos sozinhos, institucionalização, cuidadoras e acesso a serviços.
+Avaliação	O evento deixou agenda mensurável?	Sim. Protocolos, trilhas formativas, produtos derivados e recomendações de política pública.
+Transparência	Há evidências rastreáveis?	Sim. Vídeo, legendas, transcrição, relatório automático, briefing e relatório técnico.
+8. Agenda deixada pelo evento
+A seção “agenda deixada” deve ser obrigatória em todos os relatórios. Ela transforma o evento em continuidade institucional.
+
+8.1 Agenda normativa
+Acompanhar a implementação da Lei nº 15.069/2024 e sua conexão com a futura Política de Cuidados no Poder Judiciário. Também é recomendável acompanhar a agenda internacional sobre direitos das pessoas idosas e a discussão sobre a Convenção Interamericana.
+
+8.2 Agenda de serviços
+Mapear a disponibilidade de cuidado domiciliar, centros-dia, ILPIs, cuidadores sociais, apoio às famílias cuidadoras e atendimento presencial/multicanal para pessoas idosas.
+
+8.3 Agenda do sistema de justiça
+Desenvolver orientação para casos em que a conciliação familiar pode ser inadequada, especialmente quando houver violência, abandono, exploração financeira, dependência econômica, vínculos familiares rompidos ou risco de revitimização.
+
+8.4 Agenda pedagógica da ENAJU
+Converter o evento em:
+
+trilha formativa curta;
+
+cartilha de perguntas frequentes;
+
+estudo de caso sobre harmonia coercitiva;
+
+oficina sobre cuidado e políticas judiciárias;
+
+matriz de competências para atendimento à pessoa idosa;
+
+material de sensibilização sobre etarismo institucional.
+
+9. Produtos derivados recomendados
+Para o modelo geral da ENAJU, cada relatório deve indicar produtos derivados possíveis. No piloto, recomendo:
+
+Briefing executivo de 2 páginas para gestores do CNJ e da ENAJU.
+
+Nota técnica pedagógica conectando o evento às políticas judiciárias.
+
+Mapa de capacidades desenvolvidas para fins de monitoramento educacional.
+
+Banco de perguntas e respostas sobre cuidado, pessoa idosa e sistema de justiça.
+
+Roteiro de oficina sobre judicialização, cuidado familiar e rede pública.
+
+Cards institucionais com achados centrais do evento.
+
+Checklist para análise de eventos futuros, permitindo replicar o modelo.
+
+10. Bloco de qualidade e validação humana
+Esta seção deve entrar em todos os relatórios porque os insumos vêm de transcrição automática, IA e curadoria posterior.
+
+Pontos que precisam de validação antes da publicação:
+
+nomes e cargos dos participantes;
+
+número correto de leis e atos normativos;
+
+dados estatísticos apresentados oralmente;
+
+atribuição de falas;
+
+identificação de perguntas do público;
+
+trechos sensíveis envolvendo casos concretos;
+
+diferenciação entre afirmação da palestrante, interpretação do relatório e recomendação da ENAJU.
+
+No piloto, a principal correção é substituir todas as referências imprecisas à Política Nacional de Cuidados por Lei nº 15.069/2024. 
+
+11. Texto-padrão para conclusão
+Sugiro que todos os relatórios terminem com uma conclusão orientada a valor público.
+
+Conclusão do piloto:
+
+O webinário “Precisamos Falar de Cuidados e Pessoas Idosas” demonstrou que o cuidado é tema estruturante para o sistema de justiça. Ao discutir envelhecimento, sobrecarga feminina, violência intrafamiliar, ILPIs, etarismo, interseccionalidade e ausência de serviços públicos, o evento impulsionou a implementação das políticas judiciárias acompanhadas pelo CNJ e ofereceu à ENAJU insumos para formação, sensibilização, produção de conhecimento e governança interinstitucional.
+
+A principal contribuição da atividade foi deslocar o cuidado da esfera privada para o campo público dos direitos, mostrando que a dignidade da pessoa idosa depende de redes concretas, protocolos adequados, políticas públicas financiadas e protagonismo das próprias pessoas idosas.
+
+Frase-síntese do relatório:
+O evento transformou o cuidado de pessoas idosas em agenda de justiça, governança e formação, oferecendo evidências para políticas judiciárias, capacidades para o sistema de justiça e caminhos para uma atuação pública mais corresponsável, intersetorial e orientada à dignidade.
+
+12. Estrutura-padrão final para todos os relatórios ENAJU
+A partir deste piloto, eu recomendo que o modelo oficial tenha esta ordem:
+
+Cabeçalho temático
+
+Políticas judiciárias relacionadas
+
+Ficha institucional do evento
+
+Realização, apresentação, mediação e palestrantes
+
+Síntese executiva
+
+Problema público ou institucional abordado
+
+Principais achados
+
+Capacidades proporcionadas
+
+Conexão com indicadores COPJ/PJNP
+
+Participação e dinâmica do evento
+
+Agenda deixada
+
+Produtos derivados recomendados
+
+Riscos, limites e pontos de validação
+
+Conclusão orientada a valor público
+
+Anexos técnicos: transcrição, timestamps, links, materiais e fontes
+
+Esse formato serve para qualquer evento da ENAJU porque separa o que é registro, o que é análise, o que é capacidade formativa, o que é política judiciária e o que vira agenda institucional.
+
+
+ancore e fundamente o relatório nas cometencias abaixo da ENAJU:
+
+Art. 19. Compete à Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação:
+
+I. coordenar o planejamento e a implementação da política de formação e aperfeiçoamento dos servidores do Poder Judiciário, em articulação com as demais unidades da ENAJU;
+
+II - fomentar estudos, diagnósticos e levantamentos sobre necessidades de capacitação, competências e desempenho institucional;
+
+III - desenvolver e acompanhar projetos de inovação e transformação digital no âmbito educacional;
+
+IV -  produzir relatórios, diagnósticos e publicações técnicas;
+
+V  -  planejar e gerir projetos de inovação e melhoria contínua nas ações formativas;
+
+VI -  apoiar a implementação de soluções tecnológicas educacionais;
+
+VII -  disseminar boas práticas e resultados de inovação no Poder Judiciário;
+
+VIII -  monitorar indicadores de desempenho e avaliação das ações educacionais;
+
+IX - promover a cooperação técnica e o compartilhamento de práticas educacionais entre as escolas judiciais e unidades de formação dos tribunais;
+
+X - apoiar as escolas judiciais na implementação da Política Nacional de Formação;
+
+XI -  organizar eventos, seminários e encontros da Rede de Escolas Judiciais;
+
+XII - produzir e divulgar boletins, relatórios e materiais institucionais da Rede;
+
+XIII -  gerir os canais colaborativos e a identidade visual da Rede de Escolas Judiciais.
+
+Vou transformar as competências do art. 19 em espinha dorsal do modelo: cada bloco do relatório passará a ter finalidade institucional, evidência produzida e competência ENAJU correspondente.
+
+Pensou por 23s
+Perfeito. A partir das competências do art. 19, o relatório deixa de ser apenas um registro pós-evento e passa a ser um instrumento institucional da Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação da ENAJU.
+
+A lógica central deve ser esta:
+
+Cada relatório pós-evento da ENAJU deve demonstrar como a atividade contribuiu para formação, diagnóstico de necessidades, inovação educacional, produção técnica, avaliação de desempenho, cooperação entre escolas judiciais e disseminação de boas práticas no Poder Judiciário.
+
+Abaixo está a versão já ancorada nessas competências, com foco em servir de modelo para todos os próximos relatórios.
+
+Modelo ENAJU de Relatório Pós-Evento
+Síntese, Capacidades, Políticas Judiciárias, Indicadores e Agenda
+Fundamentação institucional
+Este relatório é produzido no âmbito das competências da Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação da ENAJU, especialmente para apoiar o planejamento, a implementação, o monitoramento e a avaliação das ações formativas voltadas aos servidores do Poder Judiciário.
+
+Nos termos do art. 19, o relatório cumpre função institucional ao:
+
+subsidiar a política de formação e aperfeiçoamento;
+
+gerar diagnósticos sobre necessidades de capacitação;
+
+produzir relatório técnico e material institucional;
+
+monitorar indicadores educacionais;
+
+disseminar boas práticas;
+
+apoiar escolas judiciais e unidades de formação;
+
+fortalecer a Rede de Escolas Judiciais;
+
+registrar resultados de inovação, cooperação e aprendizagem.
+
+No caso piloto, o webinário “Precisamos Falar de Cuidados e Pessoas Idosas” demonstra como um evento pode ser convertido em evidência formativa, diagnóstico institucional, agenda de políticas judiciárias e produto de conhecimento. Os anexos do NotebookLM destacam que o evento tratou do envelhecimento populacional, da feminização do cuidado, da judicialização dos conflitos familiares, da insuficiência de serviços públicos e da necessidade de redes de cuidado de longa duração.
+
+1. Cabeçalho temático do relatório
+Esta seção deve aparecer no início de todos os relatórios.
+
+Campo	Aplicação no modelo
+Evento	Webinário “Precisamos Falar de Cuidados e Pessoas Idosas”
+Tema estruturante	Cuidado, envelhecimento, pessoas idosas, acesso à justiça, etarismo, ILPIs, redes de proteção e políticas públicas
+Problema público abordado	Insuficiência de redes públicas e institucionais de cuidado, com sobrecarga das famílias e das mulheres cuidadoras
+Políticas relacionadas	Política Judiciária sobre Pessoas Idosas; Política de Cuidados no Poder Judiciário; Política Nacional de Cuidados; políticas de acesso à justiça e tratamento adequado de conflitos
+Competências ENAJU mobilizadas	Art. 19, incisos I, II, IV, V, VII, VIII, IX, X, XI e XII
+Tipo de entrega	Relatório técnico, síntese pedagógica, diagnóstico de capacidades, produto de conhecimento e insumo de planejamento formativo
+2. Matriz de ancoragem nas competências do art. 19
+Esta matriz deve ser incorporada ao modelo geral da ENAJU.
+
+Competência do art. 19	Como o relatório atende	Aplicação no webinário-piloto
+I — Coordenar o planejamento e a implementação da política de formação	O relatório identifica temas prioritários e transforma evento em insumo de planejamento educacional.	O cuidado de pessoas idosas é tratado como tema formativo relevante para servidores, magistrados e atores da rede.
+II — Fomentar estudos, diagnósticos e levantamentos sobre necessidades de capacitação, competências e desempenho institucional	O relatório extrai problemas, lacunas de conhecimento e capacidades necessárias.	Identifica necessidade de formação em cuidado, etarismo, violência intrafamiliar, ILPIs, conciliação e redes públicas.
+III — Desenvolver e acompanhar projetos de inovação e transformação digital no âmbito educacional	O relatório pode indicar uso de IA, transcrição, curadoria automatizada e reuso pedagógico de eventos.	O piloto usa legendas, pipeline de extração, relatório automatizado e análise do NotebookLM como base para inovação educacional.
+IV — Produzir relatórios, diagnósticos e publicações técnicas	Esta é a competência nuclear do produto.	O relatório consolida síntese executiva, achados, capacidades, agenda e recomendações.
+V — Planejar e gerir projetos de inovação e melhoria contínua nas ações formativas	O relatório identifica melhorias para futuras formações.	Recomenda trilha curta, cartilha, estudo de caso, oficina e banco de perguntas.
+VI — Apoiar a implementação de soluções tecnológicas educacionais	O relatório pode registrar ferramentas, fluxos e metodologias digitais usadas.	O piloto valida o uso combinado de transcrição, análise automatizada e curadoria humana.
+VII — Disseminar boas práticas e resultados de inovação no Poder Judiciário	O relatório transforma aprendizados em boas práticas replicáveis.	O evento oferece boas práticas para formação sobre pessoa idosa, cuidado e atuação interinstitucional.
+VIII — Monitorar indicadores de desempenho e avaliação das ações educacionais	O relatório cria indicadores de participação, produto, capacidade e agenda.	Usa duração, interações, temas, produtos derivados e aderência a políticas judiciárias.
+IX — Promover cooperação técnica e compartilhamento de práticas entre escolas judiciais e unidades de formação	O relatório pode ser compartilhado como modelo comum da Rede.	O tema exige cooperação entre escolas judiciais, CNJ, tribunais, MP, Defensoria, saúde e assistência social.
+X — Apoiar escolas judiciais na implementação da Política Nacional de Formação	O relatório traduz evento em matriz de competências e conteúdos formativos.	Gera insumos para cursos sobre envelhecimento, cuidado, direitos humanos e sistema de justiça.
+XI — Organizar eventos, seminários e encontros da Rede de Escolas Judiciais	O relatório retroalimenta a curadoria de eventos futuros.	Aponta temas para novos seminários: cuidado domiciliar, ILPIs, conciliação, etarismo e protagonismo da pessoa idosa.
+XII — Produzir e divulgar boletins, relatórios e materiais institucionais da Rede	O relatório pode gerar boletim, cards, síntese pública e nota técnica.	Os anexos do NotebookLM já oferecem linguagem de briefing e divulgação pública.
+XIII — Gerir canais colaborativos e identidade visual da Rede	O relatório indica produtos comunicacionais padronizados.	Recomenda materiais institucionais replicáveis nos canais da ENAJU e da Rede de Escolas Judiciais.
+3. Estrutura-padrão do relatório ENAJU
+A partir das competências acima, sugiro que todos os relatórios sigam esta estrutura fixa.
+
+1. Cabeçalho temático
+Identifica o evento, tema, problema público, políticas relacionadas, competências ENAJU mobilizadas e tipo de entrega.
+
+Competências atendidas: I, II, IV e VIII.
+
+2. Ficha institucional do evento
+Registra título, data, duração, formato, promoção, apoio, público, transmissão, participantes, mediadores e palestrantes.
+
+No piloto, a mesa envolveu Noêmia Porto, Guita Debert, Mariana Dias, Franciele Nascimento, Inês Virgínia e Epitácio Luiz, conforme sistematização do relatório técnico do NotebookLM.
+
+Competências atendidas: IV, XI e XII.
+
+3. Síntese executiva
+Resume em poucos parágrafos:
+
+o problema enfrentado;
+
+a tese central;
+
+os principais achados;
+
+a contribuição para políticas judiciárias;
+
+os produtos derivados possíveis.
+
+Competências atendidas: I, IV, VII e XII.
+
+4. Problema público ou institucional abordado
+Transforma o tema do evento em diagnóstico.
+
+No piloto, o problema não é apenas “pessoas idosas”, mas a ausência de redes de cuidado de longa duração, a sobrecarga familiar, a feminização do cuidado, a institucionalização por falta de alternativa e a dificuldade do sistema de justiça em lidar com conflitos familiares complexos.
+
+Competências atendidas: II, IV e VIII.
+
+5. Principais achados
+Substitui a ideia simples de “temas abordados” por achados analíticos.
+
+No piloto, os achados são:
+
+o cuidado deixou de ser questão privada e passou a ser problema público;
+
+a sobrecarga do cuidado tem gênero;
+
+a conciliação pode gerar “harmonia coercitiva” quando não há rede estatal;
+
+o envelhecimento no território exige serviços concretos;
+
+o envelhecimento é atravessado por raça, classe, gênero, deficiência, sexualidade e território.
+
+Competências atendidas: II, IV, VII e X.
+
+6. Capacidades proporcionadas
+Esta deve ser a seção central do modelo.
+
+Capacidade	Descrição	Competência ENAJU
+Leitura jurídica do cuidado	Compreender cuidado como direito, dever compartilhado e tema de política judiciária	I, II, X
+Diagnóstico sistêmico	Identificar causas estruturais, não apenas casos individuais	II, IV, VIII
+Atuação interinstitucional	Articular Judiciário, saúde, assistência social, MP, Defensoria e sociedade civil	IX, X, XI
+Análise crítica da autocomposição	Avaliar quando mediação e conciliação são adequadas ou arriscadas	II, X
+Sensibilidade antidiscriminatória	Reconhecer etarismo, gênero, raça, deficiência e exclusão digital	I, II, X
+Inovação educacional	Converter vídeo, legenda e IA em produto formativo validado	III, V, VI
+Gestão do conhecimento	Transformar evento em relatório, boletim, trilha, cartilha e banco de perguntas	IV, VII, XII
+7. Conexão com políticas judiciárias e indicadores
+Esta seção deve demonstrar como o evento impulsiona políticas acompanhadas pelo CNJ/COPJ.
+
+Dimensão	Pergunta orientadora	Aplicação no piloto
+Política judiciária	Qual política o evento fortalece?	Política da Pessoa Idosa e Política de Cuidados
+Indicador formativo	Que ação educacional foi realizada?	Webinário com duração de 1h53min e potencial de reaproveitamento pedagógico
+Indicador de capacidade	Que competências foram desenvolvidas?	Leitura jurídica, intersetorial, antidiscriminatória e crítica da conciliação
+Indicador de produção técnica	Que produtos foram gerados?	Transcrição, relatório automático, briefing, relatório técnico e modelo ENAJU
+Indicador de inovação	Houve uso de tecnologia educacional?	Sim: pipeline de extração, análise automática e curadoria com IA
+Indicador de cooperação	Houve articulação institucional?	Sim: CNJ, ENAJU, sistema de justiça, MP, academia e direitos humanos
+Indicador de agenda	Que continuidade o evento deixou?	Trilhas, oficinas, protocolos, cartilhas e estudos de caso
+Competências atendidas: VIII, IX, X, XI e XII.
+
+8. Participação e dinâmica
+Registra dados objetivos e qualitativos da participação.
+
+O relatório automático identificou interações, perguntas e comentários, mas alertou para a necessidade de revisão humana de nomes, falas e classificações. Esse ponto deve virar regra metodológica: indicadores automáticos são úteis, mas precisam de validação antes de divulgação institucional.
+
+Competências atendidas: VIII e IV.
+
+9. Agenda deixada
+Todo relatório deve responder: o que este evento deixa para a ENAJU fazer depois?
+
+No piloto, a agenda inclui:
+
+trilha formativa sobre cuidado e pessoas idosas;
+
+oficina sobre judicialização e desjudicialização do cuidado;
+
+cartilha sobre etarismo institucional;
+
+estudo de caso sobre “harmonia coercitiva”;
+
+protocolo formativo sobre mediação em conflitos familiares envolvendo pessoas idosas;
+
+banco de perguntas frequentes;
+
+material para escolas judiciais sobre cuidado, ILPIs e redes de proteção.
+
+Competências atendidas: I, V, VII, IX, X, XI e XII.
+
+10. Produtos derivados
+Cada relatório deve indicar entregáveis possíveis.
+
+Para este piloto:
+
+Produto	Finalidade	Competência ENAJU
+Relatório técnico	Registrar diagnóstico e achados	IV
+Briefing executivo	Apoiar gestores e decisões rápidas	IV, XII
+Boletim da Rede	Divulgar síntese e boas práticas	VII, XII, XIII
+Trilha formativa	Reaproveitar conteúdo em formação estruturada	I, X
+Oficina prática	Desenvolver competências aplicadas	I, V, XI
+Banco de perguntas	Organizar dúvidas recorrentes e demandas sociais	II, VIII
+Cards institucionais	Disseminar achados em linguagem acessível	XII, XIII
+Repositório de boas práticas	Compartilhar com escolas judiciais	VII, IX
+4. Texto pronto para inserir no relatório
+Sugiro incluir este bloco logo após o cabeçalho temático:
+
+Este relatório é elaborado como produto técnico da Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação da ENAJU, em conformidade com as competências previstas no art. 19. Sua finalidade é transformar eventos, webinários, seminários e encontros formativos em instrumentos de planejamento educacional, diagnóstico de necessidades de capacitação, monitoramento de indicadores, disseminação de boas práticas, produção técnica e fortalecimento da Rede de Escolas Judiciais.
+
+O relatório não se limita ao registro descritivo da atividade. Ele identifica o problema público abordado, as políticas judiciárias relacionadas, as capacidades desenvolvidas, os indicadores educacionais mobilizados, os produtos derivados e a agenda institucional deixada pelo evento. Dessa forma, cada ação formativa passa a integrar o ciclo de gestão do conhecimento da ENAJU, contribuindo para a Política Nacional de Formação, para a cooperação entre escolas judiciais e para a melhoria contínua das ações educacionais do Poder Judiciário.
+
+5. Ajuste conceitual do modelo
+A partir dessa ancoragem, recomendo que o nome oficial do produto seja:
+
+Relatório ENAJU de Inteligência Formativa e Agenda Institucional
+Esse nome é mais forte do que “relatório de evento”, porque expressa as competências do art. 19:
+
+Inteligência formativa: conecta evento, competências, capacitação e indicadores.
+
+Agenda institucional: transforma debate em continuidade, produtos e ações.
+
+Relatório técnico: cumpre a competência de produção, diagnóstico e publicação.
+
+Inovação educacional: incorpora tecnologias, análise de dados e curadoria.
+
+6. Conclusão orientada ao modelo
+O relatório-piloto sobre o webinário “Precisamos Falar de Cuidados e Pessoas Idosas” deve servir como matriz para os demais eventos da ENAJU porque demonstra uma metodologia replicável: partir do evento, identificar o problema público, conectar políticas judiciárias, mapear capacidades, registrar indicadores, gerar produtos derivados e deixar agenda institucional.
+
+Com base no art. 19, esse relatório não é apenas uma memória do que ocorreu. Ele é um instrumento de:
+
+planejamento educacional, diagnóstico de competências, inovação formativa, produção técnica, monitoramento de desempenho, cooperação entre escolas judiciais e disseminação de boas práticas no Poder Judiciário.
+
+
+

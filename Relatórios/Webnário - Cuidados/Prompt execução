@@ -1,0 +1,313 @@
+Segue um prompt completo, já mais “agente executor” do que simples pedido de script.
+
+Você é um agente de desenvolvimento atuando dentro do VS Code. Sua tarefa é construir um fluxo completo, automatizado e documentado para transcrever um vídeo/webinário do YouTube e gerar um relatório analítico institucional para uma Escola Nacional que promoveu o curso.
+
+## Objetivo geral
+
+Criar um projeto em Python que permita:
+
+1. Receber a URL de um vídeo do YouTube, especialmente gravações de webinários, aulas ou reuniões.
+2. Baixar apenas o áudio do vídeo usando `yt-dlp`.
+3. Processar o áudio com Whisper, preferencialmente seguindo o repositório oficial do Whisper no GitHub.
+4. Gerar transcrição completa com timestamps.
+5. Identificar os principais pontos abordados na reunião.
+6. Estimar o número de interações relevantes.
+7. Identificar participantes mencionados ou falantes, quando possível.
+8. Produzir um relatório completo de produto do webinário, voltado à apresentação institucional dos resultados da ação formativa realizada pela Escola Nacional.
+
+## Estrutura esperada do projeto
+
+Crie a seguinte estrutura de pastas:
+
+```text
+transcricao_webinario/
+├── audios/
+├── transcricoes/
+├── legendas/
+├── relatorios/
+├── dados/
+├── logs/
+├── src/
+│   ├── main.py
+│   ├── downloader.py
+│   ├── transcriber.py
+│   ├── analyzer.py
+│   ├── reporter.py
+│   ├── utils.py
+├── requirements.txt
+├── README.md
+└── urls.txt
+```
+
+## Funcionalidades obrigatórias
+
+O sistema deve permitir execução por terminal:
+
+```bash
+python src/main.py "URL_DO_YOUTUBE"
+```
+
+Também deve permitir execução em lote:
+
+```bash
+python src/main.py --batch urls.txt
+```
+
+## Etapa 1: Download do vídeo
+
+Implementar download apenas do áudio usando `yt-dlp`.
+
+Requisitos:
+
+* Baixar áudio em formato `.mp3` ou `.wav`.
+* Salvar em `/audios`.
+* Detectar título do vídeo.
+* Sanitizar o nome do arquivo.
+* Evitar baixar novamente se o áudio já existir.
+* Registrar metadados do vídeo:
+
+  * título
+  * URL
+  * duração
+  * canal
+  * data de publicação, se disponível
+  * data de processamento
+
+## Etapa 2: Transcrição com Whisper
+
+Implementar transcrição usando Whisper.
+
+Prioridade:
+
+1. Usar o repositório oficial do Whisper no GitHub, quando possível.
+2. Alternativamente, permitir uso de `faster-whisper` para melhor desempenho local.
+
+Parâmetros configuráveis:
+
+* modelo: `small`, `medium`, `large`
+* idioma padrão: português brasileiro
+* saída com timestamps
+* geração de `.txt`, `.srt` e `.json`
+
+Arquivos gerados:
+
+```text
+/transcricoes/nome_do_video.txt
+/legendas/nome_do_video.srt
+/dados/nome_do_video_segmentos.json
+```
+
+A transcrição em `.json` deve conter:
+
+* segmento
+* tempo inicial
+* tempo final
+* texto
+* confiança, se disponível
+
+## Etapa 3: Análise da reunião/webinário
+
+A partir da transcrição, criar uma análise estruturada contendo:
+
+### 1. Síntese executiva
+
+Gerar um resumo institucional do webinário com:
+
+* tema central
+* objetivo aparente da reunião
+* público-alvo provável
+* principais resultados apresentados
+* encaminhamentos ou próximos passos
+* relevância institucional para a Escola Nacional
+
+### 2. Principais pontos abordados
+
+Identificar e organizar os principais tópicos discutidos.
+
+Formato esperado:
+
+```text
+1. Tema principal
+   - resumo do ponto
+   - trechos relevantes da transcrição
+   - timestamp aproximado
+
+2. Segundo tema
+   - resumo do ponto
+   - trechos relevantes
+   - timestamp aproximado
+```
+
+### 3. Mapa de interações
+
+Identificar interações relevantes, como:
+
+* perguntas feitas
+* respostas dadas
+* comentários de participantes
+* intervenções da mediação
+* menções a dúvidas, contribuições ou encaminhamentos
+
+Gerar contagem aproximada:
+
+```text
+Total de interações identificadas: X
+Perguntas: X
+Comentários: X
+Respostas institucionais: X
+Encaminhamentos: X
+```
+
+### 4. Participantes
+
+Tentar identificar:
+
+* nomes mencionados
+* possíveis palestrantes
+* mediadores
+* participantes que fizeram perguntas
+* instituições citadas
+
+Caso a identificação automática não seja segura, indicar:
+
+```text
+A identificação de participantes depende de revisão humana, pois a transcrição automática pode não distinguir vozes com precisão.
+```
+
+### 5. Indicadores do produto educacional
+
+Gerar indicadores qualitativos e quantitativos do webinário:
+
+* duração total
+* número estimado de blocos temáticos
+* número de interações
+* número de perguntas
+* quantidade de participantes mencionados
+* temas recorrentes
+* densidade de participação
+* principais dúvidas do público
+* principais entregas apresentadas
+* potencial de reaproveitamento pedagógico
+
+### 6. Avaliação institucional
+
+Gerar uma seção com linguagem formal, adequada para relatório de escola nacional:
+
+* contribuição do webinário para a formação
+* aderência ao objetivo do curso
+* resultados percebidos
+* pontos fortes
+* pontos de atenção
+* oportunidades de melhoria
+* sugestões para novas turmas, cursos ou produtos derivados
+
+## Etapa 4: Relatório final
+
+Gerar automaticamente um relatório em Markdown e, se possível, também em `.docx`.
+
+Arquivo esperado:
+
+```text
+/relatorios/relatorio_webinario_nome_do_video.md
+/relatorios/relatorio_webinario_nome_do_video.docx
+```
+
+O relatório deve conter esta estrutura:
+
+```markdown
+# Relatório de Produto do Webinário
+
+## 1. Identificação da atividade
+
+- Título do vídeo:
+- URL:
+- Canal:
+- Data de publicação:
+- Data de processamento:
+- Duração:
+- Escola promotora:
+- Tipo de produto: Webinário / Curso / Reunião formativa
+
+## 2. Síntese executiva
+
+## 3. Objetivo da atividade
+
+## 4. Principais temas abordados
+
+## 5. Resultados apresentados
+
+## 6. Mapa de interações
+
+## 7. Participantes e instituições mencionadas
+
+## 8. Indicadores do produto
+
+## 9. Avaliação institucional
+
+## 10. Encaminhamentos e recomendações
+
+## 11. Anexos
+
+### Anexo I: Transcrição completa
+
+### Anexo II: Timestamps relevantes
+```
+
+## Etapa 5: README
+
+Criar um `README.md` com:
+
+* descrição do projeto
+* requisitos
+* instalação do Python
+* instalação do `ffmpeg`
+* instalação do Whisper
+* instalação do `yt-dlp`
+* comando para rodar um único vídeo
+* comando para rodar vários vídeos
+* explicação dos arquivos gerados
+* limitações conhecidas
+* orientações para revisão humana
+
+## Tratamento de erros
+
+Implementar mensagens claras para:
+
+* URL inválida
+* vídeo indisponível
+* ausência de `ffmpeg`
+* falha no download
+* falha na transcrição
+* arquivo já existente
+* áudio muito longo
+* memória insuficiente
+* erro na geração do relatório
+
+## Qualidade esperada do código
+
+* Código modular.
+* Funções bem nomeadas.
+* Comentários apenas onde forem úteis.
+* Logs em `/logs`.
+* Mensagens amigáveis no terminal.
+* Compatibilidade com Windows, Linux e macOS.
+* Preferir soluções simples, robustas e fáceis de manter.
+
+## Resultado final esperado
+
+Ao final da execução, o projeto deve entregar:
+
+1. Áudio baixado.
+2. Transcrição completa em `.txt`.
+3. Legendas em `.srt`.
+4. Segmentos em `.json`.
+5. Relatório institucional em `.md`.
+6. Relatório institucional em `.docx`, se possível.
+7. Arquivo de log.
+8. Sumário dos principais achados impresso no terminal.
+
+## Observação importante
+
+A análise automática deve ser tratada como primeira versão. O relatório deve indicar que nomes de participantes, falantes e interações precisam de validação humana, especialmente quando o vídeo não tiver identificação clara dos oradores.
+
+Esse prompt já coloca o agente para construir o “pipeline inteiro”: download, Whisper, transcrição, análise e relatório institucional.

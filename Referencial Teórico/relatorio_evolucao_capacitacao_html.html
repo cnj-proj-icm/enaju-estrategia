@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Evolução da Capacitação na Administração Pública</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: #FAFAED; 
+            color: #2C3531;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Lora', serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        .tab-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background-color: #116466;
+            color: #FAFAED;
+            border-color: #116466;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .tab-btn:not(.active):hover {
+            background-color: #D1E8E2;
+            color: #116466;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .level-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .level-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Chosen Palette: Calm Harmony (Warm Neutrals Base #FAFAED, Deep Teal #116466, Soft Mint #D1E8E2, Earthy Terracotta #D9B08C/ #FFCB9A for accents) -->
+    <!-- Application Structure Plan: The SPA is structured as a guided, interactive narrative dashboard with 4 distinct chapters ("views") representing the chronological and conceptual evolution of the topic. This tabbed/chapter structure prevents information overload and allows the user to digest the dense academic concepts one step at a time. The flow moves from foundational theory -> specific application -> technological future -> critical gap. Users navigate via a top progress bar/tab system. -->
+    <!-- Visualization & Content Choices: 
+         1. OECD Levels -> Goal: Organize/Hierarchy -> Interactive HTML Cards -> Shows interdependency without complex charts.
+         2. Judicial Gap -> Goal: Compare -> Bar Chart (Chart.js) -> Contrasts high institutional relevance vs low academic production clearly.
+         3. Tech Frontier -> Goal: Inform/Organize -> Interactive Grid with detail pane -> Allows exploration of distinct tech concepts.
+         4. Evaluation Gap -> Goal: Proportions -> Donut Chart (Chart.js) -> Visually emphasizes how much of the "impact" remains unknown despite existing frameworks.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <header class="bg-[#116466] text-[#FAFAED] py-12 px-6 shadow-md relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-[#D1E8E2] text-[#116466] text-xs font-bold tracking-widest uppercase mb-4">Relatório Interativo</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">A Evolução da Capacitação Estatal</h1>
+            <p class="text-lg md:text-xl font-light opacity-90 max-w-3xl">Uma jornada visual pela literatura de administração pública: das fundações estruturais da OCDE aos desafios da inteligência artificial e a lacuna da avaliação de impacto.</p>
+        </div>
+    </header>
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-wrap justify-center md:justify-between py-3 gap-2" id="nav-container">
+                <button onclick="switchTab('sec-fundacao', this)" class="tab-btn active px-4 py-2 rounded-md font-semibold text-sm border border-gray-300 text-gray-600 flex-1 min-w-[150px] text-center">1. A Base Estrutural</button>
+                <button onclick="switchTab('sec-judiciario', this)" class="tab-btn px-4 py-2 rounded-md font-semibold text-sm border border-gray-300 text-gray-600 flex-1 min-w-[150px] text-center">2. O Paradoxo Judiciário</button>
+                <button onclick="switchTab('sec-tecnologia', this)" class="tab-btn px-4 py-2 rounded-md font-semibold text-sm border border-gray-300 text-gray-600 flex-1 min-w-[150px] text-center">3. A Fronteira Tech</button>
+                <button onclick="switchTab('sec-avaliacao', this)" class="tab-btn px-4 py-2 rounded-md font-semibold text-sm border border-gray-300 text-gray-600 flex-1 min-w-[150px] text-center">4. O Abismo da Avaliação</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-full max-w-5xl mx-auto px-6 py-12">
+
+        <section id="sec-fundacao" class="view-section fade-in block">
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-[#116466] mb-4">Capacidade como Condição de Efetividade</h2>
+                <p class="text-lg leading-relaxed text-gray-700">Na literatura de administração pública, o desenvolvimento de capacidades não é acessório, mas uma <strong class="text-[#D9B08C]">condição estrutural</strong> da efetividade estatal (Grindle, 2004). A OCDE (2008) conceitua essa estrutura em três níveis interdependentes, onde a qualificação é vista como um ativo estratégico para a resiliência e o desempenho público.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-[#D1E8E2] inline-block pb-1">Os 3 Níveis Interdependentes (OCDE)</h3>
+                    
+                    <div class="level-card bg-white p-5 rounded-lg border-l-4 border-[#116466] cursor-pointer shadow-sm" onclick="showLevelDetails('sistemico')">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl text-[#116466]">&#9878;</span>
+                            <h4 class="text-lg font-bold">Nível Sistêmico</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Capacidade das políticas públicas e do ambiente institucional.</p>
+                    </div>
+
+                    <div class="level-card bg-white p-5 rounded-lg border-l-4 border-[#D9B08C] cursor-pointer shadow-sm" onclick="showLevelDetails('organizacional')">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl text-[#D9B08C]">&#127970;</span>
+                            <h4 class="text-lg font-bold">Nível Organizacional</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Capacidade das agências, ministérios e departamentos estatais.</p>
+                    </div>
+
+                    <div class="level-card bg-white p-5 rounded-lg border-l-4 border-[#FFCB9A] cursor-pointer shadow-sm" onclick="showLevelDetails('individual')">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl text-[#FFCB9A]">&#128100;</span>
+                            <h4 class="text-lg font-bold">Nível Individual</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Capacidades e qualificação dos servidores públicos.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 min-h-[300px] flex flex-col justify-center" id="level-detail-panel">
+                    <div class="text-center text-gray-400">
+                        <span class="text-4xl block mb-4">&#128072;</span>
+                        <p class="text-lg">Selecione um nível ao lado para explorar o impacto literário.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-judiciario" class="view-section hidden fade-in">
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-[#116466] mb-4">O Subcampo e o Paradoxo Judiciário</h2>
+                <p class="text-lg leading-relaxed text-gray-700">A formação de magistrados e servidores judiciais é um subcampo articulado diretamente ao estado de direito e à prestação jurisdicional de qualidade (Damaška, 1986; Geyh, 2006). Organismos internacionais atuam fortemente na área, mas existe uma assimetria notável na academia.</p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="col-span-1 flex flex-col justify-center space-y-6">
+                        <div class="bg-[#FAFAED] p-4 rounded-lg border border-[#D1E8E2]">
+                            <h4 class="font-bold text-[#116466] flex items-center gap-2"><span class="text-xl">&#9876;</span> A Prática Global</h4>
+                            <p class="text-sm text-gray-600 mt-2">Organismos como a <strong>IOJT</strong> (International Organization for Judicial Training) e a <strong>EJTN</strong> (European Judicial Training Network) lideram a sistematização de práticas de formação comparada, demonstrando alta prioridade institucional.</p>
+                        </div>
+                        <div class="bg-[#FAFAED] p-4 rounded-lg border border-[#FFCB9A]">
+                            <h4 class="font-bold text-[#D9B08C] flex items-center gap-2"><span class="text-xl">&#128218;</span> A Lacuna Científica</h4>
+                            <p class="text-sm text-gray-600 mt-2">Persiste uma distância expressiva entre a relevância institucional do Judiciário e a produção científica acadêmica sobre a sua formação (Piana, 2010).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-span-1 md:col-span-2">
+                        <h3 class="text-center font-bold text-gray-700 mb-2">Relevância vs. Produção Científica</h3>
+                        <p class="text-center text-xs text-gray-500 mb-4">Representação ilustrativa baseada na observação da literatura (Piana, 2010)</p>
+                        <div class="chart-container">
+                            <canvas id="judiciaryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-tecnologia" class="view-section hidden fade-in">
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-[#116466] mb-4">O Quarto Subcampo: Aceleração Tecnológica</h2>
+                <p class="text-lg leading-relaxed text-gray-700">Na intersecção entre tecnologia educacional e avaliação de impacto, as organizações públicas e privadas vivenciam uma rápida aceleração formativa suportada por dados e algoritmos (Drachsler e Greller, 2012; Siemens e Baker, 2012).</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                <button onclick="updateTechDetail('analytics')" class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[#116466] hover:bg-[#FAFAED] transition-colors flex flex-col items-center text-center focus:outline-none focus:ring-2 focus:ring-[#116466]">
+                    <span class="text-4xl mb-3 text-[#116466]">&#128200;</span>
+                    <h3 class="font-bold text-gray-800">Learning Analytics</h3>
+                </button>
+
+                <button onclick="updateTechDetail('ia')" class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[#D9B08C] hover:bg-[#FAFAED] transition-colors flex flex-col items-center text-center focus:outline-none focus:ring-2 focus:ring-[#D9B08C]">
+                    <span class="text-4xl mb-3 text-[#D9B08C]">&#129488;</span>
+                    <h3 class="font-bold text-gray-800">Inteligência Artificial</h3>
+                </button>
+
+                <button onclick="updateTechDetail('trilhas')" class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[#FFCB9A] hover:bg-[#FAFAED] transition-colors flex flex-col items-center text-center focus:outline-none focus:ring-2 focus:ring-[#FFCB9A]">
+                    <span class="text-4xl mb-3 text-[#FFCB9A]">&#128376;</span>
+                    <h3 class="font-bold text-gray-800">Trilhas Adaptativas</h3>
+                </button>
+            </div>
+
+            <div id="tech-detail-panel" class="bg-[#116466] text-[#FAFAED] p-8 rounded-xl shadow-lg transition-all duration-300">
+                <div class="text-center">
+                    <span class="text-4xl block mb-4">&#9881;</span>
+                    <h3 class="text-2xl font-bold mb-3">Aceleração Formativa</h3>
+                    <p class="text-lg opacity-90 max-w-2xl mx-auto">Selecione uma das tecnologias acima para compreender como ela atua na modernização e no redimensionamento da capacitação do serviço público.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-avaliacao" class="view-section hidden fade-in">
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-[#116466] mb-4">O Abismo da Avaliação de Impacto</h2>
+                <p class="text-lg leading-relaxed text-gray-700">Apesar da existência de modelos consagrados de avaliação (Kirkpatrick, 1994; Phillips, 2003), a mensuração real dos resultados dos programas de formação permanece como a grande lacuna recorrente. A ciência da administração pública ainda tateia no escuro sobre aspectos fundamentais.</p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100 flex flex-col md:flex-row gap-10 items-center">
+                
+                <div class="w-full md:w-1/2">
+                    <div class="chart-container">
+                        <canvas id="evaluationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                        <h4 class="font-bold text-red-800 mb-1">A Questão Fundamental (Aguinis e Kraiger, 2009)</h4>
+                        <p class="text-sm text-red-700">Ainda se sabe criticamente pouco sobre:</p>
+                        <ul class="list-disc list-inside mt-2 text-sm text-red-700 font-semibold space-y-1">
+                            <li>O que de fato funciona?</li>
+                            <li>Em quais contextos específicos funciona?</li>
+                            <li>Por que determinadas abordagens funcionam?</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 border-b border-gray-200 pb-2 mb-3">Modelos Existentes vs Realidade</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <span class="bg-[#D1E8E2] text-[#116466] font-bold px-2 py-1 rounded text-xs mt-1">Kirkpatrick</span>
+                                <p class="text-sm text-gray-600">Foca em 4 níveis (Reação, Aprendizado, Comportamento, Resultados). Maioria das organizações públicas para nos níveis 1 e 2.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-[#FFCB9A] text-[#D9B08C] font-bold px-2 py-1 rounded text-xs mt-1">Phillips</span>
+                                <p class="text-sm text-gray-600">Adiciona o nível de Retorno sobre Investimento (ROI). Altamente complexo de isolar no contexto do setor público.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#2C3531] text-gray-300 py-8 mt-auto border-t-4 border-[#116466]">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-sm">Desenvolvido como exercício de Arquitetura de Informação e Visualização de Dados.</p>
+            <p class="text-xs mt-2 opacity-70">Baseado na síntese literária sobre desenvolvimento de capacidades, formação judicial e tecnologia educacional.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Core Interaction & Navigation Logic ---
+        function switchTab(sectionId, btnElement) {
+            document.querySelectorAll('.view-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+            
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+        }
+
+        // --- Data & Content Dictionaries ---
+        const levelData = {
+            sistemico: {
+                title: "Nível Sistêmico",
+                color: "text-[#116466]",
+                content: "Refere-se ao quadro mais amplo das políticas públicas, regras, leis e ambiente institucional que governa o setor público. Sem uma base sistêmica forte, os esforços isolados perdem eficácia."
+            },
+            organizacional: {
+                title: "Nível Organizacional",
+                color: "text-[#D9B08C]",
+                content: "Envolve a capacidade de agências, tribunais e departamentos funcionarem. Qualidade da gestão, resiliência institucional diante de reformas (Christensen e Lægreid, 2007) e infraestrutura."
+            },
+            individual: {
+                title: "Nível Individual",
+                color: "text-[#FFCB9A]",
+                content: "O pilar central desta análise. A qualificação e formação do servidor público. É tratada como um <strong>ativo estratégico</strong> para o desempenho do Estado (OECD, 2017) e associa-se positivamente ao desempenho dos serviços prestados (Ingraham e Donahue, 2000)."
+            }
+        };
+
+        const techData = {
+            analytics: {
+                title: "Learning Analytics",
+                icon: "&#128200;",
+                content: "A coleta, medição, análise e relato de dados sobre os alunos e seus contextos. O objetivo principal é compreender e otimizar o aprendizado e os ambientes em que ele ocorre, transformando dados brutos da capacitação em decisões estratégicas de design instrucional."
+            },
+            ia: {
+                title: "Inteligência Artificial Aplicada",
+                icon: "&#129488;",
+                content: "A utilização de algoritmos avançados para simular processos cognitivos na aprendizagem. Inclui desde sistemas de tutoria inteligente e chatbots para suporte ao servidor em treinamento, até a curadoria automatizada de conteúdos baseada no perfil e nas necessidades do órgão público."
+            },
+            trilhas: {
+                title: "Trilhas Adaptativas",
+                icon: "&#128376;",
+                content: "Rompe com o modelo de 'tamanho único'. Utiliza a tecnologia para ajustar dinamicamente o percurso de aprendizagem de cada servidor. Se o servidor domina um tema, a trilha avança; se há dificuldade, o sistema oferece reforço, maximizando a eficiência do tempo investido na capacitação."
+            }
+        };
+
+        // --- Dynamic Content Update Functions ---
+        function showLevelDetails(level) {
+            const panel = document.getElementById('level-detail-panel');
+            const data = levelData[level];
+            
+            panel.innerHTML = `
+                <div class="fade-in">
+                    <h4 class="text-2xl font-bold ${data.color} mb-4 font-serif">${data.title}</h4>
+                    <p class="text-gray-700 leading-relaxed text-lg">${data.content}</p>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-500 font-semibold uppercase tracking-wide">
+                        <span class="text-xl">&#128214;</span> Evidência Literária
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateTechDetail(tech) {
+            const panel = document.getElementById('tech-detail-panel');
+            const data = techData[tech];
+            
+            panel.innerHTML = `
+                <div class="fade-in text-center md:text-left flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-6xl bg-white/10 p-6 rounded-full">${data.icon}</div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-3 font-serif">${data.title}</h3>
+                        <p class="text-lg opacity-95 leading-relaxed">${data.content}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- Chart.js Configuration & Initialization ---
+        
+        // Helper to wrap long labels
+        function wrapLabels(labelsArray) {
+            return labelsArray.map(label => {
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                
+                words.forEach(word => {
+                    if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            });
+        }
+
+        // Mandatory Tooltip Callback configuration
+        const mandatoryTooltipCallback = {
+            title: function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart 1: Judiciary Paradox (Bar Chart)
+            const ctxJudiciary = document.getElementById('judiciaryChart').getContext('2d');
+            const rawJudiciaryLabels = ['Atenção Institucional (Organismos)', 'Volume de Produção Científica'];
+            const wrappedJudiciaryLabels = wrapLabels(rawJudiciaryLabels);
+
+            new Chart(ctxJudiciary, {
+                type: 'bar',
+                data: {
+                    labels: wrappedJudiciaryLabels,
+                    datasets: [{
+                        label: 'Nível Relativo (Estimado)',
+                        data: [90, 25],
+                        backgroundColor: [
+                            '#116466', // High priority
+                            '#FFCB9A'  // Low output
+                        ],
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: mandatoryTooltipCallback }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: { display: true, text: 'Intensidade / Foco' },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: "'Nunito Sans', sans-serif", weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: Evaluation Gap (Donut Chart)
+            const ctxEval = document.getElementById('evaluationChart').getContext('2d');
+            const rawEvalLabels = ['Conhecimento Comprovado sobre Eficácia', 'Lacuna de Avaliação (O Desconhecido)'];
+            const wrappedEvalLabels = wrapLabels(rawEvalLabels);
+
+            new Chart(ctxEval, {
+                type: 'doughnut',
+                data: {
+                    labels: wrappedEvalLabels,
+                    datasets: [{
+                        data: [15, 85],
+                        backgroundColor: [
+                            '#D1E8E2', // Known (Small part)
+                            '#e76f51'  // Unknown/Gap (Large part - using terracotta red for warning)
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#FAFAED',
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    cutout: '65%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: { family: "'Nunito Sans', sans-serif" },
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: { callbacks: mandatoryTooltipCallback }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
