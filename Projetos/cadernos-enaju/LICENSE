@@ -1,0 +1,40 @@
+LICENCIAMENTO — CADERNOS_ENAJU
+==============================
+
+Status: PROPOSTA — a confirmar pela CODE antes da primeira publicação externa.
+
+Este repositório reúne dois tipos de obra com naturezas distintas. A proposta
+de licenciamento abaixo deve ser validada institucionalmente (CODE/ENAJU) e,
+se aprovada, substituída pelos textos legais completos das licenças escolhidas.
+
+1) CONTEÚDO EDITORIAL E TÉCNICO-CIENTÍFICO
+   (cadernos, protocolos, trilhas, notas técnicas, documentação em docs/ e
+   references/fichamentos/)
+
+   Licença proposta: Creative Commons Atribuição 4.0 Internacional (CC BY 4.0).
+   Texto completo: https://creativecommons.org/licenses/by/4.0/legalcode.pt
+
+   Em resumo: é permitido compartilhar e adaptar, inclusive para fins
+   comerciais, desde que atribuído o devido crédito ao projeto CADERNOS_ENAJU /
+   CODE.
+
+2) CÓDIGO-FONTE E AUTOMAÇÕES
+   (tudo em src/ e .github/workflows/)
+
+   Licença proposta: MIT.
+   Texto completo: https://opensource.org/license/mit
+
+3) DADOS DE PESQUISA
+   Dados de pessoas não são licenciados aqui. Seu tratamento segue a LGPD
+   (Lei nº 13.709/2018), o TCLE aplicável e as regras de anonimização
+   descritas nos protocolos. Microdados identificáveis NÃO devem ser
+   publicados neste repositório.
+
+OBRAS DE TERCEIROS
+   Artigos e materiais de terceiros (ex.: artigo de validação do REI-40)
+   permanecem sob a licença e os direitos de seus autores e editores. Eles são
+   citados em references/bibliografia.bib e, quando baixados, ficam em
+   references/artigos/ — pasta ignorada pelo controle de versão.
+
+Responsável pela definição final: CODE — Coordenação de Desenvolvimento,
+Pesquisa e Inovação.

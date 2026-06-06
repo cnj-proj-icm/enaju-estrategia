@@ -1,0 +1,24 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.wordWrap": "on"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "python.analysis.extraPaths": ["src"],
+  "search.exclude": {
+    "**/.venv": true,
+    "**/data/raw": true,
+    "**/data/processed": true,
+    "**/data/outputs": true,
+    "**/references/artigos": true
+  }
+}

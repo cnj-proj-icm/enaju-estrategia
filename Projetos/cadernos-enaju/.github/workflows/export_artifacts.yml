@@ -1,0 +1,45 @@
+name: export_artifacts
+
+# Exporta artefatos prontos para publicação ou distribuição interna.
+# Disparo manual; a exportação (DOCX/PDF) será implementada em src/reports.
+
+on:
+  workflow_dispatch:
+    inputs:
+      formato:
+        description: "Formato de exportação"
+        required: true
+        default: "docx"
+        type: choice
+        options:
+          - docx
+          - pdf
+          - html
+
+defaults:
+  run:
+    working-directory: "Projetos/cadernos-enaju"
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.in
+
+      - name: Exportar artefatos
+        run: python src/reports/export_artifacts.py --formato "${{ inputs.formato }}"
+
+      - name: Publicar artefatos exportados
+        uses: actions/upload-artifact@v4
+        with:
+          name: cadernos-enaju-export-${{ inputs.formato }}
+          path: "Projetos/cadernos-enaju/data/outputs/"
+          if-no-files-found: warn

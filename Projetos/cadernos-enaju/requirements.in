@@ -1,0 +1,17 @@
+# Dependências do CADERNOS_ENAJU
+# Instale com: pip install -r requirements.in
+# (gere um lock com: pip-compile requirements.in -o requirements.lock.txt)
+
+# Dados e análise
+pandas
+numpy
+pyyaml
+openpyxl
+
+# Documentos e relatórios
+python-docx
+markdown
+jinja2
+
+# Qualidade / testes
+pytest

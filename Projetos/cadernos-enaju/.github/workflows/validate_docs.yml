@@ -1,0 +1,36 @@
+name: validate_docs
+
+# Valida a estrutura de pastas, metadados e integridade dos documentos.
+
+on:
+  push:
+    paths:
+      - "Projetos/cadernos-enaju/**"
+  pull_request:
+    paths:
+      - "Projetos/cadernos-enaju/**"
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: "Projetos/cadernos-enaju"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.in
+
+      - name: Validar estrutura documental
+        run: python src/automation/validar_estrutura.py
+
+      - name: Rodar testes
+        run: python -m pytest -q

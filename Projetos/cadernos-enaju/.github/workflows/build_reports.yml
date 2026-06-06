@@ -1,0 +1,37 @@
+name: build_reports
+
+# Gera versões consolidadas dos cadernos e notas técnicas.
+# Disparo manual ou em release; o build em si ainda será implementado em src/reports.
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+defaults:
+  run:
+    working-directory: "Projetos/cadernos-enaju"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.in
+
+      - name: Gerar relatórios consolidados
+        run: python src/reports/build_reports.py
+
+      - name: Publicar artefatos
+        uses: actions/upload-artifact@v4
+        with:
+          name: cadernos-enaju-reports
+          path: "Projetos/cadernos-enaju/data/outputs/"
+          if-no-files-found: warn
