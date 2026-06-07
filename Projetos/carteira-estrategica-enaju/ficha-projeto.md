@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto | Carteira Estrategica ENAJU |
+| KR (EAB) | Transversal — governanca da carteira (apoia B1 · KR 1.1) |
+| Inciso Art.19 | — (cruza todos os incisos) |
 | Eixo | Estrategia / Governanca |
 | Responsavel | A definir |
 | Pessoas envolvidas | Coordenacao ENAJU e parceiros institucionais |

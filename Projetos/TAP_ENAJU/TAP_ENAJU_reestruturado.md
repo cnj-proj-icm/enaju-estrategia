@@ -45,16 +45,16 @@ Este projeto responde a esse conjunto de lacunas ao organizar, como entregas ver
 
 **Planejamento Estratégico**
 
-- **Objetivo estratégico I** — desenvolver políticas judiciárias e instrumentos para o aperfeiçoamento das atividades dos órgãos do Poder Judiciário, seus serviços auxiliares, notariais e de registro, e demais órgãos correicionais.
+- **Objetivo estratégico 01** — desenvolver políticas judiciárias e outros instrumentos para o aperfeiçoamento das atividades dos órgãos do Poder Judiciário e dos seus serviços auxiliares e dos serviços notariais e de registro, e dos demais órgãos correicionais.
   *Justificativa:* a consolidação operacional da ENAJU fortalece a capacidade institucional do CNJ de implementar políticas nacionais de formação que sustentam políticas judiciárias.
-- **Objetivo estratégico IV** — promover a disseminação das informações de forma padronizada e sistêmica.
+- **Objetivo estratégico 04** — promover a disseminação das informações, de forma padronizada e sistêmica.
   *Justificativa:* a ENAJU padronizará a oferta formativa e os instrumentos de gestão do conhecimento, com disseminação sistêmica para todo o Judiciário.
-- **Objetivo estratégico XVI** — aperfeiçoar políticas e práticas de gestão de pessoas.
+- **Objetivo estratégico 16** — aperfeiçoar políticas e práticas de Gestão de Pessoas.
   *Justificativa:* a ENAJU é responsável pela Política Nacional de Formação e Aperfeiçoamento de Servidores.
 
 **Estratégia Nacional**
 
-- **Macrodesafio:** Aperfeiçoamento da Gestão de Pessoas.
+- **Macrodesafio 10:** Aperfeiçoamento da gestão de pessoas.
 
 **Política Judiciária / Normativos**
 
@@ -80,7 +80,7 @@ O projeto organiza-se em **três benefícios**, cada um composto por *Key Result
 **Key Results (entregas-chave):**
 
 - **KR 1.1 — Instrumentos normativos de funcionamento interno e externo.** Regimento Interno da ENAJU, portarias e fluxos que definam competências, processos decisórios e a articulação interna de seus setores e externa (tribunais e escolas judiciais), complementando a estrutura já publicada na Portaria CNJ nº 221/2026.
-- **KR 1.2 — Operacionalização da Rede Nacional de Formação e Aperfeiçoamento.** Modelo de governança e funcionamento da Rede de Escolas Judiciais (instâncias, adesão, fluxos de cooperação), incorporando a realização periódica do **Encontro Nacional de Escolas Judiciais** como espaço de articulação da Rede e, simultaneamente, de fomento à adesão e ao povoamento do HUB ENAJU (KR 2.1).
+- **KR 1.2 — Operacionalização da Rede Nacional de Formação e Aperfeiçoamento.** Modelo de governança e funcionamento da Rede de Escolas Judiciais (instâncias, adesão, fluxos de cooperação), incorporando a realização periódica do **Encontro Nacional de Escolas Judiciais** como espaço de articulação da Rede e, simultaneamente, de fomento à adesão e ao povoamento do HUB ENAJU (KR 2.1), com plano de comunicação, estratégia de adesão ao HUB e diretrizes de identidade institucional articuladas à SCS.
 - **KR 1.3 — Plano Nacional Pedagógico de Capacitação.** Documento que traduz a Política Nacional de Formação em diretrizes pedagógicas, matriz de competências, trilhas prioritárias e critérios de qualidade para a Rede.
 - **KR 1.4 — Estúdio próprio de gravação no CNJ.** Estrutura física institucional para produção de conteúdos educacionais e audiovisuais da ENAJU (base de produção dos KRs 2.4 e 3.x).
 
@@ -91,7 +91,7 @@ O projeto organiza-se em **três benefícios**, cada um composto por *Key Result
 | Componente | Critério de aceite | Peso |
 |---|---|---|
 | KR 1.1 | Instrumentos normativos internos/externos publicados e vigentes | 30% |
-| KR 1.2 | Modelo de operacionalização da Rede aprovado e em adesão | 25% |
+| KR 1.2 | Modelo de operacionalização da Rede aprovado; plano de comunicação e estratégia de adesão ao HUB aprovados | 25% |
 | KR 1.3 | Plano Nacional Pedagógico de Capacitação aprovado | 25% |
 | KR 1.4 | Estúdio implantado ou com projeto executivo/estudo técnico aprovado | 20% |
 
@@ -105,9 +105,9 @@ O projeto organiza-se em **três benefícios**, cada um composto por *Key Result
 
 **Key Results (entregas-chave):**
 
-- **KR 2.1 — HUB ENAJU: portal único nacional e Banco de Conteúdos Educacionais.** Vertente em rede da ENAJU que integra, em portal único, a oferta de cursos e trilhas para servidores e estrutura o repositório nacional de conteúdos educacionais das escolas judiciais, com curadoria, metadados padronizados e reaproveitamento pelos tribunais; a adesão das escolas é impulsionada pelo Encontro Nacional (KR 1.2).
+- **KR 2.1 — HUB ENAJU: portal único nacional e Banco de Conteúdos Educacionais.** Vertente em rede da ENAJU que integra, em portal único, a oferta de cursos e trilhas para servidores e estrutura o repositório nacional de conteúdos educacionais das escolas judiciais, com curadoria, metadados padronizados e reaproveitamento pelos tribunais; a adesão das escolas é impulsionada pelo Encontro Nacional (KR 1.2) e monitorada por número de escolas aderentes, percentual do universo de tribunais/escolas e quantidade de conteúdos catalogados.
 - **KR 2.2 — Modernização do ambiente Moodle.** Atualização da usabilidade, da navegação, da experiência do usuário e da acessibilidade do ambiente Moodle da ENAJU.
-- **KR 2.3 — Painel de Business Intelligence (BI) das ações formativas.** Painel com dados consolidados e dinâmicos das ações formativas do Poder Judiciário, com adesão progressiva dos tribunais.
+- **KR 2.3 — Painel de Business Intelligence (BI) das ações formativas.** Painel com dados consolidados e dinâmicos das ações formativas do Poder Judiciário, com adesão progressiva dos tribunais; o protótipo funciona como marco intermediário, e o critério final é o painel operacional publicado e homologado.
 - **KR 2.4 — "Conversa com o CNJ!": série audiovisual de mediação pedagógica.** Série institucional de podcasts/episódios em áudio e vídeo dedicada à divulgação, interpretação e mediação pedagógica das políticas judiciárias, com difusão de massa (YouTube/redes), ambiente de aprendizagem na plataforma da ENAJU e certificação de participação.
 
 > *Como impulsiona o benefício:* os KRs 2.1–2.4 entregam, respectivamente, a **plataforma/hub** de integração, o **ambiente de aprendizagem** modernizado, a **inteligência de dados** das ações formativas e o **conteúdo audiovisual de alto alcance** — compondo a infraestrutura integrada de conteúdos e aprendizagem.
@@ -116,9 +116,9 @@ O projeto organiza-se em **três benefícios**, cada um composto por *Key Result
 
 | Componente | Critério de aceite | Peso |
 |---|---|---|
-| KR 2.1 | HUB e Banco de Conteúdos publicados e em adesão pelas escolas | 30% |
+| KR 2.1 | HUB e Banco de Conteúdos publicados; relatório de adesão com nº de escolas aderentes, % do universo de tribunais/escolas e nº de conteúdos catalogados | 30% |
 | KR 2.2 | Requisitos de modernização do Moodle homologados/implantados | 25% |
-| KR 2.3 | Painel de BI publicado ou prototipado | 20% |
+| KR 2.3 | Protótipo validado como marco intermediário e painel operacional publicado/homologado como critério final | 20% |
 | KR 2.4 | 1ª temporada planejada com ato/curadoria e episódio-piloto publicado | 25% |
 
 - **Meta:** 100% dos critérios atendidos até junho de 2027.
@@ -174,6 +174,8 @@ Projeto de Implantação e Consolidação da ENAJU
     └── KR 3.3 NuPEC-EJ / Grupo de Altos Estudos + Parcerias
 ```
 
+![Organograma da Estrutura Analítica de Benefícios (EAB) da ENAJU](figuras/eab-organograma-enaju.png){width=100%}
+
 ### NÃO ESCOPO
 
 Não integram o escopo deste projeto:
@@ -191,15 +193,15 @@ Não integram o escopo deste projeto:
 **Benefício 1 — Governança estruturada e capacidade institucional fortalecida**
 
 - **KR 1.1 — Instrumentos normativos internos e externos.** Produção, revisão e aprovação do conjunto mínimo de normativos para o funcionamento da ENAJU (Regimento Interno, portarias, procedimentos e fluxos), definindo competências e a articulação interna de seus setores e com a Rede. Garante segurança normativa e suporte jurídico-institucional às operações da Escola.
-- **KR 1.2 — Operacionalização da Rede Nacional.** Definição de instâncias, regras de adesão e fluxos de cooperação da Rede de Escolas Judiciais, incluindo o Encontro Nacional de Escolas Judiciais como espaço de articulação e integração da Rede e, ao mesmo tempo, de mobilização das escolas para a adesão e o compartilhamento de conteúdos no HUB ENAJU (KR 2.1).
+- **KR 1.2 — Operacionalização da Rede Nacional.** Definição de instâncias, regras de adesão e fluxos de cooperação da Rede de Escolas Judiciais, incluindo o Encontro Nacional de Escolas Judiciais como espaço de articulação e integração da Rede e, ao mesmo tempo, de mobilização das escolas para a adesão e o compartilhamento de conteúdos no HUB ENAJU (KR 2.1). Inclui plano de comunicação da ENAJU, estratégia de adesão ao HUB e diretrizes de identidade institucional em articulação com a SCS.
 - **KR 1.3 — Plano Nacional Pedagógico de Capacitação.** Diretrizes pedagógicas, matriz de competências, trilhas prioritárias e critérios de qualidade que materializam a Política Nacional de Formação para todo o Sistema.
 - **KR 1.4 — Estúdio próprio de gravação no CNJ.** Implantação de estúdio institucional para gravação e produção de conteúdos educacionais e audiovisuais da ENAJU, base física dos KRs 2.4 e 3.x.
 
 **Benefício 2 — Infraestrutura integrada de conteúdos e aprendizagem**
 
-- **KR 2.1 — HUB ENAJU + Banco de Conteúdos.** Portal único nacional que integra a oferta de cursos/trilhas para servidores e o repositório nacional de conteúdos educacionais das escolas judiciais, com governança em rede, curadoria, metadados padronizados e reaproveitamento pelos tribunais. A adesão das escolas é impulsionada pelo Encontro Nacional (KR 1.2).
+- **KR 2.1 — HUB ENAJU + Banco de Conteúdos.** Portal único nacional que integra a oferta de cursos/trilhas para servidores e o repositório nacional de conteúdos educacionais das escolas judiciais, com governança em rede, curadoria, metadados padronizados e reaproveitamento pelos tribunais. A adesão das escolas é impulsionada pelo Encontro Nacional (KR 1.2) e acompanhada por métricas objetivas de escolas aderentes, percentual de adesão sobre o universo de tribunais/escolas e conteúdos catalogados.
 - **KR 2.2 — Modernização do Moodle.** Atualização de usabilidade, navegação, experiência do usuário e acessibilidade do ambiente Moodle da ENAJU.
-- **KR 2.3 — Painel de BI.** Painel com dados consolidados e dinâmicos das ações formativas do Poder Judiciário, com potencial de adesão progressiva dos tribunais.
+- **KR 2.3 — Painel de BI.** Painel com dados consolidados e dinâmicos das ações formativas do Poder Judiciário, com potencial de adesão progressiva dos tribunais. O protótipo é tratado como entrega intermediária; a entrega final exige painel operacional publicado e homologado.
 - **KR 2.4 — "Conversa com o CNJ!".** Série institucional em áudio e vídeo de mediação pedagógica das políticas judiciárias, com difusão de massa, ambiente de aprendizagem na plataforma da ENAJU e certificação de participação, em governança compartilhada (ENAJU, Presidência, SEP, SCS, ECP) e alinhada à Política de Comunicação do Judiciário (Res. CNJ nº 640/2025).
 
 **Benefício 3 — Conhecimento aplicado e inteligência educacional baseada em evidências**
@@ -216,22 +218,24 @@ Cronograma orientado por **entregas verificáveis** (KRs), e não por fluxo de t
 
 | ID | Fase / Entrega | Produto verificável | Responsável | Início | Término |
 |---|---|---|---|---|---|
-| 1 | Validação do escopo e governança do projeto | TAP aprovado, EAB revisada, matriz de KRs aprovada, equipe designada | Gerente do Projeto / SEP / ECP | 01/08/2026 | 31/08/2026 |
+| 1 | Validação do escopo e governança do projeto | TAP elaborado, validado, aprovado e enviado ao ECP; EAB e matriz de KRs aprovadas; equipe designada | Gerente do Projeto / SEP / ECP | 01/08/2026 | 31/08/2026 |
 | 2 | **Benefício 1** — Governança e estrutura | | ENAJU | 01/09/2026 | 28/02/2027 |
 | 2.1 | KR 1.1 Normativos internos/externos | Regimento Interno e portarias de fluxos publicados | ENAJU / SG / DG / CONF | 01/09/2026 | 30/11/2026 |
-| 2.2 | KR 1.2 Operacionalização da Rede | Modelo de governança da Rede aprovado; Encontro Nacional realizado/planejado | ENAJU | 01/10/2026 | 31/01/2027 |
+| 2.2 | KR 1.2 Operacionalização da Rede | Modelo de governança da Rede aprovado; plano de comunicação, estratégia de adesão ao HUB e diretrizes de identidade institucional aprovados; Encontro Nacional realizado/planejado | ENAJU / SCS | 01/10/2026 | 31/01/2027 |
 | 2.3 | KR 1.3 Plano Nacional Pedagógico | Plano Pedagógico aprovado | ENAJU | 01/09/2026 | 31/12/2026 |
 | 2.4 | KR 1.4 Estúdio de gravação | Estúdio implantado ou projeto executivo aprovado | ENAJU / SCS / SAD | 01/09/2026 | 28/02/2027 |
 | 3 | **Benefício 2** — Infraestrutura de conteúdos e aprendizagem | | ENAJU / DTI | 01/09/2026 | 30/04/2027 |
-| 3.1 | KR 2.1 HUB + Banco de Conteúdos | Portal único e banco publicados; termos de adesão | ENAJU / DTI | 01/10/2026 | 30/04/2027 |
+| 3.1 | KR 2.1 HUB + Banco de Conteúdos | Portal único e banco publicados; termos de adesão; relatório com escolas aderentes, % do universo e conteúdos catalogados | ENAJU / DTI | 01/10/2026 | 30/04/2027 |
 | 3.2 | KR 2.2 Modernização do Moodle | Requisitos homologados/implantados | ENAJU / DTI | 01/09/2026 | 28/02/2027 |
-| 3.3 | KR 2.3 Painel de BI | Painel publicado/prototipado | ENAJU / DTI | 01/11/2026 | 31/03/2027 |
+| 3.3 | KR 2.3 Painel de BI | Protótipo validado como marco intermediário; painel operacional publicado e homologado | ENAJU / DTI | 01/11/2026 | 31/03/2027 |
 | 3.4 | KR 2.4 Conversa com o CNJ! | Curadoria da 1ª temporada e episódio-piloto publicado | ENAJU / SCS / Presidência | 01/09/2026 | 31/05/2027 |
 | 4 | **Benefício 3** — Conhecimento e evidências | | ENAJU | 01/09/2026 | 31/05/2027 |
 | 4.1 | KR 3.1 CADERNOS_ENAJU | Caderno nº 1 publicado; repositório/ambiente ativo | ENAJU | 01/09/2026 | 31/03/2027 |
 | 4.2 | KR 3.2 ENAJU Evidências | Série instituída; edições do ciclo publicadas | ENAJU | 01/09/2026 | 31/05/2027 |
 | 4.3 | KR 3.3 NuPEC-EJ + Parcerias | Regulamento e 1ª chamada; parcerias formalizadas | ENAJU | 01/10/2026 | 31/05/2027 |
-| 5 | Homologação e encerramento | Relatório de benefícios, análise de resultados dos produtos entregues, evidências dos KRs e Termo de Encerramento do Projeto (TEP) enviado ao ECP | Gerente do Projeto | 01/06/2027 | 30/06/2027 |
+| 5 | Monitoramento trimestral dos indicadores dos benefícios | Relatórios trimestrais de acompanhamento dos KRs, com consolidação dos indicadores dos três benefícios | Gerente do Projeto / ENAJU / ECP | 01/09/2026 | 31/05/2027 |
+| 6 | Análise final de benefícios e consolidação de evidências | Relatório de benefícios validado, análise de resultados dos produtos entregues e evidências consolidadas dos KRs | Gerente do Projeto | 01/06/2027 | 20/06/2027 |
+| 7 | Encerramento formal com TEP | Termo de Encerramento do Projeto (TEP) enviado ao ECP | Gerente do Projeto | 21/06/2027 | 30/06/2027 |
 
 ---
 
@@ -263,6 +267,7 @@ O orçamento reflete a natureza mista do projeto: entregas estritamente normativ
 | Sustentabilidade orçamentária plurianual das entregas de infraestrutura e conhecimento. | Incorporar ao planejamento plurianual de capacitação; buscar cooperação técnica e fontes externas de fomento. |
 | Prazo de aprovação do projeto impactando o início em agosto/2026 e a meta de junho/2027. | Submeter o TAP com antecedência; priorizar entregas de caminho crítico; manter paralelismo entre os três benefícios. |
 | Lacunas de governança enquanto não consolidados os fluxos internos. | Priorizar a publicação dos normativos do KR 1.1; indicar responsáveis provisórios; registrar condicionantes de implementação. |
+| Sobrecarga da equipe e paralelismo excessivo de entregas estratégicas. | Priorizar por caminho crítico; realizar gestão trimestral de capacidade; escalonar ao patrocinador conflitos entre frentes que comprometam prazo, qualidade ou entrega dos benefícios. |
 
 ---
 

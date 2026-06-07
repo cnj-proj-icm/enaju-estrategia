@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Implantação e Consolidação da ENAJU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #cbd5e1;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 1rem;
+            }
+            .timeline-item-left, .timeline-item-right {
+                width: 100%;
+                padding-left: 3rem;
+                text-align: left !important;
+            }
+            .timeline-dot {
+                left: 1rem !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+
+        /* Modal Styles */
+        #modal {
+            transition: opacity 0.3s ease-in-out;
+        }
+        #modal-content {
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0.95);
+        }
+        #modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #modal.open #modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-balance-scale text-blue-700 text-2xl mr-3"></i>
+                    <span class="font-bold text-xl text-slate-800">ENAJU</span>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="#inicio" class="text-slate-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                    <a href="#beneficios" class="text-slate-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">Benefícios e KRs</a>
+                    <a href="#cronograma" class="text-slate-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">Cronograma</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                Projeto de Implantação e Consolidação da ENAJU
+            </h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Governança, infraestrutura de aprendizagem e conhecimento aplicado para consolidar a Escola Nacional do Judiciário como hub central das escolas judiciais.
+            </p>
+            <div class="inline-flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm text-sm">
+                    <span class="block text-blue-200 uppercase tracking-wide text-xs mb-1">Patrocinador</span>
+                    <strong>Dr. Paulo (SEP)</strong>
+                </div>
+                <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm text-sm">
+                    <span class="block text-blue-200 uppercase tracking-wide text-xs mb-1">Gestor Negocial</span>
+                    <strong>Dr. Daniel Avelar</strong>
+                </div>
+                <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm text-sm">
+                    <span class="block text-blue-200 uppercase tracking-wide text-xs mb-1">Prazo</span>
+                    <strong>Ago/2026 - Jun/2027</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="beneficios" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Estrutura Analítica de Benefícios (EAB)</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto">
+                        O projeto organiza-se em três benefícios centrais, cada um composto por Key Results (KRs) que correspondem a projetos entregáveis.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- Benefício 1 -->
+                    <div class="glass-card rounded-xl p-6 border-t-4 border-indigo-500">
+                        <div class="flex items-center mb-4 text-indigo-700">
+                            <i class="fas fa-sitemap text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">B1 - Governança</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6 font-medium">Governança estruturada e capacidade institucional</p>
+
+                        <div class="space-y-4">
+                            <button onclick="openModal('kr11')" class="w-full text-left bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg transition-colors border border-indigo-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded mb-1 inline-block">KR 1.1</span>
+                                    <h4 class="font-semibold text-slate-800">Instrumentos normativos</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-indigo-400 group-hover:text-indigo-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr12')" class="w-full text-left bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg transition-colors border border-indigo-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded mb-1 inline-block">KR 1.2</span>
+                                    <h4 class="font-semibold text-slate-800">Rede Nacional</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-indigo-400 group-hover:text-indigo-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr13')" class="w-full text-left bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg transition-colors border border-indigo-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded mb-1 inline-block">KR 1.3</span>
+                                    <h4 class="font-semibold text-slate-800">Plano Pedagógico</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-indigo-400 group-hover:text-indigo-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr14')" class="w-full text-left bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg transition-colors border border-indigo-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded mb-1 inline-block">KR 1.4</span>
+                                    <h4 class="font-semibold text-slate-800">Estúdio CNJ</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-indigo-400 group-hover:text-indigo-600 transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Benefício 2 -->
+                    <div class="glass-card rounded-xl p-6 border-t-4 border-emerald-500">
+                        <div class="flex items-center mb-4 text-emerald-700">
+                            <i class="fas fa-laptop-code text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">B2 - Infraestrutura</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6 font-medium">Infraestrutura integrada de conteúdos e aprendizagem</p>
+
+                        <div class="space-y-4">
+                            <button onclick="openModal('kr21')" class="w-full text-left bg-emerald-50 hover:bg-emerald-100 p-4 rounded-lg transition-colors border border-emerald-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-200 px-2 py-1 rounded mb-1 inline-block">KR 2.1</span>
+                                    <h4 class="font-semibold text-slate-800">HUB ENAJU</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-emerald-400 group-hover:text-emerald-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr22')" class="w-full text-left bg-emerald-50 hover:bg-emerald-100 p-4 rounded-lg transition-colors border border-emerald-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-200 px-2 py-1 rounded mb-1 inline-block">KR 2.2</span>
+                                    <h4 class="font-semibold text-slate-800">Moodle</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-emerald-400 group-hover:text-emerald-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr23')" class="w-full text-left bg-emerald-50 hover:bg-emerald-100 p-4 rounded-lg transition-colors border border-emerald-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-200 px-2 py-1 rounded mb-1 inline-block">KR 2.3</span>
+                                    <h4 class="font-semibold text-slate-800">Painel de BI</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-emerald-400 group-hover:text-emerald-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr24')" class="w-full text-left bg-emerald-50 hover:bg-emerald-100 p-4 rounded-lg transition-colors border border-emerald-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-200 px-2 py-1 rounded mb-1 inline-block">KR 2.4</span>
+                                    <h4 class="font-semibold text-slate-800">Conversa com o CNJ!</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-emerald-400 group-hover:text-emerald-600 transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Benefício 3 -->
+                    <div class="glass-card rounded-xl p-6 border-t-4 border-amber-600">
+                        <div class="flex items-center mb-4 text-amber-700">
+                            <i class="fas fa-lightbulb text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold">B3 - Conhecimento</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6 font-medium">Conhecimento aplicado e inteligência educacional</p>
+
+                        <div class="space-y-4">
+                            <button onclick="openModal('kr31')" class="w-full text-left bg-amber-50 hover:bg-amber-100 p-4 rounded-lg transition-colors border border-amber-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-amber-700 bg-amber-200 px-2 py-1 rounded mb-1 inline-block">KR 3.1</span>
+                                    <h4 class="font-semibold text-slate-800">CADERNOS_ENAJU</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-amber-400 group-hover:text-amber-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr32')" class="w-full text-left bg-amber-50 hover:bg-amber-100 p-4 rounded-lg transition-colors border border-amber-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-amber-700 bg-amber-200 px-2 py-1 rounded mb-1 inline-block">KR 3.2</span>
+                                    <h4 class="font-semibold text-slate-800">ENAJU Evidências</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-amber-400 group-hover:text-amber-600 transition-colors"></i>
+                            </button>
+
+                            <button onclick="openModal('kr33')" class="w-full text-left bg-amber-50 hover:bg-amber-100 p-4 rounded-lg transition-colors border border-amber-100 flex justify-between items-center group">
+                                <div>
+                                    <span class="text-xs font-bold text-amber-700 bg-amber-200 px-2 py-1 rounded mb-1 inline-block">KR 3.3</span>
+                                    <h4 class="font-semibold text-slate-800">NuPEC-EJ + Parcerias</h4>
+                                </div>
+                                <i class="fas fa-chevron-right text-amber-400 group-hover:text-amber-600 transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="cronograma" class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Cronograma do Projeto</h2>
+                    <p class="text-slate-600">Principais marcos e entregas (Agosto 2026 - Junho 2027)</p>
+                </div>
+
+                <div class="timeline-container py-8">
+
+                    <!-- Marco 1 -->
+                    <div class="relative flex justify-between items-center w-full mb-8">
+                        <div class="timeline-item-left w-5/12 text-right pr-8">
+                            <h4 class="text-lg font-bold text-slate-800">Início do Projeto</h4>
+                            <p class="text-sm text-slate-600">TAP aprovado e equipe designada.</p>
+                        </div>
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-600 border-4 border-white shadow flex items-center justify-center">
+                            <i class="fas fa-flag text-white text-xs"></i>
+                        </div>
+                        <div class="timeline-item-right w-5/12 pl-8 text-left">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold">Agosto 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Marco 2 -->
+                    <div class="relative flex justify-between items-center w-full mb-8">
+                        <div class="timeline-item-left w-5/12 text-right pr-8">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold">Fev - Mar 2027</span>
+                        </div>
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-indigo-500 border-4 border-white shadow flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="timeline-item-right w-5/12 pl-8 text-left">
+                            <h4 class="text-lg font-bold text-slate-800">Entregas de Governança</h4>
+                            <p class="text-sm text-slate-600">Regimento, Moodle modernizado e Estúdio implantado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Marco 3 -->
+                    <div class="relative flex justify-between items-center w-full mb-8">
+                        <div class="timeline-item-left w-5/12 text-right pr-8">
+                            <h4 class="text-lg font-bold text-slate-800">Infraestrutura Operacional</h4>
+                            <p class="text-sm text-slate-600">HUB ENAJU publicado e Painel de BI homologado.</p>
+                        </div>
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-emerald-500 border-4 border-white shadow flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="timeline-item-right w-5/12 pl-8 text-left">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold">Abril 2027</span>
+                        </div>
+                    </div>
+
+                    <!-- Marco 4 -->
+                    <div class="relative flex justify-between items-center w-full mb-8">
+                        <div class="timeline-item-left w-5/12 text-right pr-8">
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold">Maio 2027</span>
+                        </div>
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-amber-500 border-4 border-white shadow flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="timeline-item-right w-5/12 pl-8 text-left">
+                            <h4 class="text-lg font-bold text-slate-800">Conhecimento e Rede</h4>
+                            <p class="text-sm text-slate-600">Série audiovisual, edições ENAJU Evidências e NuPEC-EJ ativo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Marco 5 -->
+                    <div class="relative flex justify-between items-center w-full">
+                        <div class="timeline-item-left w-5/12 text-right pr-8">
+                            <h4 class="text-lg font-bold text-slate-800">Encerramento</h4>
+                            <p class="text-sm text-slate-600">Análise de resultados e Termo de Encerramento do Projeto (TEP).</p>
+                        </div>
+                        <div class="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-slate-800 border-4 border-white shadow flex items-center justify-center">
+                            <i class="fas fa-flag-checkered text-white text-xs"></i>
+                        </div>
+                        <div class="timeline-item-right w-5/12 pl-8 text-left">
+                            <span class="inline-block px-3 py-1 bg-slate-800 text-white rounded-full text-sm font-semibold">Junho 2027</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 Escola Nacional do Judiciário (ENAJU). Todos os direitos reservados.</p>
+        <p class="mt-2">Baseado no Termo de Abertura de Projeto (TAP) reestruturado.</p>
+    </footer>
+
+    <!-- Modal Backdrop -->
+    <div id="modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[100] hidden flex items-center justify-center opacity-0 pointer-events-none p-4">
+        <!-- Modal Content -->
+        <div id="modal-content" class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-8" id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data derived from the TAP Document
+        const krData = {
+            'kr11': {
+                title: 'KR 1.1 - Instrumentos Normativos',
+                theme: 'indigo',
+                icon: 'fa-file-signature',
+                description: 'Produção, revisão e aprovação do conjunto mínimo de normativos para o funcionamento da ENAJU.',
+                details: 'Inclui o Regimento Interno, portarias, procedimentos e fluxos, definindo competências e a articulação interna de seus setores e com a Rede. Garante segurança normativa e suporte jurídico-institucional às operações da Escola.',
+                acceptance: 'Instrumentos normativos internos/externos publicados e vigentes.',
+                deadline: '30/11/2026'
+            },
+            'kr12': {
+                title: 'KR 1.2 - Operacionalização da Rede Nacional',
+                theme: 'indigo',
+                icon: 'fa-network-wired',
+                description: 'Definição de instâncias, regras de adesão e fluxos de cooperação da Rede de Escolas Judiciais.',
+                details: 'Inclui o Encontro Nacional de Escolas Judiciais como espaço de articulação e integração da Rede e fomento à adesão ao HUB ENAJU. Contempla plano de comunicação da ENAJU e diretrizes de identidade institucional.',
+                acceptance: 'Modelo aprovado; plano de comunicação e estratégia de adesão aprovados.',
+                deadline: '31/01/2027'
+            },
+            'kr13': {
+                title: 'KR 1.3 - Plano Nacional Pedagógico',
+                theme: 'indigo',
+                icon: 'fa-book-open',
+                description: 'Documento que traduz a Política Nacional de Formação em diretrizes práticas.',
+                details: 'Estabelece diretrizes pedagógicas, matriz de competências, trilhas prioritárias e critérios de qualidade que materializam a Política Nacional de Formação para todo o Sistema.',
+                acceptance: 'Plano Nacional Pedagógico de Capacitação aprovado.',
+                deadline: '31/12/2026'
+            },
+            'kr14': {
+                title: 'KR 1.4 - Estúdio CNJ',
+                theme: 'indigo',
+                icon: 'fa-video',
+                description: 'Estrutura física institucional para produção de conteúdos educacionais.',
+                details: 'Implantação de estúdio próprio de gravação no CNJ para a produção de conteúdos audiovisuais da ENAJU, servindo de base física para as séries e cadernos técnicos.',
+                acceptance: 'Estúdio implantado ou com projeto executivo/estudo técnico aprovado.',
+                deadline: '28/02/2027'
+            },
+            'kr21': {
+                title: 'KR 2.1 - HUB ENAJU',
+                theme: 'emerald',
+                icon: 'fa-globe',
+                description: 'Portal único nacional e Banco de Conteúdos Educacionais.',
+                details: 'Integra a oferta de cursos/trilhas para servidores e estrutura o repositório nacional de conteúdos das escolas judiciais, com curadoria e metadados padronizados para reaproveitamento pelos tribunais.',
+                acceptance: 'HUB e Banco publicados; relatório com nº de escolas aderentes e conteúdos.',
+                deadline: '30/04/2027'
+            },
+            'kr22': {
+                title: 'KR 2.2 - Modernização do Moodle',
+                theme: 'emerald',
+                icon: 'fa-graduation-cap',
+                description: 'Atualização do ambiente virtual de aprendizagem.',
+                details: 'Melhoria na usabilidade, navegação, experiência do usuário e acessibilidade do ambiente Moodle atual da ENAJU.',
+                acceptance: 'Requisitos de modernização homologados/implantados.',
+                deadline: '28/02/2027'
+            },
+            'kr23': {
+                title: 'KR 2.3 - Painel de BI',
+                theme: 'emerald',
+                icon: 'fa-chart-pie',
+                description: 'Painel de Business Intelligence (BI) das ações formativas.',
+                details: 'Painel com dados consolidados e dinâmicos das ações formativas do Poder Judiciário, visando a adesão progressiva dos tribunais para inteligência de dados centralizada.',
+                acceptance: 'Protótipo validado (intermediário); painel operacional publicado (final).',
+                deadline: '31/03/2027'
+            },
+            'kr24': {
+                title: 'KR 2.4 - Conversa com o CNJ!',
+                theme: 'emerald',
+                icon: 'fa-podcast',
+                description: 'Série audiovisual de mediação pedagógica.',
+                details: 'Série institucional de podcasts/episódios em áudio e vídeo dedicada à divulgação e interpretação das políticas judiciárias, com ambiente de aprendizagem e certificação.',
+                acceptance: '1ª temporada planejada com ato/curadoria e episódio-piloto publicado.',
+                deadline: '31/05/2027'
+            },
+            'kr31': {
+                title: 'KR 3.1 - CADERNOS_ENAJU',
+                theme: 'amber',
+                icon: 'fa-book',
+                description: 'Linha de produção técnico-científica.',
+                details: 'Linha editorial da ENAJU para produzir conhecimento aplicado e trilhas baseadas em evidências, com repositório versionado. Produto-piloto: Caderno ENAJU nº 1.',
+                acceptance: 'Caderno ENAJU nº 1 publicado e repositório/ambiente ativo.',
+                deadline: '31/03/2027'
+            },
+            'kr32': {
+                title: 'KR 3.2 - ENAJU Evidências',
+                theme: 'amber',
+                icon: 'fa-search-chart',
+                description: 'Relatórios pós-evento sistemáticos.',
+                details: 'Série editorial que transforma cada ação formativa em inteligência reutilizável (síntese, capacidades, conexão com políticas). Evento-piloto: webinário sobre pessoas idosas.',
+                acceptance: 'Série instituída e nº de edições previstas no ciclo publicadas.',
+                deadline: '31/05/2027'
+            },
+            'kr33': {
+                title: 'KR 3.3 - NuPEC-EJ + Parcerias',
+                theme: 'amber',
+                icon: 'fa-handshake',
+                description: 'Rede de pesquisadores e cooperação acadêmica.',
+                details: 'Núcleo de Pesquisa e Conhecimento, articulando pesquisadores dos tribunais, realizando Encontro Anual e formalizando parcerias com universidades e organismos internacionais.',
+                acceptance: 'NuPEC-EJ instituído (regulamento + 1ª chamada) e parcerias formalizadas.',
+                deadline: '31/05/2027'
+            }
+        };
+
+        const modal = document.getElementById('modal');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(krId) {
+            const data = krData[krId];
+            if (!data) return;
+
+            // Define theme colors dynamically based on the section
+            let themeColor = '';
+            let bgLight = '';
+            if(data.theme === 'indigo') { themeColor = 'text-indigo-600'; bgLight = 'bg-indigo-50 border-indigo-100'; }
+            if(data.theme === 'emerald') { themeColor = 'text-emerald-600'; bgLight = 'bg-emerald-50 border-emerald-100'; }
+            if(data.theme === 'amber') { themeColor = 'text-amber-600'; bgLight = 'bg-amber-50 border-amber-100'; }
+
+            modalBody.innerHTML = `
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full ${bgLight} flex items-center justify-center mr-4">
+                        <i class="fas ${data.icon} text-2xl ${themeColor}"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800">${data.title}</h2>
+                </div>
+
+                <p class="text-lg text-slate-700 font-medium mb-4">${data.description}</p>
+
+                <div class="prose prose-slate mb-6">
+                    <p class="text-slate-600">${data.details}</p>
+                </div>
+
+                <div class="${bgLight} border rounded-lg p-4 mb-4">
+                    <h4 class="text-sm uppercase tracking-wider font-bold ${themeColor} mb-2">Critério de Aceite</h4>
+                    <p class="text-slate-700 text-sm flex items-start">
+                        <i class="fas fa-check-circle mt-1 mr-2 ${themeColor}"></i>
+                        ${data.acceptance}
+                    </p>
+                </div>
+
+                <div class="flex items-center text-sm text-slate-500 font-medium">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    Término previsto: <span class="ml-1 text-slate-800">${data.deadline}</span>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.add('open');
+            }, 10);
+
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restore body scrolling
+            }, 300); // Wait for transition to finish
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

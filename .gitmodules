@@ -21,3 +21,8 @@
 	path = balanco-socio-10
 	url = https://github.com/cnj-proj-icm/balanco-socio-10.git
 	ignore = untracked
+
+[submodule "Projetos/gerador-tap-ecp"]
+	path = Projetos/gerador-tap-ecp
+	url = https://github.com/cnj-proj-icm/gerador-tap-ecp.git
+	ignore = untracked

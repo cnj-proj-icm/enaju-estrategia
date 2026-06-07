@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto | Lacunas de Capacitacao em Producoes do CNJ |
+| KR (EAB) | B3 · KR 3.2 (ENAJU Evidencias) |
+| Inciso Art.19 | II (Raio-X) / IV (Observatorio ENAJU) |
 | Eixo | Pesquisa aplicada / Inteligencia educacional / Dados |
 | Responsavel | A definir |
 | Pessoas envolvidas | A definir |

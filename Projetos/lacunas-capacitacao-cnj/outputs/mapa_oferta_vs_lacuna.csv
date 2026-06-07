@@ -1,12 +1,12 @@
-﻿eixo,gaps_observados,competencias_requeridas,ofertas_formativas,documentos_com_gap,documentos_com_oferta,status_mapeamento
-dados_e_tecnologia,932,50,47,37,21,oferta_e_lacuna_mapeadas
-direitos_humanos_e_inclusao,795,34,19,39,8,oferta_e_lacuna_mapeadas
-avaliacao_e_monitoramento,608,74,17,33,11,oferta_e_lacuna_mapeadas
-inovacao_e_transformacao,449,20,15,20,5,oferta_e_lacuna_mapeadas
-atendimento_e_servicos_judiciarios,390,28,17,39,11,oferta_e_lacuna_mapeadas
-nao_classificado,333,23,50,29,12,oferta_e_lacuna_mapeadas
-gestao_e_governanca,304,69,21,36,10,oferta_e_lacuna_mapeadas
-comunicacao_e_acessibilidade,275,24,21,29,11,oferta_e_lacuna_mapeadas
-saude_e_bem_estar,199,8,7,27,5,oferta_e_lacuna_mapeadas
-equipes_multidisciplinares,87,21,5,21,3,oferta_e_lacuna_mapeadas
-formacao_de_liderancas,75,16,1,24,1,oferta_e_lacuna_mapeadas
+﻿eixo,gaps_observados,competencias_requeridas,ofertas_formativas,documentos_com_gap,documentos_com_oferta,status_mapeamento,leitura_interpretativa
+dados_e_tecnologia,932,50,47,37,21,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+direitos_humanos_e_inclusao,795,34,19,39,8,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+avaliacao_e_monitoramento,608,74,17,33,11,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+inovacao_e_transformacao,449,20,15,20,5,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+atendimento_e_servicos_judiciarios,390,28,17,39,11,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+nao_classificado,333,23,50,29,12,revisao_tematica_pendente,revisão temática pendente
+gestao_e_governanca,304,69,21,36,10,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+comunicacao_e_acessibilidade,275,24,21,29,11,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+saude_e_bem_estar,199,8,7,27,5,lacuna_forte_com_oferta_parcial,lacuna forte com oferta parcial
+equipes_multidisciplinares,87,21,5,21,3,lacuna_moderada_com_oferta_existente,lacuna moderada com oferta existente
+formacao_de_liderancas,75,16,1,24,1,lacuna_moderada_com_oferta_existente,lacuna moderada com oferta existente

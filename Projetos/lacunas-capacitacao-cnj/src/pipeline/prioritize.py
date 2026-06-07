@@ -6,7 +6,7 @@ from typing import Any
 
 import pandas as pd
 
-from .common import RunContext, json_loads, read_csv, write_csv, write_parquet
+from .common import RunContext, json_loads, normalize_text, read_csv, write_csv, write_parquet
 
 LOGGER = logging.getLogger(__name__)
 
@@ -73,13 +73,13 @@ def _priority_band(score: float, thresholds: dict[str, Any]) -> str:
 def _proposal_for_axis(criteria: dict[str, Any], axis: str) -> dict[str, Any]:
     proposals = criteria.get("priorizacao_automatica", {}).get("propostas_formativas", {})
     proposal = dict(proposals.get(axis, {}))
-    proposal.setdefault("categoria", "Hipotese")
+    proposal.setdefault("categoria", "Hipótese")
     proposal.setdefault("proposta", axis.replace("_", " ").title())
-    proposal.setdefault("publico_prioritario", "gestores e equipes tecnicas")
-    proposal.setdefault("competencias_centrais", "analise de contexto, priorizacao e aplicacao institucional")
+    proposal.setdefault("publico_prioritario", "gestores e equipes técnicas")
+    proposal.setdefault("competencias_centrais", "análise de contexto, priorização e aplicação institucional")
     proposal.setdefault("carga_horaria_sugerida", "12h a 16h")
     proposal.setdefault("modalidade_sugerida", "curso curto com oficina aplicada")
-    proposal.setdefault("produto_esperado", "plano de aplicacao institucional")
+    proposal.setdefault("produto_esperado", "plano de aplicação institucional")
     proposal.setdefault("indicador_avaliacao", "produto final avaliado por rubrica")
     return proposal
 
@@ -260,7 +260,7 @@ def prioritize_evidence(context: RunContext) -> dict[str, Any]:
     write_parquet(expanded, context.paths.processed / "evidencias_priorizadas.parquet")
 
     matrix = _build_priority_matrix(expanded, criteria, thresholds)
-    dossier = _build_evidence_dossier(expanded)
+    dossier = _build_evidence_dossier(expanded, criteria)
     portfolio = _build_training_portfolio(matrix, criteria)
     by_source_type = _build_source_type_matrix(expanded)
     normative = _build_normative_competency_matrix(expanded)
@@ -312,13 +312,77 @@ def _build_priority_matrix(expanded: pd.DataFrame, criteria: dict[str, Any], thr
     ]
 
 
-def _build_evidence_dossier(expanded: pd.DataFrame) -> pd.DataFrame:
+def _axis_alignment(row: pd.Series, criteria: dict[str, Any]) -> float:
+    axis = str(row.get("eixo", ""))
+    terms = criteria.get("eixos", {}).get(axis, {}).get("termos", [])
+    if not terms:
+        return 0.0
+    searchable = normalize_text(
+        " ".join(
+            str(row.get(column, ""))
+            for column in ("titulo", "trecho", "hipotese_competencia", "termos_encontrados")
+        )
+    )
+    score = 0.0
+    for term in terms:
+        normalized_term = normalize_text(str(term))
+        if not normalized_term or normalized_term not in searchable:
+            continue
+        # Termos muito genéricos, como "dados" ou "gestão", ajudam a classificar,
+        # mas não devem dominar a escolha de exemplos publicáveis.
+        specificity = 1.0
+        if " " in normalized_term:
+            specificity += 2.0
+        if len(normalized_term) >= 8:
+            specificity += 1.0
+        if normalized_term in {"dados", "gestao", "saude", "servico", "fluxo"}:
+            specificity -= 0.5
+        score += max(specificity, 0.25)
+    return round(score, 2)
+
+
+def _curation_note(row: pd.Series) -> str:
+    alignment = float(row.get("aderencia_eixo", 0) or 0)
+    if alignment < 1:
+        return "revisar aderência temática antes de citar"
+    if str(row.get("eixo", "")) == "nao_classificado":
+        return "reclassificação temática pendente"
+    return "aderência temática suficiente para dossiê"
+
+
+def _dossier_source_preference(row: pd.Series) -> float:
+    source_weights = {
+        "relatorio_diagnostico_pesquisa": 4.0,
+        "ato_normativo": 3.2,
+        "manual_guia_cartilha": 3.0,
+        "pagina_programa": 2.0,
+        "oferta_formativa": 1.2,
+        "noticia_cnj": 1.0,
+    }
+    class_weights = {
+        "gap_observado": 3.0,
+        "competencia_requerida": 2.0,
+        "oferta_formativa": 1.0,
+    }
+    return source_weights.get(str(row.get("fonte_tipo", "")), 1.5) + class_weights.get(
+        str(row.get("achado_classe", "")), 1.5
+    )
+
+
+def _build_evidence_dossier(expanded: pd.DataFrame, criteria: dict[str, Any]) -> pd.DataFrame:
     usable = expanded[expanded["eixo"] != "nao_classificado"].copy()
     if usable.empty:
         return pd.DataFrame()
     usable["trecho_curto"] = usable["trecho"].astype(str).str.replace(r"\s+", " ", regex=True).str.slice(0, 600)
-    usable = usable.sort_values(["score_final", "score", "documentos_eixo"], ascending=False)
+    usable["aderencia_eixo"] = usable.apply(lambda row: _axis_alignment(row, criteria), axis=1)
+    usable["observacao_curadoria"] = usable.apply(_curation_note, axis=1)
+    usable["preferencia_dossie"] = usable.apply(_dossier_source_preference, axis=1)
+    usable = usable.sort_values(
+        ["preferencia_dossie", "aderencia_eixo", "score_final", "score", "documentos_eixo"],
+        ascending=False,
+    )
     top = usable.groupby(["eixo", "proposta"], dropna=False).head(3).copy()
+    top = top.sort_values(["score_final", "aderencia_eixo", "score"], ascending=False)
     columns = [
         "eixo",
         "proposta",
@@ -333,6 +397,8 @@ def _build_evidence_dossier(expanded: pd.DataFrame) -> pd.DataFrame:
         "pagina",
         "url",
         "hipotese_competencia",
+        "aderencia_eixo",
+        "observacao_curadoria",
         "trecho_curto",
     ]
     return top[[column for column in columns if column in top.columns]]
@@ -409,6 +475,53 @@ def _build_normative_competency_matrix(expanded: pd.DataFrame) -> pd.DataFrame:
     return matrix
 
 
+def _offer_gap_status(
+    axis: str,
+    gap: int,
+    required: int,
+    offer: int,
+    gap_docs: int,
+    offer_docs: int,
+) -> str:
+    if axis == "nao_classificado":
+        return "revisao_tematica_pendente"
+    if gap and not offer:
+        if gap >= 50 or gap_docs >= 5:
+            return "lacuna_forte_com_baixa_oferta"
+        return "lacuna_sem_oferta_mapeada"
+    if gap and offer:
+        offer_ratio = offer / max(gap, 1)
+        doc_ratio = offer_docs / max(gap_docs, 1)
+        if gap >= 100 and (offer_ratio < 0.20 or doc_ratio < 0.50):
+            return "lacuna_forte_com_oferta_parcial"
+        if gap >= 100:
+            return "lacuna_forte_com_oferta_existente"
+        if required and gap < 20 and offer >= gap:
+            return "competencia_normativa_com_oferta_mapeada"
+        return "lacuna_moderada_com_oferta_existente"
+    if required and not gap:
+        return "competencia_normativa_sem_diagnostico"
+    if offer and not gap:
+        return "oferta_sem_gap_demonstrado"
+    return "sem_sinal_suficiente"
+
+
+def _offer_gap_label(status: str) -> str:
+    labels = {
+        "lacuna_forte_com_baixa_oferta": "lacuna forte com baixa oferta mapeada",
+        "lacuna_sem_oferta_mapeada": "lacuna sem oferta mapeada",
+        "lacuna_forte_com_oferta_parcial": "lacuna forte com oferta parcial",
+        "lacuna_forte_com_oferta_existente": "lacuna forte com oferta existente",
+        "lacuna_moderada_com_oferta_existente": "lacuna moderada com oferta existente",
+        "competencia_normativa_com_oferta_mapeada": "competência normativa com oferta mapeada",
+        "competencia_normativa_sem_diagnostico": "competência normativa sem diagnóstico",
+        "oferta_sem_gap_demonstrado": "oferta existente sem gap demonstrado",
+        "revisao_tematica_pendente": "revisão temática pendente",
+        "sem_sinal_suficiente": "sem sinal suficiente",
+    }
+    return labels.get(status, status.replace("_", " "))
+
+
 def _build_offer_gap_map(expanded: pd.DataFrame) -> pd.DataFrame:
     if expanded.empty:
         return pd.DataFrame()
@@ -424,16 +537,19 @@ def _build_offer_gap_map(expanded: pd.DataFrame) -> pd.DataFrame:
         gap = int(evidence.get("gap_observado", pd.Series()).get(axis, 0))
         required = int(evidence.get("competencia_requerida", pd.Series()).get(axis, 0))
         offer = int(evidence.get("oferta_formativa", pd.Series()).get(axis, 0))
-        status = "lacuna_sem_oferta_mapeada" if gap and not offer else "oferta_e_lacuna_mapeadas" if gap and offer else "competencia_ou_oferta_sem_gap"
+        gap_docs = int(docs.get("gap_observado", pd.Series()).get(axis, 0))
+        offer_docs = int(docs.get("oferta_formativa", pd.Series()).get(axis, 0))
+        status = _offer_gap_status(str(axis), gap, required, offer, gap_docs, offer_docs)
         rows.append(
             {
                 "eixo": axis,
                 "gaps_observados": gap,
                 "competencias_requeridas": required,
                 "ofertas_formativas": offer,
-                "documentos_com_gap": int(docs.get("gap_observado", pd.Series()).get(axis, 0)),
-                "documentos_com_oferta": int(docs.get("oferta_formativa", pd.Series()).get(axis, 0)),
+                "documentos_com_gap": gap_docs,
+                "documentos_com_oferta": offer_docs,
                 "status_mapeamento": status,
+                "leitura_interpretativa": _offer_gap_label(status),
             }
         )
     return pd.DataFrame(rows).sort_values(["gaps_observados", "competencias_requeridas"], ascending=False)

@@ -83,6 +83,8 @@ flowchart TB
     F --> F2[Laboratorios e oficinas]
 ```
 
+> **Mapa oficial EAB ↔ Carteira Art. 19 ↔ fichas/repos:** [`Projetos/carteira-estrategica-enaju/eab-carteira-depara.md`](../Projetos/carteira-estrategica-enaju/eab-carteira-depara.md) (diagrama Mermaid + de-para).
+
 ## Proximas Melhorias Recomendadas
 
 | Prioridade | Acao |

@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto | CADERNOS_ENAJU |
+| KR (EAB) | B3 · KR 3.1 (CADERNOS_ENAJU) |
+| Inciso Art.19 | IV (Observatório ENAJU) |
 | Unidade responsável | CODE — Coordenação de Desenvolvimento, Pesquisa e Inovação |
 | Eixo | Pesquisa aplicada / Educação judicial / Inovação / Políticas judiciárias |
 | Responsável | A definir |

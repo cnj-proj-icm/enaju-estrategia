@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto | Futuros da Justica |
+| KR (EAB) | B2 · KR 2.2 (Modernizacao do Moodle / Trilhas) |
+| Inciso Art.19 | III (Trilhas Digitais) / VI (Ecossistema LMS) |
 | Eixo | Produto digital / Foresight / Competencias |
 | Responsavel | A definir |
 | Repositorio vinculado | `futuros-da-justica` |

@@ -84,14 +84,25 @@ def test_fixture_pipeline_generates_publishable_automated_report(monkeypatch, tm
 
     assert outputs["status"] == "priorizado"
     report = (context.paths.outputs / "relatorio_publicavel.md").read_text(encoding="utf-8")
-    assert "publicavel" in report.lower()
+    assert "publicável" in report.lower()
     assert "alertas de risco" in report.lower()
     assert "automatiz" in report.lower()
     publication = (context.paths.outputs / "publicacao_final.md").read_text(encoding="utf-8")
     executive = (context.paths.outputs / "resumo_executivo.md").read_text(encoding="utf-8")
     assert "if preliminary else" not in publication
     assert "if preliminary else" not in executive
-    assert "Evidencias rastreaveis" in publication
+    assert "Evidências rastreáveis" in publication
+    assert "Método utilizado e justificativa da escolha" in publication
+    assert "Strings de busca para formação do corpus" in publication
+    assert "Strings usadas na análise dos gaps" in publication
+    assert "`necessidade de`" in publication
+    assert "`capacitacao`" in publication
+    assert "Portfólio preliminar para validação" in publication
+    assert "score textual bruto utiliza escala própria" in publication
+    assert "Plano proposto para análise robusta dos gaps" in publication
+    assert "gap_observado" in publication
+    assert "competencia_requerida" in publication
+    assert "oferta_formativa" in publication
     assert (context.paths.outputs / "publicacao_final.docx").exists()
     assert (context.paths.outputs / "matriz_lacunas_priorizadas.csv").exists()
     assert (context.paths.outputs / "dossie_evidencias.csv").exists()

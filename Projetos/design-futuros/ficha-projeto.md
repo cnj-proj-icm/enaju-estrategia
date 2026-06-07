@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto | Design Futuros |
+| KR (EAB) | B3 · KR 3.3 (NuPEC-EJ + Parcerias) |
+| Inciso Art.19 | IX (Ponte Educacional) |
 | Eixo | Pesquisa aplicada / Foresight / Parcerias |
 | Responsavel | A definir |
 | Repositorio vinculado | `design-futuros` |

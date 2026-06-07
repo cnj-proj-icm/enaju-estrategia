@@ -232,92 +232,92 @@ priorizacao_automatica:
     nao_classificado: 0.20
   propostas_formativas:
     dados_e_tecnologia:
-      categoria: Capacitacao
-      proposta: Capacitacao em dados, tecnologia e inteligencia institucional
+      categoria: Capacitação
+      proposta: Capacitação em dados, tecnologia e inteligência institucional
       publico_prioritario: gestores, analistas e equipes de dados
-      competencias_centrais: leitura de indicadores, governanca de dados, uso de evidencias e qualidade informacional
+      competencias_centrais: leitura de indicadores, governança de dados, uso de evidências e qualidade informacional
       carga_horaria_sugerida: 12h a 20h
-      modalidade_sugerida: curso curto com laboratorio aplicado
+      modalidade_sugerida: curso curto com laboratório aplicado
       produto_esperado: painel simples ou plano de uso de indicadores
       indicador_avaliacao: percentual de participantes capazes de interpretar indicadores institucionais em estudo de caso
     direitos_humanos_e_inclusao:
-      categoria: Capacitacao
-      proposta: Capacitacao em direitos humanos, inclusao e acessibilidade
-      publico_prioritario: servidores, gestores e equipes de politicas publicas
-      competencias_centrais: inclusao, acessibilidade, linguagem institucional e resposta a vulnerabilidades
+      categoria: Capacitação
+      proposta: Capacitação em direitos humanos, inclusão e acessibilidade
+      publico_prioritario: servidores, gestores e equipes de políticas públicas
+      competencias_centrais: inclusão, acessibilidade, linguagem institucional e resposta a vulnerabilidades
       carga_horaria_sugerida: 12h a 16h
-      modalidade_sugerida: curso com oficina de aplicacao
-      produto_esperado: guia de boas praticas inclusivas
-      indicador_avaliacao: percentual de participantes que aplicam criterios de acessibilidade em exercicios praticos
+      modalidade_sugerida: curso com oficina de aplicação
+      produto_esperado: guia de boas práticas inclusivas
+      indicador_avaliacao: percentual de participantes que aplicam critérios de acessibilidade em exercícios práticos
     avaliacao_e_monitoramento:
       categoria: Trilha
-      proposta: Trilha de avaliacao, monitoramento e planejamento estrategico
-      publico_prioritario: gestores e formuladores de politicas
-      competencias_centrais: avaliacao de impacto, indicadores, priorizacao e acompanhamento de resultados
+      proposta: Trilha de avaliação, monitoramento e planejamento estratégico
+      publico_prioritario: gestores e formuladores de políticas
+      competencias_centrais: avaliação de impacto, indicadores, priorização e acompanhamento de resultados
       carga_horaria_sugerida: 16h a 24h
       modalidade_sugerida: trilha curta com mentoria
       produto_esperado: plano de monitoramento institucional
-      indicador_avaliacao: percentual de participantes que elaboram indicadores e metas plausiveis
+      indicador_avaliacao: percentual de participantes que elaboram indicadores e metas plausíveis
     inovacao_e_transformacao:
       categoria: Trilha
-      proposta: Trilha de inovacao e transformacao digital
-      publico_prioritario: coordenadores e equipes de inovacao
-      competencias_centrais: transformacao digital, gestao do conhecimento, experimentacao e servicos digitais
+      proposta: Trilha de inovação e transformação digital
+      publico_prioritario: coordenadores e equipes de inovação
+      competencias_centrais: transformação digital, gestão do conhecimento, experimentação e serviços digitais
       carga_horaria_sugerida: 16h a 20h
       modalidade_sugerida: trilha com projeto piloto
-      produto_esperado: prototipo de servico digital simples
-      indicador_avaliacao: numero de ideias viaveis convertidas em prototipo piloto
+      produto_esperado: protótipo de serviço digital simples
+      indicador_avaliacao: número de ideias viáveis convertidas em protótipo piloto
     atendimento_e_servicos_judiciarios:
       categoria: Trilha
-      proposta: Trilha de atendimento e servicos ao cidadao
-      publico_prioritario: equipes de atendimento, comunicacao e gestao de servicos
-      competencias_centrais: comunicacao clara, acolhimento, experiencia do cidadao e melhoria de servicos
+      proposta: Trilha de atendimento e serviços ao cidadão
+      publico_prioritario: equipes de atendimento, comunicação e gestão de serviços
+      competencias_centrais: comunicação clara, acolhimento, experiência do cidadão e melhoria de serviços
       carga_horaria_sugerida: 12h a 18h
-      modalidade_sugerida: curso com simulacao
+      modalidade_sugerida: curso com simulação
       produto_esperado: protocolo de atendimento humanizado
-      indicador_avaliacao: desempenho em simulacao ou satisfacao aferida em exercicio pratico
+      indicador_avaliacao: desempenho em simulação ou satisfação aferida em exercício prático
     gestao_e_governanca:
       categoria: Trilha
-      proposta: Trilha de gestao, governanca e lideranca
-      publico_prioritario: gestores, chefias e equipes de governanca
-      competencias_centrais: governanca, padronizacao de fluxos, tomada de decisao e coordenacao institucional
+      proposta: Trilha de gestão, governança e liderança
+      publico_prioritario: gestores, chefias e equipes de governança
+      competencias_centrais: governança, padronização de fluxos, tomada de decisão e coordenação institucional
       carga_horaria_sugerida: 16h a 24h
       modalidade_sugerida: trilha aplicada
-      produto_esperado: plano de melhoria de fluxo ou governanca
+      produto_esperado: plano de melhoria de fluxo ou governança
       indicador_avaliacao: qualidade do plano segundo rubrica de viabilidade e alinhamento institucional
     comunicacao_e_acessibilidade:
-      categoria: Capacitacao
-      proposta: Capacitacao em comunicacao e acessibilidade
-      publico_prioritario: equipes de comunicacao, atendimento e gestao de conteudo
-      competencias_centrais: linguagem simples, acessibilidade comunicacional e desenho de informacao
+      categoria: Capacitação
+      proposta: Capacitação em comunicação e acessibilidade
+      publico_prioritario: equipes de comunicação, atendimento e gestão de conteúdo
+      competencias_centrais: linguagem simples, acessibilidade comunicacional e desenho de informação
       carga_horaria_sugerida: 8h a 12h
-      modalidade_sugerida: oficina pratica
-      produto_esperado: peca comunicacional revisada com criterios de acessibilidade
-      indicador_avaliacao: conformidade da peca revisada com checklist de acessibilidade
+      modalidade_sugerida: oficina prática
+      produto_esperado: peça comunicacional revisada com critérios de acessibilidade
+      indicador_avaliacao: conformidade da peça revisada com checklist de acessibilidade
     saude_e_bem_estar:
-      categoria: Capacitacao
-      proposta: Capacitacao em saude e bem-estar institucional
+      categoria: Capacitação
+      proposta: Capacitação em saúde e bem-estar institucional
       publico_prioritario: gestores de pessoas, magistrados e equipes de apoio institucional
-      competencias_centrais: prevencao, acolhimento, monitoramento de riscos e promocao de saude no trabalho
+      competencias_centrais: prevenção, acolhimento, monitoramento de riscos e promoção de saúde no trabalho
       carga_horaria_sugerida: 12h a 16h
       modalidade_sugerida: curso com estudo de caso
-      produto_esperado: plano de acao de cuidado institucional
-      indicador_avaliacao: qualidade do plano de acao conforme criterios de prevencao e encaminhamento
+      produto_esperado: plano de ação de cuidado institucional
+      indicador_avaliacao: qualidade do plano de ação conforme critérios de prevenção e encaminhamento
     formacao_de_liderancas:
       categoria: Trilha
-      proposta: Trilha de formacao de liderancas
-      publico_prioritario: liderancas atuais e potenciais gestores
-      competencias_centrais: lideranca, gestao de equipes, comunicacao e tomada de decisao
+      proposta: Trilha de formação de lideranças
+      publico_prioritario: lideranças atuais e potenciais gestores
+      competencias_centrais: liderança, gestão de equipes, comunicação e tomada de decisão
       carga_horaria_sugerida: 20h a 30h
-      modalidade_sugerida: trilha com atividades reflexivas e praticas
-      produto_esperado: plano individual de desenvolvimento de lideranca
-      indicador_avaliacao: evolucao do participante em rubrica de competencias de lideranca
+      modalidade_sugerida: trilha com atividades reflexivas e práticas
+      produto_esperado: plano individual de desenvolvimento de liderança
+      indicador_avaliacao: evolução do participante em rubrica de competências de liderança
     equipes_multidisciplinares:
-      categoria: Capacitacao
-      proposta: Capacitacao para estruturacao e atuacao de equipes multidisciplinares
-      publico_prioritario: equipes tecnicas, gestores e unidades de apoio psicossocial
-      competencias_centrais: trabalho multidisciplinar, fluxos de atendimento e articulacao interinstitucional
+      categoria: Capacitação
+      proposta: Capacitação para estruturação e atuação de equipes multidisciplinares
+      publico_prioritario: equipes técnicas, gestores e unidades de apoio psicossocial
+      competencias_centrais: trabalho multidisciplinar, fluxos de atendimento e articulação interinstitucional
       carga_horaria_sugerida: 12h a 20h
       modalidade_sugerida: curso com oficina de fluxo
-      produto_esperado: desenho de fluxo de atuacao multidisciplinar
-      indicador_avaliacao: aderencia do fluxo proposto aos criterios de clareza, responsabilizacao e viabilidade
+      produto_esperado: desenho de fluxo de atuação multidisciplinar
+      indicador_avaliacao: aderência do fluxo proposto aos critérios de clareza, responsabilização e viabilidade

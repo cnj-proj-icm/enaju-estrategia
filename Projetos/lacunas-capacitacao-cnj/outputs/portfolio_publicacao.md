@@ -1,47 +1,47 @@
-# Portfolio de Capacitacoes e Trilhas Baseado em Evidencias do CNJ
+# Portfólio Preliminar de Capacitações e Trilhas Baseado em Evidências do CNJ
 
 ## Objetivo
 
-Consolidar as lacunas priorizadas da linha de base `baseline-2026-05-31` em uma proposta inicial de capacitacoes e trilhas para a ENAJU e escolas judiciais.
+Consolidar as lacunas priorizadas da linha de base `baseline-2026-05-31` em uma proposta inicial de capacitações e trilhas para a ENAJU e escolas judiciais.
 
 ## Status
 
-**PROPOSTA TECNICA - priorizacao automatizada com amostra de calibracao estruturada**
+**PROPOSTA TÉCNICA - priorização automatizada com amostra de calibração estruturada**
 
-## Portfolio
+## Portfólio preliminar para validação
 
-| Ordem | Faixa | Tipo | Proposta | Publico | Competencias | Produto esperado | Indicador |
+| Ordem | Faixa | Tipo | Proposta | Público | Competências | Produto esperado | Indicador |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | media | Capacitacao | Capacitacao em dados, tecnologia e inteligencia institucional | gestores, analistas e equipes de dados | leitura de indicadores, governanca de dados, uso de evidencias e qualidade informacional | painel simples ou plano de uso de indicadores | percentual de participantes capazes de interpretar indicadores institucionais em estudo de caso |
-| 2 | media | Capacitacao | Capacitacao em direitos humanos, inclusao e acessibilidade | servidores, gestores e equipes de politicas publicas | inclusao, acessibilidade, linguagem institucional e resposta a vulnerabilidades | guia de boas praticas inclusivas | percentual de participantes que aplicam criterios de acessibilidade em exercicios praticos |
-| 3 | media | Capacitacao | Capacitacao em comunicacao e acessibilidade | equipes de comunicacao, atendimento e gestao de conteudo | linguagem simples, acessibilidade comunicacional e desenho de informacao | peca comunicacional revisada com criterios de acessibilidade | conformidade da peca revisada com checklist de acessibilidade |
-| 4 | media | Trilha | Trilha de avaliacao, monitoramento e planejamento estrategico | gestores e formuladores de politicas | avaliacao de impacto, indicadores, priorizacao e acompanhamento de resultados | plano de monitoramento institucional | percentual de participantes que elaboram indicadores e metas plausiveis |
-| 5 | media | Trilha | Trilha de gestao, governanca e lideranca | gestores, chefias e equipes de governanca | governanca, padronizacao de fluxos, tomada de decisao e coordenacao institucional | plano de melhoria de fluxo ou governanca | qualidade do plano segundo rubrica de viabilidade e alinhamento institucional |
-| 6 | media | Trilha | Trilha de atendimento e servicos ao cidadao | equipes de atendimento, comunicacao e gestao de servicos | comunicacao clara, acolhimento, experiencia do cidadao e melhoria de servicos | protocolo de atendimento humanizado | desempenho em simulacao ou satisfacao aferida em exercicio pratico |
-| 7 | media | Trilha | Trilha de inovacao e transformacao digital | coordenadores e equipes de inovacao | transformacao digital, gestao do conhecimento, experimentacao e servicos digitais | prototipo de servico digital simples | numero de ideias viaveis convertidas em prototipo piloto |
-| 8 | baixa | Capacitacao | Capacitacao em saude e bem-estar institucional | gestores de pessoas, magistrados e equipes de apoio institucional | prevencao, acolhimento, monitoramento de riscos e promocao de saude no trabalho | plano de acao de cuidado institucional | qualidade do plano de acao conforme criterios de prevencao e encaminhamento |
-| 9 | baixa | Trilha | Trilha de formacao de liderancas | liderancas atuais e potenciais gestores | lideranca, gestao de equipes, comunicacao e tomada de decisao | plano individual de desenvolvimento de lideranca | evolucao do participante em rubrica de competencias de lideranca |
-| 10 | baixa | Capacitacao | Capacitacao para estruturacao e atuacao de equipes multidisciplinares | equipes tecnicas, gestores e unidades de apoio psicossocial | trabalho multidisciplinar, fluxos de atendimento e articulacao interinstitucional | desenho de fluxo de atuacao multidisciplinar | aderencia do fluxo proposto aos criterios de clareza, responsabilizacao e viabilidade |
+| 1 | media | Capacitação | Capacitação em dados, tecnologia e inteligência institucional | gestores, analistas e equipes de dados | leitura de indicadores, governança de dados, uso de evidências e qualidade informacional | painel simples ou plano de uso de indicadores | percentual de participantes capazes de interpretar indicadores institucionais em estudo de caso |
+| 2 | media | Capacitação | Capacitação em direitos humanos, inclusão e acessibilidade | servidores, gestores e equipes de políticas públicas | inclusão, acessibilidade, linguagem institucional e resposta a vulnerabilidades | guia de boas práticas inclusivas | percentual de participantes que aplicam critérios de acessibilidade em exercícios práticos |
+| 3 | media | Capacitação | Capacitação em comunicação e acessibilidade | equipes de comunicação, atendimento e gestão de conteúdo | linguagem simples, acessibilidade comunicacional e desenho de informação | peça comunicacional revisada com critérios de acessibilidade | conformidade da peça revisada com checklist de acessibilidade |
+| 4 | media | Trilha | Trilha de avaliação, monitoramento e planejamento estratégico | gestores e formuladores de políticas | avaliação de impacto, indicadores, priorização e acompanhamento de resultados | plano de monitoramento institucional | percentual de participantes que elaboram indicadores e metas plausíveis |
+| 5 | media | Trilha | Trilha de gestão, governança e liderança | gestores, chefias e equipes de governança | governança, padronização de fluxos, tomada de decisão e coordenação institucional | plano de melhoria de fluxo ou governança | qualidade do plano segundo rubrica de viabilidade e alinhamento institucional |
+| 6 | media | Trilha | Trilha de atendimento e serviços ao cidadão | equipes de atendimento, comunicação e gestão de serviços | comunicação clara, acolhimento, experiência do cidadão e melhoria de serviços | protocolo de atendimento humanizado | desempenho em simulação ou satisfação aferida em exercício prático |
+| 7 | media | Trilha | Trilha de inovação e transformação digital | coordenadores e equipes de inovação | transformação digital, gestão do conhecimento, experimentação e serviços digitais | protótipo de serviço digital simples | número de ideias viáveis convertidas em protótipo piloto |
+| 8 | baixa | Capacitação | Capacitação em saúde e bem-estar institucional | gestores de pessoas, magistrados e equipes de apoio institucional | prevenção, acolhimento, monitoramento de riscos e promoção de saúde no trabalho | plano de ação de cuidado institucional | qualidade do plano de ação conforme critérios de prevenção e encaminhamento |
+| 9 | baixa | Trilha | Trilha de formação de lideranças | lideranças atuais e potenciais gestores | liderança, gestão de equipes, comunicação e tomada de decisão | plano individual de desenvolvimento de liderança | evolução do participante em rubrica de competências de liderança |
+| 10 | baixa | Capacitação | Capacitação para estruturação e atuação de equipes multidisciplinares | equipes técnicas, gestores e unidades de apoio psicossocial | trabalho multidisciplinar, fluxos de atendimento e articulação interinstitucional | desenho de fluxo de atuação multidisciplinar | aderência do fluxo proposto aos critérios de clareza, responsabilização e viabilidade |
 
-## Criterios de priorizacao
+## Critérios de priorização
 
 - score textual do trecho;
-- consistencia evidencial por recorrencia e documentos distintos;
+- consistência evidencial por recorrência e documentos distintos;
 - valor institucional configurado por eixo;
-- rebaixamento de itens sem classificacao tematica;
-- leitura final condicionada a validacao pedagogica e institucional.
+- rebaixamento de itens sem classificação temática;
+- leitura final condicionada a validação pedagógica e institucional.
 
 ## Magnitude documental
 
-| Proposta | Evidencias | Documentos | Score final |
+| Proposta | Evidências | Documentos | Score final |
 | --- | --- | --- | --- |
-| Capacitacao em dados, tecnologia e inteligencia institucional | 1029 | 46 | 0.6656 |
-| Capacitacao em direitos humanos, inclusao e acessibilidade | 848 | 48 | 0.6411 |
-| Capacitacao em comunicacao e acessibilidade | 320 | 42 | 0.591 |
-| Trilha de avaliacao, monitoramento e planejamento estrategico | 699 | 44 | 0.5736 |
-| Trilha de gestao, governanca e lideranca | 394 | 51 | 0.5709 |
-| Trilha de atendimento e servicos ao cidadao | 435 | 45 | 0.5567 |
-| Trilha de inovacao e transformacao digital | 484 | 27 | 0.5157 |
-| Capacitacao em saude e bem-estar institucional | 214 | 31 | 0.4448 |
-| Trilha de formacao de liderancas | 92 | 25 | 0.4443 |
-| Capacitacao para estruturacao e atuacao de equipes multidisciplinares | 113 | 24 | 0.4367 |
+| Capacitação em dados, tecnologia e inteligência institucional | 1029 | 46 | 0.6656 |
+| Capacitação em direitos humanos, inclusão e acessibilidade | 848 | 48 | 0.6411 |
+| Capacitação em comunicação e acessibilidade | 320 | 42 | 0.591 |
+| Trilha de avaliação, monitoramento e planejamento estratégico | 699 | 44 | 0.5736 |
+| Trilha de gestão, governança e liderança | 394 | 51 | 0.5709 |
+| Trilha de atendimento e serviços ao cidadão | 435 | 45 | 0.5567 |
+| Trilha de inovação e transformação digital | 484 | 27 | 0.5157 |
+| Capacitação em saúde e bem-estar institucional | 214 | 31 | 0.4448 |
+| Trilha de formação de lideranças | 92 | 25 | 0.4443 |
+| Capacitação para estruturação e atuação de equipes multidisciplinares | 113 | 24 | 0.4367 |

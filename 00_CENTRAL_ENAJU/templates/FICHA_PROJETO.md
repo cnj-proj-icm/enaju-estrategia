@@ -5,6 +5,8 @@
 | Campo | Preencher |
 | --- | --- |
 | Nome do projeto |  |
+| KR (EAB) | Ex.: B3 · KR 3.1 — ver `Projetos/carteira-estrategica-enaju/eab-carteira-depara.md` |
+| Inciso Art.19 | Ex.: IV — ver `Inputs/Planos/projetos_estrategicos_coordenacao.md` |
 | Eixo | Estrategia / Pesquisa / Produto digital / Publicacao / Governanca / Parceria |
 | Responsavel |  |
 | Pessoas envolvidas |  |

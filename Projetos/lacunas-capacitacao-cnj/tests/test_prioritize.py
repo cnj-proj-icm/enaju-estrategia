@@ -66,6 +66,11 @@ def test_prioritize_calculates_deterministic_composite_score(tmp_path: Path) -> 
     assert data_row["score_final"] == 0.9875
     assert data_row["faixa_prioridade"] == "alta"
     assert unclassified["faixa_prioridade"] == "baixa"
+    dossier = pd.read_csv(context.paths.outputs / "dossie_evidencias.csv", encoding="utf-8-sig")
+    offer_gap = pd.read_csv(context.paths.outputs / "mapa_oferta_vs_lacuna.csv", encoding="utf-8-sig")
+    assert "aderencia_eixo" in dossier.columns
+    assert "leitura_interpretativa" in offer_gap.columns
+    assert "revisão temática pendente" in set(offer_gap["leitura_interpretativa"])
 
 
 def test_import_calibration_rejects_invalid_decision(tmp_path: Path) -> None:

@@ -1,11 +1,11 @@
 ﻿eixo,proposta,categoria,evidencias_total,documentos_impactados,score_textual_medio,consistencia_evidencial,valor_institucional,taxa_falso_positivo_estimada,score_final,faixa_prioridade,magnitude_documental
-dados_e_tecnologia,"Capacitacao em dados, tecnologia e inteligencia institucional",Capacitacao,1029,46,0.3173,0.951,0.95,,0.6656,media,1029
-direitos_humanos_e_inclusao,"Capacitacao em direitos humanos, inclusao e acessibilidade",Capacitacao,848,48,0.3084,0.8826,0.95,,0.6411,media,848
-comunicacao_e_acessibilidade,Capacitacao em comunicacao e acessibilidade,Capacitacao,320,42,0.5018,0.5673,0.78,,0.591,media,320
-avaliacao_e_monitoramento,"Trilha de avaliacao, monitoramento e planejamento estrategico",Trilha,699,44,0.2606,0.771,0.9,,0.5736,media,699
-gestao_e_governanca,"Trilha de gestao, governanca e lideranca",Trilha,394,51,0.3634,0.6914,0.8,,0.5709,media,394
-atendimento_e_servicos_judiciarios,Trilha de atendimento e servicos ao cidadao,Trilha,435,45,0.3576,0.6525,0.8,,0.5567,media,435
-inovacao_e_transformacao,Trilha de inovacao e transformacao digital,Trilha,484,27,0.3404,0.4999,0.85,,0.5157,media,484
-saude_e_bem_estar,Capacitacao em saude e bem-estar institucional,Capacitacao,214,31,0.3052,0.4079,0.74,,0.4448,baixa,214
-formacao_de_liderancas,Trilha de formacao de liderancas,Trilha,92,25,0.3943,0.2898,0.72,,0.4443,baixa,92
-equipes_multidisciplinares,Capacitacao para estruturacao e atuacao de equipes multidisciplinares,Capacitacao,113,24,0.3881,0.2902,0.7,,0.4367,baixa,113
+dados_e_tecnologia,"Capacitação em dados, tecnologia e inteligência institucional",Capacitação,1029,46,0.3173,0.951,0.95,,0.6656,media,1029
+direitos_humanos_e_inclusao,"Capacitação em direitos humanos, inclusão e acessibilidade",Capacitação,848,48,0.3084,0.8826,0.95,,0.6411,media,848
+comunicacao_e_acessibilidade,Capacitação em comunicação e acessibilidade,Capacitação,320,42,0.5018,0.5673,0.78,,0.591,media,320
+avaliacao_e_monitoramento,"Trilha de avaliação, monitoramento e planejamento estratégico",Trilha,699,44,0.2606,0.771,0.9,,0.5736,media,699
+gestao_e_governanca,"Trilha de gestão, governança e liderança",Trilha,394,51,0.3634,0.6914,0.8,,0.5709,media,394
+atendimento_e_servicos_judiciarios,Trilha de atendimento e serviços ao cidadão,Trilha,435,45,0.3576,0.6525,0.8,,0.5567,media,435
+inovacao_e_transformacao,Trilha de inovação e transformação digital,Trilha,484,27,0.3404,0.4999,0.85,,0.5157,media,484
+saude_e_bem_estar,Capacitação em saúde e bem-estar institucional,Capacitação,214,31,0.3052,0.4079,0.74,,0.4448,baixa,214
+formacao_de_liderancas,Trilha de formação de lideranças,Trilha,92,25,0.3943,0.2898,0.72,,0.4443,baixa,92
+equipes_multidisciplinares,Capacitação para estruturação e atuação de equipes multidisciplinares,Capacitação,113,24,0.3881,0.2902,0.7,,0.4367,baixa,113
