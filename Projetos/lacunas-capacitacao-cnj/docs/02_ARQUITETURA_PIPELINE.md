@@ -15,6 +15,9 @@ flowchart LR
     I --> J[Deteccao e classificacao]
     J --> K[Validacao humana]
     K --> L[Datasets e sinteses]
+    M[Fontes CNJ expandidas] --> N[Catalogo multibase]
+    N --> O[Corpus HTML/PDF expandido]
+    O --> J
 ```
 
 ## 2. Modulos planejados
@@ -24,11 +27,16 @@ flowchart LR
 | `pipeline/snapshot.py` | Salvar HTML e metadados da fonte | URL fonte | Snapshot e `manifest_run.json` |
 | `pipeline/catalog.py` | Extrair cards, inferir metadados e aplicar regras documentais | Snapshot local | `catalogo_pdfs.csv`, `relacoes_documentos.csv` |
 | `pipeline/corpus.py` | Baixar, validar, extrair, limpar e segmentar | Catalogo aprovado | PDFs, TXT, status e `segmentos.parquet` |
+| `pipeline/expanded.py` | Descobrir fontes CNJ, classificar tipo de fonte e extrair HTML | `config/sources.yml` | `catalogo_fontes_expandido.csv`, `corpus_documentos_expandido.csv` |
 | `pipeline/detect.py` | Aplicar termos, score, eixos e hipoteses | Segmentos | Candidatos, amostra e fila de revisao |
 | `pipeline/outputs.py` | Consolidar tabelas e resumos | Candidatos ou evidencias confirmadas | Arquivos em `outputs/` |
 
 O orquestrador `src/run_pipeline.py` executa etapas isoladas ou o fluxo
 preliminar completo e permite retomada sem baixar novamente artefatos validos.
+
+Quando `segmentos_expandido.parquet` existir, a etapa `detect` usa o corpus
+expandido e escreve `trechos_candidatos_expandido.csv`, mantendo a linha de
+base original rastreavel pelos arquivos `catalogo_pdfs*` e `corpus_documentos`.
 
 ## 3. Coleta robusta
 
@@ -114,7 +122,10 @@ idempotentes pulam artefatos validos e podem ser reexecutadas com `--force`.
 python src/run_pipeline.py --step snapshot --as-of 2026-05-31
 python src/run_pipeline.py --step catalog
 python src/run_pipeline.py --step corpus
+python src/run_pipeline.py --step discover-sources
+python src/run_pipeline.py --step expanded-corpus
 python src/run_pipeline.py --step detect
+python src/run_pipeline.py --step prioritize
 python src/run_pipeline.py --step outputs
 python src/run_pipeline.py --step all-preliminary
 ```

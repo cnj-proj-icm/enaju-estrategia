@@ -13,6 +13,19 @@ data/logs/*
 !data/logs/.gitkeep
 outputs/*
 !outputs/README.md
+!outputs/matriz_lacunas_priorizadas.csv
+!outputs/matriz_lacunas_por_tipo_fonte.csv
+!outputs/matriz_normativos_competencias.csv
+!outputs/mapa_oferta_vs_lacuna.csv
+!outputs/dossie_evidencias.csv
+!outputs/trilhas_capacitacoes_evidencias.csv
+!outputs/resumo_executivo.md
+!outputs/resumo_executivo.docx
+!outputs/relatorio_validacao.md
+!outputs/relatorio_publicavel.md
+!outputs/portfolio_publicacao.md
+!outputs/publicacao_final.md
+!outputs/publicacao_final.docx
 
 # Ambiente local
 .venv/

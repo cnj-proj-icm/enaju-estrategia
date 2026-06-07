@@ -81,6 +81,23 @@ def evaluate_segment(text: str, criteria: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def classify_finding(result: dict[str, Any], metadata: dict[str, Any]) -> str:
+    groups = result.get("grupos_encontrados", {})
+    source_type = str(metadata.get("fonte_tipo", "")).strip()
+    use = str(metadata.get("uso_metodologico", "")).strip()
+    if source_type == "oferta_formativa" or use == "oferta_formativa":
+        if "A_lacuna_direta" not in groups and "C_problema_organizacional" not in groups:
+            return "oferta_formativa"
+    if source_type == "ato_normativo" or use == "competencia_requerida":
+        if "A_lacuna_direta" not in groups:
+            return "competencia_requerida"
+    if "F_competencia_requerida" in groups and "A_lacuna_direta" not in groups:
+        return "competencia_requerida"
+    if "G_oferta_formativa" in groups and "A_lacuna_direta" not in groups:
+        return "oferta_formativa"
+    return "gap_observado"
+
+
 def _merge_overlapping(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     grouped: dict[tuple[str, int], list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -103,10 +120,15 @@ def _merge_overlapping(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def detect_candidates(context: RunContext) -> pd.DataFrame:
-    segments = pd.read_parquet(context.paths.processed / "segmentos.parquet")
-    corpus = read_csv(context.paths.processed / "corpus_documentos.csv")
+    expanded = (context.paths.processed / "segmentos_expandido.parquet").exists()
+    segment_path = context.paths.processed / ("segmentos_expandido.parquet" if expanded else "segmentos.parquet")
+    corpus_path = context.paths.processed / ("corpus_documentos_expandido.csv" if expanded else "corpus_documentos.csv")
+    output_suffix = "_expandido" if expanded else ""
+    segments = pd.read_parquet(segment_path)
+    corpus = read_csv(corpus_path)
     criteria = context.criteria_config
     preferred = segments[segments["tipo_segmento"] == "janela"].copy()
+    metadata_by_doc = {row["doc_id"]: row for row in corpus.to_dict("records")}
     rows: list[dict[str, Any]] = []
     no_match_rows: list[dict[str, Any]] = []
     for segment in preferred.to_dict("records"):
@@ -114,10 +136,12 @@ def detect_candidates(context: RunContext) -> pd.DataFrame:
         if not result["termos_encontrados"]:
             no_match_rows.append(segment)
             continue
+        metadata = metadata_by_doc.get(segment["doc_id"], {})
         rows.append(
             {
                 **segment,
                 **result,
+                "achado_classe": classify_finding(result, metadata),
                 "termos_encontrados": json_dumps(result["termos_encontrados"]),
                 "grupos_encontrados": json_dumps(result["grupos_encontrados"]),
                 "verbos_acao": json_dumps(result["verbos_acao"]),
@@ -125,9 +149,28 @@ def detect_candidates(context: RunContext) -> pd.DataFrame:
             }
         )
     candidates = _merge_overlapping(rows)
-    metadata = corpus[
-        ["doc_id", "titulo", "ano", "url", "secao_portal", "prioridade_analitica", "snapshot_sha256"]
+    metadata_columns = [
+        "doc_id",
+        "titulo",
+        "ano",
+        "url",
+        "secao_portal",
+        "prioridade_analitica",
+        "snapshot_sha256",
+        "fonte_tipo",
+        "peso_fonte",
+        "forca_probatoria",
+        "uso_metodologico",
     ]
+    for column, default in (
+        ("fonte_tipo", "relatorio_diagnostico_pesquisa"),
+        ("peso_fonte", 1.0),
+        ("forca_probatoria", "alta"),
+        ("uso_metodologico", "gap_observado"),
+    ):
+        if column not in corpus.columns:
+            corpus[column] = default
+    metadata = corpus[metadata_columns]
     frame = pd.DataFrame(candidates)
     if frame.empty:
         frame = pd.DataFrame(columns=["doc_id"])
@@ -151,6 +194,10 @@ def detect_candidates(context: RunContext) -> pd.DataFrame:
         "url",
         "secao_portal",
         "prioridade_analitica",
+        "fonte_tipo",
+        "peso_fonte",
+        "forca_probatoria",
+        "uso_metodologico",
         "pagina",
         "tipo_segmento",
         "char_inicio",
@@ -161,20 +208,25 @@ def detect_candidates(context: RunContext) -> pd.DataFrame:
         "verbos_acao",
         "eixos",
         "tipo_gap",
+        "achado_classe",
         "hipotese_competencia",
         "score",
         "segmentos_agregados",
     ]
     frame = frame[output_columns].sort_values(["score", "doc_id", "pagina"], ascending=[False, True, True])
-    write_csv(frame, context.paths.processed / "trechos_candidatos.csv")
-    write_parquet(frame, context.paths.processed / "trechos_candidatos.parquet")
+    write_csv(frame, context.paths.processed / f"trechos_candidatos{output_suffix}.csv")
+    write_parquet(frame, context.paths.processed / f"trechos_candidatos{output_suffix}.parquet")
+    if expanded:
+        write_csv(frame, context.paths.processed / "trechos_candidatos.csv")
+        write_parquet(frame, context.paths.processed / "trechos_candidatos.parquet")
     _write_review_queue(context, frame)
     _write_calibration_sample(context, frame, no_match_rows)
     context.update_manifest(
-        "detect",
+        "detect-expanded" if expanded else "detect",
         candidatos=len(frame),
         fila_revisao=len(read_csv(context.paths.processed / "fila_revisao.csv")),
         segmentos_sem_match=len(no_match_rows),
+        corpus="expandido" if expanded else "baseline",
     )
     LOGGER.info("Deteccao concluida: %s candidatos", len(frame))
     return frame

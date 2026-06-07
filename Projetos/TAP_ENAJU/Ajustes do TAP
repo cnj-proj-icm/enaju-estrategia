@@ -1,0 +1,134 @@
+## Veredito geral
+
+O TAP está **bem fundamentado na justificativa institucional**, mas ainda **não está maduro para formalização no ECP**. Ele tem uma boa alma estratégica, mas o corpo do projeto está desalinhado. Em termos bem diretos: o documento mistura **projeto de estruturação normativa**, **projeto de implantação operacional**, **projeto tecnológico**, **projeto pedagógico**, **evento nacional** e **estrutura física de estúdio** como se tudo tivesse o mesmo rito, o mesmo custo e o mesmo cronograma. Aí o TAP vira um polvo administrativo, elegante, mas escorregadio.
+
+O próprio objeto define o projeto como criação de estrutura organizacional, governança, processos e instrumentos normativos para funcionamento da ENAJU . Porém, os KRs incluem Moodle, BI, banco de conteúdos, parcerias, estúdio e encontro nacional . Esse é o principal problema.
+
+## Principais forças do TAP
+
+A **justificativa está forte**. Ela explica bem a passagem do Ceajud para a ENAJU, vincula a mudança à Resolução CNJ nº 643/2025 e demonstra que há um déficit real entre o mandato normativo da Escola e sua capacidade operacional atual .
+
+O **alinhamento estratégico também está adequado**. O TAP conecta a ENAJU aos objetivos estratégicos do CNJ, ao macrodesafio de aperfeiçoamento da gestão de pessoas, à Resolução CNJ nº 643/2025 e ao Eixo 2 de Gestão, voltado a estrutura, inovação e transparência .
+
+A **EAB do Benefício 1** é coerente. Estrutura organizacional, governança, instrumentos normativos e processos de trabalho formam um bloco lógico. Esse é, de fato, o núcleo do projeto de estruturação institucional da ENAJU .
+
+## Fragilidades críticas
+
+### 1. O escopo está largo demais
+
+O Benefício 1 é institucional e normativo. O Benefício 2 é operacional, tecnológico, pedagógico, comunicacional e até físico. Banco de conteúdos, Moodle, BI, parcerias, estúdio e encontro nacional são entregas de naturezas muito diferentes .
+
+Minha recomendação: **dividir em dois projetos**.
+
+**Projeto 1: Estruturação Institucional da ENAJU**
+Inclui organograma, governança, regimento, portarias, processos, matriz de responsabilidades e modelo de operação.
+
+**Projeto 2: Plataforma Nacional de Aprendizagem e Rede ENAJU**
+Inclui banco de conteúdos, Moodle, BI, parcerias, encontro nacional, eventualmente estúdio.
+
+Se quiser manter tudo em um único documento, o nome deve mudar para **Programa de Implantação da ENAJU**, não apenas TAP de estruturação. Hoje o TAP chama “programa” em alguns trechos e “projeto” em outros, o que denuncia a confusão.
+
+### 2. O cronograma não conversa com os KRs
+
+Sua observação no documento está correta: o cronograma está montado como **fluxo de tramitação normativa**, não como cronograma de entregas. Ele passa por GT, SG, DG, DIGE, SEORG, SGP, DTI, CONF, Presidência e encerramento, mas não mostra quando serão entregues banco de conteúdos, Moodle, BI, parcerias, estúdio ou encontro nacional .
+
+O cronograma atual serve para aprovar portaria e regimento. Não serve para gerir o projeto inteiro.
+
+### 3. O Benefício 2 tem indicador errado
+
+O indicador do Benefício 2 mede apenas o **Banco de Conteúdos Educacionais**: banco criado, conteúdos catalogados, regras de curadoria e acesso às escolas .
+
+Mas os KRs do Benefício 2 incluem seis entregas: banco, Moodle, BI, parcerias, estúdio e encontro nacional. Ou seja, o indicador não mede o benefício inteiro. Mede só um pedaço. É como pesar um boi olhando apenas o chifre.
+
+O correto seria criar um indicador composto com os seis KRs.
+
+### 4. O orçamento zero está incompatível com o escopo
+
+Se o TAP ficar restrito a organograma, regimento, governança e processos, o orçamento zero é defensável.
+
+Mas, se permanecerem estúdio de gravação, encontro nacional, modernização do Moodle e painel de BI, o orçamento zero fica frágil. O próprio documento informa R$ 0,00 para TI, treinamento, passagens, diárias, serviços e outros, sob o argumento de que o projeto é essencialmente normativo, administrativo e técnico . Só que o escopo não é apenas normativo.
+
+Estúdio custa. Encontro custa. Moodle consome capacidade técnica. BI exige dados, arquitetura, ETL, painel, homologação e sustentação. Mesmo quando não há contratação externa, há custo de capacidade institucional.
+
+### 5. O “não escopo” está vazio
+
+O campo de não escopo ainda aparece como orientação genérica de preenchimento, não como conteúdo do projeto .
+
+Sugestão de não escopo:
+
+> Não integra o escopo deste projeto a criação de cargos ou funções, a aprovação de projeto de lei, a execução ordinária de cursos, o desenvolvimento integral de novo sistema educacional, a gestão continuada do Moodle após a implantação das melhorias, a alteração das estruturas das escolas judiciais dos tribunais e a realização de contratações externas não previstas em estudo técnico específico.
+
+### 6. Há campos incompletos e erros formais
+
+Antes de tramitar, precisa corrigir:
+
+* data de elaboração ainda como “xx/xx/xxxx”;
+* equipe do projeto não preenchida;
+* nome do projeto pouco preciso;
+* redações com erros: “fFortalecimento”, “maior coerência promoção da”, “metodologia formativas”, “aàs”, “cessibilidade”, “dados integrado”;
+* padronização de “escolas judiciais” com inicial minúscula ou maiúscula;
+* remoção dos comentários internos antes da versão formal.
+
+## Sobre o GT
+
+Sua pergunta no comentário é muito pertinente. Se a estrutura já estiver aprovada por ato da Presidência, o GT perde centralidade. Nesse caso, o projeto não deveria mais ser “definir estrutura”, mas **implantar a estrutura aprovada**.
+
+A pergunta correta passa a ser:
+
+> O GT ainda é necessário para propor atos normativos ou sua função já foi absorvida pela fase de implantação, validação técnica e operacionalização da ENAJU?
+
+Se a Portaria de estrutura já saiu, eu retiraria o GT como eixo principal do cronograma. Ele pode aparecer apenas como **insumo histórico** ou **instância consultiva residual**, não como frente condutora.
+
+## Como eu reescreveria o foco do TAP
+
+Sugestão de novo nome:
+
+> **Implantação Institucional e Operacional da Escola Nacional do Judiciário**
+
+Sugestão de objeto:
+
+> Implantar a estrutura institucional e operacional mínima da Escola Nacional do Judiciário, mediante definição de governança, papéis, processos de trabalho, instrumentos normativos, matriz de responsabilidades e mecanismos iniciais de integração da Rede Nacional de Formação e Aperfeiçoamento de Servidores do Poder Judiciário.
+
+Esse objeto é mais limpo. Ele não promete o mundo. Prometer o mundo é bonito em discurso de posse, mas em TAP costuma virar passivo no ECP.
+
+## Cronograma recomendado por entregas
+
+| Fase | Entrega                            | Produto verificável                                                 |
+| ---- | ---------------------------------- | ------------------------------------------------------------------- |
+| 1    | Validação do escopo                | TAP ajustado, EAB revisada, matriz de KRs aprovada                  |
+| 2    | Estrutura organizacional           | Organograma, papéis, responsabilidades, matriz RACI                 |
+| 3    | Governança institucional           | Modelo decisório, instâncias, fluxos de aprovação                   |
+| 4    | Instrumentos normativos            | Regimento, portarias, procedimentos e minutas consolidadas          |
+| 5    | Processos de trabalho              | AS IS, TO BE, fluxogramas, POPs, checklists                         |
+| 6    | Infraestrutura educacional inicial | Banco de conteúdos, requisitos Moodle, requisitos BI                |
+| 7    | Rede e articulação                 | plano de parcerias, modelo do encontro nacional, governança da rede |
+| 8    | Homologação e encerramento         | relatório de benefícios, evidências dos KRs, TEP                    |
+
+## Ajuste dos indicadores
+
+Para o Benefício 1, o indicador está bom, mas precisa de critérios objetivos de aceite.
+
+Para o Benefício 2, sugiro:
+
+> **Percentual de implantação da infraestrutura integrada de aprendizagem da ENAJU**, composto por:
+> KR 2.1 Banco de Conteúdos publicado, peso 20%;
+> KR 2.2 requisitos de modernização do Moodle homologados, peso 15%;
+> KR 2.3 painel BI publicado ou prototipado, peso 20%;
+> KR 2.4 parcerias formalizadas, peso 15%;
+> KR 2.5 estudo técnico ou implantação do estúdio, peso 15%;
+> KR 2.6 Encontro Nacional realizado ou planejado com ato convocatório, peso 15%.
+
+Se o estúdio e o encontro ficarem no escopo, precisam ter orçamento, riscos e etapas próprias. Se não houver orçamento, transforme-os em **estudo técnico preliminar** e **plano de realização**, não em implantação plena.
+
+## Recomendações finais
+
+Minha recomendação é: **não submeter ainda como está**.
+
+A versão está boa para debate interno, mas precisa de uma limpeza estratégica antes de virar documento formal. Eu faria quatro movimentos:
+
+1. **Decidir se é projeto ou programa.**
+2. **Separar o escopo normativo do escopo tecnológico e educacional.**
+3. **Reconstruir o cronograma a partir dos KRs, não a partir da tramitação.**
+4. **Compatibilizar orçamento, riscos e entregas.**
+
+Com esses ajustes, o TAP deixa de ser apenas uma peça de abertura e vira o que precisa ser: o primeiro esqueleto administrativo da ENAJU nova. Um bom TAP, nesse caso, não é burocracia. É arquitetura institucional em estado de nascente.

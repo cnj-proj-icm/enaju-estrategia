@@ -6,6 +6,16 @@ Entregaveis consolidados para leitura humana:
 - `resumo_por_documento.csv`
 - `resumo_por_eixo.csv`
 - `relatorio_validacao.md`
+- `relatorio_publicavel.md`
+- `matriz_lacunas_priorizadas.csv`
+- `matriz_lacunas_por_tipo_fonte.csv`
+- `matriz_normativos_competencias.csv`
+- `mapa_oferta_vs_lacuna.csv`
+- `dossie_evidencias.csv`
+- `trilhas_capacitacoes_evidencias.csv`
+- `portfolio_publicacao.md`
+- `publicacao_final.md`
+- `publicacao_final.docx`
 - `resumo_executivo.md`
 - `resumo_executivo.docx`
 

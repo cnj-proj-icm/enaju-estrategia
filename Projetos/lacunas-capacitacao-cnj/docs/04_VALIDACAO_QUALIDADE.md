@@ -18,7 +18,9 @@ Cada etapa possui verificacoes proprias e deixa rastros para auditoria.
 | Limpeza | Comparacao entre TXT bruto e limpo | Marcadores de pagina preservados |
 | Segmentacao | Segmentos ligados a documento e pagina | Amostra reconstruivel |
 | Deteccao | Termos, score e regra registrados | Score reproduzivel |
-| Analise | Revisao humana separada da classificacao automatica | Resumos distinguem pendentes e confirmados |
+| Analise | Calibracao amostral separada da classificacao automatica | Resumos distinguem amostra, riscos e proposta tecnica |
+| Priorizacao | Score composto com pesos documentados | Matriz reproduzivel por eixo, evidencia e valor institucional |
+| Expansao do corpus | Tipo de fonte, peso e uso metodologico registrados | Noticias e ofertas nao dominam relatorios, diagnosticos e normas |
 
 ## 3. Validacao do catalogo piloto
 
@@ -76,7 +78,35 @@ Depois da amostra:
 4. versionar a configuracao;
 5. executar novamente a deteccao.
 
-## 6. Criterios para uso institucional
+## 6. Priorizacao automatizada
+
+Depois da calibracao amostral, a etapa `prioritize` gera:
+
+- `data/processed/evidencias_priorizadas.csv`;
+- `outputs/matriz_lacunas_priorizadas.csv`;
+- `outputs/dossie_evidencias.csv`;
+- `outputs/trilhas_capacitacoes_evidencias.csv`.
+
+O score final combina score textual normalizado, consistencia evidencial e
+valor institucional configurado. Itens `nao_classificado` permanecem
+rastreaveis, mas sao rebaixados e nao compoem o portfolio final.
+
+## 7. Corpus expandido
+
+A expansao metodologica cria `catalogo_fontes_expandido.csv` e
+`corpus_documentos_expandido.csv`. Cada item recebe:
+
+- `fonte_tipo`;
+- `peso_fonte`;
+- `forca_probatoria`;
+- `uso_metodologico`.
+
+Noticias entram no corpus como evidencia contextual. Cursos e capacitacoes
+entram como oferta formativa. Atos normativos e guias entram principalmente como
+competencias requeridas. Relatorios, diagnosticos e pesquisas continuam sendo a
+fonte mais forte para `gap_observado`.
+
+## 8. Criterios para uso institucional
 
 Um achado so pode aparecer como evidencia confirmada quando:
 
@@ -86,7 +116,7 @@ Um achado so pode aparecer como evidencia confirmada quando:
 - a hipotese de competencia e apresentada como hipotese, salvo validacao
   institucional adicional.
 
-## 7. Testes tecnicos previstos
+## 9. Testes tecnicos previstos
 
 - teste de normalizacao de URL;
 - teste de inferencia de idioma e tipo documental;
@@ -96,4 +126,9 @@ Um achado so pode aparecer como evidencia confirmada quando:
 - teste de correcao de hifenizacao;
 - teste de normalizacao sem acentos;
 - teste deterministico do score;
+- teste deterministico do score composto;
+- teste de importacao invalida da calibracao;
+- teste de geracao da publicacao final;
+- teste de descoberta multibase e classificacao por tipo de fonte;
+- teste de que noticia e oferta formativa recebem menor peso probatorio;
 - teste de serializacao CSV e Parquet.

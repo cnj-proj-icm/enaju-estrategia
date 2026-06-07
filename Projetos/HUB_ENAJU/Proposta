@@ -1,0 +1,124 @@
+Uma boa formulação é propor a criação de uma **vertente** da ENAJU que funcione como hub nacional das escolas do Judiciário para cursos voltados a servidores, com integração tecnológica em um portal único e governança em rede. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+
+Abaixo vai uma proposta de projeto em formato que você pode adaptar para CNJ, GT interno ou edital de parceria (ex.: com Anitec/Hub70):
+
+***
+
+## 1. Título e contextualização
+
+**Título sugerido**  
+“ENAJU Hub Nacional de Educação para Servidores do Poder Judiciário”
+
+**Subtítulo**  
+“Vertente em rede da Escola Nacional do Judiciário para integração das escolas judiciárias e de servidores em um portal único, com foco em cursos para servidores.”
+
+**Contexto institucional**  
+- A Resolução CNJ nº 643/2025 transformou o CEAJud na Escola Nacional do Judiciário (ENAJU), atribuindo‑lhe papel de órgão **central** do Sistema Nacional de Formação e Aperfeiçoamento de Servidores do Poder Judiciário, com competências de planejar, coordenar e fomentar ações de capacitação e inovação. [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+- O histórico do CEAJud mostra grande capilaridade em EAD, tendo ofertado dezenas de cursos e superado centenas de milhares de capacitações em parceria com tribunais, o que demonstra massa crítica e demanda consolidada para um arranjo em rede. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+- Ecossistemas de educação corporativa como o Hub70 da Anitec já oferecem infraestrutura colaborativa para universidades corporativas e instituições, com funcionalidades de curadoria, compartilhamento de conteúdos e conexão entre parceiros. [anitec.org](https://anitec.org.br)
+
+***
+
+## 2. Objetivo geral e objetivos específicos
+
+**Objetivo geral**  
+Estruturar uma vertente da ENAJU como hub nacional de educação para servidores do Poder Judiciário, articulando escolas judiciais e centros de formação em um ecossistema digital único para compartilhamento de cursos, trilhas e boas práticas.
+
+**Objetivos específicos**  
+- Mapear e integrar, em um portal único, a oferta de cursos e trilhas de aprendizagem voltadas a servidores em todo o Judiciário. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+- Estabelecer um modelo de governança em rede que envolva ENAJU, escolas judiciais e unidades de gestão de pessoas, com foco em servidores (e não em magistrados). [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+- Padronizar metadados, taxonomias e critérios mínimos de qualidade para cursos compartilhados, facilitando reuso e certificação integrada. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+- Utilizar uma plataforma de ecossistema educacional (inspirada em soluções como o Hub70) para criar catálogos, comunidades de prática e funcionalidades de cooperação entre escolas. [hub70.anitec.org](https://hub70.anitec.org.br)
+- Promover inovação na formação de servidores, articulando laboratórios de inovação do Judiciário e iniciativas de modernização da gestão. [repositorio.idp.edu](https://repositorio.idp.edu.br/handle/123456789/4372)
+
+***
+
+## 3. Justificativa
+
+- A criação da ENAJU como órgão central sinaliza que o CNJ pretende integrar, em rede, a formação de servidores, indo além da lógica de cursos isolados por tribunal. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+- Hoje há multiplicidade de plataformas, cursos redundantes e dificuldades para compartilhamento sistemático de conteúdos entre escolas do Judiciário; um hub reduz custos, aumenta alcance e permite especialização regional. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+- Ecossistemas de educação corporativa já demonstraram que a atuação em rede, com universidades corporativas e parceiros, potencializa curadoria, inovação pedagógica e uso de tecnologias de aprendizagem. [anitec.org](https://anitec.org.br/project-tag/hub70/)
+- O foco em servidores atende diretamente à Política Nacional de Formação de Servidores, reforçando valorização, desenvolvimento de competências e incentivo à inovação, pontos destacados na própria criação da ENAJU. [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+
+***
+
+## 4. Escopo do projeto
+
+### 4.1 Eixo institucional e de governança
+
+- Instituir, no âmbito da ENAJU, a vertente “ENAJU Hub Servidores” como arranjo em rede das escolas/centros de formação dos tribunais. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+- Criar um Comitê Gestor do Hub com representantes: ENAJU/CNJ, escolas judiciais, unidades de gestão de pessoas e laboratórios de inovação. [tjam.jus](https://www.tjam.jus.br/index.php/menu/sala-de-imprensa/9291-trilha-da-inovacao-escola-judicial-e-manaus-tech-hub-promovem-eventos-de-inovacao-para-o-poder-judiciario-do-amazonas)
+- Formalizar adesão por meio de termo de cooperação com os tribunais, definindo regras de compartilhamento de cursos, certificação e dados. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+
+### 4.2 Eixo tecnológico (portal único)
+
+- Desenvolvimento ou contratação/integração de plataforma de ecossistema educacional, tomando como referência soluções como o Hub70, que já operam como hub de universidades corporativas. [pt.linkedin](https://pt.linkedin.com/posts/aniteceducacaocorporativa_ecossistema-de-educa%C3%A7%C3%A3o-corporativa-activity-7099822230494179328-hwb1)
+- Funcionalidades mínimas do portal único:  
+  - Catálogo nacional de cursos e trilhas para servidores, com filtros por tema, competência, tribunal e modalidade. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+  - Área de gestão para cada escola/tribunal publicar, atualizar e disponibilizar cursos para a rede. [hub70.anitec.org](https://hub70.anitec.org.br)
+  - Mecanismos de inscrição, registro de participação e integração (via API ou exportação) com os AVAs e sistemas internos dos tribunais. [anitec.org](https://anitec.org.br)
+  - Espaços de comunidade de prática, fóruns e grupos temáticos (ex.: inovação, gestão de pessoas, tecnologia, processo judicial eletrônico). [anitec.org](https://anitec.org.br/project-tag/hub70/)
+
+### 4.3 Eixo pedagógico
+
+- Definir matriz de competências para servidores do Judiciário em articulação com a Política Nacional de Formação e com diretrizes da ENAJU. [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+- Criar trilhas nacionais prioritárias (por exemplo: transformação digital, atendimento ao cidadão, gestão e inovação, saúde mental e trabalho), articulando cursos dos tribunais e da própria ENAJU. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+- Estabelecer critérios para reconhecimento recíproco de carga horária e certificação entre ENAJU e tribunais parceiros. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+
+### 4.4 Eixo de inovação e rede
+
+- Integrar laboratórios de inovação do Judiciário às ações da ENAJU Hub, usando-os como espaços de co-criação de cursos, desafios e soluções de modernização. [repositorio.idp.edu](https://repositorio.idp.edu.br/handle/123456789/4372)
+- Promover encontros periódicos (virtuais e presenciais) entre coordenadores de escolas judiciais, gestores de educação corporativa e parceiros externos (como associações e universidades corporativas ligadas à Anitec). [anitec.org](https://anitec.org.br/tag/hub70/)
+
+***
+
+## 5. Resultados esperados e indicadores
+
+**Resultados esperados**  
+- Portal único em produção, com adesão progressiva das escolas judiciais e centros de formação de servidores. [hub70.anitec.org](https://hub70.anitec.org.br)
+- Aumento do volume de cursos compartilhados entre tribunais, evitando duplicidade de esforços e fortalecendo especializações regionais. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+- Fortalecimento da ENAJU como órgão central de referência para formação de servidores, alinhado à Resolução CNJ nº 643/2025. [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+- Criação de comunidades de prática e projetos colaborativos de inovação ligados à formação. [tjam.jus](https://www.tjam.jus.br/index.php/menu/sala-de-imprensa/9291-trilha-da-inovacao-escola-judicial-e-manaus-tech-hub-promovem-eventos-de-inovacao-para-o-poder-judiciario-do-amazonas)
+
+**Indicadores sugeridos**  
+- Número de tribunais (e escolas) integrados ao hub. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+- Número de cursos cadastrados e número de cursos efetivamente compartilhados entre órgãos. [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+- Quantidade de servidores certificados por ano via hub (por tribunal, temática e modalidade). [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+- Número de trilhas nacionais ativas e de comunidades de prática com engajamento regular. [anitec.org](https://anitec.org.br)
+
+***
+
+## 6. Fases de implementação e cronograma macro
+
+1. **Fase 1 – Desenho conceitual e governança (0–3 meses)**  
+   - Detalhamento do modelo de hub, definição da vertente da ENAJU, criação de Comitê Gestor e aprovação em instância interna do CNJ. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+
+2. **Fase 2 – Arquitetura tecnológica e piloto (3–9 meses)**  
+   - Seleção/contratação ou desenvolvimento da plataforma (considerando parcerias como a Anitec/Hub70). [anitec.org](https://anitec.org.br/project-tag/hub70/)
+   - Projeto piloto com grupo restrito de tribunais (ex.: um TRF, um TJ, um TRT, um TRE). [trf2.jus](https://www.trf2.jus.br/jf2/aviso-jf2/2025/centro-de-formacao-do-poder-judiciario-ja-capacitou-mais-de-420-mil-pessoas-em)
+
+3. **Fase 3 – Expansão e consolidação da rede (9–24 meses)**  
+   - Ampliação da adesão, unificação progressiva dos catálogos e consolidação de trilhas nacionais de formação. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+
+***
+
+## 7. Parcerias estratégicas e sustentabilidade
+
+- **Parcerias com instituições especializadas em educação corporativa**, como a Anitec e seu ecossistema Hub70, para desenho da arquitetura de hub e apoio à curadoria e integração de universidades corporativas públicas. [pt.linkedin](https://pt.linkedin.com/posts/aniteceducacaocorporativa_ecossistema-de-educa%C3%A7%C3%A3o-corporativa-activity-7099822230494179328-hwb1)
+- **Integração com programas de modernização do Judiciário**, laboratórios de inovação e projetos apoiados pelo CNJ, aproveitando sinergias entre formação, gestão de conhecimento e transformação digital. [repositorio.idp.edu](https://repositorio.idp.edu.br/handle/123456789/4372)
+- **Sustentabilidade**: incorporar o hub ao planejamento plurianual de capacitação e ao orçamento de formação do CNJ, com possibilidade de cooperação técnica com outras instituições públicas e organismos internacionais. [fenajufe.org](https://www.fenajufe.org.br/noticias-da-fenajufe/cnj-atende-solicitacao-da-fenajufe-e-transforma-ceajud-em-escola-nacional-do-judiciario/)
+
+***
+
+## 8. Estrutura resumida para documento formal (2–4 páginas)
+
+Você pode condensar tudo em tópicos para um ofício‑proposta ou termo de referência:
+
+1. Contextualização: criação da ENAJU e papel central no Sistema Nacional de Formação de Servidores. [jfal.jus](https://www.jfal.jus.br/noticias/6546/)
+2. Problema: fragmentação de ofertas, dificuldades de compartilhamento de cursos entre escolas do Judiciário, foco ainda muito centrado em magistrados em algumas iniciativas. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+3. Solução: criação da vertente “ENAJU Hub Servidores”, com portal único, governança em rede e integração tecnológica com tribunais. [anitec.org](https://anitec.org.br)
+4. Objetivos, escopo e eixos (institucional, tecnológico, pedagógico, inovação). [repositorio.idp.edu](https://repositorio.idp.edu.br/handle/123456789/4372)
+5. Resultados esperados e indicadores. [revista.trf1.jus](https://revista.trf1.jus.br/trf1/article/view/545)
+6. Possíveis parcerias (ex.: Anitec/Hub70, escolas judiciais, laboratórios de inovação). [anitec.org](https://anitec.org.br/tag/hub70/)
+
+Se você me disser se essa proposta será usada como minuta interna do CNJ, como projeto acadêmico ou como termo de cooperação com parceiros externos, posso reescrever em formato mais jurídico‑administrativo (com cláusulas) ou mais acadêmico (problema, referencial, metodologia).

@@ -16,6 +16,22 @@ fonte:
   coletar_todos_pdfs_da_pagina_antes_de_filtrar: true
   registrar_snapshot_html: true
 
+expansao_corpus:
+  modo: cnj_expandido
+  ano_inicial: 2021
+  ano_final: "data_da_execucao"
+  incluir_noticias: true
+  max_pages: 120
+  max_depth: 1
+  max_links_per_page: 80
+  min_chars_html: 300
+  allowed_domains:
+    - cnj.jus.br
+    - atos.cnj.jus.br
+    - bibliotecadigital.cnj.jus.br
+    - boaspraticas.cnj.jus.br
+    - paineisanalytics.cnj.jus.br
+
 catalogo:
   normalizar_url: true
   remover_fragmento_url: true

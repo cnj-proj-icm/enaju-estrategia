@@ -42,11 +42,24 @@ dos criterios para `1.0.0` e reexecutar:
 .\.venv\Scripts\python.exe src\run_pipeline.py --step checklist
 ```
 
-### 3. Evidencias: revisar 1.807 trechos
+### 3. Priorizacao automatizada
 
-Na aba `Evidencias`, o revisor principal confirma, ajusta ou descarta todos os
-itens. O segundo revisor audita `20%` da amostra estratificada e todos os
-trechos marcados para uso no relatorio.
+Depois da calibracao amostral, gerar a matriz priorizada e a publicacao final:
+
+```powershell
+.\.venv\Scripts\python.exe src\run_pipeline.py --step prioritize
+.\.venv\Scripts\python.exe src\run_pipeline.py --step outputs
+```
+
+A revisao completa dos `1.807` trechos deixa de ser pre-condicao para a
+publicacao tecnica. Ela fica reservada para casos de alto impacto, auditoria ou
+uso institucional definitivo.
+
+### 4. Evidencias: revisao pontual quando necessario
+
+Na aba `Evidencias`, o revisor principal pode confirmar, ajustar ou descartar os
+itens que serao usados nominalmente no relatorio ou que apresentem risco alto.
+O segundo revisor audita todos os trechos marcados para uso final.
 
 Ao concluir, clicar em `Baixar CSV preenchido`, mover o arquivo para
 `data/processed/` e executar:
@@ -55,6 +68,7 @@ Ao concluir, clicar em `Baixar CSV preenchido`, mover o arquivo para
 .\.venv\Scripts\python.exe src\run_pipeline.py `
   --step import-review `
   --review-file data\processed\fila_revisao_preenchida.csv
+.\.venv\Scripts\python.exe src\run_pipeline.py --step prioritize
 .\.venv\Scripts\python.exe src\run_pipeline.py --step outputs
 ```
 

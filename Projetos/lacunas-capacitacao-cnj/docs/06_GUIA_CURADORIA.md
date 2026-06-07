@@ -60,6 +60,19 @@ ajustes em `config/criterios_analiticos.yml`, alterar a versao para `1.0.0` e
 reexecutar `detect`.
 
 Baixar `amostra_calibracao_preenchida.csv` como registro da calibracao.
+Colocar o arquivo em `data/processed/` e importar:
+
+```powershell
+.\.venv\Scripts\python.exe src\run_pipeline.py `
+  --step import-calibration `
+  --review-file data\processed\amostra_calibracao_preenchida.csv
+.\.venv\Scripts\python.exe src\run_pipeline.py --step prioritize
+.\.venv\Scripts\python.exe src\run_pipeline.py --step outputs
+```
+
+A importacao aceita `gap_confirmado`, `falso_positivo`, `termo_ausente` e
+`pendente`. O resultado agregado fica em
+`data/processed/calibracao_analitica.csv`.
 
 ## 5. Revisao de evidencias
 
@@ -89,6 +102,7 @@ importar:
 Gerar novamente os produtos:
 
 ```powershell
+.\.venv\Scripts\python.exe src\run_pipeline.py --step prioritize
 .\.venv\Scripts\python.exe src\run_pipeline.py --step outputs
 ```
 

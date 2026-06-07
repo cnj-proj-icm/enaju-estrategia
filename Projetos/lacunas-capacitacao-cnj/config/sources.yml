@@ -1,0 +1,112 @@
+sources:
+  - name: pesquisas-judiciarias-producao-interna
+    url: https://www.cnj.jus.br/pesquisas-judiciarias/
+    section: Pesquisas Judiciarias - Producao Interna
+    priority: high
+    type: publications_research
+    description: Base original de publicacoes institucionais do CNJ.
+
+  - name: pesquisas-judiciarias-justica-pesquisa
+    url: https://www.cnj.jus.br/pesquisas-judiciarias/justica-pesquisa/publicacoes-justica-pesquisa/
+    section: Justica Pesquisa
+    priority: high
+    type: publications_research
+    description: Serie Justica Pesquisa e relatorios associados.
+
+  - name: atos-normativos-cnj
+    url: https://www.cnj.jus.br/atos_normativos/
+    section: Atos Normativos CNJ
+    priority: high
+    type: normative_acts
+    description: Busca oficial de resolucoes, portarias, provimentos, recomendacoes, instrucoes normativas e enunciados.
+
+  - name: programas-e-acoes
+    url: https://www.cnj.jus.br/programas-e-acoes/
+    section: Programas e Acoes
+    priority: high
+    type: program
+    description: Indice de programas tematicos e politicas judiciarias nacionais do CNJ.
+
+  - name: publicacoes-cnj
+    url: https://www.cnj.jus.br/publicacoes-
+    section: Publicacoes CNJ
+    priority: high
+    type: publications
+    description: Publicacoes, relatorios, cartilhas, guias e manuais do CNJ.
+
+  - name: biblioteca-digital-cnj
+    url: https://bibliotecadigital.cnj.jus.br/
+    section: Biblioteca Digital CNJ
+    priority: high
+    type: digital_library
+    description: Repositorio digital de publicacoes e metadados vinculados ao CNJ.
+
+  - name: enaju-publicacoes
+    url: https://www.cnj.jus.br/cidadao/publicacoes/
+    section: ENAJU e CEAJUD
+    priority: high
+    type: training
+    description: Publicacoes, relatorios e manuais da Escola Nacional do Judiciario.
+
+  - name: ceajud-legislacao
+    url: https://www.cnj.jus.br/legislacao-ceajud/
+    section: Legislacao CEAJUD
+    priority: high
+    type: normative_acts
+    description: Legislacao estruturante de formacao, capacitacao e gestao por competencias.
+
+  - name: gestao-por-competencias
+    url: https://www.cnj.jus.br/formacao-e-capacitacao/gestao-por-competencias/
+    section: Gestao por Competencias
+    priority: high
+    type: training
+    description: Pagina tematica sobre gestao por competencias no Poder Judiciario.
+
+  - name: justica-4-capacitacoes
+    url: https://www.cnj.jus.br/tecnologia-da-informacao-e-comunicacao/justica-4-0/capacitacoes/
+    section: Justica 4.0 - Capacitacoes
+    priority: high
+    type: justice_4_training
+    description: Capacitacoes, cursos e materiais do Programa Justica 4.0.
+
+  - name: pdpj-capacitacao
+    url: https://www.cnj.jus.br/capacitacao/
+    section: PDPJ - Capacitacao
+    priority: medium
+    type: justice_4_training
+    description: Conteudos de capacitacao para PDPJ e pesquisa empirica.
+
+  - name: justica-em-numeros
+    url: https://www.cnj.jus.br/justica-em-numeros/
+    section: Justica em Numeros
+    priority: medium
+    type: publications_research
+    description: Relatorios analiticos, sumarios e documentacao do Justica em Numeros.
+
+  - name: relatorios-anuais-cnj
+    url: https://www.cnj.jus.br/relatorios-anuais-do-cnj/
+    section: Relatorios Anuais CNJ
+    priority: medium
+    type: publications
+    description: Relatorios anuais de atividades do CNJ.
+
+  - name: sistema-penal-publicacoes
+    url: https://www.cnj.jus.br/publicacoes-e-relatorios/
+    section: Sistema Penal e Socioeducativo
+    priority: medium
+    type: publications
+    description: Publicacoes e relatorios de sistema penal, socioeducativo e politicas correlatas.
+
+  - name: politicas-programaticas
+    url: https://www.cnj.jus.br/gestao-da-justica/politicas-judiciarias-nacionais-programaticas/eixos-estrategicos/
+    section: Politicas Judiciarias Programaticas
+    priority: medium
+    type: program
+    description: Eixos estrategicos, politicas programaticas e documentos associados.
+
+  - name: noticias-cnj
+    url: https://www.cnj.jus.br/category/noticias/
+    section: Noticias CNJ
+    priority: low
+    type: news
+    description: Noticias institucionais usadas como evidencia contextual e descoberta de fontes.

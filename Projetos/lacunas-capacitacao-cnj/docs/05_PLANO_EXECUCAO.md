@@ -15,8 +15,10 @@ mas um catalogo auditavel que permita validar o universo documental.
 | 3. Corpus | PDFs baixados, hashes e TXT gerados | Cobertura e falhas conhecidas |
 | 4. Processamento | Texto limpo e segmentos produzidos | Amostra reconstruivel por pagina |
 | 5. Deteccao | Candidatos classificados e ordenados | Dataset preliminar gerado |
-| 6. Calibracao | Amostra humana revisada e regras ajustadas | Versao dos criterios congelada |
-| 7. Sintese | Resumos e relatorio de validacao | Entregaveis prontos para uso interno |
+| 6. Calibracao | Amostra revisada e risco estimado | Versao dos criterios congelada |
+| 7. Priorizacao | Score composto e matriz de lacunas | Lacunas ordenadas por evidencia, consistencia e valor |
+| 8. Expansao do corpus | Fontes CNJ expandidas, HTML e normativos | Universo documental ampliado e separado por tipo de fonte |
+| 9. Sintese publicavel | Publicacao, portfolio e anexos CSV | Entregaveis prontos para leitura institucional |
 
 ## 3. Ordem de implementacao
 
@@ -28,7 +30,9 @@ mas um catalogo auditavel que permita validar o universo documental.
 6. Implementar download, extracao e limpeza.
 7. Implementar segmentacao, deteccao e consolidacao.
 8. Criar testes unitarios e um teste integrado com pequena amostra fixa.
-9. Gerar notebook exploratorio somente depois do dataset preliminar.
+9. Implementar importacao de calibracao, priorizacao e publicacao final.
+10. Implementar descoberta multibase e corpus expandido.
+11. Gerar notebook exploratorio somente depois do dataset preliminar.
 
 ## 4. Decisoes antes do piloto
 
@@ -60,7 +64,10 @@ mas um catalogo auditavel que permita validar o universo documental.
 - [ ] Detectar candidatos.
 - [ ] Revisar amostra.
 - [ ] Calibrar configuracao.
-- [ ] Gerar resumos finais.
+- [ ] Gerar matriz de lacunas priorizadas.
+- [ ] Executar descoberta multibase CNJ.
+- [ ] Gerar corpus expandido HTML/PDF e matrizes por tipo de fonte.
+- [ ] Gerar publicacao final, portfolio e anexos CSV.
 
 ## 6. Evolucoes posteriores
 
@@ -82,4 +89,6 @@ mas um catalogo auditavel que permita validar o universo documental.
 | Deteccao deterministica | Concluida com criterios `0.1.0` |
 | Amostra de calibracao | Gerada; revisao humana pendente |
 | Fila de evidencias | Gerada; revisao e auditoria pendentes |
-| Sintese | Gerada em modo preliminar |
+| Priorizacao automatizada | Implementada como etapa `prioritize` |
+| Expansao do corpus | Implementada com `discover-sources` e `expanded-corpus` |
+| Sintese | Publicacao final integrada ao pipeline, com secao de expansao documental |

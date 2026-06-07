@@ -99,6 +99,55 @@ grupos:
       - saude mental
       - violencia
 
+  F_competencia_requerida:
+    peso: 2
+    termos:
+      - devera promover
+      - devera garantir
+      - compete ao tribunal
+      - compete aos tribunais
+      - fica instituida
+      - fica instituido
+      - politica nacional
+      - plano nacional
+      - programa nacional
+      - implementar politica
+      - assegurar capacitacao
+      - promover capacitacao
+      - desenvolver competencias
+      - mapeamento de competencias
+      - gestao por competencias
+
+  G_oferta_formativa:
+    peso: 1
+    termos:
+      - curso
+      - cursos
+      - webinar
+      - capacitações
+      - capacitacoes
+      - autoinstrucional
+      - ead
+      - carga horaria
+      - publico-alvo
+      - publico alvo
+      - inscricoes
+      - certificacao
+
+  H_implementacao_politica:
+    peso: 1
+    termos:
+      - implementacao
+      - implantação
+      - implantacao
+      - plano de acao
+      - plano de ação
+      - monitoramento da politica
+      - acompanhamento da politica
+      - relatorio anual
+      - prestação de contas
+      - prestacao de contas
+
 bonus:
   coocorrencia_A_B:
     peso: 2
@@ -117,6 +166,14 @@ tipos_gap:
     regra: "contem sinal organizacional do grupo C com potencial de desenvolvimento institucional"
   potencial:
     regra: "contem termo tematico ou formativo, mas exige revisao humana para confirmar a lacuna"
+
+classes_achado:
+  gap_observado:
+    regra: "diagnostico, pesquisa, relatorio ou noticia identifica ausencia, fragilidade, dificuldade, carencia ou necessidade"
+  competencia_requerida:
+    regra: "norma, manual, guia ou programa estabelece capacidade esperada ou obrigacao de implementacao"
+  oferta_formativa:
+    regra: "curso, capacitacao ou noticia indica resposta formativa existente sem necessariamente demonstrar lacuna"
 
 eixos:
   dados_e_tecnologia:
@@ -151,3 +208,116 @@ hipoteses_competencia:
     hipotese: acessibilidade e comunicacao inclusiva
   - gatilhos: [equipe multidisciplinar, equipes multidisciplinares, equipe reduzida]
     hipotese: estruturacao e atuacao de equipes multidisciplinares
+
+priorizacao_automatica:
+  pesos:
+    score_textual: 0.45
+    consistencia_evidencial: 0.30
+    valor_institucional: 0.25
+  limiares:
+    alta: 0.75
+    media: 0.50
+  valor_padrao: 0.50
+  valor_institucional_por_eixo:
+    dados_e_tecnologia: 0.95
+    direitos_humanos_e_inclusao: 0.95
+    avaliacao_e_monitoramento: 0.90
+    inovacao_e_transformacao: 0.85
+    atendimento_e_servicos_judiciarios: 0.80
+    gestao_e_governanca: 0.80
+    comunicacao_e_acessibilidade: 0.78
+    saude_e_bem_estar: 0.74
+    formacao_de_liderancas: 0.72
+    equipes_multidisciplinares: 0.70
+    nao_classificado: 0.20
+  propostas_formativas:
+    dados_e_tecnologia:
+      categoria: Capacitacao
+      proposta: Capacitacao em dados, tecnologia e inteligencia institucional
+      publico_prioritario: gestores, analistas e equipes de dados
+      competencias_centrais: leitura de indicadores, governanca de dados, uso de evidencias e qualidade informacional
+      carga_horaria_sugerida: 12h a 20h
+      modalidade_sugerida: curso curto com laboratorio aplicado
+      produto_esperado: painel simples ou plano de uso de indicadores
+      indicador_avaliacao: percentual de participantes capazes de interpretar indicadores institucionais em estudo de caso
+    direitos_humanos_e_inclusao:
+      categoria: Capacitacao
+      proposta: Capacitacao em direitos humanos, inclusao e acessibilidade
+      publico_prioritario: servidores, gestores e equipes de politicas publicas
+      competencias_centrais: inclusao, acessibilidade, linguagem institucional e resposta a vulnerabilidades
+      carga_horaria_sugerida: 12h a 16h
+      modalidade_sugerida: curso com oficina de aplicacao
+      produto_esperado: guia de boas praticas inclusivas
+      indicador_avaliacao: percentual de participantes que aplicam criterios de acessibilidade em exercicios praticos
+    avaliacao_e_monitoramento:
+      categoria: Trilha
+      proposta: Trilha de avaliacao, monitoramento e planejamento estrategico
+      publico_prioritario: gestores e formuladores de politicas
+      competencias_centrais: avaliacao de impacto, indicadores, priorizacao e acompanhamento de resultados
+      carga_horaria_sugerida: 16h a 24h
+      modalidade_sugerida: trilha curta com mentoria
+      produto_esperado: plano de monitoramento institucional
+      indicador_avaliacao: percentual de participantes que elaboram indicadores e metas plausiveis
+    inovacao_e_transformacao:
+      categoria: Trilha
+      proposta: Trilha de inovacao e transformacao digital
+      publico_prioritario: coordenadores e equipes de inovacao
+      competencias_centrais: transformacao digital, gestao do conhecimento, experimentacao e servicos digitais
+      carga_horaria_sugerida: 16h a 20h
+      modalidade_sugerida: trilha com projeto piloto
+      produto_esperado: prototipo de servico digital simples
+      indicador_avaliacao: numero de ideias viaveis convertidas em prototipo piloto
+    atendimento_e_servicos_judiciarios:
+      categoria: Trilha
+      proposta: Trilha de atendimento e servicos ao cidadao
+      publico_prioritario: equipes de atendimento, comunicacao e gestao de servicos
+      competencias_centrais: comunicacao clara, acolhimento, experiencia do cidadao e melhoria de servicos
+      carga_horaria_sugerida: 12h a 18h
+      modalidade_sugerida: curso com simulacao
+      produto_esperado: protocolo de atendimento humanizado
+      indicador_avaliacao: desempenho em simulacao ou satisfacao aferida em exercicio pratico
+    gestao_e_governanca:
+      categoria: Trilha
+      proposta: Trilha de gestao, governanca e lideranca
+      publico_prioritario: gestores, chefias e equipes de governanca
+      competencias_centrais: governanca, padronizacao de fluxos, tomada de decisao e coordenacao institucional
+      carga_horaria_sugerida: 16h a 24h
+      modalidade_sugerida: trilha aplicada
+      produto_esperado: plano de melhoria de fluxo ou governanca
+      indicador_avaliacao: qualidade do plano segundo rubrica de viabilidade e alinhamento institucional
+    comunicacao_e_acessibilidade:
+      categoria: Capacitacao
+      proposta: Capacitacao em comunicacao e acessibilidade
+      publico_prioritario: equipes de comunicacao, atendimento e gestao de conteudo
+      competencias_centrais: linguagem simples, acessibilidade comunicacional e desenho de informacao
+      carga_horaria_sugerida: 8h a 12h
+      modalidade_sugerida: oficina pratica
+      produto_esperado: peca comunicacional revisada com criterios de acessibilidade
+      indicador_avaliacao: conformidade da peca revisada com checklist de acessibilidade
+    saude_e_bem_estar:
+      categoria: Capacitacao
+      proposta: Capacitacao em saude e bem-estar institucional
+      publico_prioritario: gestores de pessoas, magistrados e equipes de apoio institucional
+      competencias_centrais: prevencao, acolhimento, monitoramento de riscos e promocao de saude no trabalho
+      carga_horaria_sugerida: 12h a 16h
+      modalidade_sugerida: curso com estudo de caso
+      produto_esperado: plano de acao de cuidado institucional
+      indicador_avaliacao: qualidade do plano de acao conforme criterios de prevencao e encaminhamento
+    formacao_de_liderancas:
+      categoria: Trilha
+      proposta: Trilha de formacao de liderancas
+      publico_prioritario: liderancas atuais e potenciais gestores
+      competencias_centrais: lideranca, gestao de equipes, comunicacao e tomada de decisao
+      carga_horaria_sugerida: 20h a 30h
+      modalidade_sugerida: trilha com atividades reflexivas e praticas
+      produto_esperado: plano individual de desenvolvimento de lideranca
+      indicador_avaliacao: evolucao do participante em rubrica de competencias de lideranca
+    equipes_multidisciplinares:
+      categoria: Capacitacao
+      proposta: Capacitacao para estruturacao e atuacao de equipes multidisciplinares
+      publico_prioritario: equipes tecnicas, gestores e unidades de apoio psicossocial
+      competencias_centrais: trabalho multidisciplinar, fluxos de atendimento e articulacao interinstitucional
+      carga_horaria_sugerida: 12h a 20h
+      modalidade_sugerida: curso com oficina de fluxo
+      produto_esperado: desenho de fluxo de atuacao multidisciplinar
+      indicador_avaliacao: aderencia do fluxo proposto aos criterios de clareza, responsabilizacao e viabilidade
