@@ -1,0 +1,349 @@
+{
+  "source": "Plano de Capacitações da ENAJU 2026",
+  "updatedAt": "2026-07-24T18:10:15.179652-03:00",
+  "actions": [
+    {
+      "order": 1,
+      "name": "Projeto Elo",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "Não localizado",
+      "decision": "Fora do bloco principal do Plano de Gestão",
+      "plannerTaskIds": [
+        "planner-26"
+      ],
+      "outlookEventIds": [
+        "outlook-55-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-56-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-57-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-58-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-59-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-60-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-61-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-62-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-63-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju",
+        "outlook-64-programa-de-formacao-em-governanca-e-gestao-das-politicas-ju"
+      ],
+      "hasPlanner": true,
+      "hasOutlook": true,
+      "coverage": 100,
+      "coverageClass": "complete"
+    },
+    {
+      "order": 2,
+      "name": "Avaliação Biopsicossocial do BPC (3 trilhas)",
+      "axis": "Eixo 4",
+      "evidence": "D043 e curso BPC validado",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-20"
+      ],
+      "outlookEventIds": [
+        "outlook-1-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-2-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-3-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-4-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-5-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-6-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-7-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-8-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-9-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-10-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-11-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-12-assincrona-modulo-iv-formacao-bpc",
+        "outlook-13-assincrona-modulo-iv-formacao-bpc",
+        "outlook-14-assincrona-modulo-iv-formacao-bpc",
+        "outlook-15-assincrona-modulo-iv-formacao-bpc",
+        "outlook-16-assincrona-modulo-iv-formacao-bpc",
+        "outlook-17-assincrona-modulo-iii-formacao-bpc",
+        "outlook-18-assincrona-modulo-iii-formacao-bpc",
+        "outlook-19-assincrona-modulo-iii-formacao-bpc",
+        "outlook-20-assincrona-modulo-iii-formacao-bpc",
+        "outlook-21-assincrona-modulo-ii-formacao-bpc",
+        "outlook-22-assincrona-modulo-i-formacao-bpc",
+        "outlook-23-assincrona-modulo-i-formacao-bpc",
+        "outlook-24-assincrona-modulo-ii-formacao-bpc",
+        "outlook-25-assincrona-modulo-ii-formacao-bpc",
+        "outlook-26-assincrona-modulo-ii-formacao-bpc",
+        "outlook-27-assincrona-modulo-ii-formacao-bpc",
+        "outlook-28-assincrona-modulo-i-formacao-bpc",
+        "outlook-29-assincrona-modulo-i-formacao-bpc",
+        "outlook-30-assincrona-modulo-i-formacao-bpc",
+        "outlook-31-remoto-formacao-bpc-abertura",
+        "outlook-32-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-33-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-34-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-35-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-36-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-37-remoto-formacao-bpc-aulas-sincronas-gerais",
+        "outlook-38-remoto-formacao-bpc"
+      ],
+      "hasPlanner": true,
+      "hasOutlook": true,
+      "coverage": 100,
+      "coverageClass": "complete"
+    },
+    {
+      "order": 3,
+      "name": "Avaliação Biopsicossocial. IFBrA e IFBrM (3 trilhas)",
+      "axis": "Eixo 4",
+      "evidence": "Bloco biopsicossocial validado",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-20"
+      ],
+      "outlookEventIds": [],
+      "hasPlanner": true,
+      "hasOutlook": false,
+      "coverage": 50,
+      "coverageClass": "partial"
+    },
+    {
+      "order": 4,
+      "name": "Serviço de Acolhimento Familiar (8 trilhas)",
+      "axis": "Eixo 6",
+      "evidence": "Oferta ENAJU identificada",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-27"
+      ],
+      "outlookEventIds": [],
+      "hasPlanner": true,
+      "hasOutlook": false,
+      "coverage": 50,
+      "coverageClass": "partial"
+    },
+    {
+      "order": 5,
+      "name": "Women's Judges Program",
+      "axis": "Eixo 3",
+      "evidence": "Oferta ENAJU identificada",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-19"
+      ],
+      "outlookEventIds": [
+        "outlook-52-women-s-judges-program-judicial-training-and-the-brazilian-j",
+        "outlook-53-women-s-judges-program-judicial-training-and-the-brazilian-j"
+      ],
+      "hasPlanner": true,
+      "hasOutlook": true,
+      "coverage": 100,
+      "coverageClass": "complete"
+    },
+    {
+      "order": 6,
+      "name": "Formação em Justiça Comunitária",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "Não localizado",
+      "decision": "Fora do bloco principal do Plano de Gestão",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 7,
+      "name": "Curso de Marco Legal do Crime Organizado",
+      "axis": "Eixo 1",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 8,
+      "name": "Curso de Provas Digitais",
+      "axis": "Eixo 6",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 9,
+      "name": "Fundamentos da Auditoria Interna",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "D029",
+      "decision": "Executar na trilha de auditoria",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 10,
+      "name": "Trilha de Auditoria",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "D021, D023, D029 e D051",
+      "decision": "Executar como trilha interna",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 11,
+      "name": "Curso de Formação de Mediadores e Conciliadores",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "Não localizado",
+      "decision": "Fora do bloco principal do Plano de Gestão",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 12,
+      "name": "Curso do Programa Nacional de Execução Efetiva. PNEE",
+      "axis": "Eixo 1",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 13,
+      "name": "Sisbajud",
+      "axis": "Eixo 1",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 14,
+      "name": "Infovoo",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "Não localizado",
+      "decision": "Fora do bloco principal do Plano de Gestão",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 15,
+      "name": "Formação de Tradutores e Intérpretes de línguas indígenas",
+      "axis": "Eixo 4",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-1",
+        "planner-31"
+      ],
+      "outlookEventIds": [],
+      "hasPlanner": true,
+      "hasOutlook": false,
+      "coverage": 50,
+      "coverageClass": "partial"
+    },
+    {
+      "order": 16,
+      "name": "Formação de Equipes Técnicas Multidisciplinares",
+      "axis": "Eixo 6",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-3"
+      ],
+      "outlookEventIds": [],
+      "hasPlanner": true,
+      "hasOutlook": false,
+      "coverage": 50,
+      "coverageClass": "partial"
+    },
+    {
+      "order": 17,
+      "name": "Governança e Gestão Estratégica da Auditoria",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "D023",
+      "decision": "Executar na trilha de auditoria",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 18,
+      "name": "Capacitação e atuação de mediadoras indígenas. Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "axis": "Eixo 4",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [
+        "planner-28"
+      ],
+      "outlookEventIds": [],
+      "hasPlanner": true,
+      "hasOutlook": false,
+      "coverage": 50,
+      "coverageClass": "partial"
+    },
+    {
+      "order": 19,
+      "name": "Justiça e Direitos da População em Situação de Rua",
+      "axis": "Eixo 3",
+      "evidence": "Não localizado",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 20,
+      "name": "The Role of the Judiciary",
+      "axis": "Sem vínculo direto localizado",
+      "evidence": "Não localizado",
+      "decision": "Fora do bloco principal do Plano de Gestão",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    },
+    {
+      "order": 21,
+      "name": "Capacitação dentro do Programa Justiça pela Terra",
+      "axis": "Eixo 4",
+      "evidence": "D016",
+      "decision": "Executar",
+      "plannerTaskIds": [],
+      "outlookEventIds": [],
+      "hasPlanner": false,
+      "hasOutlook": false,
+      "coverage": 0,
+      "coverageClass": "empty"
+    }
+  ]
+}
