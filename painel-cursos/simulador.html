@@ -1,0 +1,224 @@
+<!doctype html>
+<!--
+  ARQUIVO GERADO AUTOMATICAMENTE - NAO EDITE DIRETAMENTE.
+  Fonte: simulador.html, estilos.css, regras.js, ficha.js, simulador.js
+  Para alterar o conteudo, edite regras.js e rode: python gerar_autonomo.py
+-->
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simulador de prazos — ENAJU</title><style>
+:root{--navy:#12376d;--ink:#10223f;--blue:#397bc0;--gold:#c8891d;--sage:#2f7566;--paper:#f4f7fb;--card:#fff;--muted:#586980;--line:#d8e1ed;--soft:#eaf3f0;--warn:#fff5dc;--max:980px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Segoe UI",Arial,sans-serif}.wrap{max-width:var(--max);margin:auto;padding:0 24px 56px}
+.hero{background:linear-gradient(145deg,var(--navy),#0b1e3b);color:#fff;margin:0 -24px 34px;padding:48px max(24px,calc((100vw - var(--max))/2 + 24px));border-bottom:5px solid var(--gold)}.eyebrow{margin:0 0 10px;color:#f2ca76;text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:800}.hero h1{max-width:780px;margin:0;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05}.hero p:last-child{max-width:680px;color:#dce8f7;font:1.1rem/1.55 Georgia,serif}
+.notice,.card,.result,.sheet{background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px #14356b12}.notice{border-left:5px solid var(--gold);padding:16px 20px;margin-bottom:28px}.notice strong{display:block}.notice p{margin:4px 0 0;color:var(--muted)}
+.progress{height:7px;background:var(--line);border-radius:8px;overflow:hidden;margin:18px 0 28px}.progress span{display:block;height:100%;width:16.6%;background:var(--blue);transition:width .2s}
+fieldset{border:0;padding:0;margin:0}.step{display:none}.step.active{display:block}.step legend{font-size:clamp(1.35rem,3vw,2rem);font-weight:800;margin-bottom:6px}.hint{color:var(--muted);margin:0 0 18px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.option{position:relative}.option input{position:absolute;opacity:0}.option label{display:block;height:100%;padding:17px 18px;background:var(--card);border:2px solid var(--line);border-radius:10px;font-weight:700;cursor:pointer}.option input:focus-visible+label{outline:3px solid #f0b84e;outline-offset:2px}.option input:checked+label{border-color:var(--blue);background:#edf5fd;color:var(--navy)}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:25px}.button{border:0;border-radius:8px;padding:12px 19px;font:700 1rem inherit;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:var(--navy);color:#fff}.secondary{background:#e8eef7;color:var(--ink)}button:disabled{opacity:.45;cursor:not-allowed}
+.result{display:none;padding:clamp(22px,5vw,40px);border-top:6px solid var(--sage)}.result.active{display:block}.deadline{display:flex;align-items:baseline;gap:10px;color:var(--sage)}.deadline strong{font-size:clamp(3.2rem,10vw,6rem);line-height:1}.deadline span{font-weight:800}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.chip{background:#e9f0f9;border-radius:99px;padding:6px 10px;font-size:.85rem;font-weight:700}.status{background:var(--warn);color:#704d09}.result h2{font-size:clamp(1.5rem,4vw,2.2rem);margin:.4em 0}.result h3{margin-bottom:4px}.result p{color:var(--muted)}.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.sheet{margin-top:28px;overflow:hidden}.sheet-head{padding:34px;background:linear-gradient(145deg,var(--navy),#0b1e3b);color:#fff;border-bottom:5px solid var(--gold)}.sheet-head h1{margin:6px 0;font-size:clamp(2rem,6vw,3.3rem);line-height:1.08}.sheet-head p{color:#dbe7f6;max-width:70ch}.sheet-body{padding:clamp(22px,5vw,42px)}.big-number{color:var(--sage);font-size:4.5rem;font-weight:900;line-height:1}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{padding:19px;background:#f8fafc;border-left:4px solid var(--blue)}.panel h2{font-size:1.05rem;margin:0 0 8px}.panel ul{margin:0;padding-left:20px}.box-row{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.footer-note{margin-top:28px;padding:17px;background:var(--soft);border-left:4px solid var(--sage)}footer{margin-top:34px;color:var(--muted);font-size:.86rem}
+@media(max-width:650px){.options,.grid{grid-template-columns:1fr}.wrap{padding-left:16px;padding-right:16px}.hero{margin-left:-16px;margin-right:-16px}.actions{align-items:stretch}.button{text-align:center}}
+.export .simulator-only{display:none!important}.export .wrap{padding-bottom:18px}.export .sheet{margin-bottom:0}
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero,.simulator-only,.actions,.result-actions,footer{display:none!important}.sheet{box-shadow:none;border:0;margin:0}.sheet-head{-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet-body{padding:28px}.panel,.footer-note,.chip{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style><script>
+/* Matriz preliminar. Alterar aqui após homologação SEGAF/SEGAC. */
+window.ENAJU_REGRAS = {
+  versao: "preliminar-2026-07",
+  tipos: {
+    curso: "Curso",
+    palestra: "Palestra",
+    workshop: "Workshop / oficina",
+    seminario: "Seminário"
+  },
+  situacoes: { nova: "Ação nova", existente: "Nova oferta de ação existente" },
+  modalidades: {
+    presencial: "Presencial",
+    sincrona: "Remota síncrona",
+    assincrona: "Remota assíncrona",
+    hibrida: "Híbrida"
+  },
+  profissionais: {
+    proprio: "Equipe própria / sem contratação",
+    gecc: "Servidor(a) remunerado(a) por GECC",
+    externo: "Profissional sem vínculo com a Administração",
+    pj: "Pessoa jurídica por inexigibilidade"
+  },
+  cenarios: {
+    "oferta-existente": {
+      prazo: 30, status: "Referência existente",
+      titulo: "Nova oferta de ação já existente",
+      fator: "Preparação da nova oferta",
+      resumo: "A ação já está desenvolvida, mas ainda exige organização de turma, inscrições, divulgação, ambiente e certificação.",
+      unidades: ["ENAJU / SEGAF", "Comunicação Social", "Tecnologia da Informação"],
+      etapas: ["Análise de viabilidade", "Atualização da oferta", "Divulgação e inscrições", "Execução, avaliação e certificação"],
+      providencias: ["Objetivo e público-alvo", "Data pretendida", "Estimativa de participantes", "Indicação do conteúdo ou edição anterior"]
+    },
+    "gecc-remoto": {
+      prazo: 30, status: "Referência existente",
+      titulo: "Instrutoria por GECC em formato remoto",
+      fator: "Contratação de servidor(a) por GECC",
+      resumo: "A contratação percorre autorizações e disponibilidade orçamentária, além da preparação operacional da ação.",
+      unidades: ["ENAJU / SEGAF", "ENAJU / SEGAC", "Orçamento e Finanças", "Gestão de Pessoas"],
+      etapas: ["Plano pedagógico", "Autorização e orçamento", "Documentação e empenho", "Preparação e realização"],
+      providencias: ["Programa ou ementa", "Dados do(a) instrutor(a)", "Carga horária", "Datas e público estimado"]
+    },
+    "producao-nova-vinculo": {
+      prazo: 60, status: "Referência existente",
+      titulo: "Produção nova com equipe própria ou GECC",
+      fator: "Desenvolvimento de conteúdo inédito",
+      resumo: "O prazo protege o desenho pedagógico, a produção, a revisão, a validação e a preparação do ambiente de aprendizagem.",
+      unidades: ["ENAJU / SEGAF", "ENAJU / SEGAC, se houver GECC", "Comunicação Social", "Tecnologia da Informação"],
+      etapas: ["Desenho pedagógico", "Produção e revisão", "Validação do conteúdo", "Montagem, testes e divulgação"],
+      providencias: ["Problema e objetivo da ação", "Ementa preliminar", "Conteudista indicado", "Carga horária e data pretendida"]
+    },
+    "instrutoria-externa": {
+      prazo: 60, status: "Referência existente",
+      titulo: "Instrutoria externa sem desenvolvimento integral de curso",
+      fator: "Contratação de profissional sem vínculo",
+      resumo: "A instrução processual da contratação externa exige documentação e tramitação próprias antes da realização.",
+      unidades: ["ENAJU / SEGAF", "ENAJU / SEGAC", "Orçamento e Finanças", "Unidades administrativas competentes"],
+      etapas: ["Definição da instrutoria", "Instrução e autorizações", "Preparação operacional", "Realização e pagamento"],
+      providencias: ["Justificativa da escolha", "Currículo e documentos", "Proposta de conteúdo", "Carga horária, datas e público"]
+    },
+    "presencial-hibrida": {
+      prazo: 60, status: "Proposta para validação",
+      titulo: "Ação presencial ou híbrida",
+      fator: "Logística ampliada e articulação entre unidades",
+      resumo: "Além do planejamento pedagógico, o formato pode exigir sala, comunicação, audiovisual, transmissão, acessibilidade, equipamentos e apoio operacional.",
+      unidades: ["ENAJU / SEGAF", "Comunicação Social", "Cerimonial", "Tecnologia da Informação", "Apoio logístico"],
+      etapas: ["Viabilidade e reserva", "Plano de comunicação", "Infraestrutura e acessibilidade", "Teste técnico e realização"],
+      providencias: ["Local e datas possíveis", "Número de participantes", "Necessidades de transmissão e gravação", "Acessibilidade e apoio logístico"]
+    },
+    "curso-novo-externo": {
+      prazo: 90, status: "Referência existente",
+      titulo: "Curso novo com conteudista externo",
+      fator: "Contratação externa somada ao desenvolvimento integral",
+      resumo: "É o fluxo mais sensível: contratação, desenho educacional, produção, revisões, validação, diagramação e montagem no ambiente virtual.",
+      unidades: ["ENAJU / SEGAF", "ENAJU / SEGAC", "Comunicação Social", "Tecnologia da Informação", "Unidades de contratação e orçamento"],
+      etapas: ["Contratação e plano pedagógico", "Produção do conteúdo", "Revisão e validação", "Montagem, testes e oferta"],
+      providencias: ["Justificativa e objetivo", "Ementa e carga horária", "Dados do(a) conteudista", "Cronograma de entregas e data de início"]
+    },
+    "pj-inexigibilidade": {
+      prazo: 90, status: "Proposta para validação",
+      titulo: "Contratação de pessoa jurídica por inexigibilidade",
+      fator: "Fluxo de contratação de pessoa jurídica",
+      resumo: "A contratação demanda termo de referência, análises administrativa e jurídica, certidões, autorização, publicação e empenho.",
+      unidades: ["ENAJU / SEGAF", "ENAJU / SEGAC", "Orçamento e Finanças", "Administração e área jurídica", "Diretoria-Geral"],
+      etapas: ["Termo de referência e orçamento", "Análises administrativa e jurídica", "Autorização, publicação e empenho", "Preparação e execução"],
+      providencias: ["Justificativa da escolha", "Proposta e escopo", "Documentos e certidões da empresa", "Datas, carga horária e público"]
+    }
+  },
+  calcular: function (r) {
+    var candidatos = [];
+    candidatos.push({ id: "oferta-existente", prazo: 30 });
+    if (r.profissional === "gecc") candidatos.push({ id: "gecc-remoto", prazo: 30 });
+    if (r.situacao === "nova") candidatos.push({ id: "producao-nova-vinculo", prazo: 60 });
+    if (r.profissional === "externo") candidatos.push({ id: "instrutoria-externa", prazo: 60 });
+    if (r.modalidade === "presencial" || r.modalidade === "hibrida") candidatos.push({ id: "presencial-hibrida", prazo: 60 });
+    if (r.tipo === "curso" && r.situacao === "nova" && r.profissional === "externo") candidatos.push({ id: "curso-novo-externo", prazo: 90 });
+    if (r.profissional === "pj") candidatos.push({ id: "pj-inexigibilidade", prazo: 90 });
+    candidatos.sort(function (a, b) { return b.prazo - a.prazo; });
+    var vencedor = candidatos[0];
+    /* Empates favorecem o cenário que melhor explica a seleção. */
+    if (vencedor.prazo === 60 && (r.modalidade === "presencial" || r.modalidade === "hibrida")) vencedor = { id: "presencial-hibrida", prazo: 60 };
+    if (r.situacao === "existente" && r.profissional === "gecc" && vencedor.prazo === 30) vencedor = { id: "gecc-remoto", prazo: 30 };
+    return { cenario: vencedor.id, detalhes: this.cenarios[vencedor.id], candidatos: candidatos };
+  }
+};
+</script></head>
+<body><main class="wrap">
+<header class="hero"><p class="eyebrow">ENAJU · Escola Nacional do Judiciário</p><h1>De quanto tempo a sua ação formativa precisa?</h1><p>Monte o cenário da sua demanda. Em poucos passos, você recebe uma referência de antecedência e entende o caminho necessário para uma entrega com qualidade.</p></header>
+<aside class="notice" aria-label="Aviso"><strong>Simulação orientativa — matriz preliminar.</strong><p>O resultado não substitui a análise de viabilidade, orçamento e disponibilidade pela ENAJU. Conte o prazo para trás a partir da data pretendida para o início.</p></aside>
+<section id="simulador" class="simulator-only" aria-labelledby="titulo-form"><h2 id="titulo-form">Monte o seu cenário</h2><div class="progress" aria-hidden="true"><span id="barra"></span></div>
+<form id="form">
+<fieldset class="step active" data-key="tipo"><legend>1. Que tipo de ação você pretende realizar?</legend><p class="hint">Escolha o formato principal.</p><div class="options"></div></fieldset>
+<fieldset class="step" data-key="situacao"><legend>2. Em que estágio está a ação?</legend><p class="hint">Uma nova oferta reaproveita conteúdo já desenvolvido e validado.</p><div class="options"></div></fieldset>
+<fieldset class="step" data-key="modalidade"><legend>3. Como a ação acontecerá?</legend><p class="hint">Presencial e híbrida exigem articulação logística ampliada.</p><div class="options"></div></fieldset>
+<fieldset class="step" data-key="tutoria"><legend>4. O curso terá tutoria?</legend><p class="hint">Esta pergunta aparece apenas para curso remoto assíncrono ou híbrido.</p><div class="options"></div></fieldset>
+<fieldset class="step" data-key="profissional"><legend><span class="step-number">5</span>. Como será a instrutoria ou produção de conteúdo?</legend><p class="hint">A forma de contratação pode ser o fator determinante do prazo.</p><div class="options"></div></fieldset>
+<div class="actions"><button type="button" class="button secondary" id="voltar">Voltar</button><button type="button" class="button primary" id="avancar" disabled>Continuar</button></div>
+</form></section>
+<section id="resultado" class="result simulator-only" tabindex="-1" aria-live="polite"></section>
+<article id="ficha" class="sheet" hidden></article>
+<footer>Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação — ENAJU/CNJ.</footer>
+</main><script>
+(function(){
+  "use strict";
+  /* Monta o HTML da ficha. Usado pelas paginas de fichas/ e pelo arquivo autonomo. */
+  window.ENAJU_FICHA=function(id,q){
+    var R=window.ENAJU_REGRAS, d=R.cenarios[id], labels=[];
+    if(q.get("tipo"))labels.push(R.tipos[q.get("tipo")]);if(q.get("situacao"))labels.push(R.situacoes[q.get("situacao")]);if(q.get("modalidade"))labels.push(R.modalidades[q.get("modalidade")]);
+    if(q.get("tutoria"))labels.push(q.get("tutoria")==="sim"?"Com tutoria":"Sem tutoria");if(q.get("profissional"))labels.push(R.profissionais[q.get("profissional")]);
+    if(!labels.length)labels=[d.titulo];
+    return '<header class="sheet-head"><p class="eyebrow">Ficha orientativa · '+d.status+'</p><h1>'+d.titulo+'</h1><p>'+d.resumo+'</p></header><div class="sheet-body"><div class="big-number">'+d.prazo+' dias</div><p><strong>de antecedência mínima</strong>, contados para trás a partir da data pretendida para o início.</p><div class="box-row">'+labels.map(function(x){return'<span class="chip">'+x+'</span>';}).join("")+'</div><div class="grid"><section class="panel"><h2>Fator determinante</h2><p>'+d.fator+'</p></section><section class="panel"><h2>Unidades normalmente envolvidas</h2><ul>'+d.unidades.map(function(x){return'<li>'+x+'</li>';}).join("")+'</ul></section><section class="panel"><h2>Etapas principais</h2><ol>'+d.etapas.map(function(x){return'<li>'+x+'</li>';}).join("")+'</ol></section><section class="panel"><h2>Tenha estas informações em mãos</h2><ul>'+d.providencias.map(function(x){return'<li>'+x+'</li>';}).join("")+'</ul></section></div><aside class="footer-note"><strong>Este prazo é uma referência de planejamento.</strong> A viabilidade pedagógica, estratégica, orçamentária e normativa será confirmada pela ENAJU. Procure a Escola desde a ideia: quanto mais cedo a conversa começa, mais caminhos continuam abertos.</aside><div class="result-actions simulator-only"><a class="button secondary" data-voltar href="../simulador.html">Voltar ao simulador</a><button class="button primary" onclick="window.print()">Imprimir ou salvar em PDF</button></div></div>';
+  };
+  /* Paginas de fichas/: renderizam no carregamento. O arquivo autonomo nao define data-cenario. */
+  var id=document.body.dataset.cenario;
+  if(!id)return;
+  var q=new URLSearchParams(location.search);
+  if(q.get("export")==="1")document.documentElement.classList.add("export");
+  document.title=window.ENAJU_REGRAS.cenarios[id].titulo+" — ENAJU";
+  document.querySelector("#ficha").innerHTML=window.ENAJU_FICHA(id,q);
+})();
+</script>
+<script>
+(function(){
+  "use strict";
+  var R=window.ENAJU_REGRAS, form=document.querySelector("#form"), steps=[].slice.call(document.querySelectorAll(".step"));
+  var state={}, index=0, voltar=document.querySelector("#voltar"), avancar=document.querySelector("#avancar"), barra=document.querySelector("#barra");
+  var fontes={tipo:R.tipos,situacao:R.situacoes,modalidade:R.modalidades,tutoria:{nao:"Sem tutoria",sim:"Com tutoria"},profissional:R.profissionais};
+  function options(step){
+    var key=step.dataset.key, box=step.querySelector(".options");
+    box.innerHTML=Object.keys(fontes[key]).map(function(v){return '<div class="option"><input type="radio" id="'+key+'-'+v+'" name="'+key+'" value="'+v+'"><label for="'+key+'-'+v+'">'+fontes[key][v]+'</label></div>';}).join("");
+  }
+  steps.forEach(options);
+  function visiveis(){
+    return steps.filter(function(s){return s.dataset.key!=="tutoria" || (state.tipo==="curso"&&(state.modalidade==="assincrona"||state.modalidade==="hibrida"));});
+  }
+  function show(i){
+    var vs=visiveis(); index=Math.max(0,Math.min(i,vs.length-1));
+    steps.forEach(function(s){s.classList.remove("active");}); vs[index].classList.add("active");
+    vs.forEach(function(s,n){var num=s.querySelector(".step-number");if(num)num.textContent=n+1;});
+    voltar.disabled=index===0; avancar.textContent=index===vs.length-1?"Ver meu prazo":"Continuar";
+    avancar.disabled=!state[vs[index].dataset.key]; barra.style.width=((index+1)/vs.length*100)+"%";
+    vs[index].querySelector("legend").focus?.();
+  }
+  form.addEventListener("change",function(e){
+    if(e.target.matches("input")){state[e.target.name]=e.target.value;if(e.target.name==="modalidade"&&!(state.tipo==="curso"&&(state.modalidade==="assincrona"||state.modalidade==="hibrida")))delete state.tutoria;avancar.disabled=false;}
+  });
+  avancar.addEventListener("click",function(){var vs=visiveis();if(index<vs.length-1)show(index+1);else result();});
+  voltar.addEventListener("click",function(){show(index-1);});
+  function labels(){var a=[R.tipos[state.tipo],R.situacoes[state.situacao],R.modalidades[state.modalidade]];if(state.tutoria)a.push(fontes.tutoria[state.tutoria]);a.push(R.profissionais[state.profissional]);return a;}
+  function result(){
+    var calc=R.calcular(state), d=calc.detalhes, el=document.querySelector("#resultado");
+    var params=new URLSearchParams(state).toString();
+    el.innerHTML='<p class="eyebrow" style="color:var(--blue)">Resultado da simulação</p><div class="deadline"><strong>'+d.prazo+'</strong><span>dias de antecedência</span></div><div class="chips">'+labels().map(function(x){return'<span class="chip">'+x+'</span>';}).join("")+'<span class="chip status">'+d.status+'</span></div><h2>'+d.titulo+'</h2><h3>Fator determinante</h3><p>'+d.fator+'. '+d.resumo+'</p><p><strong>Atenção:</strong> conte este prazo para trás a partir da data pretendida para o início da ação.</p><div class="result-actions"><a class="button primary" href="fichas/'+calc.cenario+'.html?'+params+'">Abrir ficha completa</a><button class="button secondary" type="button" id="copiar">Copiar link</button><button class="button secondary" type="button" onclick="location.reload()">Nova simulação</button></div>';
+    el.classList.add("active");el.focus();history.replaceState(null,"","#resultado");
+    document.querySelector("#copiar").onclick=function(){navigator.clipboard?navigator.clipboard.writeText(location.href):null;this.textContent="Link copiado";};
+  }
+  show(0);
+})();
+</script>
+<script>
+(function(){
+  "use strict";
+  /* Em file://, alguns navegadores recusam history.replaceState. */
+  var rs=history.replaceState.bind(history);
+  history.replaceState=function(){try{return rs.apply(history,arguments);}catch(e){}};
+
+  var res=document.querySelector("#resultado"), sheet=document.querySelector("#ficha");
+  res.addEventListener("click",function(e){
+    var a=e.target.closest("a[href^='fichas/']");
+    if(!a)return;
+    e.preventDefault();
+    var href=a.getAttribute("href"), id=href.slice("fichas/".length).split(".html")[0];
+    sheet.innerHTML=window.ENAJU_FICHA(id,new URLSearchParams(href.split("?")[1]||""));
+    sheet.hidden=false;
+    sheet.scrollIntoView({behavior:"smooth"});
+  });
+  sheet.addEventListener("click",function(e){
+    var a=e.target.closest("a[data-voltar]");
+    if(!a)return;
+    e.preventDefault();
+    sheet.hidden=true;
+    document.querySelector("#simulador").scrollIntoView({behavior:"smooth"});
+  });
+})();
+</script></body></html>
