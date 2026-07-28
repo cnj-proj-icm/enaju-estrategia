@@ -1,0 +1,1097 @@
+{
+  "source": "Planejamento estratégico — Macrodesafios do Poder Judiciário",
+  "method": "Afinidade lexical por termos temáticos normalizados; até duas relações por curso.",
+  "matrixStatus": "Aprovada",
+  "approvedConnections": 27,
+  "updatedAt": "2026-07-24T18:10:15.179652-03:00",
+  "macrochallenges": [
+    {
+      "code": "01",
+      "name": "Garantia dos direitos fundamentais",
+      "projectCount": 14,
+      "keywords": [
+        "direitos",
+        "humanos",
+        "população",
+        "rua",
+        "indígenas",
+        "mulheres",
+        "acessibilidade",
+        "inclusão",
+        "infância",
+        "família",
+        "acolhimento",
+        "proteção",
+        "bpc",
+        "biopsicossocial",
+        "intérpretes"
+      ]
+    },
+    {
+      "code": "02",
+      "name": "Fortalecimento da Relação Institucional do Judiciário com a Sociedade",
+      "projectCount": 11,
+      "keywords": [
+        "sociedade",
+        "cidadania",
+        "comunitária",
+        "comunidade",
+        "interinstitucional",
+        "judges",
+        "judiciary"
+      ]
+    },
+    {
+      "code": "03",
+      "name": "Agilidade e produtividade na prestação jurisdicional",
+      "projectCount": 14,
+      "keywords": [
+        "agilidade",
+        "produtividade",
+        "execução",
+        "efetiva",
+        "eficiência",
+        "sisbajud"
+      ]
+    },
+    {
+      "code": "04",
+      "name": "Enfrentamento à corrupção, à improbidade administrativa e aos ilícitos eleitorais",
+      "projectCount": 3,
+      "keywords": [
+        "corrupção",
+        "improbidade",
+        "eleitoral",
+        "ilícitos"
+      ]
+    },
+    {
+      "code": "05",
+      "name": "Prevenção de litígios e adoção de soluções consensuais para os conflitos",
+      "projectCount": 1,
+      "keywords": [
+        "litígios",
+        "consensuais",
+        "conflitos",
+        "mediação",
+        "mediadores",
+        "conciliadores",
+        "fundiários",
+        "terra"
+      ]
+    },
+    {
+      "code": "06",
+      "name": "Consolidação do sistema de precedentes obrigatórios",
+      "projectCount": 1,
+      "keywords": [
+        "precedentes",
+        "precedente",
+        "jurisprudência"
+      ]
+    },
+    {
+      "code": "07",
+      "name": "Promoção da sustentabilidade",
+      "projectCount": 1,
+      "keywords": [
+        "sustentabilidade",
+        "ambiental",
+        "climática"
+      ]
+    },
+    {
+      "code": "08",
+      "name": "Aperfeiçoamento da gestão da justiça criminal",
+      "projectCount": 10,
+      "keywords": [
+        "criminal",
+        "crime",
+        "penal",
+        "provas",
+        "segurança"
+      ]
+    },
+    {
+      "code": "09",
+      "name": "Aperfeiçoamento da gestão administrativa e da governança judiciária",
+      "projectCount": 21,
+      "keywords": [
+        "administrativa",
+        "governança",
+        "gestão",
+        "auditoria",
+        "estratégica",
+        "elo"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Aperfeiçoamento da gestão de pessoas",
+      "projectCount": 3,
+      "keywords": [
+        "pessoas",
+        "equipes",
+        "trabalho",
+        "liderança",
+        "competências"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Aperfeiçoamento da gestão orçamentária e financeira",
+      "projectCount": 0,
+      "keywords": [
+        "orçamentária",
+        "financeira",
+        "orçamento",
+        "finanças"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "projectCount": 22,
+      "keywords": [
+        "tic",
+        "tecnologia",
+        "digital",
+        "digitais",
+        "dados",
+        "sistemas",
+        "sisbajud",
+        "infovoo",
+        "videoteca"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "courseOrder": 1,
+      "courseName": "Projeto Elo",
+      "macroCode": "09",
+      "macroName": "Aperfeiçoamento da gestão administrativa e da governança judiciária",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "elo"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 2,
+      "courseName": "Avaliação Biopsicossocial do BPC (3 trilhas)",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "bpc",
+        "biopsicossocial"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 3,
+      "courseName": "Avaliação Biopsicossocial. IFBrA e IFBrM (3 trilhas)",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "biopsicossocial"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 4,
+      "courseName": "Serviço de Acolhimento Familiar (8 trilhas)",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "família",
+        "acolhimento"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 5,
+      "courseName": "Women's Judges Program",
+      "macroCode": "02",
+      "macroName": "Fortalecimento da Relação Institucional do Judiciário com a Sociedade",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "judges"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 6,
+      "courseName": "Formação em Justiça Comunitária",
+      "macroCode": "02",
+      "macroName": "Fortalecimento da Relação Institucional do Judiciário com a Sociedade",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "comunitária"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 6,
+      "courseName": "Formação em Justiça Comunitária",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "tic"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 7,
+      "courseName": "Curso de Marco Legal do Crime Organizado",
+      "macroCode": "08",
+      "macroName": "Aperfeiçoamento da gestão da justiça criminal",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "crime"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 8,
+      "courseName": "Curso de Provas Digitais",
+      "macroCode": "08",
+      "macroName": "Aperfeiçoamento da gestão da justiça criminal",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "provas"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 8,
+      "courseName": "Curso de Provas Digitais",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "digitais"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 9,
+      "courseName": "Fundamentos da Auditoria Interna",
+      "macroCode": "09",
+      "macroName": "Aperfeiçoamento da gestão administrativa e da governança judiciária",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "auditoria"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 10,
+      "courseName": "Trilha de Auditoria",
+      "macroCode": "09",
+      "macroName": "Aperfeiçoamento da gestão administrativa e da governança judiciária",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "auditoria"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 11,
+      "courseName": "Curso de Formação de Mediadores e Conciliadores",
+      "macroCode": "05",
+      "macroName": "Prevenção de litígios e adoção de soluções consensuais para os conflitos",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "mediadores",
+        "conciliadores"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 12,
+      "courseName": "Curso do Programa Nacional de Execução Efetiva. PNEE",
+      "macroCode": "03",
+      "macroName": "Agilidade e produtividade na prestação jurisdicional",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "execução",
+        "efetiva"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 13,
+      "courseName": "Sisbajud",
+      "macroCode": "03",
+      "macroName": "Agilidade e produtividade na prestação jurisdicional",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "sisbajud"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 13,
+      "courseName": "Sisbajud",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "sisbajud"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 14,
+      "courseName": "Infovoo",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "infovoo"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 15,
+      "courseName": "Formação de Tradutores e Intérpretes de línguas indígenas",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "indígenas",
+        "intérpretes"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 16,
+      "courseName": "Formação de Equipes Técnicas Multidisciplinares",
+      "macroCode": "10",
+      "macroName": "Aperfeiçoamento da gestão de pessoas",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "equipes"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 17,
+      "courseName": "Governança e Gestão Estratégica da Auditoria",
+      "macroCode": "09",
+      "macroName": "Aperfeiçoamento da gestão administrativa e da governança judiciária",
+      "score": 86,
+      "rank": 1,
+      "matchedTerms": [
+        "governança",
+        "gestão",
+        "auditoria",
+        "estratégica"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 18,
+      "courseName": "Capacitação e atuação de mediadoras indígenas. Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 58,
+      "rank": 1,
+      "matchedTerms": [
+        "indígenas",
+        "mulheres"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 18,
+      "courseName": "Capacitação e atuação de mediadoras indígenas. Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "macroCode": "02",
+      "macroName": "Fortalecimento da Relação Institucional do Judiciário com a Sociedade",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "cidadania"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 19,
+      "courseName": "Justiça e Direitos da População em Situação de Rua",
+      "macroCode": "01",
+      "macroName": "Garantia dos direitos fundamentais",
+      "score": 72,
+      "rank": 1,
+      "matchedTerms": [
+        "direitos",
+        "população",
+        "rua"
+      ],
+      "strength": "Alta",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 19,
+      "courseName": "Justiça e Direitos da População em Situação de Rua",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "tic"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 20,
+      "courseName": "The Role of the Judiciary",
+      "macroCode": "02",
+      "macroName": "Fortalecimento da Relação Institucional do Judiciário com a Sociedade",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "judiciary"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 21,
+      "courseName": "Capacitação dentro do Programa Justiça pela Terra",
+      "macroCode": "05",
+      "macroName": "Prevenção de litígios e adoção de soluções consensuais para os conflitos",
+      "score": 44,
+      "rank": 1,
+      "matchedTerms": [
+        "terra"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    },
+    {
+      "courseOrder": 21,
+      "courseName": "Capacitação dentro do Programa Justiça pela Terra",
+      "macroCode": "12",
+      "macroName": "Fortalecimento da estratégia nacional de TIC e de proteção de dados",
+      "score": 44,
+      "rank": 2,
+      "matchedTerms": [
+        "tic"
+      ],
+      "strength": "Média",
+      "approved": true,
+      "approvalStatus": "Aprovado",
+      "approvedBy": "Administração ENAJU",
+      "approvedAt": "2026-07-24T18:10:15.179652-03:00"
+    }
+  ],
+  "objectives": [
+    {
+      "code": "01",
+      "name": "Desenvolver políticas judiciárias e outros instrumentos para o aperfeiçoamento das atividades dos órgãos do Poder Judiciário e dos seus serviços auxiliares e dos serviços notariais e de registro, e dos demais órgãos correicionais",
+      "projectCount": 15,
+      "keywords": [
+        "políticas",
+        "judiciárias",
+        "jurisdicional",
+        "crime",
+        "criminal",
+        "penal",
+        "precedentes"
+      ]
+    },
+    {
+      "code": "02",
+      "name": "Aperfeiçoar os mecanismos de monitoramento de políticas judiciárias",
+      "projectCount": 7,
+      "keywords": [
+        "monitoramento",
+        "indicadores",
+        "avaliação",
+        "acompanhamento"
+      ]
+    },
+    {
+      "code": "03",
+      "name": "Fomentar a gestão da qualidade dos dados no Poder Judiciário",
+      "projectCount": 11,
+      "keywords": [
+        "dados",
+        "qualidade",
+        "informações"
+      ]
+    },
+    {
+      "code": "04",
+      "name": "Promover a disseminação das informações, de forma padronizada e sistêmica",
+      "projectCount": 3,
+      "keywords": [
+        "disseminação",
+        "informações",
+        "videoteca",
+        "publicação"
+      ]
+    },
+    {
+      "code": "05",
+      "name": "Aprimorar as inspeções e correições",
+      "projectCount": 1,
+      "keywords": [
+        "inspeções",
+        "correições",
+        "correcional"
+      ]
+    },
+    {
+      "code": "06",
+      "name": "Fomentar a melhoria dos serviços extrajudiciais",
+      "projectCount": 0,
+      "keywords": [
+        "extrajudiciais",
+        "notariais",
+        "registro"
+      ]
+    },
+    {
+      "code": "07",
+      "name": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "projectCount": 21,
+      "keywords": [
+        "interinstitucional",
+        "direitos",
+        "humanos",
+        "população",
+        "rua",
+        "indígenas",
+        "mulheres",
+        "infância",
+        "família",
+        "acolhimento",
+        "judges",
+        "judiciary"
+      ]
+    },
+    {
+      "code": "08",
+      "name": "Fortalecer a política judiciária de soluções alternativas de conflitos e a desjudicialização",
+      "projectCount": 1,
+      "keywords": [
+        "conflitos",
+        "mediação",
+        "mediadores",
+        "conciliadores",
+        "fundiários",
+        "terra",
+        "consensuais"
+      ]
+    },
+    {
+      "code": "09",
+      "name": "Fomentar e incrementar a produção de soluções tecnológicas, com foco em inovação e transformação digital",
+      "projectCount": 18,
+      "keywords": [
+        "tecnológicas",
+        "tecnologia",
+        "inovação",
+        "digital",
+        "digitais",
+        "sisbajud",
+        "infovoo"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Aprimorar a governança e a gestão da tecnologia e comunicação sob a ótica de soluções colaborativas",
+      "projectCount": 4,
+      "keywords": [
+        "governança",
+        "tecnologia",
+        "comunicação",
+        "colaborativas"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Garantir Infraestrutura adequada ao funcionamento do CNJ",
+      "projectCount": 0,
+      "keywords": [
+        "infraestrutura",
+        "instalações",
+        "equipamentos"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Promover práticas inovadoras de gestão e de incentivo ao trabalho colaborativo",
+      "projectCount": 3,
+      "keywords": [
+        "inovadoras",
+        "gestão",
+        "colaborativo",
+        "elo",
+        "governança"
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Estimular a desburocratização no Poder Judiciário",
+      "projectCount": 11,
+      "keywords": [
+        "desburocratização",
+        "simplificação",
+        "eficiência",
+        "execução",
+        "efetiva"
+      ]
+    },
+    {
+      "code": "14",
+      "name": "Impulsionar a implantação e a gestão das  Políticas de Sustentabilidade e Acessibilidade",
+      "projectCount": 2,
+      "keywords": [
+        "sustentabilidade",
+        "acessibilidade",
+        "inclusão",
+        "bpc",
+        "biopsicossocial",
+        "ifra",
+        "ifbrm"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Estimular a comunicação ao cidadão, a integração e a colaboração no âmbito do Poder Judiciário",
+      "projectCount": 1,
+      "keywords": [
+        "comunicação",
+        "cidadão",
+        "integração",
+        "colaboração",
+        "comunitária"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Aperfeiçoar políticas e práticas de Gestão de Pessoas",
+      "projectCount": 2,
+      "keywords": [
+        "pessoas",
+        "equipes",
+        "competências",
+        "liderança"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Promover  a saúde e a qualidade de vida no trabalho de forma integrada e contínua",
+      "projectCount": 0,
+      "keywords": [
+        "saúde",
+        "qualidade",
+        "vida",
+        "trabalho",
+        "psicossociais"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Aprimorar sistemas de gestão de planejamento, orçamento e finanças no Poder Judiciário",
+      "projectCount": 0,
+      "keywords": [
+        "planejamento",
+        "orçamento",
+        "financeira",
+        "finanças",
+        "auditoria"
+      ]
+    }
+  ],
+  "objectiveConnections": [
+    {
+      "courseOrder": 1,
+      "courseName": "Projeto Elo",
+      "objectiveCode": "12",
+      "objectiveName": "Promover práticas inovadoras de gestão e de incentivo ao trabalho colaborativo",
+      "score": 45,
+      "matchedTerms": [
+        "elo"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 2,
+      "courseName": "Avaliação Biopsicossocial do BPC (3 trilhas)",
+      "objectiveCode": "14",
+      "objectiveName": "Impulsionar a implantação e a gestão das  Políticas de Sustentabilidade e Acessibilidade",
+      "score": 58,
+      "matchedTerms": [
+        "bpc",
+        "biopsicossocial"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 3,
+      "courseName": "Avaliação Biopsicossocial. IFBrA e IFBrM (3 trilhas)",
+      "objectiveCode": "14",
+      "objectiveName": "Impulsionar a implantação e a gestão das  Políticas de Sustentabilidade e Acessibilidade",
+      "score": 58,
+      "matchedTerms": [
+        "biopsicossocial",
+        "ifbrm"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 4,
+      "courseName": "Serviço de Acolhimento Familiar (8 trilhas)",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 58,
+      "matchedTerms": [
+        "família",
+        "acolhimento"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 5,
+      "courseName": "Women's Judges Program",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 45,
+      "matchedTerms": [
+        "judges"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 6,
+      "courseName": "Formação em Justiça Comunitária",
+      "objectiveCode": "15",
+      "objectiveName": "Estimular a comunicação ao cidadão, a integração e a colaboração no âmbito do Poder Judiciário",
+      "score": 45,
+      "matchedTerms": [
+        "comunitária"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 7,
+      "courseName": "Curso de Marco Legal do Crime Organizado",
+      "objectiveCode": "01",
+      "objectiveName": "Desenvolver políticas judiciárias e outros instrumentos para o aperfeiçoamento das atividades dos órgãos do Poder Judiciário e dos seus serviços auxiliares e dos serviços notariais e de registro, e dos demais órgãos correicionais",
+      "score": 45,
+      "matchedTerms": [
+        "crime"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 8,
+      "courseName": "Curso de Provas Digitais",
+      "objectiveCode": "09",
+      "objectiveName": "Fomentar e incrementar a produção de soluções tecnológicas, com foco em inovação e transformação digital",
+      "score": 45,
+      "matchedTerms": [
+        "digitais"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 9,
+      "courseName": "Fundamentos da Auditoria Interna",
+      "objectiveCode": "18",
+      "objectiveName": "Aprimorar sistemas de gestão de planejamento, orçamento e finanças no Poder Judiciário",
+      "score": 45,
+      "matchedTerms": [
+        "auditoria"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 10,
+      "courseName": "Trilha de Auditoria",
+      "objectiveCode": "18",
+      "objectiveName": "Aprimorar sistemas de gestão de planejamento, orçamento e finanças no Poder Judiciário",
+      "score": 45,
+      "matchedTerms": [
+        "auditoria"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 11,
+      "courseName": "Curso de Formação de Mediadores e Conciliadores",
+      "objectiveCode": "08",
+      "objectiveName": "Fortalecer a política judiciária de soluções alternativas de conflitos e a desjudicialização",
+      "score": 58,
+      "matchedTerms": [
+        "mediadores",
+        "conciliadores"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 12,
+      "courseName": "Curso do Programa Nacional de Execução Efetiva. PNEE",
+      "objectiveCode": "13",
+      "objectiveName": "Estimular a desburocratização no Poder Judiciário",
+      "score": 58,
+      "matchedTerms": [
+        "execução",
+        "efetiva"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 13,
+      "courseName": "Sisbajud",
+      "objectiveCode": "09",
+      "objectiveName": "Fomentar e incrementar a produção de soluções tecnológicas, com foco em inovação e transformação digital",
+      "score": 45,
+      "matchedTerms": [
+        "sisbajud"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 14,
+      "courseName": "Infovoo",
+      "objectiveCode": "09",
+      "objectiveName": "Fomentar e incrementar a produção de soluções tecnológicas, com foco em inovação e transformação digital",
+      "score": 45,
+      "matchedTerms": [
+        "infovoo"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 15,
+      "courseName": "Formação de Tradutores e Intérpretes de línguas indígenas",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 45,
+      "matchedTerms": [
+        "indígenas"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 16,
+      "courseName": "Formação de Equipes Técnicas Multidisciplinares",
+      "objectiveCode": "16",
+      "objectiveName": "Aperfeiçoar políticas e práticas de Gestão de Pessoas",
+      "score": 45,
+      "matchedTerms": [
+        "equipes"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 17,
+      "courseName": "Governança e Gestão Estratégica da Auditoria",
+      "objectiveCode": "12",
+      "objectiveName": "Promover práticas inovadoras de gestão e de incentivo ao trabalho colaborativo",
+      "score": 58,
+      "matchedTerms": [
+        "gestão",
+        "governança"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 18,
+      "courseName": "Capacitação e atuação de mediadoras indígenas. Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 58,
+      "matchedTerms": [
+        "indígenas",
+        "mulheres"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 19,
+      "courseName": "Justiça e Direitos da População em Situação de Rua",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 71,
+      "matchedTerms": [
+        "direitos",
+        "população",
+        "rua"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 20,
+      "courseName": "The Role of the Judiciary",
+      "objectiveCode": "07",
+      "objectiveName": "Fomentar e fortalecer a atuação interinstitucional do CNJ para garantir os direitos dos cidadãos",
+      "score": 45,
+      "matchedTerms": [
+        "judiciary"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    },
+    {
+      "courseOrder": 21,
+      "courseName": "Capacitação dentro do Programa Justiça pela Terra",
+      "objectiveCode": "08",
+      "objectiveName": "Fortalecer a política judiciária de soluções alternativas de conflitos e a desjudicialização",
+      "score": 45,
+      "matchedTerms": [
+        "terra"
+      ],
+      "approved": true,
+      "approvalStatus": "Aprovado"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173e34">
+  <title>Agenda de Cursos | ENAJU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="login-gate" id="loginGate">
+    <div class="login-network" aria-hidden="true"></div>
+    <div class="login-card">
+      <div class="login-brand"><span class="brand-mark"><span>EN</span></span><div><strong>enaju</strong><small>Gestão educacional</small></div></div>
+      <p class="eyebrow">ACESSO RESTRITO</p>
+      <h1>Painel de cursos</h1>
+      <p>Entre com as credenciais administrativas para consultar a carteira educacional.</p>
+      <form id="loginForm">
+        <label><span>Usuário</span><input id="loginUser" autocomplete="username" value="admin" required></label>
+        <label><span>Senha</span><input id="loginPassword" type="password" autocomplete="current-password" required></label>
+        <p class="login-error" id="loginError" role="alert"></p>
+        <button class="primary-btn" type="submit">Entrar no painel <span>→</span></button>
+      </form>
+      <small>Escola Nacional do Judiciário · CNJ</small>
+    </div>
+  </section>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Início">
+        <span class="brand-mark"><span>EN</span></span>
+        <span><strong>ENAJU</strong><small>Gestão educacional</small></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <p class="nav-label">GESTÃO</p>
+        <button class="nav-item active" data-view="overview"><span class="icon" data-icon="grid"></span>Visão geral</button>
+        <button class="nav-item" data-view="agenda"><span class="icon" data-icon="calendar"></span>Agenda</button>
+        <button class="nav-item" data-view="courses"><span class="icon" data-icon="book"></span>Cursos</button>
+        <button class="nav-item" data-view="pipeline"><span class="icon" data-icon="layers"></span>Pipeline</button>
+        <button class="nav-item" data-view="plan"><span class="icon" data-icon="target"></span>Plano 2026</button>
+        <button class="nav-item" data-view="affinity"><span class="icon" data-icon="network"></span>Conexões PJ</button>
+        <p class="nav-label">ACOMPANHAMENTO</p>
+        <button class="nav-item" data-view="reports"><span class="icon" data-icon="chart"></span>Indicadores</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="pulse"></span>
+        <div><strong>Ciclo 2026</strong><small id="cycleSummary">Carregando carteira…</small></div>
+      </div>
+      <div class="sidebar-footer">Escola Nacional de<br>Formação Judiciária</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-head">
+          <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu"><span class="icon" data-icon="menu"></span></button>
+          <div>
+            <p class="eyebrow" id="eyebrow">PLANEJAMENTO EDUCACIONAL · 2026</p>
+            <h1 id="pageTitle">Visão geral</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <label class="global-search">
+            <span class="icon" data-icon="search"></span>
+            <input id="globalSearch" type="search" placeholder="Buscar curso ou processo">
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-btn notification" aria-label="Notificações"><span class="icon" data-icon="bell"></span><i></i></button>
+          <button class="avatar" title="Equipe ENAJU">EN</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="view-overview">
+          <div class="welcome-row">
+            <div>
+              <p class="date-label" id="todayLabel"></p>
+              <h2>Bom dia, equipe ENAJU.</h2>
+              <p>Acompanhe o ciclo completo das ações educacionais em um só lugar.</p>
+            </div>
+            <div class="sync-summary"><span class="sync-dot"></span><div><b>Dados consolidados</b><small id="lastSyncLabel">Atualização semanal</small></div></div>
+          </div>
+
+          <section class="action-center">
+            <div class="next-deadline">
+              <div class="action-title"><span class="action-symbol"><span class="icon" data-icon="calendar"></span></span><div><p>PRÓXIMAS DATAS</p><h3>Agenda prioritária</h3></div><button class="text-btn" data-goto="agenda">Ver agenda →</button></div>
+              <div class="deadline-list" id="deadlineList"></div>
+            </div>
+            <div class="pending-alert">
+              <div class="action-title"><span class="action-symbol warning"><span class="icon" data-icon="alert"></span></span><div><p>PENDÊNCIAS</p><h3>Ações necessárias</h3></div><span class="pending-count" id="pendingCount">0</span></div>
+              <div class="pending-preview" id="pendingPreview"></div>
+            </div>
+          </section>
+
+          <div class="kpi-grid" id="kpiGrid"></div>
+
+          <section class="dossier-section">
+            <div class="panel-head">
+              <div><h3>Dossiês em preparação</h3><p>Informações consolidadas dos processos SEI recebidos</p></div>
+              <span class="source-note">2 processos analisados</span>
+            </div>
+            <div class="dossier-grid" id="dossierGrid"></div>
+          </section>
+
+          <div class="overview-grid">
+            <section class="panel progress-panel">
+              <div class="panel-head">
+                <div><h3>Execução da carteira</h3><p>Distribuição por etapa do ciclo</p></div>
+                <button class="text-btn" data-goto="pipeline">Ver pipeline <span>→</span></button>
+              </div>
+              <div class="execution-body">
+                <div class="donut" id="donutChart"><div><strong id="donutValue">0%</strong><span>concluído</span></div></div>
+                <div class="stage-legend" id="stageLegend"></div>
+              </div>
+            </section>
+
+            <section class="panel attention-panel">
+              <div class="panel-head">
+                <div><h3>Pontos de atenção</h3><p>Itens que pedem ação da equipe</p></div>
+                <span class="badge alert" id="alertCount">0 alertas</span>
+              </div>
+              <div id="attentionList" class="attention-list"></div>
+            </section>
+
+            <section class="panel calendar-panel">
+              <div class="panel-head">
+                <div><h3>Próximas ações</h3><p>Agenda dos próximos 90 dias</p></div>
+                <button class="text-btn" data-goto="agenda">Agenda completa <span>→</span></button>
+              </div>
+              <div id="upcomingList" class="upcoming-list"></div>
+            </section>
+
+            <section class="panel capacity-panel">
+              <div class="panel-head">
+                <div><h3>Alcance planejado</h3><p>Vagas e participação estimada</p></div>
+                <span class="tag">META ANUAL</span>
+              </div>
+              <div class="capacity-number"><strong id="capacityTotal">0</strong><span>vagas ofertadas</span></div>
+              <div class="capacity-bar"><i id="capacityProgress"></i></div>
+              <div class="capacity-meta"><span><b id="capacityPercent">0%</b> da meta de 1.000</span><span id="capacityRemaining">0 vagas restantes</span></div>
+              <div class="mini-stats">
+                <div><span class="mini-icon purple"><span class="icon" data-icon="users"></span></span><p><b id="courseCountMini">0</b><small>ações previstas</small></p></div>
+                <div><span class="mini-icon green"><span class="icon" data-icon="check"></span></span><p><b id="confirmedCount">0</b><small>datas confirmadas</small></p></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-agenda">
+          <div class="section-toolbar">
+            <div><p class="date-label">CRONOGRAMA ANUAL</p><h2>Agenda de ações</h2><p>Visualize os cursos por mês e situação.</p></div>
+            <span class="sync-pill">Base Outlook</span>
+          </div>
+          <div class="panel agenda-board">
+            <div class="calendar-toolbar">
+              <div class="segmented"><button class="active">Ano</button><button>Mês</button></div>
+              <div class="legend-inline"><span><i class="dot planned"></i>Planejamento</span><span><i class="dot scheduled"></i>Agendado</span><span><i class="dot execution"></i>Em execução</span></div>
+            </div>
+            <div class="year-grid" id="yearGrid"></div>
+          </div>
+        </section>
+
+        <section class="view" id="view-courses">
+          <div class="section-toolbar">
+            <div><p class="date-label">CARTEIRA EDUCACIONAL</p><h2>Todos os cursos</h2><p>Consulte e atualize as ações da ENAJU.</p></div>
+            <span class="sync-pill">Base Planner</span>
+          </div>
+          <div class="table-controls panel">
+            <label class="table-search"><span class="icon" data-icon="search"></span><input id="courseSearch" type="search" placeholder="Buscar por nome, processo ou responsável"></label>
+            <select id="statusFilter"><option value="">Todos os status</option></select>
+            <select id="priorityFilter"><option value="">Todas as prioridades</option><option>Alta</option><option>Média</option><option>Baixa</option></select>
+            <button class="secondary-btn" id="exportBtn"><span class="icon" data-icon="download"></span> Exportar CSV</button>
+          </div>
+          <div class="panel table-panel">
+            <table>
+              <thead><tr><th>Ação educacional</th><th>Responsável</th><th>Período</th><th>Status</th><th>Progresso</th><th></th></tr></thead>
+              <tbody id="courseTable"></tbody>
+            </table>
+            <div class="table-footer"><span id="tableCount">0 ações</span><span>Dados salvos neste navegador</span></div>
+          </div>
+        </section>
+
+        <section class="view" id="view-pipeline">
+          <div class="section-toolbar">
+            <div><p class="date-label">FLUXO DE ENTREGA</p><h2>Pipeline dos cursos</h2><p>Da demanda inicial à avaliação de resultados.</p></div>
+            <span class="sync-pill">Somente leitura</span>
+          </div>
+          <div class="pipeline-board" id="pipelineBoard"></div>
+        </section>
+
+        <section class="view" id="view-reports">
+          <div class="section-toolbar">
+            <div><p class="date-label">MONITORAMENTO</p><h2>Indicadores da carteira</h2><p>Leitura executiva do planejamento e da execução.</p></div>
+            <button class="secondary-btn" id="printBtn"><span class="icon" data-icon="download"></span> Gerar relatório</button>
+          </div>
+          <div class="report-grid">
+            <section class="panel report-hero"><p>ÍNDICE DE EXECUÇÃO</p><strong id="executionIndex">0%</strong><span>progresso médio ponderado da carteira</span><div class="report-line"><i id="executionLine"></i></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>Carga de trabalho</h3><p>Ações por responsável</p></div></div><div class="bar-chart" id="ownerChart"></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>Perfil da carteira</h3><p>Distribuição por modalidade</p></div></div><div class="horizontal-stats" id="formatStats"></div></section>
+            <section class="panel"><div class="panel-head"><div><h3>Qualidade dos dados</h3><p>Completude do planejamento</p></div></div><div class="quality-list" id="qualityList"></div></section>
+          </div>
+        </section>
+
+        <section class="view" id="view-plan">
+          <div class="section-toolbar">
+            <div><p class="date-label">PLANO DE CAPACITAÇÕES · 2026</p><h2>Carteira estratégica</h2><p>Cruzamento do plano oficial com Planner e Outlook.</p></div>
+            <span class="sync-pill">21 ações comprometidas</span>
+          </div>
+          <div class="plan-kpis" id="planKpis"></div>
+          <div class="plan-filters panel">
+            <button class="active" data-plan-filter="">Todas</button>
+            <button data-plan-filter="Eixo">Plano de Gestão</button>
+            <button data-plan-filter="Planner">No Planner</button>
+            <button data-plan-filter="Outlook">No Outlook</button>
+            <button data-plan-filter="Pendente">Sem registro</button>
+          </div>
+          <div class="plan-list" id="planList"></div>
+        </section>
+
+        <section class="view" id="view-affinity">
+          <div class="section-toolbar">
+            <div><p class="date-label">ALINHAMENTO ESTRATÉGICO</p><h2>Conexões com os macrodesafios</h2><p>De–para lexical por afinidade temática entre cursos e Estratégia do Poder Judiciário.</p></div>
+            <span class="sync-pill">Método auditável</span>
+          </div>
+          <div class="affinity-kpis" id="affinityKpis"></div>
+          <div class="approval-banner" id="approvalBanner"><span class="icon" data-icon="check"></span><div><strong>Matriz temática aprovada</strong><p>As relações sugeridas foram validadas e incorporadas ao painel.</p></div><span id="approvalTotal"></span></div>
+          <section class="panel objective-chart-panel">
+            <div class="panel-head"><div><h3>Cursos por objetivo estratégico</h3><p>Distribuição das 21 ações do Plano de Capacitações</p></div><span class="source-note">18 objetivos analisados</span></div>
+            <div class="objective-chart" id="objectiveChart"></div>
+          </section>
+          <div class="affinity-layout">
+            <section class="macro-panel panel">
+              <div class="panel-head"><div><h3>Macrodesafios do PJ</h3><p>Selecione um tema estratégico</p></div></div>
+              <div class="macro-list" id="macroList"></div>
+            </section>
+            <section class="connection-panel panel">
+              <div class="connection-head" id="connectionHead"></div>
+              <div class="connection-map" id="connectionMap"></div>
+            </section>
+          </div>
+          <section class="panel affinity-depara">
+            <div class="panel-head"><div><h3>Matriz de–para</h3><p>Relação principal, nota e evidências lexicais</p></div><span class="source-note">Afinidade não substitui validação institucional</span></div>
+            <div class="table-scroll"><table><thead><tr><th>Curso</th><th>Macrodesafio principal</th><th>Afinidade</th><th>Termos coincidentes</th><th>Status</th></tr></thead><tbody id="affinityTable"></tbody></table></div>
+          </section>
+          <section class="panel objective-depara">
+            <div class="panel-head"><div><h3>Vínculos com os objetivos estratégicos</h3><p>De–para aprovado para cada curso da carteira</p></div></div>
+            <div class="table-scroll"><table><thead><tr><th>Curso</th><th>Objetivo estratégico vinculado</th><th>Afinidade</th><th>Evidência lexical</th></tr></thead><tbody id="objectiveTable"></tbody></table></div>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="courseDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">DETALHES DA AÇÃO</p><h2 id="drawerTitle">Ação educacional</h2></div><button class="icon-btn" id="closeDrawer" aria-label="Fechar">×</button></div>
+    <div class="course-readonly">
+      <div class="readonly-summary" id="readonlySummary"></div>
+      <section class="process-intelligence" id="processIntelligence" hidden>
+        <div class="intelligence-head"><div><p class="eyebrow">INFORMAÇÕES DO PROCESSO</p><h3 id="intelTitle"></h3></div><span class="readiness-badge" id="intelReadiness"></span></div>
+        <p class="intel-description" id="intelDescription"></p>
+        <div class="intel-meta" id="intelMeta"></div>
+        <div class="intel-block"><strong>Marcos e pendências</strong><div class="milestone-list" id="intelMilestones"></div></div>
+        <div class="intel-block" id="modulesBlock"><strong>Estrutura formativa</strong><div class="module-list" id="intelModules"></div></div>
+        <a class="pdf-link" id="intelPdf" target="_blank"><span class="icon" data-icon="book"></span> Abrir processo PDF</a>
+      </section>
+      <label class="notes-field"><span>Anotações administrativas</span><textarea id="courseNotes" rows="6" placeholder="Registre aqui observações, decisões ou lembretes sobre esta ação."></textarea><small>As anotações ficam salvas somente neste navegador.</small></label>
+      <div class="notes-actions"><button type="button" class="secondary-btn" id="cancelDrawer">Fechar</button><button type="button" class="primary-btn" id="saveNotes">Salvar anotações</button></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"><span class="icon" data-icon="check"></span><span id="toastText">Alterações salvas</span></div>
+  <script src="data/data-bundle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

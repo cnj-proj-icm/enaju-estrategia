@@ -1,0 +1,280 @@
+{
+  "source": "Microsoft Planner",
+  "updatedAt": "2026-07-24T20:38:22.041000",
+  "reportFile": "ENAJU - PROJETOS.xlsx",
+  "tasks": [
+    {
+      "id": "planner-1",
+      "courseProcess": "18801/2025",
+      "title": "18801/2025 - Plano de Formação e Certificação dos Intérpretes",
+      "courseName": "Plano de Formação e Certificação dos Intérpretes",
+      "owner": "Fábio Lopes Fernandes Ramos",
+      "start": "2026-01-07",
+      "end": "2026-01-26",
+      "bucket": "AGUARDANDO",
+      "percentComplete": 0,
+      "dashboardStatus": "Planejamento",
+      "priority": "Média",
+      "nextAction": "Indiquei a Aline como ponto focal (Despacho 2466075) Aguardando o andamento do projeto - ECP.",
+      "notes": "Indiquei a Aline como ponto focal (Despacho 2466075) Aguardando o andamento do projeto - ECP.",
+      "checklist": "",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-3",
+      "courseProcess": "21069/2025",
+      "title": "21069/2025 - Trilha formativa para equipes técnicas multiprofissionais",
+      "courseName": "Trilha formativa para equipes técnicas multiprofissionais",
+      "owner": "Fábio Lopes Fernandes Ramos",
+      "start": "2026-01-07",
+      "end": "2026-01-26",
+      "bucket": "AGUARDANDO",
+      "percentComplete": 100,
+      "dashboardStatus": "Concluído",
+      "priority": "Média",
+      "nextAction": "Sem próximo passo registrado",
+      "notes": "",
+      "checklist": "",
+      "labels": [
+        "CURSO",
+        "NÃO ATRIBUÍDO"
+      ]
+    },
+    {
+      "id": "planner-4",
+      "courseProcess": "01114/2026",
+      "title": "01114/2026 - Emenda Constitucional nº 136/2025: Alterações nas regras de processamento e pagamento de precatórios\"",
+      "courseName": "Emenda Constitucional nº 136/2025: Alterações nas regras de processamento e pagamento de precatórios\"",
+      "owner": "Fábio Lopes Fernandes Ramos",
+      "start": "2026-01-07",
+      "end": "2026-02-13",
+      "bucket": "AGUARDANDO",
+      "percentComplete": 0,
+      "dashboardStatus": "Planejamento",
+      "priority": "Média",
+      "nextAction": "Aguardando expedição de ofício pela SEP.",
+      "notes": "Aguardando expedição de ofício pela SEP.",
+      "checklist": "",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-5",
+      "courseProcess": "06616/2024",
+      "title": "06616/2024 - Criação de Videoteca",
+      "courseName": "Criação de Videoteca",
+      "owner": "A definir",
+      "start": "2026-01-07",
+      "end": "2026-03-10",
+      "bucket": "AGUARDANDO",
+      "percentComplete": 100,
+      "dashboardStatus": "Concluído",
+      "priority": "Média",
+      "nextAction": "Sem próximo passo registrado",
+      "notes": "",
+      "checklist": "",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-6",
+      "courseProcess": "02578/2026",
+      "title": "02578/2026 - IPPDH - Contratação de Coordenadora Pedagógica",
+      "courseName": "IPPDH - Contratação de Coordenadora Pedagógica",
+      "owner": "A definir",
+      "start": "2026-01-07",
+      "end": "2026-03-10",
+      "bucket": "AGUARDANDO",
+      "percentComplete": 0,
+      "dashboardStatus": "Planejamento",
+      "priority": "Média",
+      "nextAction": "Sem próximo passo registrado",
+      "notes": "",
+      "checklist": "",
+      "labels": [
+        "CURSO",
+        "CODE"
+      ]
+    },
+    {
+      "id": "planner-9",
+      "courseProcess": "21433/2025",
+      "title": "21433/2025 - Identidade visual e transmissão do evento",
+      "courseName": "Identidade visual e transmissão do evento",
+      "owner": "Isabelle Bueno",
+      "start": "2026-01-07",
+      "end": "2026-03-10",
+      "bucket": "A FAZER",
+      "percentComplete": 100,
+      "dashboardStatus": "Concluído",
+      "priority": "Média",
+      "nextAction": "Solicitar produção da identidade visual do curso. Agendar transmissão do evento com a equipe do áudio e vídeo. Tem que fazer um PIT. Incluir despacho contextualizando o evento e informar que terá presença do Ministro e sua equipe.",
+      "notes": "Solicitar produção da identidade visual do curso. Agendar transmissão do evento com a equipe do áudio e vídeo. Tem que fazer um PIT. Incluir despacho contextualizando o evento e informar que terá presença do Ministro e sua equipe.",
+      "checklist": "",
+      "labels": [
+        "CURCO SFA",
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-19",
+      "courseProcess": "00650/2026",
+      "title": "SEI 00650/2026 - Women's Judges Program",
+      "courseName": "Women's Judges Program",
+      "owner": "Alana Viana, Igor Caires Machado, Rodrigo Silva",
+      "start": "2026-01-07",
+      "end": "2026-06-19",
+      "bucket": "VALIDAR - FABIO",
+      "percentComplete": 50,
+      "dashboardStatus": "Avaliação",
+      "priority": "Média",
+      "nextAction": "IV – manter esta unidade informada acerca dos encaminhamentos adotados.;III – promover as tratativas necessárias à organização logística e acadêmica do curso, inclusive qua;II – adotar as providências necessárias à instrução do procedimento de contratação, observadas as no;I – analisar a viabilidade pedagógica e administrativa da proposta;",
+      "notes": "à ENAJU para: I – analisar a viabilidade pedagógica e administrativa da proposta; II – adotar as providências necessárias à instrução do procedimento de contratação, observadas as normas aplicáveis; III – promover as tratativas necessárias à organização logística e acadêmica do curso, inclusive quanto à definição de local, cronograma definitivo, inscrições, certificação e demais providências correlatas; IV – manter esta unidade informada acerca dos encaminhamentos adotados.",
+      "checklist": "IV – manter esta unidade informada acerca dos encaminhamentos adotados.;III – promover as tratativas necessárias à organização logística e acadêmica do curso, inclusive qua;II – adotar as providências necessárias à instrução do procedimento de contratação, observadas as no;I – analisar a viabilidade pedagógica e administrativa da proposta;",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-20",
+      "courseProcess": "",
+      "title": "Curso 2 Biopsicosocial",
+      "courseName": "Curso 2 Biopsicosocial",
+      "owner": "Alana Viana, Igor Caires Machado",
+      "start": "2026-01-07",
+      "end": "2026-06-26",
+      "bucket": "FAZENDO",
+      "percentComplete": 0,
+      "dashboardStatus": "Em execução",
+      "priority": "Média",
+      "nextAction": "Fazer despacho de conclusão do módulo I e planejamento do Módulo 2",
+      "notes": "",
+      "checklist": "Fazer despacho de conclusão do módulo I e planejamento do Módulo 2",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-25",
+      "courseProcess": "13590/2026",
+      "title": "13590/2026 - Curso de Assédio Eleitoral e o seu Enfrentamento",
+      "courseName": "Curso de Assédio Eleitoral e o seu Enfrentamento",
+      "owner": "Igor Caires Machado",
+      "start": "2026-01-07",
+      "end": "2026-07-23",
+      "bucket": "A FAZER",
+      "percentComplete": 0,
+      "dashboardStatus": "Agendado",
+      "priority": "Média",
+      "nextAction": "Agendar reunião",
+      "notes": "Vamos agendar uma reunião com o Gab. do Conselheiro Paulo Regis para alinhar a demanda.",
+      "checklist": "Agendar reunião",
+      "labels": [
+        "CURSO",
+        "R. AGENDADA"
+      ]
+    },
+    {
+      "id": "planner-26",
+      "courseProcess": "13116/2026",
+      "title": "13116/2026 - Curso Projeto Elo",
+      "courseName": "Curso Projeto Elo",
+      "owner": "Janilton Oliveira",
+      "start": "2026-01-07",
+      "end": "2026-07-23",
+      "bucket": "A FAZER",
+      "percentComplete": 0,
+      "dashboardStatus": "Agendado",
+      "priority": "Média",
+      "nextAction": "Reunião agendada - 28/07 às 16h Programa de Formação em Governança e Gestão das Políticas Judiciárias Nacionais Programáticas",
+      "notes": "Reunião agendada - 28/07 às 16h Programa de Formação em Governança e Gestão das Políticas Judiciárias Nacionais Programáticas",
+      "checklist": "",
+      "labels": [
+        "CURSO",
+        "R. AGENDADA"
+      ]
+    },
+    {
+      "id": "planner-27",
+      "courseProcess": "07447/2026",
+      "title": "07447/2026 - Curso Acolhimento Familiar",
+      "courseName": "Curso Acolhimento Familiar",
+      "owner": "Rodrigo Silva",
+      "start": "2026-01-07",
+      "end": "2026-07-23",
+      "bucket": "A FAZER",
+      "percentComplete": 0,
+      "dashboardStatus": "Planejamento",
+      "priority": "Média",
+      "nextAction": "Encaminhar para pagamento",
+      "notes": "Encaminhar para pagamento",
+      "checklist": "",
+      "labels": [
+        "CURSO",
+        "PAGAMENTO"
+      ]
+    },
+    {
+      "id": "planner-28",
+      "courseProcess": "03954/2026",
+      "title": "03954/2026 - PID – Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "courseName": "PID – Justiça, Cidadania e Segurança das Mulheres Indígenas",
+      "owner": "A definir",
+      "start": "",
+      "end": "",
+      "bucket": "IN BOX",
+      "percentComplete": 0,
+      "dashboardStatus": "Planejamento",
+      "priority": "Média",
+      "nextAction": "Sem próximo passo registrado",
+      "notes": "",
+      "checklist": "",
+      "labels": [
+        "CURSO"
+      ]
+    },
+    {
+      "id": "planner-31",
+      "courseProcess": "18801/2025",
+      "title": "18801/2025 - Formação Nacional de Intérpretes e Tradutores de Línguas Indígenas do Poder Judiciário (FNITI)",
+      "courseName": "Formação Nacional de Intérpretes e Tradutores de Línguas Indígenas do Poder Judiciário (FNITI)",
+      "owner": "Fábio Lopes Fernandes Ramos",
+      "start": "2026-01-07",
+      "end": "2026-07-24",
+      "bucket": "A FAZER",
+      "percentComplete": 0,
+      "dashboardStatus": "Agendado",
+      "priority": "Média",
+      "nextAction": "Reunião agendada - 27/07 às 14h às 15h30",
+      "notes": "Reunião agendada - 27/07 às 14h às 15h30",
+      "checklist": "",
+      "labels": [
+        "CURSO",
+        "R. AGENDADA"
+      ]
+    },
+    {
+      "id": "planner-32",
+      "courseProcess": "10416/2026",
+      "title": "10416/2026 - webinário “Riscos Psicossociais: Organização e Gestão do Trabalho (NR-1)",
+      "courseName": "webinário “Riscos Psicossociais: Organização e Gestão do Trabalho (NR-1)",
+      "owner": "Janilton Oliveira",
+      "start": "2026-01-07",
+      "end": "2026-07-24",
+      "bucket": "FAZENDO",
+      "percentComplete": 0,
+      "dashboardStatus": "Em execução",
+      "priority": "Média",
+      "nextAction": "Validar plataforma e fazer despacho informando que a demanda foi atendida. Informar a quantidade de pessoas capacitadas.",
+      "notes": "Validar plataforma e fazer despacho informando que a demanda foi atendida. Informar a quantidade de pessoas capacitadas.",
+      "checklist": "",
+      "labels": [
+        "CURSO"
+      ]
+    }
+  ]
+}
