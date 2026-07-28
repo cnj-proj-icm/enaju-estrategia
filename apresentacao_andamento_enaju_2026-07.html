@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENAJU · Panorama executivo — julho 2026</title>
+<style>
+:root{
+  --bg:#050b17; --bg2:#0a1730; --panel:#0d1d3a;
+  --glass:rgba(148,197,255,.055); --glass2:rgba(148,197,255,.10);
+  --stroke:rgba(148,197,255,.16); --stroke2:rgba(148,197,255,.30);
+  --ink:#e8f1fd; --muted:#93a8c9; --faint:#5c7396;
+  --blue:#3b82f6; --sky:#38bdf8; --cyan:#22d3ee;
+  --gold:#f5b942; --green:#34d399; --amber:#fb923c; --red:#f87171;
+  --grad:linear-gradient(92deg,#38bdf8,#3b82f6 55%,#22d3ee);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--bg); color:var(--ink); overflow:hidden;
+  font-family:"Segoe UI",system-ui,-apple-system,Inter,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+/* ---------- fundo dinâmico ---------- */
+#bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+#bg::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 600px at 18% -10%,rgba(59,130,246,.20),transparent 60%),
+    radial-gradient(1100px 700px at 100% 110%,rgba(34,211,238,.13),transparent 60%),
+    linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);}
+#bg::after{content:"";position:absolute;inset:0;opacity:.5;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 79px,rgba(148,197,255,.045) 79px 80px),
+    repeating-linear-gradient(90deg,transparent 0 79px,rgba(148,197,255,.045) 79px 80px);
+  mask-image:radial-gradient(75% 75% at 50% 45%,#000 30%,transparent 100%);}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 26s ease-in-out infinite alternate}
+.orb.a{width:520px;height:520px;left:-140px;top:-160px;background:rgba(59,130,246,.30)}
+.orb.b{width:640px;height:640px;right:-220px;bottom:-260px;background:rgba(34,211,238,.18);animation-delay:-13s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.15)}}
+
+/* ---------- palco escalado ---------- */
+#wrap{position:fixed;inset:0}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;
+  transform:translate(-50%,-50%) scale(var(--s,1));transform-origin:center}
+
+/* ---------- slides ---------- */
+.slide{position:absolute;inset:0;padding:52px 56px 46px;display:flex;flex-direction:column;
+  opacity:0;visibility:hidden;transform:translateY(26px) scale(.985);
+  transition:opacity .55s ease,transform .55s ease,visibility 0s linear .55s}
+.slide.active{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.slide.prev{transform:translateY(-26px) scale(.985)}
+
+header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.kick{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sky)}
+.no{font-size:12px;font-weight:700;color:var(--faint);letter-spacing:.1em}
+h2{font-size:31px;font-weight:700;letter-spacing:-.01em;margin:2px 0 10px}
+h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rule{width:64px;height:4px;border-radius:2px;background:var(--grad);margin-bottom:18px}
+.body{flex:1;display:flex;flex-direction:column;min-height:0}
+footer{display:flex;justify-content:space-between;border-top:1px solid var(--stroke);
+  padding-top:8px;margin-top:14px;font-size:10.5px;color:var(--faint)}
+
+/* ---------- reveals ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease var(--d,0s),transform .55s ease var(--d,0s)}
+.active .rv{opacity:1;transform:none}
+
+/* ---------- componentes ---------- */
+.card{background:var(--glass);border:1px solid var(--stroke);border-radius:14px;padding:18px 20px;
+  position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--ac,var(--blue))}
+.card h3{font-size:17px;margin-bottom:8px}
+.card p{font-size:13px;line-height:1.5;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kpi{background:var(--glass);border:1px solid var(--stroke);border-radius:14px;padding:14px 18px}
+.kpi b{display:block;font-size:34px;font-weight:700;letter-spacing:-.02em}
+.kpi span{font-size:12px;color:var(--muted)}
+.kpi small{display:block;font-size:10.5px;color:var(--faint);margin-top:2px}
+.band{border-radius:14px;padding:14px 22px;display:flex;align-items:center;gap:18px}
+.band.pale{background:var(--glass2);border:1px solid var(--stroke)}
+.band.gold{background:linear-gradient(92deg,rgba(245,185,66,.22),rgba(245,185,66,.10));border:1px solid rgba(245,185,66,.45)}
+.band.grad{background:linear-gradient(92deg,rgba(56,189,248,.20),rgba(34,211,238,.08));border:1px solid rgba(56,189,248,.4)}
+.band .lab{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);white-space:nowrap}
+.band p{font-size:15px;font-weight:600}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px;border-radius:99px;background:rgba(245,185,66,.16);border:1px solid rgba(245,185,66,.5);color:var(--gold)}
+.pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 12px;border-radius:99px;color:#04101f}
+.dot{width:12px;height:12px;border-radius:4px;display:inline-block;flex:none}
+
+/* barras horizontais (gráfico) */
+.hrow{display:grid;grid-template-columns:190px 1fr 64px;align-items:center;gap:10px;margin:7px 0}
+.hrow .l{font-size:11.5px;text-align:right;color:var(--muted)}
+.hrow.own .l{color:var(--ink);font-weight:600}
+.hbar{height:16px;border-radius:5px;background:rgba(148,197,255,.08);overflow:hidden}
+.hbar i{display:block;height:100%;width:0;border-radius:5px;background:#33455e;transition:width 1.1s cubic-bezier(.2,.7,.2,1) .25s}
+.hrow.own .hbar i{background:linear-gradient(90deg,#22d3ee,#38bdf8)}
+.active .hbar i{width:var(--w)}
+.hrow .v{font-size:11px;color:var(--muted)}
+.hrow.own .v{color:var(--ink);font-weight:600}
+
+/* medidor 7→25 */
+.meter{height:14px;border-radius:7px;background:rgba(148,197,255,.12);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f5b942,#fbbf24);transition:width 1.2s ease .4s}
+.active .meter i{width:28%}
+
+/* progresso projetos */
+.pbar{height:9px;width:170px;border-radius:5px;background:rgba(148,197,255,.10);overflow:hidden}
+.pbar i{display:block;height:100%;width:0;border-radius:5px;background:var(--ac,var(--blue));transition:width 1s ease .3s}
+.active .pbar i{width:var(--w)}
+
+/* tabela matriz */
+table{border-collapse:separate;border-spacing:0 5px;width:100%}
+th{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);
+  background:rgba(59,130,246,.14);border:1px solid var(--stroke);padding:8px 6px}
+th small{display:block;font-size:9px;color:var(--muted);letter-spacing:.02em;text-transform:none;margin-top:2px}
+th:first-child{border-radius:9px 0 0 9px}th:last-child{border-radius:0 9px 9px 0}
+td{background:var(--glass);border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);
+  padding:6.5px 8px;font-size:12.5px;text-align:center}
+td:first-child{border-left:1px solid var(--stroke);border-radius:9px 0 0 9px;text-align:left;font-weight:600}
+td:last-child{border-right:1px solid var(--stroke);border-radius:0 9px 9px 0}
+.chk{display:inline-flex;width:20px;height:20px;border-radius:6px;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#04101f}
+.nochk{color:var(--faint)}
+
+/* timeline */
+.tl{position:relative;height:118px;margin:4px 8px 0}
+.tl .line{position:absolute;left:0;right:0;top:58px;height:2px;background:var(--stroke2)}
+.tl .pt{position:absolute;top:52px;width:14px;height:14px;border-radius:5px;background:var(--cyan);
+  box-shadow:0 0 12px rgba(34,211,238,.7);transform:translateX(-50%)}
+.tl .lbl{position:absolute;width:150px;transform:translateX(-50%);text-align:center}
+.tl .lbl b{display:block;font-size:12px}
+.tl .lbl span{display:block;font-size:10.5px;color:var(--muted);line-height:1.25}
+.tl .up{bottom:74px}.tl .dn{top:74px}
+
+/* funil segmentado */
+.funnel{display:flex;gap:6px;height:86px}
+.funnel .seg{border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:700;color:#04101f;position:relative;
+  transform:scaleX(.35);transform-origin:left;transition:transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.active .funnel .seg{transform:none}
+.funnel .seg span{position:absolute;top:calc(100% + 8px);left:0;right:0;text-align:center;
+  font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--muted)}
+
+/* fluxo (cadeia/série) */
+.flow{display:flex;align-items:stretch;gap:0}
+.flow .step{flex:1;background:var(--glass);border:1px solid var(--stroke);border-radius:12px;
+  padding:12px 10px;text-align:center}
+.flow .step b{display:block;font-size:12px;letter-spacing:.06em;color:var(--sky)}
+.flow .step span{font-size:10.5px;color:var(--muted)}
+.flow .arr{align-self:center;padding:0 6px;font-size:20px;color:var(--gold);font-weight:700}
+
+/* linhas de lista (projetos/normativos/decisões) */
+.lrow{display:flex;align-items:center;gap:18px;background:var(--glass);border:1px solid var(--stroke);
+  border-left:4px solid var(--ac,var(--blue));border-radius:12px;padding:10px 18px}
+.lrow h4{font-size:15.5px;min-width:250px}
+.lrow .st{font-size:11px;font-weight:700;min-width:150px;color:var(--ac,var(--sky))}
+.lrow p{font-size:12px;color:var(--muted);line-height:1.4;flex:1}
+
+/* slides especiais */
+.cover{justify-content:center;padding:52px 90px}
+.cover .kick{color:var(--gold)}
+.cover h1{font-size:58px;font-weight:700;letter-spacing:-.02em;line-height:1.06;margin:16px 0 12px}
+.cover h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .sub{font-size:22px;color:var(--muted);margin-bottom:22px}
+.cover .pillbtn{display:inline-block;background:var(--grad);color:#04101f;font-weight:700;font-size:13.5px;
+  padding:10px 22px;border-radius:99px;margin-bottom:38px}
+.cover .note{font-size:11px;color:var(--faint);margin-top:26px}
+.divider{justify-content:center;padding:52px 90px}
+.divider .kick{color:var(--gold)}
+.divider h1{font-size:44px;font-weight:700;margin:14px 0 10px}
+.divider p{font-size:15px;color:var(--muted)}
+
+/* painel escuro (detalhe) */
+.side{background:linear-gradient(165deg,rgba(59,130,246,.20),rgba(13,29,58,.9));
+  border:1px solid var(--stroke2);border-radius:16px;padding:22px;width:340px;flex:none;
+  display:flex;flex-direction:column;gap:10px}
+.side .lab{font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--cyan)}
+.side h3{font-size:21px;line-height:1.2}
+.side p{font-size:12.5px;color:#c4d6f2;line-height:1.5}
+.side .comp{margin-top:auto;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.45);
+  color:var(--cyan);border-radius:9px;padding:7px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.06em}
+.detail{display:flex;gap:22px;flex:1;min-height:0}
+.detail .main{flex:1;display:flex;flex-direction:column}
+.detail .main .lab{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--sky);margin-bottom:8px}
+.detail ul{list-style:none;margin-bottom:auto}
+.detail li{font-size:14px;line-height:1.45;color:var(--ink);padding-left:20px;position:relative;margin-bottom:11px}
+.detail li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;border-radius:2px;background:var(--sky)}
+.next{display:flex;gap:16px;align-items:center;background:var(--glass2);border:1px solid var(--stroke);
+  border-radius:12px;padding:13px 18px}
+.next .lab2{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold);white-space:nowrap}
+.next p{font-size:13.5px;font-weight:600}
+
+/* colunas apêndice funil */
+.cols5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;flex:1;min-height:0}
+.cols5 .col{background:var(--glass);border:1px solid var(--stroke);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.cols5 .colh{padding:6px;text-align:center;font-size:9.5px;font-weight:700;letter-spacing:.09em;color:#04101f}
+.cols5 .n{font-size:24px;font-weight:700;text-align:center;padding:4px 0 2px}
+.cols5 ul{list-style:none;padding:4px 10px 10px}
+.cols5 li{font-size:10.5px;color:var(--muted);line-height:1.35;margin-bottom:6px;padding-left:11px;position:relative}
+.cols5 li::before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--faint)}
+
+/* ---------- HUD ---------- */
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;background:rgba(148,197,255,.10);z-index:50}
+#progress i{display:block;height:100%;width:0;background:var(--grad);transition:width .4s ease}
+#hud{position:fixed;right:18px;bottom:14px;z-index:50;font-size:12px;color:var(--faint);
+  display:flex;gap:14px;align-items:center;user-select:none}
+#hud b{color:var(--muted);font-weight:600}
+.navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:50;width:44px;height:64px;border:1px solid var(--stroke);
+  background:rgba(10,23,48,.55);color:var(--muted);font-size:22px;border-radius:12px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:.2s;backdrop-filter:blur(6px)}
+.navbtn:hover{color:var(--ink);border-color:var(--stroke2)}
+#prev{left:14px}#next{right:14px}
+#help{position:fixed;inset:0;z-index:60;background:rgba(4,10,22,.82);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center}
+#help.open{display:flex}
+#help .box{background:var(--panel);border:1px solid var(--stroke2);border-radius:16px;padding:30px 38px;min-width:380px}
+#help h3{margin-bottom:16px;font-size:18px}
+#help table{border-spacing:0 8px}#help td{background:none;border:none;font-size:13.5px;text-align:left;padding:2px 14px 2px 0}
+#help kbd{background:rgba(148,197,255,.12);border:1px solid var(--stroke2);border-radius:6px;
+  padding:2px 9px;font-family:inherit;font-size:12px;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+}
+/* modo estático (?static=1): sem animações — útil para captura e impressão */
+body.static *,body.static *::before,body.static *::after{animation:none!important;transition:none!important}
+</style>
+</head>
+<body>
+<div id="bg"><div class="orb a"></div><div class="orb b"></div></div>
+<div id="progress"><i></i></div>
+
+<div id="wrap"><div id="stage">
+
+<!-- ============ 1 · CAPA ============ -->
+<section class="slide cover" aria-label="Capa">
+  <div class="kick rv">Escola Nacional do Judiciário · CNJ</div>
+  <h1 class="rv" style="--d:.08s">Panorama executivo<br>da <em>ENAJU</em></h1>
+  <div class="sub rv" style="--d:.16s">Andamento, evidências e deliberações propostas</div>
+  <div class="rv" style="--d:.24s"><span class="pillbtn">Reunião de acompanhamento com a Direção · julho de 2026</span></div>
+  <div class="grid4 rv" style="--d:.32s;max-width:1020px">
+    <div class="kpi"><b data-n="44">44</b><span>ações formativas no Planner</span></div>
+    <div class="kpi"><b data-n="16">16</b><span>projetos na carteira</span></div>
+    <div class="kpi"><b data-n="3">3</b><span>relatórios de evidências</span></div>
+    <div class="kpi"><b style="color:var(--gold)" data-n="5">5</b><span>frentes do art. 19</span></div>
+  </div>
+  <div class="note rv" style="--d:.4s">Documento de trabalho — dados da operação administrativa em coleta &nbsp;·&nbsp; use <b>←</b> e <b>→</b> para navegar · <b>?</b> mostra os atalhos</div>
+</section>
+
+<!-- ============ 2 · UMA PÁGINA ============ -->
+<section class="slide" aria-label="A ENAJU em uma página">
+  <header><span class="kick">Mandato · Res. CNJ n. 192/2014 · art. 19</span><span class="no">02 / 25</span></header>
+  <h2>A ENAJU em <em>uma página</em></h2><div class="rule"></div>
+  <div class="body">
+    <div style="display:flex;gap:20px;flex:1">
+      <div class="side rv">
+        <span class="lab">MANDATO</span>
+        <h3>Núcleo de educação, pesquisa e inovação do Poder Judiciário</h3>
+        <p>Integra a Política Nacional de Formação dos Servidores (Res. CNJ n. 192/2014). A Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação (CODE) concentra as 13 competências do art. 19.</p>
+        <span class="lab">PÚBLICO E REDE</span>
+        <p>Servidores do Poder Judiciário · Rede de Escolas Judiciais e centros de formação dos tribunais.</p>
+        <div class="comp">13 COMPETÊNCIAS · 5 FRENTES</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:9px">
+        <div class="lrow rv" style="--ac:#60a5fa;--d:.08s"><span class="dot" style="background:#60a5fa"></span><h4>Política e Planejamento</h4><p>Traduz a política nacional em planos anuais de capacitação (PAC).</p></div>
+        <div class="lrow rv" style="--ac:#34d399;--d:.14s"><span class="dot" style="background:#34d399"></span><h4>Diagnósticos e Mapeamento</h4><p>Estudos de desempenho e levantamento de necessidades (LNC).</p></div>
+        <div class="lrow rv" style="--ac:#22d3ee;--d:.20s"><span class="dot" style="background:#22d3ee"></span><h4>Inovação e Tecnologia</h4><p>Trilhas online, ambientes virtuais e transformação digital do ensino.</p></div>
+        <div class="lrow rv" style="--ac:#f5b942;--d:.26s"><span class="dot" style="background:#f5b942"></span><h4>Avaliação e Dados</h4><p>Indicadores de impacto e participação; painéis gerenciais.</p></div>
+        <div class="lrow rv" style="--ac:#fb923c;--d:.32s"><span class="dot" style="background:#fb923c"></span><h4>Rede de Escolas</h4><p>Hub de boas práticas, eventos e plataformas colaborativas.</p></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:16px;margin-top:14px">
+      <div class="band pale rv" style="--d:.38s;flex:1"><span class="lab">Já entrega</span><p style="font-size:13px">44 ações formativas e 17 processos no Planner · 16 projetos · 3 relatórios de evidências · normativos em minuta.</p></div>
+      <div class="band grad rv" style="--d:.44s;flex:1"><span class="lab" style="color:var(--gold)">Precisa da Direção</span><p style="font-size:13px">Prioridades do ciclo · responsáveis por projeto · sequência dos atos normativos.</p></div>
+    </div>
+  </div>
+  <footer><span>Fonte: plano_de_acao_enaju.md · Res. CNJ n. 192/2014 · art. 19 (CODE)</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 3 · SÍNTESE ============ -->
+<section class="slide" aria-label="Síntese">
+  <header><span class="kick">Síntese</span><span class="no">03 / 25</span></header>
+  <h2>A carteira está constituída e requer <em>consolidação de governança</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="grid3">
+      <div class="card rv" style="--ac:#60a5fa"><h3>Formação</h3><p>Organizar o funil completo dos cursos — do backlog à execução — com agenda, capacidade e prioridades visíveis.</p></div>
+      <div class="card rv" style="--ac:#22d3ee;--d:.1s"><h3>Projetos estruturantes</h3><p>Converter pesquisa, conteúdo e tecnologia em produtos institucionais com responsáveis, marcos e critérios de aceite.</p></div>
+      <div class="card rv" style="--ac:#f5b942;--d:.2s"><h3>Base operacional</h3><p>Fechar normativos e dar previsibilidade a contratações, pagamentos e demais processos administrativos.</p></div>
+    </div>
+    <div class="card rv" style="--d:.3s;margin-top:18px;flex:1;--ac:#38bdf8">
+      <div style="display:flex;gap:30px;height:100%">
+        <div style="width:190px">
+          <h3 style="margin-top:6px">Leitura para decisão</h3>
+          <p style="font-size:11px;margin-top:10px">Detalhe e riscos na pauta de deliberações (lâmina 13).</p>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:13px">
+          <div style="display:flex;gap:14px;align-items:center"><span class="pill" style="background:var(--grad)">1</span><b style="font-size:17px">Eleger as frentes prioritárias do primeiro ciclo executivo</b></div>
+          <div style="display:flex;gap:14px;align-items:center"><span class="pill" style="background:var(--grad)">2</span><b style="font-size:17px">Nomear responsáveis e instância decisória por projeto</b></div>
+          <div style="display:flex;gap:14px;align-items:center"><span class="pill" style="background:var(--grad)">3</span><b style="font-size:17px">Sequenciar os atos normativos habilitadores</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 4 · CARTEIRA ============ -->
+<section class="slide" aria-label="Carteira em números">
+  <header><span class="kick">Visão geral</span><span class="no">04 / 25</span></header>
+  <h2>Carteira registrada no <em>workspace</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="grid4">
+      <div class="kpi rv"><b data-n="16">16</b><span>projetos na carteira</span></div>
+      <div class="kpi rv" style="--d:.08s"><b data-n="12">12</b><span>em execução</span></div>
+      <div class="kpi rv" style="--d:.16s"><b data-n="4">4</b><span>planejados</span></div>
+      <div class="kpi rv" style="--d:.24s"><b data-n="52" data-suf="%">52%</b><span>progresso médio informado</span></div>
+    </div>
+    <div class="grid3" style="margin-top:18px;flex:1">
+      <div class="card rv" style="--ac:#34d399;--d:.3s"><span class="pill" style="background:#34d399;margin-bottom:10px">capacidade</span><h3>O que já existe</h3><p>TAPs, minutas, pipelines, relatórios, protótipos e bases de governança organizados no repositório.</p></div>
+      <div class="card rv" style="--ac:#fb923c;--d:.38s"><span class="pill" style="background:#fb923c;margin-bottom:10px">atenção</span><h3>Atenção gerencial</h3><p>9 decisões e 13 riscos constavam abertos na data-base; vários projetos ainda sem responsável definido.</p></div>
+      <div class="card rv" style="--ac:#f87171;--d:.46s"><span class="pill" style="background:#f87171;margin-bottom:10px">data-base</span><h3>Limite da leitura</h3><p>Indicadores do portfólio são uma fotografia registrada em 25/06/2026. Atualizar antes da reunião.</p></div>
+    </div>
+  </div>
+  <footer><span>Fonte: relatório de portfólio ENAJU de 25/06/2026</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 5 · RESULTADOS ============ -->
+<section class="slide" aria-label="Resultados medidos">
+  <header><span class="kick">Painel de evidências · relatórios n. 001–002</span><span class="no">05 / 25</span></header>
+  <h2>Resultados <em>medidos</em> das ações formativas</h2><div class="rule"></div>
+  <div class="body">
+    <div class="grid4">
+      <div class="kpi rv"><b data-n="11000" data-pre="~">~11.000</b><span>visualizações · Guaramirim-SC</span><small>maior alcance do canal no período</small></div>
+      <div class="kpi rv" style="--d:.07s"><b data-n="500" data-pre="~">~500</b><span>certificados na Trilha 1</span><small>emitidos em três semanas</small></div>
+      <div class="kpi rv" style="--d:.14s"><b data-n="5000" data-pre="~">~5.000</b><span>inscritos na plataforma ENAJU</span><small>~2.000 espectadores simultâneos</small></div>
+      <div class="kpi rv" style="--d:.21s"><b data-n="96" data-suf=" h">96 h</b><span>trilha formativa em SAF</span><small>8 trilhas · 2.000 vagas EAD</small></div>
+    </div>
+    <div style="display:flex;gap:18px;margin-top:16px;flex:1;min-height:0">
+      <div class="card rv" style="--d:.28s;flex:1.55;--ac:#22d3ee">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <h3>Alcance no canal do CNJ no YouTube</h3>
+          <span style="font-size:10.5px;color:var(--muted)"><i class="dot" style="background:#22d3ee;width:9px;height:9px"></i> ações da ENAJU &nbsp; <i class="dot" style="background:#33455e;width:9px;height:9px"></i> demais conteúdos</span>
+        </div>
+        <p style="font-size:10.5px;margin-bottom:8px">visualizações aproximadas · coleta de 09/06/2026</p>
+        <div class="hrow own"><span class="l">Guaramirim · SAF</span><span class="hbar"><i style="--w:100%"></i></span><span class="v">~11.000</span></div>
+        <div class="hrow"><span class="l">Domicílio Judicial Eletrônico</span><span class="hbar"><i style="--w:86%"></i></span><span class="v">~9.500</span></div>
+        <div class="hrow"><span class="l">Berna · IA</span><span class="hbar"><i style="--w:47%"></i></span><span class="v">~5.200</span></div>
+        <div class="hrow own"><span class="l">Abertura Família Acolhedora</span><span class="hbar"><i style="--w:37%"></i></span><span class="v">~4.100</span></div>
+        <div class="hrow"><span class="l">IAJus 2026</span><span class="hbar"><i style="--w:28%"></i></span><span class="v">~3.100</span></div>
+        <div class="hrow own"><span class="l">Encerramento Trilha 1</span><span class="hbar"><i style="--w:18%"></i></span><span class="v">~2.000</span></div>
+        <p style="font-size:10.5px;margin-top:8px">Média das sessões ordinárias do CNJ no período: 300 a 2.500 visualizações.</p>
+      </div>
+      <div class="side rv" style="--d:.36s;width:330px">
+        <span class="lab">DA FORMAÇÃO À POLÍTICA</span>
+        <h3>Acolhimento em família acolhedora</h3>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin:8px 0 4px">
+          <div><b style="font-size:38px;color:var(--gold)">7%</b><span style="display:block;font-size:11px;color:#c4d6f2">hoje</span></div>
+          <div style="text-align:right"><b style="font-size:38px">25%</b><span style="display:block;font-size:11px;color:var(--cyan)">meta 2027</span></div>
+        </div>
+        <div class="meter"><i></i></div>
+        <p style="margin-top:10px">Recomendação Conjunta CNJ n. 2/2024. A formação nacional em Serviço de Acolhimento Familiar é o instrumento de implementação dessa meta.</p>
+      </div>
+    </div>
+  </div>
+  <footer><span>Fonte: ENAJU_CODE Evidências n. 002/2026 (SEI 21433/2025) · dados aproximados de 09/06/2026</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 6 · SÉRIE EVIDÊNCIAS ============ -->
+<section class="slide" aria-label="Série ENAJU Evidências">
+  <header><span class="kick">CODE · série editorial de inteligência institucional</span><span class="no">06 / 25</span></header>
+  <h2>ENAJU Evidências: cada ação formativa <em>vira evidência</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="flow rv">
+      <div class="step"><b>AÇÃO FORMATIVA</b><span>evento, curso ou webinário</span></div><span class="arr">›</span>
+      <div class="step"><b>CAPTURA</b><span>transcrição e insumos SEI</span></div><span class="arr">›</span>
+      <div class="step"><b>ANÁLISE</b><span>IA + curadoria editorial</span></div><span class="arr">›</span>
+      <div class="step"><b>RELATÓRIO</b><span>achados, capacidades e agenda</span></div><span class="arr">›</span>
+      <div class="step"><b>DESTINATÁRIOS</b><span>Presidência, COPJ, Rede, SCS</span></div>
+    </div>
+    <div class="grid3" style="margin-top:16px;flex:1">
+      <div class="card rv" style="--ac:#34d399;--d:.12s"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="pill" style="background:#34d399">N. 001 · piloto publicado</span></div><h3>Cuidados e pessoas idosas</h3><p>Webinário de 02/06/2026 (1h53). Cinco achados sobre cuidado, gênero e etarismo; retroalimenta a Res. CNJ n. 520/2023 e a Portaria CNJ n. 379/2025.</p></div>
+      <div class="card rv" style="--ac:#60a5fa;--d:.2s"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="pill" style="background:#60a5fa">N. 002 · v02 em revisão final</span></div><h3>Acolhimento familiar · Guaramirim-SC</h3><p>Estudo de caso do marco de ativação do projeto nacional. Rede de 8 instituições, alcance digital medido e lei municipal de guarda subsidiada.</p></div>
+      <div class="card rv" style="--ac:#fb923c;--d:.28s"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="pill" style="background:#fb923c">N. 003 · em pipeline</span></div><h3>Avaliação biopsicossocial · BPC</h3><p>Vídeo e transcrição já processados. Relatório a produzir, acompanhando a Trilha 1 do curso em execução.</p></div>
+    </div>
+    <div class="band pale rv" style="--d:.36s;margin-top:14px"><span class="lab">Lacuna de cobertura</span><p>3 das 44 ações formativas registradas no Planner geraram relatório de evidências. Definir critério de priorização e meta de cobertura da série para 2026.</p></div>
+  </div>
+  <footer><span>Fonte: 01-gestao/enaju-evidencias · série ENAJU_CODE Evidências · competências do art. 19 (CODE)</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 7 · FUNIL + AGENDA (Planner 28/07/2026) ============ -->
+<section class="slide" aria-label="Funil formativo e agenda">
+  <header><span class="kick">Formação · Planner ENAJU · 44 ações · fotografia de 28/07/2026</span><span class="no">07 / 25</span></header>
+  <h2>Ações formativas: <em>funil do Planner</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="funnel" style="margin-bottom:26px">
+      <div class="seg" style="flex:1;min-width:96px;background:#34d399;--d:0s">1<span>CONCLUÍDA</span></div>
+      <div class="seg" style="flex:2;min-width:104px;background:#60a5fa;--d:.08s">2<span>EM EXECUÇÃO</span></div>
+      <div class="seg" style="flex:5;min-width:96px;background:#22d3ee;--d:.16s">5<span>A FAZER</span></div>
+      <div class="seg" style="flex:1;min-width:104px;background:#a78bfa;--d:.24s">1<span>EM VALIDAÇÃO</span></div>
+      <div class="seg" style="flex:5;min-width:104px;background:#fb923c;--d:.32s">5<span>AGUARDANDO</span></div>
+      <div class="seg" style="flex:30;background:#33455e;color:var(--ink);--d:.4s">30<span>CAIXA DE ENTRADA</span></div>
+    </div>
+    <div class="grid3 rv" style="--d:.45s">
+      <div class="card" style="--ac:#60a5fa;padding:10px 16px"><p style="font-size:11.5px;color:var(--ink)">2 em execução: Avaliação Biopsicossocial (módulo 2) e webinário Riscos Psicossociais</p></div>
+      <div class="card" style="--ac:#22d3ee;padding:10px 16px"><p style="font-size:11.5px;color:var(--ink)">13 ativas entre execução, a fazer, validação e aguardando resposta externa</p></div>
+      <div class="card" style="--ac:#33455e;padding:10px 16px"><p style="font-size:11.5px;color:var(--ink)">30 na caixa de entrada aguardando triagem e priorização (inclui registro de ideias)</p></div>
+    </div>
+    <h3 class="rv" style="--d:.5s;font-size:15px;margin:16px 0 10px">Compromissos e providências registrados na semana</h3>
+    <div class="rv" style="--d:.55s;display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
+      <div class="card" style="--ac:#22d3ee;padding:12px 14px"><b style="font-size:12.5px">Reunião 27/07 · 14h</b><p style="font-size:11px;margin-top:5px">Intérpretes e Tradutores de Línguas Indígenas (18801/2025)</p></div>
+      <div class="card" style="--ac:#22d3ee;padding:12px 14px"><b style="font-size:12.5px">Reunião 28/07 · 16h</b><p style="font-size:11px;margin-top:5px">Curso Projeto ELO (13116/2026)</p></div>
+      <div class="card" style="--ac:#fb923c;padding:12px 14px"><b style="font-size:12.5px">Agendar reunião</b><p style="font-size:11px;margin-top:5px">Assédio Eleitoral (13590/2026) · gabinete do Conselheiro relator</p></div>
+      <div class="card" style="--ac:#fb923c;padding:12px 14px"><b style="font-size:12.5px">Encaminhar pagamento</b><p style="font-size:11px;margin-top:5px">Curso Acolhimento Familiar (07447/2026)</p></div>
+      <div class="card" style="--ac:#fb923c;padding:12px 14px"><b style="font-size:12.5px">Validar plataforma</b><p style="font-size:11px;margin-top:5px">Webinário Riscos Psicossociais (10416/2026) · despacho à demandante</p></div>
+    </div>
+    <div class="band grad rv" style="--d:.62s;margin-top:14px"><p>Pergunta de direção: quem tria a caixa de entrada (30 itens) e quais ações entram no ciclo de execução do 2º semestre?</p></div>
+  </div>
+  <footer><span>Fonte: Planner ENAJU - PROJETOS · export de 28/07/2026 · detalhamento por processo no apêndice (lâmina 17)</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 8 · PROCESSOS EM TRAMITAÇÃO (Planner 28/07/2026) ============ -->
+<section class="slide" aria-label="Processos em tramitação">
+  <header><span class="kick">Gestão · Planner ENAJU · 17 processos · fotografia de 28/07/2026</span><span class="no">08 / 25</span></header>
+  <h2>Processos em <em>tramitação</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="grid4">
+      <div class="kpi rv"><b data-n="4" style="color:#60a5fa">4</b><span>em elaboração</span></div>
+      <div class="kpi rv" style="--d:.07s"><b data-n="4" style="color:#a78bfa">4</b><span>em validação</span></div>
+      <div class="kpi rv" style="--d:.14s"><b data-n="5" style="color:#fb923c">5</b><span>aguardando resposta externa</span></div>
+      <div class="kpi rv" style="--d:.21s"><b data-n="2" style="color:#22d3ee">2</b><span>a iniciar</span><small>+1 concluído · +1 registro de ideias</small></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;flex:1">
+      <div class="lrow rv" style="--ac:#fb923c;--d:.26s"><h4 style="min-width:330px">Reestruturação ENAJU (16934/2025)</h4><span class="pill" style="background:#fb923c;min-width:104px;text-align:center">aguardando</span><p>Instrução Normativa e Provimento elaborados; aguarda publicação. Fábio e Igor.</p></div>
+      <div class="lrow rv" style="--ac:#fb923c;--d:.32s"><h4 style="min-width:330px">GT — Política Nacional de Formação (02533/2026)</h4><span class="pill" style="background:#fb923c;min-width:104px;text-align:center">aguardando</span><p>2 de 5 respostas recebidas; pendem TSE, ENFAM, TST/ENAMAT e STM. Cobrança em curso.</p></div>
+      <div class="lrow rv" style="--ac:#fb923c;--d:.38s"><h4 style="min-width:330px">Mapeamento de Processos da ENAJU</h4><span class="pill" style="background:#fb923c;min-width:104px;text-align:center">aguardando</span><p>Material enviado à DGE (Juceli) em 24/07. Alana, Igor e Rodrigo.</p></div>
+      <div class="lrow rv" style="--ac:#60a5fa;--d:.44s"><h4 style="min-width:330px">Cadernos ENAJU · TAP da Reestruturação</h4><span class="pill" style="background:#60a5fa;min-width:104px;text-align:center">em elaboração</span><p>Edital de chamamento e resumo executivo em produção; TAP em redação. Igor e Fábio.</p></div>
+      <div class="lrow rv" style="--ac:#a78bfa;--d:.5s"><h4 style="min-width:330px">Podcast Conversa com o CNJ! · Questionário às Escolas</h4><span class="pill" style="background:#a78bfa;min-width:104px;text-align:center">em validação</span><p>TAP do podcast e questionário (02704/2026) aguardam validação da coordenação.</p></div>
+      <div class="lrow rv" style="--ac:#22d3ee;--d:.56s"><h4 style="min-width:330px">ENAJU Tech · Gerência de Governança (13856/2026)</h4><span class="pill" style="background:#22d3ee;min-width:104px;text-align:center">a iniciar</span><p>Escopo definido com a DTI; TAP e acordo de cooperação a formalizar.</p></div>
+    </div>
+    <div class="band gold rv" style="--d:.62s;margin-top:12px"><p style="color:var(--gold)">Decisão esperada: onde a Direção precisa destravar publicação, resposta institucional ou patrocínio?</p></div>
+    <p class="rv" style="--d:.68s;font-size:10.5px;color:var(--faint);margin-top:8px">Dados financeiros de contratações e pagamentos seguem em coleta com Rodrigo (planilha SEI enviada em 22/07) e complementam esta lâmina antes da reunião.</p>
+  </div>
+  <footer><span>Fonte: Planner ENAJU - PROJETOS · export de 28/07/2026 · plano de Fábio Lopes Fernandes Ramos</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 9 · PROJETOS ============ -->
+<section class="slide" aria-label="Projetos em acompanhamento">
+  <header><span class="kick">Síntese dos projetos</span><span class="no">09 / 25</span></header>
+  <h2>Projetos em <em>acompanhamento</em></h2><div class="rule"></div>
+  <div class="body" style="gap:10px">
+    <div class="lrow rv" style="--ac:#60a5fa"><h4>ENAJU Evidências</h4><div style="min-width:250px"><span class="st" style="--ac:#60a5fa">EM EXECUÇÃO</span><div style="display:flex;gap:10px;align-items:center;margin-top:5px"><span class="pbar"><i style="--w:80%;--ac:#60a5fa"></i></span><b style="font-size:11.5px">80%*</b></div></div><p>Três edições produzidas (001 publicada, 002 em revisão final, 003 em pipeline); converte cursos e eventos em relatórios técnicos.</p></div>
+    <div class="lrow rv" style="--ac:#fb923c;--d:.08s"><h4>Cadernos ENAJU</h4><div style="min-width:250px"><span class="st" style="--ac:#fb923c">ESTRUTURAÇÃO</span><div style="display:flex;gap:10px;align-items:center;margin-top:5px"><span class="pbar"><i style="--w:38%;--ac:#fb923c"></i></span><b style="font-size:11.5px">38%*</b></div></div><p>Estrutura publicação técnico-científica para registrar e difundir estudos, experiências e práticas de educação judicial.</p></div>
+    <div class="lrow rv" style="--ac:#34d399;--d:.16s"><h4>Altos Estudos / Trilhas</h4><div style="min-width:250px"><span class="st" style="--ac:#34d399">ESTRUTURAÇÃO</span><div style="display:flex;gap:10px;align-items:center;margin-top:5px"><span class="pbar"><i style="--w:86%;--ac:#34d399"></i></span><b style="font-size:11.5px">86%*</b></div></div><p>Organiza diagnóstico e chamada nacional para desenvolver trilhas formativas vinculadas a funções estratégicas.</p></div>
+    <div class="lrow rv" style="--ac:#22d3ee;--d:.24s"><h4>ENAJU Tech</h4><div style="min-width:250px"><span class="st" style="--ac:#22d3ee">ESCOPO DEFINIDO</span><div style="font-size:11px;color:var(--muted);margin-top:5px">TAP a formalizar</div></div><p>Hub de capacitação em tecnologia com a DTI: trilhas, laboratórios e comunidades de prática em IA, dados, segurança e serviços digitais.</p></div>
+    <div class="lrow rv" style="--ac:#38bdf8;--d:.32s"><h4>Podcast / Conversa com o CNJ!</h4><div style="min-width:250px"><span class="st" style="--ac:#38bdf8">PRÉ-PRODUÇÃO</span><div style="display:flex;gap:10px;align-items:center;margin-top:5px"><span class="pbar"><i style="--w:13%;--ac:#38bdf8"></i></span><b style="font-size:11.5px">13%*</b></div></div><p>Série audiovisual destinada a apresentar políticas e iniciativas do CNJ em formato contextualizado e reutilizável.</p></div>
+    <p class="rv" style="--d:.4s;font-size:10.5px;color:var(--faint)">*Percentuais da fotografia de 25/06/2026; confirmar atualização.</p>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 10 · RELAÇÃO FUNCIONAL ============ -->
+<section class="slide" aria-label="Relação funcional">
+  <header><span class="kick">Integração</span><span class="no">10 / 25</span></header>
+  <h2>Relação <em>funcional</em> entre os projetos</h2><div class="rule"></div>
+  <div class="body" style="justify-content:center;gap:26px">
+    <div class="flow" style="align-items:stretch">
+      <div class="step rv" style="padding:26px 14px"><b>CAPTAR</b><h3 style="font-size:19px;margin:8px 0 6px">Evidências</h3><span>resultados e aprendizados</span></div><span class="arr rv" style="--d:.1s">›</span>
+      <div class="step rv" style="--d:.12s;padding:26px 14px"><b>SISTEMATIZAR</b><h3 style="font-size:19px;margin:8px 0 6px">Cadernos / Altos Estudos</h3><span>conhecimento aplicável</span></div><span class="arr rv" style="--d:.22s">›</span>
+      <div class="step rv" style="--d:.24s;padding:26px 14px"><b>CAPACITAR EM TECNOLOGIA</b><h3 style="font-size:19px;margin:8px 0 6px">ENAJU Tech</h3><span>competências digitais e ativos técnicos</span></div><span class="arr rv" style="--d:.34s">›</span>
+      <div class="step rv" style="--d:.36s;padding:26px 14px"><b>DIFUNDIR</b><h3 style="font-size:19px;margin:8px 0 6px">Podcast</h3><span>alcance e apropriação</span></div>
+    </div>
+    <div class="band grad rv" style="--d:.45s;justify-content:center"><p>Finalidade conjunta: apoiar o planejamento formativo, o registro do conhecimento e a difusão institucional.</p></div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 11 · NORMATIVOS ============ -->
+<section class="slide" aria-label="Normativos">
+  <header><span class="kick">Governança institucional</span><span class="no">11 / 25</span></header>
+  <h2>Normativos que <em>sustentam a execução</em></h2><div class="rule"></div>
+  <div class="body" style="gap:11px">
+    <div class="lrow rv" style="--ac:#fb923c"><h4 style="min-width:360px">IN da ENAJU — docência, contratação e avaliação</h4><span class="pill" style="background:#fb923c;min-width:110px;text-align:center">minuta revisada</span><p>Fechar data e autoridade; deliberar tabela de valores, mensuração de horas e Portaria de GECC.</p></div>
+    <div class="lrow rv" style="--ac:#fb923c;--d:.08s"><h4 style="min-width:360px">Portaria de criação dos Cadernos ENAJU</h4><span class="pill" style="background:#fb923c;min-width:110px;text-align:center">minuta</span><p>Validar autoridade/numeração, autuar processo SEI e designar equipe e Conselho Editorial.</p></div>
+    <div class="lrow rv" style="--ac:#f87171;--d:.16s"><h4 style="min-width:360px">Ato específico para bolsas / pesquisa aplicada</h4><span class="pill" style="background:#f87171;min-width:110px;text-align:center">necessário</span><p>A própria minuta registra que bolsa depende de ato próprio e não se confunde com GECC.</p></div>
+    <div class="lrow rv" style="--ac:#22d3ee;--d:.24s"><h4 style="min-width:360px">Governança do podcast e identidade da série</h4><span class="pill" style="background:#22d3ee;min-width:110px;text-align:center">a formalizar</span><p>Aprovar TAP, responsabilidades ENAJU–SCS, infraestrutura mínima e episódio-piloto.</p></div>
+    <div class="band pale rv" style="--d:.32s;justify-content:center;margin-top:auto"><p style="font-size:13px">Validar a lista com a unidade jurídica antes da versão final.</p></div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 12 · MATRIZ ART. 19 ============ -->
+<section class="slide" aria-label="Matriz de aderência">
+  <header><span class="kick">Art. 19 organizado em cinco frentes</span><span class="no">12 / 25</span></header>
+  <h2>Conferência: entregas × <em>competências da ENAJU</em></h2><div class="rule"></div>
+  <div class="body">
+    <table class="rv">
+      <tr><th style="width:270px;text-align:left">Entrega</th>
+        <th>Política e<br>Planejamento<small>4 de 9</small></th>
+        <th>Diagnósticos e<br>Mapeamento<small>4 de 9</small></th>
+        <th>Inovação e<br>Tecnologia<small>6 de 9</small></th>
+        <th>Avaliação e<br>Dados<small>8 de 9</small></th>
+        <th>Rede de<br>Escolas<small>9 de 9</small></th></tr>
+      <tr><td>Planejamento de capacitação</td><td><span class="chk" style="background:#60a5fa">✓</span></td><td><span class="chk" style="background:#34d399">✓</span></td><td class="nochk">—</td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Artigo ENAJUS 2026</td><td><span class="chk" style="background:#60a5fa">✓</span></td><td class="nochk">—</td><td class="nochk">—</td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Cadernos ENAJU</td><td class="nochk">—</td><td class="nochk">—</td><td><span class="chk" style="background:#22d3ee">✓</span></td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Altos Estudos / Trilhas</td><td><span class="chk" style="background:#60a5fa">✓</span></td><td><span class="chk" style="background:#34d399">✓</span></td><td><span class="chk" style="background:#22d3ee">✓</span></td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Publicações</td><td class="nochk">—</td><td><span class="chk" style="background:#34d399">✓</span></td><td><span class="chk" style="background:#22d3ee">✓</span></td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Normativos</td><td><span class="chk" style="background:#60a5fa">✓</span></td><td class="nochk">—</td><td class="nochk">—</td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>ENAJU Evidências</td><td class="nochk">—</td><td><span class="chk" style="background:#34d399">✓</span></td><td><span class="chk" style="background:#22d3ee">✓</span></td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>ENAJU Tech</td><td class="nochk">—</td><td class="nochk">—</td><td><span class="chk" style="background:#22d3ee">✓</span></td><td><span class="chk" style="background:#f5b942">✓</span></td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+      <tr><td>Podcast / Conversa com o CNJ!</td><td class="nochk">—</td><td class="nochk">—</td><td><span class="chk" style="background:#22d3ee">✓</span></td><td class="nochk">—</td><td><span class="chk" style="background:#fb923c">✓</span></td></tr>
+    </table>
+    <div class="band pale rv" style="--d:.2s;margin-top:auto;justify-content:center"><p style="font-size:12.5px">Leitura: Rede (9 de 9) e Avaliação (8 de 9) estão cobertas por quase toda a carteira; Política e Diagnósticos dependem de 4 entregas cada — é onde a falta de responsável abre lacuna primeiro.</p></div>
+  </div>
+  <footer><span>Referência: plano_de_acao_enaju.md · competências do art. 19 agrupadas em cinco frentes</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 13 · DELIBERAÇÕES ============ -->
+<section class="slide" aria-label="Deliberações propostas">
+  <header><span class="kick">Pauta da Direção</span><span class="no">13 / 25</span></header>
+  <h2>Deliberações propostas para o <em>próximo ciclo</em></h2><div class="rule"></div>
+  <div class="body" style="gap:9px">
+    <div class="lrow rv" style="--ac:#3b82f6"><span class="pill" style="background:var(--grad);min-width:30px;text-align:center">01</span><h4 style="min-width:150px">Prioridades</h4><div style="flex:1"><p style="color:var(--ink);font-weight:600;font-size:13px">Selecionar as 3 frentes prioritárias do primeiro ciclo executivo.</p><p style="font-size:11px;color:var(--red)">Risco se não decidir: esforço disperso em 16 projetos e atraso nas entregas do 2º semestre.</p></div></div>
+    <div class="lrow rv" style="--ac:#3b82f6;--d:.07s"><span class="pill" style="background:var(--grad);min-width:30px;text-align:center">02</span><h4 style="min-width:150px">Responsáveis</h4><div style="flex:1"><p style="color:var(--ink);font-weight:600;font-size:13px">Nomear dono operacional e instância decisória para cada projeto.</p><p style="font-size:11px;color:var(--red)">Risco se não decidir: projetos sem dono estagnam e cada impasse retorna à Direção caso a caso.</p></div></div>
+    <div class="lrow rv" style="--ac:#3b82f6;--d:.14s"><span class="pill" style="background:var(--grad);min-width:30px;text-align:center">03</span><h4 style="min-width:150px">Normativos</h4><div style="flex:1"><p style="color:var(--ink);font-weight:600;font-size:13px">Definir sequência e patrocínio para concluir os atos habilitadores.</p><p style="font-size:11px;color:var(--red)">Risco se não decidir: docência, GECC e bolsas seguem sem base segura para contratar e pagar.</p></div></div>
+    <div class="lrow rv" style="--ac:#3b82f6;--d:.21s"><span class="pill" style="background:var(--grad);min-width:30px;text-align:center">04</span><h4 style="min-width:150px">Evidências</h4><div style="flex:1"><p style="color:var(--ink);font-weight:600;font-size:13px">Fixar meta de cobertura da série ENAJU Evidências e indicadores de aprendizagem e conclusão.</p><p style="font-size:11px;color:var(--red)">Risco se não decidir: resultados formativos sem registro rastreável; a série perde cadência.</p></div></div>
+    <div class="lrow rv" style="--ac:#3b82f6;--d:.28s"><span class="pill" style="background:var(--grad);min-width:30px;text-align:center">05</span><h4 style="min-width:150px">Cadência</h4><div style="flex:1"><p style="color:var(--ink);font-weight:600;font-size:13px">Instituir acompanhamento mensal com painel único de cursos, processos e projetos.</p><p style="font-size:11px;color:var(--red)">Risco se não decidir: acompanhamento episódico; pendências reaparecem sem tratamento.</p></div></div>
+    <div class="band grad rv" style="--d:.36s;justify-content:center;margin-top:auto"><p>Resultado da reunião: prioridades + responsáveis + prazos + decisões registradas</p></div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 14 · 90 DIAS ============ -->
+<section class="slide" aria-label="Próximos 90 dias">
+  <header><span class="kick">Proposta de encaminhamento</span><span class="no">14 / 25</span></header>
+  <h2>Próximos 90 dias: <em>consolidação e execução</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="grid3" style="flex:1">
+      <div class="card rv" style="--ac:#60a5fa"><span class="pill" style="background:#60a5fa;margin-bottom:12px">0–30 dias</span><h3 style="font-size:21px">Consolidar dados</h3><p style="margin-top:10px;font-size:13.5px">Atualizar cursos e processos; formalizar TAP do ENAJU Tech; designar responsáveis; ordenar normativos.</p></div>
+      <div class="card rv" style="--ac:#22d3ee;--d:.1s"><span class="pill" style="background:#22d3ee;margin-bottom:12px">31–60 dias</span><h3 style="font-size:21px">Tratar pendências</h3><p style="margin-top:10px;font-size:13.5px">Concluir atos prioritários; validar chamada de Trilhas; publicar Evidências 002 e iniciar a 003.</p></div>
+      <div class="card rv" style="--ac:#34d399;--d:.2s"><span class="pill" style="background:#34d399;margin-bottom:12px">61–90 dias</span><h3 style="font-size:21px">Registrar resultados</h3><p style="margin-top:10px;font-size:13.5px">Publicar primeiro painel executivo; colocar pilotos em produção; adotar indicadores de aprendizagem e conclusão.</p></div>
+    </div>
+    <div class="band grad rv" style="--d:.3s;margin-top:16px;justify-content:center"><p>Ritual sugerido: reunião mensal de 30 minutos, com foco em exceções e decisões.</p></div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 15 · CHECKLIST ============ -->
+<section class="slide" aria-label="Checklist pré-reunião">
+  <header><span class="kick">Checklist de atualização</span><span class="no">15 / 25</span></header>
+  <h2>Informações a validar <em>antes da reunião</em></h2><div class="rule"></div>
+  <div class="body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div class="card rv" style="--ac:#22d3ee"><h3>✓ &nbsp;Janilton / Rodrigo</h3><p>Triagem dos 30 itens da caixa de entrada e classificação das 44 ações do Planner por estágio e prioridade.</p></div>
+      <div class="card rv" style="--ac:#22d3ee;--d:.08s"><h3>✓ &nbsp;Rodrigo</h3><p>Contratações, pagamentos, demais processos, prazos e gargalos.</p></div>
+      <div class="card rv" style="--ac:#22d3ee;--d:.16s"><h3>✓ &nbsp;CODE / Evidências</h3><p>Fechamento da edição 002, início da 003 e meta de cobertura da série.</p></div>
+      <div class="card rv" style="--ac:#22d3ee;--d:.24s"><h3>✓ &nbsp;ENAJU Tech / DTI</h3><p>Confirmar escopo, patrocínio, trilha-piloto e modelo de oferta do hub.</p></div>
+    </div>
+    <div class="band pale rv" style="--d:.32s;margin-top:auto"><span class="lab">Síntese</span><p>A consolidação do relatório depende da atualização dos dados, da definição de responsáveis e do registro das deliberações.</p></div>
+  </div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 16 · DIVISOR ============ -->
+<section class="slide divider" aria-label="Apêndice">
+  <div class="kick rv">Apêndice</div>
+  <h1 class="rv" style="--d:.1s">Detalhamento por <em style="font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">projeto e por processo</em></h1>
+  <p class="rv" style="--d:.2s">Lâminas 17 a 25 · material de consulta para a discussão, fora do fluxo principal</p>
+</section>
+
+<!-- ============ 17 · FUNIL DETALHADO (Planner 28/07/2026) ============ -->
+<section class="slide" aria-label="Funil detalhado">
+  <header><span class="kick">Apêndice · formação · Planner ENAJU · 44 ações · 28/07/2026</span><span class="no">17 / 25</span></header>
+  <h2>Funil formativo: <em>detalhamento por processo</em></h2><div class="rule"></div>
+  <div class="body">
+    <div class="cols5">
+      <div class="col rv"><div class="colh" style="background:#60a5fa">EM EXECUÇÃO</div><div class="n" style="color:#60a5fa">2</div><ul><li>Avaliação Biopsicossocial — módulo 2 (Alana e Igor)</li><li>Webinário Riscos Psicossociais (10416/2026) — Janilton</li></ul></div>
+      <div class="col rv" style="--d:.07s"><div class="colh" style="background:#22d3ee">A FAZER</div><div class="n" style="color:#22d3ee">5</div><ul><li>SAF (21433/2025) — identidade visual e transmissão (Isabelle)</li><li>Assédio Eleitoral (13590/2026) — agendar reunião</li><li>Projeto ELO (13116/2026) — reunião 28/07</li><li>Acolhimento Familiar (07447/2026) — encaminhar pagamento</li><li>Intérpretes de Línguas Indígenas (18801/2025) — reunião 27/07</li></ul></div>
+      <div class="col rv" style="--d:.14s"><div class="colh" style="background:#a78bfa">VALIDAÇÃO · CONCLUÍDA</div><div class="n" style="color:#a78bfa">2</div><ul><li>Women's Judges Program (00650/2026) — análise de viabilidade em validação</li><li>Requisição de passagem — Profa. Jane (21433/2025) — concluída</li></ul></div>
+      <div class="col rv" style="--d:.21s"><div class="colh" style="background:#fb923c">AGUARDANDO</div><div class="n" style="color:#fb923c">5</div><ul><li>Plano de Formação de Intérpretes (18801/2025)</li><li>Trilha equipes técnicas multiprofissionais (21069/2025)</li><li>EC 136/2025 — precatórios (01114/2026) — ofício da SEP</li><li>Criação de Videoteca (06616/2024)</li><li>IPPDH — coordenadora pedagógica (02578/2026)</li></ul></div>
+      <div class="col rv" style="--d:.28s"><div class="colh" style="background:#7d93b5">CAIXA DE ENTRADA</div><div class="n" style="color:#93a8c9">30</div><ul><li>Justiça Comunitária (03431/2026)</li><li>Fundamentos e Governança da Auditoria</li><li>Conexão Auditoria (04568/2026)</li><li>Educação Inclusiva (12900/2026)</li><li>Missão WJP 2026 (18102/2025)</li><li>Conciliadores e Mediadores (20502/2025)</li><li>Proteção de dados (12425/2025)</li><li>Encontro Nacional de Escolas Judiciais (07204/2026)</li><li>+22 demais itens a triar (inclui registro de ideias)</li></ul></div>
+    </div>
+    <div class="band pale rv" style="--d:.35s;margin-top:14px"><p style="font-size:12.5px">Triagem da caixa de entrada e classificação por estágio a revalidar com Janilton e Rodrigo antes da reunião.</p></div>
+  </div>
+  <footer><span>Fonte: Planner ENAJU - PROJETOS · export de 28/07/2026</span><span>JUL 2026</span></footer>
+</section>
+
+<!-- ============ 18–25 · DETALHES ============ -->
+<section class="slide" aria-label="Artigo ENAJUS 2026">
+  <header><span class="kick">Apêndice · produção institucional e posicionamento</span><span class="no">18 / 25</span></header>
+  <h2>Artigo <em>ENAJUS 2026</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Em revisão editorial</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Sistematiza a evolução da educação corporativa judicial e posiciona a criação da ENAJU como marco institucional.</p>
+      <div class="comp">POLÍTICA · AVALIAÇÃO · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Trabalho completo identificado e versão double blind em QMD/DOCX/PDF.</li><li>Resumo expandido sincronizado e mapa de versões canônicas organizado.</li><li>Corpus normativo revisto: sete atos confirmados; título unificado.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Confirmar ordem dos autores, validar versão canônica e conferir aderência final ao edital.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="Cadernos ENAJU">
+  <header><span class="kick">Apêndice · curadoria e memória institucional</span><span class="no">19 / 25</span></header>
+  <h2>Cadernos <em>ENAJU</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Estruturação da edição 001</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Cria um canal permanente de curadoria, avaliação e difusão de pesquisas, experiências e boas práticas das escolas.</p>
+      <div class="comp">INOVAÇÃO · AVALIAÇÃO · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Projeto geral, charter e estrutura replicável de edição.</li><li>Minuta de Portaria, despacho, equipe e governança editorial.</li><li>Projeto editorial, edital e estrutura preliminar do Caderno n. 001.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Aprovar criação, Portaria, editor-chefe, conselhos, tema e cronograma do edital.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="Altos Estudos e Trilhas">
+  <header><span class="kick">Apêndice · estratégia formativa nacional</span><span class="no">20 / 25</span></header>
+  <h2>Altos Estudos / <em>Trilhas ENAJU</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Pacote técnico elaborado</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Conecta desempenho institucional, competências e formação por função estratégica em uma chamada colaborativa nacional.</p>
+      <div class="comp">TODAS AS CINCO FRENTES</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>TAP, minuta de chamada e quatro anexos já renderizados em DOCX/PDF.</li><li>Diagnóstico com catálogo DGE, gaps, matriz e nota técnica.</li><li>Sete macrotrilhas; seis classificadas como alta prioridade.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Validar juridicamente a chamada, curar dados pendentes e cruzar a matriz com LNC e inventário nacional.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="ENAJU Evidências">
+  <header><span class="kick">Apêndice · inteligência institucional sobre a formação</span><span class="no">21 / 25</span></header>
+  <h2>ENAJU <em>Evidências</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Série em produção regular</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Converte cada ação formativa em registro rastreável de achados, capacidades desenvolvidas e agenda para as políticas judiciárias.</p>
+      <div class="comp">DIAGNÓSTICOS · AVALIAÇÃO · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Edição 001 (piloto): webinário sobre cuidados e pessoas idosas, com cinco achados e vínculo à Res. CNJ n. 520/2023.</li><li>Edição 002: acolhimento familiar e o marco de Guaramirim-SC — alcance, certificação e rede interinstitucional medidos.</li><li>Edição 003 em pipeline (avaliação biopsicossocial/BPC); template, pipeline de transcrição e fluxo de destinatários padronizados.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Definir critério de priorização e meta de cobertura: hoje 3 das 44 ações do Planner geram relatório.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="ENAJU Tech">
+  <header><span class="kick">Apêndice · hub de competências digitais · parceria com a DTI</span><span class="no">22 / 25</span></header>
+  <h2>ENAJU <em>Tech</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Escopo definido</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Fortalece competências digitais no Judiciário e transforma o conhecimento técnico do CNJ em ativos institucionais reutilizáveis. Governança e patrocínio a formalizar com a DTI.</p>
+      <div class="comp">INOVAÇÃO · DIAGNÓSTICOS · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Plataforma única com trilhas, laboratórios, comunidades de prática e conteúdos digitais.</li><li>Temas: IA, engenharia de software, arquitetura, ciência de dados, segurança, governança digital, interoperabilidade e design de serviços.</li><li>Vertente internacional: apoia a transferência de tecnologia do CNJ e a formação das equipes que operam as soluções em países parceiros.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Formalizar TAP e o acordo ENAJU–DTI, definir a trilha-piloto e o modelo de oferta.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="Publicações ENAJU">
+  <header><span class="kick">Apêndice · produção técnico-científica</span><span class="no">23 / 25</span></header>
+  <h2>Publicações <em>ENAJU</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Agenda editorial a estruturar</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Reúne a produção de artigos e relatórios técnicos da equipe, para registrar conhecimento institucional e submetê-lo a canais adequados de publicação.</p>
+      <div class="comp">DIAGNÓSTICOS · AVALIAÇÃO · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Meta proposta: produção regular de artigos técnico-científicos pela equipe da ENAJU.</li><li>Referências existentes: Artigo ENAJUS 2026 e estudo bibliométrico GCPJ/COBPIT/RAP.</li><li>A agenda deve registrar tema, autores, periódico-alvo, prazo de submissão e situação editorial.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Identificar o primeiro tema e o periódico adequado para uma publicação envolvendo a equipe da ENAJU.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="Normativos da ENAJU">
+  <header><span class="kick">Apêndice · base regulatória da operação</span><span class="no">24 / 25</span></header>
+  <h2>Normativos da <em>ENAJU</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>IN revisada; atos complementares pendentes</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Dá segurança para planejar, selecionar, contratar, remunerar, atestar e avaliar ações de educação, pesquisa e inovação.</p>
+      <div class="comp">POLÍTICA · AVALIAÇÃO · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>Minuta revisada com 8 seções e 32 artigos; processo SEI 12153/2026.</li><li>Distribuição de competências entre CODE, Gestão Acadêmica e Administrativa.</li><li>Avaliação multinível e seção própria de pesquisa aplicada e inovação.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Fechar autoridade/data e deliberar tabela de valores, mensuração de horas, GECC e tratamento de inativos.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+<section class="slide" aria-label="Planejamento de capacitação">
+  <header><span class="kick">Apêndice · demanda institucional 2026</span><span class="no">25 / 25</span></header>
+  <h2>Planejamento de <em>ações de capacitação</em></h2><div class="rule"></div>
+  <div class="body"><div class="detail">
+    <div class="side rv">
+      <span class="lab">SITUAÇÃO</span><h3>Levantamento inicial consolidado</h3>
+      <span class="lab">VALOR PARA A ENAJU</span><p>Reúne demandas das unidades e fornece matéria-prima para priorizar agenda, modalidades, capacidade de produção e parcerias.</p>
+      <div class="comp">POLÍTICA · DIAGNÓSTICOS · REDE</div>
+    </div>
+    <div class="main rv" style="--d:.12s">
+      <span class="lab">ENTREGAS / EVIDÊNCIAS</span>
+      <ul><li>67 ações registradas no levantamento disponível.</li><li>11 unidades demandantes, com objetivos, base normativa, público, formato e período.</li><li>Temas recorrentes: transformação digital, TIC, auditoria, governança, projetos e políticas judiciárias.</li></ul>
+      <div class="next"><span class="lab2">PRÓXIMO MARCO</span><p>Higienizar períodos, classificar o funil e priorizar por estratégia, urgência normativa, alcance, capacidade e custo.</p></div>
+    </div>
+  </div></div>
+  <footer><span>ENAJU · acompanhamento executivo</span><span>JUL 2026</span></footer>
+</section>
+
+</div></div>
+
+<button class="navbtn" id="prev" aria-label="Lâmina anterior">‹</button>
+<button class="navbtn" id="next" aria-label="Próxima lâmina">›</button>
+<div id="hud"><span><b id="cur">1</b> / <span id="tot">25</span></span><span>? atalhos</span></div>
+
+<div id="help" role="dialog" aria-label="Atalhos de teclado">
+  <div class="box">
+    <h3>Atalhos de teclado</h3>
+    <table>
+      <tr><td><kbd>→</kbd> <kbd>Espaço</kbd> <kbd>PgDn</kbd></td><td>próxima lâmina</td></tr>
+      <tr><td><kbd>←</kbd> <kbd>PgUp</kbd></td><td>lâmina anterior</td></tr>
+      <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>primeira / última</td></tr>
+      <tr><td><kbd>A</kbd></td><td>ir ao apêndice</td></tr>
+      <tr><td><kbd>F</kbd></td><td>tela cheia</td></tr>
+      <tr><td><kbd>?</kbd> ou <kbd>Esc</kbd></td><td>abrir / fechar esta ajuda</td></tr>
+    </table>
+  </div>
+</div>
+
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const stage=document.getElementById('stage');
+  const bar=document.querySelector('#progress i');
+  const cur=document.getElementById('cur');
+  document.getElementById('tot').textContent=slides.length;
+  let i=0;
+
+  function fit(){
+    const s=Math.min(innerWidth/1280,innerHeight/720)*.985;
+    stage.style.setProperty('--s',s);
+  }
+  addEventListener('resize',fit);fit();
+
+  const isStatic=new URLSearchParams(location.search).has('static');
+  if(isStatic)document.body.classList.add('static');
+
+  function fmt(n){return n.toLocaleString('pt-BR')}
+  function countUp(slide){
+    if(isStatic||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    slide.querySelectorAll('[data-n]').forEach(el=>{
+      const target=+el.dataset.n,pre=el.dataset.pre||'',suf=el.dataset.suf||'';
+      const t0=performance.now(),dur=900;
+      function tick(t){
+        const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+        el.textContent=pre+fmt(Math.round(target*e))+suf;
+        if(p<1)requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  function go(n,push=true){
+    n=Math.max(0,Math.min(slides.length-1,n));
+    if(n===i&&slides[i].classList.contains('active'))return;
+    slides.forEach((s,k)=>{
+      s.classList.toggle('active',k===n);
+      s.classList.toggle('prev',k<n);
+    });
+    i=n;
+    cur.textContent=n+1;
+    bar.style.width=((n+1)/slides.length*100)+'%';
+    if(push)history.replaceState(null,'','#'+(n+1));
+    countUp(slides[n]);
+  }
+
+  const help=document.getElementById('help');
+  function toggleHelp(force){help.classList.toggle('open',force)}
+
+  addEventListener('keydown',e=>{
+    if(e.key==='?'){toggleHelp(!help.classList.contains('open'));return}
+    if(e.key==='Escape'){toggleHelp(false);return}
+    if(help.classList.contains('open'))return;
+    switch(e.key){
+      case'ArrowRight':case'ArrowDown':case'PageDown':go(i+1);e.preventDefault();break;
+      case' ':go(e.shiftKey?i-1:i+1);e.preventDefault();break;
+      case'ArrowLeft':case'ArrowUp':case'PageUp':go(i-1);e.preventDefault();break;
+      case'Home':go(0);e.preventDefault();break;
+      case'End':go(slides.length-1);e.preventDefault();break;
+      case'a':case'A':go(15);break;
+      case'f':case'F':document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();break;
+    }
+  });
+  document.getElementById('prev').onclick=()=>go(i-1);
+  document.getElementById('next').onclick=()=>go(i+1);
+  help.onclick=e=>{if(e.target===help)toggleHelp(false)};
+
+  const h=parseInt(location.hash.slice(1),10);
+  go(isNaN(h)?0:h-1,false);
+})();
+</script>
+</body>
+</html>
