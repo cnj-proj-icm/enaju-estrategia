@@ -2,575 +2,645 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Plano de Comunicação Institucional da ENAJU</title>
 <style>
-  :root {
-    color-scheme: light;
-    --navy: #14356B;
-    --azure: #3B7DC4;
-    --azure-soft: #E3EDF8;
-    --sky: #2AA3DC;
-    --deep: #1B3F7E;
-    --ink: #1B2A44;
-    --dim: #566781;
-    --muted: #8593AB;
-    --paper: #F5F7FB;
-    --card: #FFFFFF;
-    --rule: #D8E0EC;
-    --gold: #C8871B;
-    --gold-bg: #FBF2E0;
-  }
-  * { box-sizing: border-box; margin: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+:root{
+  --navy:#14356B; --deep:#1B3F7E; --azure:#3B7DC4; --sky:#2AA3DC;
+  --ink:#1B2A44; --dim:#566781; --muted:#8593AB;
+  --paper:#F2F5FA; --card:#FFFFFF; --rule:#D8E0EC; --soft:#E7EFF9;
+  --gold:#C8871B; --gold-bg:#FBF2E0;
+  --grad:linear-gradient(92deg,var(--azure),var(--sky));
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0}
+html{height:100%}
+body{min-height:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+  line-height:1.55; overflow:hidden;
+}
 
-  /* ---------- marca ---------- */
-  .logo { display: inline-flex; align-items: center; gap: 12px; }
-  .logo-books { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; }
-  .logo-books span { display: block; height: 9px; border-radius: 0 6px 6px 0; }
-  .logo-books span:nth-child(1) { width: 22px; background: var(--sky); }
-  .logo-books span:nth-child(2) { width: 30px; background: var(--azure); }
-  .logo-books span:nth-child(3) { width: 26px; background: var(--deep); }
-  .logo-name { font-weight: 700; letter-spacing: .4px; color: #5A5F66; font-size: 22px; }
-  .logo-name small { display: block; font-weight: 400; font-size: 11px; letter-spacing: .6px; color: var(--dim); }
+/* ---------- fundo ---------- */
+#bg{position:fixed;inset:0;z-index:0;overflow:hidden;
+  background:
+    radial-gradient(900px 620px at 15% -12%,rgba(59,125,196,.13),transparent 62%),
+    radial-gradient(1000px 700px at 102% 108%,rgba(42,163,220,.11),transparent 62%),
+    linear-gradient(165deg,#F7F9FC 0%,#EAF0F8 100%);}
+#bg::after{content:"";position:absolute;inset:0;opacity:.6;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 79px,rgba(20,53,107,.030) 79px 80px),
+    repeating-linear-gradient(90deg,transparent 0 79px,rgba(20,53,107,.030) 79px 80px);
+  -webkit-mask-image:radial-gradient(78% 76% at 50% 45%,#000 30%,transparent 100%);
+  mask-image:radial-gradient(78% 76% at 50% 45%,#000 30%,transparent 100%);}
 
-  /* ---------- hero ---------- */
-  header.hero {
-    background: linear-gradient(140deg, #0E2450 0%, var(--navy) 55%, #245A9E 100%);
-    color: #fff; padding: 72px 0 84px;
-  }
-  header.hero .logo-name { color: #fff; }
-  header.hero .logo-name small { color: #B9CCE8; }
-  .hero-badge {
-    display: inline-block; margin: 34px 0 18px; padding: 6px 14px;
-    border: 1px solid rgba(255,255,255,.45); border-radius: 999px;
-    font-size: 12px; letter-spacing: 1.6px; font-weight: 600; color: #D7E4F6;
-  }
-  header.hero h1 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.15; letter-spacing: -.5px; max-width: 20ch; }
-  header.hero p.sub { margin-top: 18px; max-width: 62ch; font-size: 17px; color: #C9D8EE; }
-  .hero-meta { margin-top: 30px; font-size: 13px; color: #9FB6D8; }
+/* ---------- palco escalado ---------- */
+#wrap{position:fixed;inset:0;z-index:1}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;
+  transform:translate(-50%,-50%) scale(var(--s,1));transform-origin:center}
 
-  /* ---------- seções ---------- */
-  section { padding: 64px 0 8px; }
-  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 1.8px; color: var(--azure); text-transform: uppercase; }
-  h2 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -.3px; margin: 8px 0 14px; color: var(--navy); }
-  p.lead { max-width: 74ch; color: var(--dim); font-size: 16px; }
+/* ---------- slides ---------- */
+.slide{position:absolute;inset:0;padding:46px 56px 34px;display:flex;flex-direction:column;
+  background:var(--card);border:1px solid var(--rule);border-radius:20px;
+  box-shadow:0 30px 80px rgba(20,53,107,.10);
+  opacity:0;visibility:hidden;transform:translateY(24px) scale(.986);
+  transition:opacity .5s ease,transform .5s ease,visibility 0s linear .5s}
+.slide.active{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.slide.prev{transform:translateY(-24px) scale(.986)}
+.slide.dark{background:linear-gradient(145deg,#0E2450 0%,var(--navy) 58%,#245A9E 100%);
+  border-color:transparent;color:#fff}
 
-  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
-  .js .reveal.visible { opacity: 1; transform: none; }
-  @media print { .js .reveal { opacity: 1; transform: none; } }
+.slide header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.kick{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--azure)}
+.dark .kick{color:#8FB4E4}
+.no{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.1em}
+.dark .no{color:#7F9AC4}
+.slide h2{font-size:30px;font-weight:700;letter-spacing:-.015em;margin:2px 0 9px;color:var(--navy)}
+.dark h2{color:#fff}
+.rule{width:62px;height:4px;border-radius:2px;background:var(--grad);margin-bottom:17px;flex:none}
+.body{flex:1;display:flex;flex-direction:column;min-height:0;justify-content:center}
+.slide footer{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--rule);
+  padding-top:8px;margin-top:14px;font-size:10.5px;color:var(--muted);flex:none}
+.dark footer{border-top-color:rgba(255,255,255,.18);color:#7F9AC4}
 
-  /* ---------- cards ---------- */
-  .grid { display: grid; gap: 18px; margin-top: 30px; }
-  .grid.c2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-  .grid.c3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-  .card {
-    background: var(--card); border: 1px solid var(--rule); border-radius: 16px;
-    padding: 24px 24px 22px; box-shadow: 0 10px 30px rgba(20,53,107,.06);
-  }
-  .card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
-  .card p { font-size: 14px; color: var(--dim); }
-  .num {
-    width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
-    background: var(--azure-soft); color: var(--navy); font-weight: 700; font-size: 15px;
-    margin-bottom: 14px;
-  }
+/* ---------- reveals ---------- */
+.rv{opacity:0;transform:translateY(15px);transition:opacity .5s ease var(--d,0s),transform .5s ease var(--d,0s)}
+.active .rv{opacity:1;transform:none}
 
-  .depara { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 30px; }
-  .depara .card.antes { border-top: 4px solid var(--muted); }
-  .depara .card.depois { border-top: 4px solid var(--azure); }
-  .depara .tag { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; color: var(--muted); }
-  .depara .card.depois .tag { color: var(--azure); }
-  .depara h3 { font-size: 18px; margin: 6px 0 10px; }
-  .depara ul { padding-left: 18px; font-size: 14px; color: var(--dim); }
-  .depara li { margin: 6px 0; }
+/* ---------- marca ---------- */
+.logo{display:inline-flex;align-items:center;gap:11px}
+.books{display:flex;flex-direction:column;gap:3px;align-items:flex-start;flex:none}
+.books span{display:block;height:8px;border-radius:0 5px 5px 0}
+.books span:nth-child(1){width:19px;background:var(--sky)}
+.books span:nth-child(2){width:26px;background:var(--azure)}
+.books span:nth-child(3){width:22px;background:var(--deep)}
+.logo b{font-weight:700;letter-spacing:.4px;color:#5A5F66;font-size:21px;line-height:1.25}
+.logo b small{display:block;font-weight:400;font-size:10.5px;letter-spacing:.55px;color:var(--dim);margin-top:2px}
+.dark .logo b{color:#fff}
+.dark .logo b small{color:#B9CCE8}
 
-  /* ---------- stat tiles ---------- */
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; margin-top: 30px; }
-  .stat { background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; }
-  .stat .v { font-size: 34px; font-weight: 700; letter-spacing: -.8px; color: var(--navy); line-height: 1.1; }
-  .stat .l { margin-top: 8px; font-size: 13px; color: var(--dim); }
-  .stat .s { margin-top: 6px; font-size: 11.5px; color: var(--muted); }
+/* ---------- capa ---------- */
+.cover{justify-content:center;padding:64px 68px}
+.cover .badge{display:inline-block;margin:30px 0 20px;padding:6px 15px;
+  border:1px solid rgba(255,255,255,.42);border-radius:999px;
+  font-size:11.5px;letter-spacing:.15em;font-weight:600;color:#D7E4F6}
+.cover h1{font-size:47px;line-height:1.14;letter-spacing:-.02em;max-width:19ch;font-weight:700}
+.cover p{margin-top:18px;max-width:60ch;font-size:17px;color:#C9D8EE}
+.cover .meta{margin-top:30px;font-size:12.5px;color:#9FB6D8}
 
-  /* ---------- gráficos de barras ---------- */
-  .chart-card { background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 26px; }
-  .chart-card h3 { font-size: 15.5px; color: var(--navy); }
-  .chart-card .src { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
-  .bars { margin-top: 20px; display: grid; gap: 10px; }
-  .brow { display: grid; grid-template-columns: 180px 1fr; align-items: center; gap: 12px; }
-  .brow .bl { font-size: 13px; color: var(--ink); text-align: right; }
-  .btrack { position: relative; height: 22px; }
-  .bar {
-    position: absolute; left: 0; top: 3px; height: 16px; min-width: 3px;
-    background: var(--azure); border-radius: 0 4px 4px 0;
-    transform-origin: left; transform: scaleX(0); transition: transform .8s cubic-bezier(.2,.7,.2,1);
-    cursor: default;
-  }
-  .visible .bar { transform: scaleX(1); }
-  .bv { position: absolute; top: 1px; font-size: 12.5px; font-weight: 600; color: var(--dim); white-space: nowrap; }
-  #tooltip {
-    position: fixed; z-index: 50; pointer-events: none; display: none;
-    background: var(--navy); color: #fff; font-size: 12.5px; padding: 7px 11px;
-    border-radius: 8px; box-shadow: 0 8px 24px rgba(14,31,58,.3);
-  }
+/* ---------- componentes ---------- */
+.card{background:var(--card);border:1px solid var(--rule);border-radius:15px;padding:20px 22px}
+.card h3{font-size:16.5px;color:var(--navy);margin-bottom:7px}
+.card p{font-size:13.5px;color:var(--dim)}
+.card ul{padding-left:17px;font-size:13.5px;color:var(--dim)}
+.card li{margin:6px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.num{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
+  background:var(--soft);color:var(--navy);font-weight:700;font-size:14px;margin-bottom:11px}
+.tag{font-size:10.5px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
 
-  /* ---------- tabela ---------- */
-  .tbl-wrap { overflow-x: auto; margin-top: 26px; border: 1px solid var(--rule); border-radius: 14px; background: var(--card); }
-  table { border-collapse: collapse; width: 100%; font-size: 13.5px; min-width: 720px; }
-  th, td { padding: 11px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
-  th { background: var(--azure-soft); color: var(--navy); font-size: 12.5px; letter-spacing: .4px; }
-  td { color: var(--dim); }
-  td:first-child { color: var(--ink); font-weight: 600; }
-  tr:last-child td { border-bottom: 0; }
+.kpi{background:var(--card);border:1px solid var(--rule);border-radius:15px;padding:18px 20px}
+.kpi b{display:block;font-size:33px;font-weight:700;letter-spacing:-.025em;color:var(--navy);line-height:1.12}
+.kpi span{display:block;margin-top:7px;font-size:12.5px;color:var(--dim)}
+.kpi small{display:block;margin-top:6px;font-size:10.5px;color:var(--muted)}
 
-  /* ---------- mockups ---------- */
-  .disclaimer {
-    margin-top: 26px; border: 1px solid #E4C98C; background: var(--gold-bg);
-    border-radius: 14px; padding: 18px 22px; font-size: 14px; color: #6B4E14;
-  }
-  .disclaimer strong { color: #56400F; }
-  .tabs { display: flex; gap: 10px; margin-top: 28px; }
-  .tabs button {
-    border: 1px solid var(--rule); background: var(--card); color: var(--dim);
-    padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: all .15s ease; font-family: inherit;
-  }
-  .tabs button.active { background: var(--navy); border-color: var(--navy); color: #fff; }
-  .mock-stage { margin-top: 26px; display: grid; place-items: center; }
-  .mock-panel { display: none; width: 100%; }
-  .mock-panel.active { display: grid; place-items: center; animation: fadein .4s ease; }
-  @keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* barras */
+.hrow{display:grid;grid-template-columns:126px 1fr 62px;align-items:center;gap:10px;margin:6px 0}
+.hrow .l{font-size:12px;text-align:right;color:var(--dim)}
+.hrow.own .l{color:var(--ink);font-weight:600}
+.hbar{height:15px;border-radius:0 4px 4px 0;background:rgba(20,53,107,.06)}
+.hbar i{display:block;height:100%;width:0;border-radius:0 4px 4px 0;background:var(--azure);
+  transition:width 1s cubic-bezier(.2,.7,.2,1) .2s}
+.hrow.own .hbar i{background:linear-gradient(90deg,var(--deep),var(--sky))}
+.active .hbar i{width:var(--w)}
+.hrow .v{font-size:11.5px;color:var(--dim)}
+.hrow.own .v{color:var(--ink);font-weight:600}
+.chart{background:var(--card);border:1px solid var(--rule);border-radius:15px;padding:18px 20px}
+.chart h3{font-size:14.5px;color:var(--navy)}
+.chart .src{font-size:10.5px;color:var(--muted);margin:2px 0 12px}
 
-  .mockshell { position: relative; width: fit-content; max-width: 100%; }
-  .ribbon {
-    position: absolute; z-index: 5; top: -14px; right: -18px;
-    background: var(--gold); color: #fff; font-size: 11px; font-weight: 700;
-    letter-spacing: 1.4px; padding: 6px 16px; border-radius: 6px;
-    transform: rotate(6deg); box-shadow: 0 6px 16px rgba(200,135,27,.4);
-  }
+/* tabela */
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th,.tbl td{padding:7px 12px;text-align:left;border-bottom:1px solid var(--rule)}
+.tbl th{background:var(--soft);color:var(--navy);font-size:11px;letter-spacing:.03em}
+.tbl td{color:var(--dim)}
+.tbl td:first-child{color:var(--ink);font-weight:600}
+.tbl tr:last-child td{border-bottom:0}
+.tbl-wrap{border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--card)}
 
-  /* Instagram phone */
-  .phone {
-    width: 320px; background: #fff; border: 1px solid var(--rule); border-radius: 34px;
-    box-shadow: 0 30px 70px rgba(14,31,58,.18); overflow: hidden;
-  }
-  .phone .notch { height: 26px; display: grid; place-items: center; }
-  .phone .notch i { width: 90px; height: 8px; border-radius: 999px; background: #E8ECF3; }
-  .ig-top { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px 0; font-weight: 700; font-size: 15px; }
-  .ig-top .dots { color: var(--muted); letter-spacing: 2px; }
-  .ig-head { display: flex; gap: 18px; align-items: center; padding: 14px 16px 6px; }
-  .avatar {
-    width: 62px; height: 62px; border-radius: 50%; flex: 0 0 auto;
-    background: linear-gradient(150deg, var(--sky), var(--deep));
-    display: grid; place-items: center;
-  }
-  .avatar .logo-books span { height: 5px; border-radius: 0 3px 3px 0; }
-  .avatar .logo-books span:nth-child(1) { width: 12px; background: #fff; opacity: .95; }
-  .avatar .logo-books span:nth-child(2) { width: 17px; background: #fff; opacity: .8; }
-  .avatar .logo-books span:nth-child(3) { width: 14px; background: #fff; opacity: .65; }
-  .ig-stats { display: flex; gap: 18px; font-size: 12px; color: var(--dim); text-align: center; }
-  .ig-stats b { display: block; font-size: 14px; color: var(--ink); }
-  .ig-bio { padding: 4px 16px 12px; font-size: 12.5px; }
-  .ig-bio b { font-size: 13px; }
-  .ig-bio .link { color: var(--azure); }
-  .ig-btn { margin: 0 16px 12px; text-align: center; background: var(--azure); color: #fff; font-size: 13px; font-weight: 600; border-radius: 8px; padding: 7px; }
-  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .post {
-    aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 8px; color: #fff; font-size: 9.5px; font-weight: 600; line-height: 1.25;
-  }
-  .post small { font-weight: 400; opacity: .85; font-size: 8px; }
-  .p1 { background: linear-gradient(160deg, #245A9E, #14356B); }
-  .p2 { background: linear-gradient(160deg, #2AA3DC, #1E6FB0); }
-  .p3 { background: linear-gradient(160deg, #14356B, #0E2450); }
-  .p4 { background: linear-gradient(160deg, #3B7DC4, #1B3F7E); }
-  .p5 { background: linear-gradient(160deg, #1E6FB0, #14356B); }
-  .p6 { background: linear-gradient(160deg, #0E2450, #245A9E); }
+/* aviso */
+.warn{border:1px solid #E4C98C;background:var(--gold-bg);border-radius:13px;
+  padding:14px 18px;font-size:13px;color:#6B4E14}
+.warn strong{color:#56400F}
 
-  /* LinkedIn card */
-  .li-card {
-    width: 560px; max-width: 100%; background: #fff; border: 1px solid var(--rule);
-    border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px rgba(14,31,58,.18);
-  }
-  .li-banner { height: 96px; background: linear-gradient(120deg, #0E2450, #245A9E 60%, #2AA3DC); position: relative; }
-  .li-banner .logo-name { position: absolute; right: 18px; bottom: 12px; color: #fff; font-size: 16px; opacity: .9; }
-  .li-body { padding: 0 22px 20px; }
-  .li-avatar {
-    position: relative; z-index: 2;
-    width: 84px; height: 84px; border-radius: 12px; border: 3px solid #fff;
-    margin-top: -42px; background: linear-gradient(150deg, var(--sky), var(--deep));
-    display: grid; place-items: center;
-  }
-  .li-avatar .logo-books span { height: 7px; }
-  .li-avatar .logo-books span:nth-child(1) { width: 16px; background: #fff; opacity: .95; }
-  .li-avatar .logo-books span:nth-child(2) { width: 23px; background: #fff; opacity: .8; }
-  .li-avatar .logo-books span:nth-child(3) { width: 19px; background: #fff; opacity: .65; }
-  .li-body h3 { font-size: 19px; margin-top: 10px; color: var(--ink); }
-  .li-body .sub { font-size: 13.5px; color: var(--dim); }
-  .li-body .meta { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
-  .li-actions { display: flex; gap: 10px; margin-top: 14px; }
-  .li-actions .follow { background: var(--azure); color: #fff; font-weight: 600; font-size: 13.5px; border-radius: 999px; padding: 7px 20px; }
-  .li-actions .more { border: 1px solid var(--rule); color: var(--dim); font-size: 13.5px; border-radius: 999px; padding: 7px 20px; }
-  .li-post { border-top: 1px solid var(--rule); margin-top: 18px; padding-top: 16px; }
-  .li-post .ph { display: flex; gap: 10px; align-items: center; }
-  .li-post .ph .mini { width: 38px; height: 38px; border-radius: 8px; background: linear-gradient(150deg, var(--sky), var(--deep)); }
-  .li-post .ph b { font-size: 13.5px; display: block; }
-  .li-post .ph small { font-size: 11.5px; color: var(--muted); }
-  .li-post p { font-size: 13px; color: var(--ink); margin-top: 10px; }
-  .li-post .thumb {
-    margin-top: 12px; border-radius: 10px; padding: 22px 20px; color: #fff;
-    background: linear-gradient(140deg, #14356B, #2AA3DC);
-    font-weight: 700; font-size: 16px; line-height: 1.3;
-  }
-  .li-post .thumb small { display: block; font-weight: 400; font-size: 11.5px; opacity: .85; margin-top: 6px; }
-  .li-post .react { margin-top: 10px; font-size: 12px; color: var(--muted); }
+/* ---------- simulações ---------- */
+.mock{position:relative;width:fit-content;max-width:100%}
+.ribbon{position:absolute;z-index:5;top:-13px;right:-17px;background:var(--gold);color:#fff;
+  font-size:10.5px;font-weight:700;letter-spacing:.13em;padding:5px 15px;border-radius:6px;
+  transform:rotate(6deg);box-shadow:0 6px 16px rgba(200,135,27,.38);white-space:nowrap}
 
-  /* ---------- matriz / timeline ---------- */
-  .matriz { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 30px; }
-  .matriz .card ul { padding-left: 18px; font-size: 14px; color: var(--dim); }
-  .matriz .card li { margin: 7px 0; }
-  .matriz .who { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; }
-  .matriz .enaju .who { color: var(--azure); }
-  .matriz .scs .who { color: var(--navy); }
-  .matriz .card.enaju { border-top: 4px solid var(--azure); }
-  .matriz .card.scs { border-top: 4px solid var(--navy); }
+.phone{width:296px;background:#fff;border:1px solid var(--rule);border-radius:30px;
+  box-shadow:0 24px 60px rgba(20,53,107,.17);overflow:hidden}
+.phone .notch{height:22px;display:grid;place-items:center}
+.phone .notch i{width:80px;height:7px;border-radius:999px;background:#E8ECF3}
+.ig-top{display:flex;align-items:center;justify-content:space-between;padding:6px 14px 0;font-weight:700;font-size:14px}
+.ig-top .dots{color:var(--muted);letter-spacing:2px}
+.ig-head{display:flex;gap:16px;align-items:center;padding:12px 14px 5px}
+.av{width:56px;height:56px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:linear-gradient(150deg,var(--sky),var(--deep))}
+.av .books span{height:4.5px;border-radius:0 3px 3px 0}
+.av .books span:nth-child(1){width:11px;background:#fff;opacity:.95}
+.av .books span:nth-child(2){width:15px;background:#fff;opacity:.8}
+.av .books span:nth-child(3){width:12.5px;background:#fff;opacity:.65}
+.ig-stats{display:flex;gap:15px;font-size:11px;color:var(--dim);text-align:center}
+.ig-stats b{display:block;font-size:13px;color:var(--ink)}
+.ig-bio{padding:3px 14px 10px;font-size:11.5px;line-height:1.45}
+.ig-bio b{font-size:12px}
+.ig-bio .lk{color:var(--azure)}
+.ig-btn{margin:0 14px 10px;text-align:center;background:var(--azure);color:#fff;
+  font-size:12px;font-weight:600;border-radius:7px;padding:6px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.post{aspect-ratio:1;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:7px;color:#fff;font-size:8.5px;font-weight:600;line-height:1.25}
+.post small{font-weight:400;opacity:.85;font-size:7.5px}
+.p1{background:linear-gradient(160deg,#245A9E,#14356B)}
+.p2{background:linear-gradient(160deg,#2AA3DC,#1E6FB0)}
+.p3{background:linear-gradient(160deg,#14356B,#0E2450)}
+.p4{background:linear-gradient(160deg,#3B7DC4,#1B3F7E)}
+.p5{background:linear-gradient(160deg,#1E6FB0,#14356B)}
+.p6{background:linear-gradient(160deg,#0E2450,#245A9E)}
 
-  .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 30px; }
-  .step { position: relative; background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; }
-  .step .k { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; color: var(--azure); }
-  .step h3 { font-size: 15.5px; color: var(--navy); margin: 8px 0 6px; }
-  .step p { font-size: 13.5px; color: var(--dim); }
+.li{width:520px;max-width:100%;background:#fff;border:1px solid var(--rule);
+  border-radius:15px;overflow:hidden;box-shadow:0 24px 60px rgba(20,53,107,.17)}
+.li-ban{height:84px;background:linear-gradient(120deg,#0E2450,#245A9E 60%,#2AA3DC);position:relative}
+.li-ban b{position:absolute;right:17px;bottom:11px;color:#fff;font-size:15px;opacity:.9;
+  font-weight:700;letter-spacing:.4px}
+.li-in{padding:0 20px 17px}
+.li-av{position:relative;z-index:2;width:74px;height:74px;border-radius:11px;border:3px solid #fff;
+  margin-top:-37px;background:linear-gradient(150deg,var(--sky),var(--deep));display:grid;place-items:center}
+.li-av .books span{height:6px}
+.li-av .books span:nth-child(1){width:14px;background:#fff;opacity:.95}
+.li-av .books span:nth-child(2){width:20px;background:#fff;opacity:.8}
+.li-av .books span:nth-child(3){width:16.5px;background:#fff;opacity:.65}
+.li-in h3{font-size:17.5px;margin-top:9px;color:var(--ink)}
+.li-in .sb{font-size:12.5px;color:var(--dim)}
+.li-in .mt{font-size:11.5px;color:var(--muted);margin-top:3px}
+.li-act{display:flex;gap:9px;margin-top:12px}
+.li-act .f{background:var(--azure);color:#fff;font-weight:600;font-size:12.5px;border-radius:999px;padding:6px 18px}
+.li-act .m{border:1px solid var(--rule);color:var(--dim);font-size:12.5px;border-radius:999px;padding:6px 18px}
+.li-po{border-top:1px solid var(--rule);margin-top:15px;padding-top:13px}
+.li-po .ph{display:flex;gap:9px;align-items:center}
+.li-po .ph i{width:34px;height:34px;border-radius:7px;flex:none;background:linear-gradient(150deg,var(--sky),var(--deep))}
+.li-po .ph b{font-size:12.5px;display:block}
+.li-po .ph small{font-size:11px;color:var(--muted)}
+.li-po p{font-size:12.5px;color:var(--ink);margin-top:9px}
+.li-po .th{margin-top:10px;border-radius:9px;padding:19px 18px;color:#fff;
+  background:linear-gradient(140deg,#14356B,#2AA3DC);font-weight:700;font-size:15px;line-height:1.3}
+.li-po .th small{display:block;font-weight:400;font-size:11px;opacity:.85;margin-top:5px}
+.li-po .rc{margin-top:9px;font-size:11.5px;color:var(--muted)}
 
-  /* ---------- pedido ---------- */
-  .pedido {
-    margin-top: 34px; background: linear-gradient(140deg, #0E2450, var(--navy) 60%, #245A9E);
-    border-radius: 20px; color: #fff; padding: 44px 40px;
-  }
-  .pedido h2 { color: #fff; }
-  .pedido p { max-width: 78ch; color: #C9D8EE; font-size: 15.5px; }
-  .pedido .sig { margin-top: 26px; font-size: 13px; color: #9FB6D8; }
+.matriz .card.a{border-top:4px solid var(--azure)}
+.matriz .card.b{border-top:4px solid var(--navy)}
+.matriz .who{font-size:11px;font-weight:700;letter-spacing:.14em}
+.matriz .a .who{color:var(--azure)}
+.matriz .b .who{color:var(--navy)}
+.step .k{font-size:11px;font-weight:700;letter-spacing:.13em;color:var(--azure)}
+.step h3{font-size:14.5px;color:var(--navy);margin:7px 0 5px}
+.step p{font-size:12.5px;color:var(--dim)}
+.dark .big{font-size:17px;color:#C9D8EE;max-width:80ch}
+.dark .big + .big{margin-top:13px}
 
-  footer.page {
-    margin-top: 70px; padding: 30px 0 44px; border-top: 1px solid var(--rule);
-    font-size: 12.5px; color: var(--muted);
-  }
-  @media (max-width: 640px) {
-    .brow { grid-template-columns: 110px 1fr; }
-    .brow .bl { font-size: 11.5px; }
-    header.hero { padding: 52px 0 60px; }
-  }
+/* ---------- chrome ---------- */
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;background:rgba(20,53,107,.10);z-index:60}
+#progress i{display:block;height:100%;width:0;background:var(--grad);transition:width .45s ease}
+.navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:55;width:42px;height:60px;
+  border:1px solid var(--rule);background:rgba(255,255,255,.86);color:var(--dim);
+  border-radius:12px;cursor:pointer;font-size:19px;font-family:inherit;
+  backdrop-filter:blur(6px);transition:color .15s,border-color .15s}
+.navbtn:hover{color:var(--navy);border-color:var(--azure)}
+#prev{left:14px}#next{right:14px}
+#counter{position:fixed;right:16px;bottom:13px;z-index:55;font-size:11.5px;color:var(--muted);
+  background:rgba(255,255,255,.86);border:1px solid var(--rule);border-radius:999px;
+  padding:5px 13px;backdrop-filter:blur(6px)}
+#hint{position:fixed;left:16px;bottom:13px;z-index:55;font-size:11px;color:var(--muted)}
+#hint kbd{background:var(--card);border:1px solid var(--rule);border-radius:5px;
+  padding:1px 6px;font-family:inherit;font-size:10.5px}
+
+/* ==========================================================
+   MODO FLUXO — telas estreitas / retrato
+   O deck vira documento rolável e legível.
+   ========================================================== */
+body.flow{overflow-x:hidden;overflow-y:auto;height:auto;min-height:100%;-webkit-text-size-adjust:100%}
+body.flow #wrap{position:relative;inset:auto;z-index:1}
+body.flow #stage{position:static;width:auto;height:auto;transform:none;
+  max-width:780px;margin:0 auto;padding:14px 14px 60px}
+body.flow .slide{position:static;opacity:1;visibility:visible;transform:none;
+  min-height:0;padding:26px 22px 22px;margin-bottom:16px;border-radius:16px;
+  box-shadow:0 12px 34px rgba(20,53,107,.07)}
+body.flow .rv{opacity:1;transform:none}
+body.flow .body{display:block}
+body.flow .slide h2{font-size:23px}
+body.flow .cover{padding:34px 24px 30px}
+body.flow .cover h1{font-size:30px;max-width:none}
+body.flow .cover p{font-size:15.5px}
+body.flow .g2,body.flow .g3,body.flow .g4,body.flow .matriz-g{grid-template-columns:1fr}
+body.flow .hrow{grid-template-columns:96px 1fr 56px}
+body.flow .hrow .l{font-size:11px}
+body.flow .chart+.chart{margin-top:14px}
+body.flow .tbl-wrap{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;max-width:100%}
+body.flow .tbl{min-width:560px}
+body.flow .tbl th,body.flow .tbl td{padding:7px 10px}
+body.flow .scrollnote{display:block;font-size:10.5px;color:var(--muted);margin-top:7px}
+.scrollnote{display:none}
+body.flow .mock{width:100%;justify-self:stretch;margin-top:4px}
+body.flow .li{width:100%}
+body.flow .phone{margin-left:auto;margin-right:auto}
+body.flow .ribbon{right:6px;top:-11px}
+body.flow .navbtn,body.flow #hint{display:none}
+body.flow #counter{display:none}
+body.flow .slide footer{font-size:10px}
+body.flow .stack>*+*{margin-top:14px}
+body.flow .kpi b{font-size:29px}
+@media (max-width:400px){
+  body.flow .phone{width:270px}
+  body.flow .ribbon{font-size:9.5px;padding:4px 11px;right:-10px}
+}
+@media (prefers-reduced-motion:reduce){
+  .slide,.rv,.hbar i,#progress i{transition:none!important}
+}
+@media print{
+  body{overflow:visible}
+  .navbtn,#counter,#hint,#progress{display:none}
+}
 </style>
 </head>
 <body>
 
-<div id="tooltip" role="presentation"></div>
+<div id="bg"></div>
+<div id="progress"><i></i></div>
 
-<header class="hero">
-  <div class="wrap">
-    <span class="logo" aria-label="ENAJU">
-      <span class="logo-books" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="logo-name">enaju<small>ESCOLA NACIONAL DO JUDICIÁRIO · CNJ</small></span>
-    </span>
-    <div><span class="hero-badge">MINUTA PARA APRECIAÇÃO DA SCS</span></div>
+<div id="wrap">
+<div id="stage">
+
+  <!-- 1 ------------------------------------------------------------------ -->
+  <section class="slide dark cover">
+    <span class="logo"><span class="books" aria-hidden="true"><span></span><span></span><span></span></span>
+      <b>enaju<small>ESCOLA NACIONAL DO JUDICIÁRIO · CNJ</small></b></span>
+    <div><span class="badge">MINUTA PARA APRECIAÇÃO DA SCS</span></div>
     <h1>Plano de Comunicação Institucional da ENAJU</h1>
-    <p class="sub">Proposta de construção conjunta com a Secretaria de Comunicação Social do CNJ para consolidar a Escola Nacional do Judiciário como referência nacional em educação corporativa do setor público, ainda na atual gestão.</p>
-    <p class="hero-meta">Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação · julho de 2026</p>
-  </div>
-</header>
+    <p>Proposta de construção conjunta com a Secretaria de Comunicação Social do CNJ para consolidar a Escola Nacional do Judiciário como referência nacional em educação corporativa do setor público, ainda na atual gestão.</p>
+    <p class="meta">Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação · julho de 2026</p>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">Contexto</span>
+  <!-- 2 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Contexto</span><span class="no">02</span></header>
     <h2>Uma nova Escola, um novo patamar institucional</h2>
-    <p class="lead">A Resolução CNJ n. 643/2025 transformou o antigo Ceajud na Escola Nacional do Judiciário, órgão central do Sistema Nacional de Formação e Aperfeiçoamento de Servidores do Poder Judiciário. A mudança de patamar precisa ser conhecida por servidores, gestores, tribunais e escolas judiciais. Comunicação institucional planejada é condição para essa consolidação.</p>
-    <div class="depara">
-      <div class="card antes">
-        <span class="tag">PONTO DE PARTIDA</span>
-        <h3>Centro de oferta de cursos</h3>
-        <ul>
-          <li>Atuação percebida como oferta pontual de capacitações</li>
-          <li>Divulgação dependente de menções ocasionais nos canais gerais do CNJ</li>
-          <li>Público de servidores sem canal de comunicação dedicado</li>
-        </ul>
-      </div>
-      <div class="card depois">
-        <span class="tag">O QUE AS COMPETÊNCIAS DEFINEM</span>
-        <h3>Órgão central do Sistema Nacional de Formação</h3>
-        <ul>
-          <li>Política Nacional de Formação de Servidores e articulação da rede de escolas</li>
-          <li>Produção e disseminação de conhecimento técnico-científico</li>
-          <li>Plataforma unificada de educação corporativa, pesquisa aplicada e inovação</li>
-        </ul>
+    <div class="rule"></div>
+    <div class="body stack">
+      <p class="rv" style="font-size:15px;color:var(--dim);max-width:92ch">A Resolução CNJ n. 643/2025 transformou o antigo Ceajud na Escola Nacional do Judiciário, órgão central do Sistema Nacional de Formação e Aperfeiçoamento de Servidores do Poder Judiciário. A mudança de patamar precisa ser conhecida por servidores, gestores, tribunais e escolas judiciais.</p>
+      <div class="g2" style="margin-top:20px">
+        <div class="card rv" style="--d:.08s;border-top:4px solid var(--muted)">
+          <span class="tag">PONTO DE PARTIDA</span>
+          <h3 style="margin:5px 0 9px">Centro de oferta de cursos</h3>
+          <ul>
+            <li>Atuação percebida como oferta pontual de capacitações</li>
+            <li>Divulgação dependente de menções ocasionais nos canais gerais do CNJ</li>
+            <li>Público de servidores sem canal de comunicação dedicado</li>
+          </ul>
+        </div>
+        <div class="card rv" style="--d:.16s;border-top:4px solid var(--azure)">
+          <span class="tag" style="color:var(--azure)">O QUE AS COMPETÊNCIAS DEFINEM</span>
+          <h3 style="margin:5px 0 9px">Órgão central do Sistema Nacional de Formação</h3>
+          <ul>
+            <li>Política Nacional de Formação de Servidores e articulação da rede de escolas</li>
+            <li>Produção e disseminação de conhecimento técnico-científico</li>
+            <li>Plataforma unificada de educação corporativa, pesquisa aplicada e inovação</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <footer><span>Resolução CNJ n. 643/2025</span><span>Plano de Comunicação Institucional da ENAJU</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">Diagnóstico</span>
+  <!-- 3 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Diagnóstico</span><span class="no">03</span></header>
     <h2>O público de servidores não possui canal dedicado</h2>
-    <p class="lead">Levantamento em fontes públicas, julho de 2026. A rede consolidada da Enfam é dirigida à magistratura e os canais gerais do CNJ não segmentam a pauta educacional. O espaço de comunicação digital com o servidor permanece vago.</p>
-    <div class="stats">
-      <div class="stat"><div class="v">≈ 270 mil</div><div class="l">servidores no Poder Judiciário, público direto da ENAJU</div><div class="s">Fonte: CNJ, Justiça em Números</div></div>
-      <div class="stat"><div class="v">0</div><div class="l">canais sociais dedicados hoje à formação do servidor do Judiciário</div><div class="s">Levantamento em fontes públicas</div></div>
-      <div class="stat"><div class="v">165 mil</div><div class="l">seguidores da ENAP no Instagram, referência de escola de governo</div><div class="s">Perfil público da ENAP</div></div>
-      <div class="stat"><div class="v">72%</div><div class="l">taxa de abertura de campanha de cursos da FGV no LinkedIn, ante 30% da média do setor</div><div class="s">Caso publicado pelo LinkedIn Marketing Solutions</div></div>
+    <div class="rule"></div>
+    <div class="body stack">
+      <p class="rv" style="font-size:15px;color:var(--dim);max-width:92ch">Levantamento em fontes públicas, julho de 2026. A rede consolidada da Enfam é dirigida à magistratura e os canais gerais do CNJ não segmentam a pauta educacional. O espaço de comunicação digital com o servidor permanece vago.</p>
+      <div class="g4" style="margin-top:22px">
+        <div class="kpi rv" style="--d:.06s"><b>≈ 270 mil</b><span>servidores no Poder Judiciário, público direto da ENAJU</span><small>Fonte: CNJ, Justiça em Números</small></div>
+        <div class="kpi rv" style="--d:.13s"><b>0</b><span>canais sociais dedicados hoje à formação do servidor do Judiciário</span><small>Levantamento em fontes públicas</small></div>
+        <div class="kpi rv" style="--d:.20s"><b>165 mil</b><span>seguidores da ENAP no Instagram, referência de escola de governo</span><small>Perfil público da ENAP</small></div>
+        <div class="kpi rv" style="--d:.27s"><b>72%</b><span>taxa de abertura de campanha de cursos da FGV no LinkedIn, ante 30% da média do setor</span><small>Caso publicado pelo LinkedIn</small></div>
+      </div>
     </div>
-  </div>
-</section>
+    <footer><span>Fontes públicas consultadas em julho de 2026</span><span>03 · Diagnóstico</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">Levantamento comparativo</span>
+  <!-- 4 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Levantamento comparativo</span><span class="no">04</span></header>
     <h2>Instagram consolidado nas escolas, LinkedIn em aberto</h2>
-    <p class="lead">As escolas do Judiciário mantêm audiências relevantes no Instagram. No LinkedIn, rede organizada em torno de carreira, o espaço setorial está praticamente vazio. A ENAJU pode ser a primeira escola do Judiciário a ocupá-lo de forma estruturada.</p>
-    <div class="grid c2">
-      <div class="chart-card">
-        <h3>Seguidores no Instagram, escolas do Judiciário (mil)</h3>
-        <p class="src">Perfis públicos, julho de 2026, valores aproximados. A ENAP, escola de governo de referência, soma 165 mil</p>
-        <div class="bars" id="chart-ig"></div>
-      </div>
-      <div class="chart-card">
-        <h3>Seguidores no LinkedIn, instituições selecionadas</h3>
-        <p class="src">Páginas públicas, julho de 2026, valores aproximados</p>
-        <div class="bars" id="chart-li"></div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="g2">
+        <div class="chart rv">
+          <h3>Seguidores no Instagram, escolas do Judiciário</h3>
+          <p class="src">Perfis públicos, julho de 2026, valores aproximados. A ENAP, escola de governo de referência, soma 165 mil</p>
+          <div class="hrow"><span class="l">Enfam</span><span class="hbar"><i style="--w:100%"></i></span><span class="v">20,1 mil</span></div>
+          <div class="hrow"><span class="l">Esmape</span><span class="hbar"><i style="--w:79.6%"></i></span><span class="v">16 mil</span></div>
+          <div class="hrow"><span class="l">EJ do Pará</span><span class="hbar"><i style="--w:64.7%"></i></span><span class="v">13 mil</span></div>
+          <div class="hrow"><span class="l">ESMESC</span><span class="hbar"><i style="--w:64.7%"></i></span><span class="v">13 mil</span></div>
+          <div class="hrow"><span class="l">EJUD TJPI</span><span class="hbar"><i style="--w:54.7%"></i></span><span class="v">11 mil</span></div>
+          <div class="hrow"><span class="l">ESMAT</span><span class="hbar"><i style="--w:47.3%"></i></span><span class="v">9,5 mil</span></div>
+          <div class="hrow"><span class="l">EJEF</span><span class="hbar"><i style="--w:34.3%"></i></span><span class="v">6,9 mil</span></div>
+        </div>
+        <div class="chart rv" style="--d:.12s">
+          <h3>Seguidores no LinkedIn, instituições selecionadas</h3>
+          <p class="src">Páginas públicas, julho de 2026, valores aproximados</p>
+          <div class="hrow"><span class="l">ENAP</span><span class="hbar"><i style="--w:100%"></i></span><span class="v">27.000</span></div>
+          <div class="hrow"><span class="l">Enfam</span><span class="hbar"><i style="--w:4.3%"></i></span><span class="v">1.166</span></div>
+          <div class="hrow"><span class="l">EJUS TJSP</span><span class="hbar"><i style="--w:0.6%"></i></span><span class="v">44</span></div>
+          <div style="margin-top:16px;padding:13px 15px;background:var(--soft);border-radius:11px;font-size:12.5px;color:var(--dim)">
+            O LinkedIn permanece praticamente inexplorado pelas escolas do Judiciário, inclusive pela única escola dedicada a servidores identificada. A ENAJU pode ser a primeira a ocupá-lo de forma estruturada.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="tbl-wrap">
-      <table aria-label="Tabela do levantamento comparativo">
-        <thead>
-          <tr><th>Instituição</th><th>Vínculo e público principal</th><th>Instagram (aprox.)</th><th>LinkedIn (aprox.)</th><th>Observações</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Enfam</td><td>STJ, magistrados</td><td>20,1 mil</td><td>1,2 mil</td><td>Rede consolidada, foco declarado na magistratura</td></tr>
-          <tr><td>CNJ (canal geral)</td><td>Público amplo</td><td>999 mil</td><td>Não levantado</td><td>Grande alcance, sem segmentação para as escolas</td></tr>
-          <tr><td>ENAP</td><td>Governo federal, servidores</td><td>165 mil</td><td>27 mil</td><td>Referência nacional em educação corporativa pública</td></tr>
-          <tr><td>EJUS</td><td>TJSP, servidores</td><td>Não identificado</td><td>44</td><td>Escola dedicada a servidores, presença incipiente</td></tr>
-          <tr><td>Esmape</td><td>TJPE</td><td>16 mil</td><td>Não identificado</td><td>Entre as maiores audiências estaduais</td></tr>
-          <tr><td>Escola Judicial do Pará</td><td>TJPA</td><td>13 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
-          <tr><td>ESMESC</td><td>Magistratura de SC</td><td>13 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
-          <tr><td>EJUD TJPI</td><td>TJPI</td><td>11 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
-          <tr><td>ESMAT</td><td>TJTO</td><td>9,5 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
-          <tr><td>EJEF</td><td>TJMG</td><td>6,9 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
-          <tr><td>FGV</td><td>Ensino superior privado</td><td>Não levantado</td><td>Caso documentado</td><td>Campanha no LinkedIn com 72% de abertura e mais de 2,8 mil inscrições</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+    <footer><span>Perfis e páginas públicas · julho de 2026</span><span>04 · Levantamento</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">O plano</span>
+  <!-- 5 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Levantamento comparativo</span><span class="no">05</span></header>
+    <h2>Quadro completo das instituições analisadas</h2>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="tbl-wrap rv">
+        <table class="tbl">
+          <thead><tr><th>Instituição</th><th>Vínculo e público principal</th><th>Instagram</th><th>LinkedIn</th><th>Observações</th></tr></thead>
+          <tbody>
+            <tr><td>Enfam</td><td>STJ, magistrados</td><td>20,1 mil</td><td>1,2 mil</td><td>Rede consolidada, foco declarado na magistratura</td></tr>
+            <tr><td>CNJ (canal geral)</td><td>Público amplo</td><td>999 mil</td><td>Não levantado</td><td>Grande alcance, sem segmentação para as escolas</td></tr>
+            <tr><td>ENAP</td><td>Governo federal, servidores</td><td>165 mil</td><td>27 mil</td><td>Referência nacional em educação corporativa pública</td></tr>
+            <tr><td>EJUS</td><td>TJSP, servidores</td><td>Não identificado</td><td>44</td><td>Escola dedicada a servidores, presença incipiente</td></tr>
+            <tr><td>Esmape</td><td>TJPE</td><td>16 mil</td><td>Não identificado</td><td>Entre as maiores audiências estaduais</td></tr>
+            <tr><td>Escola Judicial do Pará</td><td>TJPA</td><td>13 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
+            <tr><td>ESMESC</td><td>Magistratura de SC</td><td>13 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
+            <tr><td>EJUD TJPI</td><td>TJPI</td><td>11 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
+            <tr><td>ESMAT</td><td>TJTO</td><td>9,5 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
+            <tr><td>EJEF</td><td>TJMG</td><td>6,9 mil</td><td>Não identificado</td><td>Presença ativa no Instagram</td></tr>
+            <tr><td>FGV</td><td>Ensino superior privado</td><td>Não levantado</td><td>Caso documentado</td><td>Campanha no LinkedIn com 72% de abertura e mais de 2,8 mil inscrições</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <span class="scrollnote">Arraste a tabela para o lado para ver todas as colunas.</span>
+    </div>
+    <footer><span>Valores aproximados, obtidos em perfis e páginas públicas</span><span>05 · Quadro comparativo</span></footer>
+  </section>
+
+  <!-- 6 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">O plano</span><span class="no">06</span></header>
     <h2>Cinco eixos de ação, propostos para construção conjunta</h2>
-    <p class="lead">Sugestão inicial da ENAJU, a ser ajustada, reduzida ou ampliada conforme a avaliação técnica da SCS.</p>
-    <div class="grid c3">
-      <div class="card"><div class="num">1</div><h3>Presença digital dedicada</h3><p>Perfis oficiais da ENAJU no Instagram e no LinkedIn, com pauta e curadoria pedagógica da Escola e estratégia, identidade e publicação da SCS.</p></div>
-      <div class="card"><div class="num">2</div><h3>Matérias no portal do CNJ</h3><p>Agenda regular de pautas educacionais: cursos com inscrições abertas, prazos, resultados, chamadas públicas e eventos da rede de escolas.</p></div>
-      <div class="card"><div class="num">3</div><h3>Gravações educacionais pontuais</h3><p>Gravações com magistrados e servidores para difusão de boas práticas, normativos e orientações, sempre em formato educacional.</p></div>
-      <div class="card"><div class="num">4</div><h3>Ações formativas de divulgação</h3><p>Apresentações e materiais orientativos para as unidades do CNJ, tribunais, escolas judiciais e áreas de gestão de pessoas.</p></div>
-      <div class="card"><div class="num">5</div><h3>Rede de servidores docentes</h3><p>Mobilização de servidores professores, mestres e doutores como autores de artigos, aulas e entrevistas, com visibilidade institucional qualificada.</p></div>
+    <div class="rule"></div>
+    <div class="body stack">
+      <p class="rv" style="font-size:14.5px;color:var(--dim)">Sugestão inicial da ENAJU, a ser ajustada, reduzida ou ampliada conforme a avaliação técnica da SCS.</p>
+      <div class="g3" style="margin-top:16px">
+        <div class="card rv" style="--d:.05s"><div class="num">1</div><h3>Presença digital dedicada</h3><p>Perfis oficiais no Instagram e no LinkedIn, com pauta e curadoria pedagógica da Escola e estratégia, identidade e publicação da SCS.</p></div>
+        <div class="card rv" style="--d:.11s"><div class="num">2</div><h3>Matérias no portal do CNJ</h3><p>Agenda regular de pautas educacionais: cursos com inscrições abertas, prazos, resultados, chamadas públicas e eventos da rede.</p></div>
+        <div class="card rv" style="--d:.17s"><div class="num">3</div><h3>Gravações educacionais pontuais</h3><p>Gravações com magistrados e servidores para difusão de boas práticas, normativos e orientações, sempre em formato educacional.</p></div>
+      </div>
+      <div class="g3" style="margin-top:15px">
+        <div class="card rv" style="--d:.23s"><div class="num">4</div><h3>Ações formativas de divulgação</h3><p>Apresentações e materiais orientativos para as unidades do CNJ, tribunais, escolas judiciais e áreas de gestão de pessoas.</p></div>
+        <div class="card rv" style="--d:.29s"><div class="num">5</div><h3>Rede de servidores docentes</h3><p>Mobilização de servidores professores, mestres e doutores como autores de artigos, aulas e entrevistas, com visibilidade qualificada.</p></div>
+        <div class="rv" style="--d:.35s;display:grid;place-items:center;background:var(--soft);border-radius:15px;padding:20px;font-size:13px;color:var(--dim);text-align:center">
+          A presença digital, detalhada a seguir, é o <strong style="color:var(--navy)">Eixo 1</strong> deste plano.
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+    <footer><span>Eixos sujeitos à priorização da SCS</span><span>06 · O plano</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">Eixo 1 em destaque</span>
-    <h2>Como os perfis poderiam se apresentar</h2>
-    <div class="disclaimer">
-      <strong>Simulações meramente ilustrativas.</strong> As telas abaixo servem apenas para dar concretude à proposta. A criação dos perfis, a identidade visual, o nome de usuário, os formatos e toda a estratégia dos canais serão definidos pela Secretaria de Comunicação Social do CNJ, a quem compete a gestão dos canais institucionais nos termos da Resolução CNJ n. 640/2025.
-    </div>
-    <div class="tabs" role="tablist">
-      <button type="button" class="active" data-tab="ig" role="tab" aria-selected="true">Instagram</button>
-      <button type="button" data-tab="li" role="tab" aria-selected="false">LinkedIn</button>
-    </div>
-    <div class="mock-stage">
-      <div class="mock-panel active" id="tab-ig">
-        <div class="mockshell">
-          <span class="ribbon">SIMULAÇÃO ILUSTRATIVA</span>
-          <div class="phone" aria-label="Simulação ilustrativa de perfil da ENAJU no Instagram">
-            <div class="notch"><i></i></div>
-            <div class="ig-top"><span>enaju</span><span class="dots">•••</span></div>
-            <div class="ig-head">
-              <span class="avatar"><span class="logo-books"><span></span><span></span><span></span></span></span>
-              <div class="ig-stats">
-                <span><b>•••</b>publicações</span>
-                <span><b>•••</b>seguidores</span>
-                <span><b>•••</b>seguindo</span>
+  <!-- 7 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Eixo 1 em destaque</span><span class="no">07</span></header>
+    <h2>Como o perfil no Instagram poderia se apresentar</h2>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="g2" style="align-items:center;gap:34px">
+        <div class="stack rv">
+          <div class="warn"><strong>Simulação meramente ilustrativa.</strong> A tela serve apenas para dar concretude à proposta. A criação do perfil, a identidade visual, o nome de usuário, os formatos e toda a estratégia do canal serão definidos pela Secretaria de Comunicação Social do CNJ, a quem compete a gestão dos canais institucionais nos termos da Resolução CNJ n. 640/2025.</div>
+          <div class="card" style="margin-top:16px">
+            <h3>Linhas de conteúdo previstas</h3>
+            <ul>
+              <li>Cursos e trilhas com inscrições abertas</li>
+              <li>Eventos, chamadas públicas e ações da rede de escolas</li>
+              <li>Prazos e fluxos para solicitar capacitação nacional</li>
+              <li>Servidores docentes em destaque</li>
+              <li>Gravações educacionais com magistrados e servidores</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:grid;place-items:center">
+          <div class="mock rv" style="--d:.12s">
+            <span class="ribbon">SIMULAÇÃO ILUSTRATIVA</span>
+            <div class="phone" role="img" aria-label="Simulação ilustrativa de perfil da ENAJU no Instagram">
+              <div class="notch"><i></i></div>
+              <div class="ig-top"><span>enaju</span><span class="dots">•••</span></div>
+              <div class="ig-head">
+                <span class="av"><span class="books"><span></span><span></span><span></span></span></span>
+                <span class="ig-stats"><span><b>•••</b>publicações</span><span><b>•••</b>seguidores</span><span><b>•••</b>seguindo</span></span>
               </div>
-            </div>
-            <div class="ig-bio">
-              <b>ENAJU · Escola Nacional do Judiciário</b><br>
-              Formação e aperfeiçoamento dos servidores do Poder Judiciário. Cursos gratuitos, trilhas e eventos.<br>
-              <span class="link">enaju.cnj.jus.br/ead</span>
-            </div>
-            <div class="ig-btn">Seguir</div>
-            <div class="ig-grid">
-              <div class="post p1">Inscrições abertas<small>Curso a distância</small></div>
-              <div class="post p2">Prazos para solicitar capacitação<small>Orientação</small></div>
-              <div class="post p3">Servidor docente em destaque<small>Entrevista</small></div>
-              <div class="post p4">Trilha de aprendizagem<small>Nova turma</small></div>
-              <div class="post p5">Boas práticas<small>Gravação educacional</small></div>
-              <div class="post p6">Evento da rede de escolas<small>Agenda</small></div>
+              <div class="ig-bio"><b>ENAJU · Escola Nacional do Judiciário</b><br>
+                Formação e aperfeiçoamento dos servidores do Poder Judiciário. Cursos gratuitos, trilhas e eventos.<br>
+                <span class="lk">enaju.cnj.jus.br/ead</span></div>
+              <div class="ig-btn">Seguir</div>
+              <div class="ig-grid">
+                <div class="post p1">Inscrições abertas<small>Curso a distância</small></div>
+                <div class="post p2">Prazos para solicitar capacitação<small>Orientação</small></div>
+                <div class="post p3">Servidor docente em destaque<small>Entrevista</small></div>
+                <div class="post p4">Trilha de aprendizagem<small>Nova turma</small></div>
+                <div class="post p5">Boas práticas<small>Gravação educacional</small></div>
+                <div class="post p6">Evento da rede de escolas<small>Agenda</small></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mock-panel" id="tab-li">
-        <div class="mockshell">
-          <span class="ribbon">SIMULAÇÃO ILUSTRATIVA</span>
-          <div class="li-card" aria-label="Simulação ilustrativa de página da ENAJU no LinkedIn">
-            <div class="li-banner"><span class="logo-name">enaju</span></div>
-            <div class="li-body">
-              <span class="li-avatar"><span class="logo-books"><span></span><span></span><span></span></span></span>
-              <h3>ENAJU · Escola Nacional do Judiciário</h3>
-              <p class="sub">Educação corporativa do Poder Judiciário. Cursos gratuitos, trilhas e desenvolvimento de carreira para servidores.</p>
-              <p class="meta">Administração pública · Brasília, DF</p>
-              <div class="li-actions"><span class="follow">+ Seguir</span><span class="more">Visitar site</span></div>
-              <div class="li-post">
-                <div class="ph">
-                  <span class="mini"></span>
-                  <span><b>ENAJU · Escola Nacional do Judiciário</b><small>Publicação ilustrativa</small></span>
+    </div>
+    <footer><span>Simulação ilustrativa, sem caráter vinculante</span><span>07 · Instagram</span></footer>
+  </section>
+
+  <!-- 8 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Eixo 1 em destaque</span><span class="no">08</span></header>
+    <h2>Como a página no LinkedIn poderia se apresentar</h2>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="g2" style="align-items:center;gap:34px">
+        <div class="stack rv">
+          <div class="warn"><strong>Simulação meramente ilustrativa.</strong> A criação da página, a identidade visual, os formatos e toda a estratégia do canal serão definidos pela Secretaria de Comunicação Social do CNJ.</div>
+          <div class="card" style="margin-top:16px">
+            <h3>Por que o LinkedIn</h3>
+            <p style="margin-bottom:9px">O relatório <em>Workplace Learning Report 2025</em>, do próprio LinkedIn, indica que a progressão de carreira é o principal motivador de aprendizagem entre profissionais.</p>
+            <p>Cursos, trilhas e certificações da ENAJU são instrumentos diretos de desenvolvimento de carreira do servidor, e o LinkedIn é a rede organizada em torno da vida profissional.</p>
+          </div>
+        </div>
+        <div style="display:grid;place-items:center">
+          <div class="mock rv" style="--d:.12s">
+            <span class="ribbon">SIMULAÇÃO ILUSTRATIVA</span>
+            <div class="li" role="img" aria-label="Simulação ilustrativa de página da ENAJU no LinkedIn">
+              <div class="li-ban"><b>enaju</b></div>
+              <div class="li-in">
+                <span class="li-av"><span class="books"><span></span><span></span><span></span></span></span>
+                <h3>ENAJU · Escola Nacional do Judiciário</h3>
+                <p class="sb">Educação corporativa do Poder Judiciário. Cursos gratuitos, trilhas e desenvolvimento de carreira para servidores.</p>
+                <p class="mt">Administração pública · Brasília, DF</p>
+                <div class="li-act"><span class="f">+ Seguir</span><span class="m">Visitar site</span></div>
+                <div class="li-po">
+                  <div class="ph"><i></i><span><b>ENAJU · Escola Nacional do Judiciário</b><small>Publicação ilustrativa</small></span></div>
+                  <p>Estão abertas as inscrições para novo curso a distância, gratuito e com certificação, no ambiente virtual de aprendizagem da Escola.</p>
+                  <div class="th">Formação que avança com a sua carreira<small>enaju.cnj.jus.br/ead</small></div>
+                  <div class="rc">Gostei · Comentar · Compartilhar</div>
                 </div>
-                <p>Estão abertas as inscrições para novo curso a distância, gratuito e com certificação, no ambiente virtual de aprendizagem da Escola.</p>
-                <div class="thumb">Formação que avança com a sua carreira<small>enaju.cnj.jus.br/ead</small></div>
-                <div class="react">Gostei · Comentar · Compartilhar</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <footer><span>Simulação ilustrativa, sem caráter vinculante</span><span>08 · LinkedIn</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <span class="eyebrow">Governança</span>
+  <!-- 9 ------------------------------------------------------------------ -->
+  <section class="slide">
+    <header><span class="kick">Governança</span><span class="no">09</span></header>
     <h2>Papéis claros, governança preservada</h2>
-    <div class="matriz">
-      <div class="card enaju">
-        <span class="who">ENAJU / CODE</span>
-        <ul>
-          <li>Pauta, calendário editorial e curadoria pedagógica</li>
-          <li>Dados, links e subsídios organizados para cada publicação</li>
-          <li>Articulação com servidores docentes e com a rede de escolas</li>
-          <li>Roteiro e finalidade pedagógica das gravações educacionais</li>
-        </ul>
+    <div class="rule"></div>
+    <div class="body stack">
+      <div class="g2 matriz matriz-g">
+        <div class="card a rv"><span class="who">ENAJU / CODE</span>
+          <ul style="margin-top:8px">
+            <li>Pauta, calendário editorial e curadoria pedagógica</li>
+            <li>Dados, links e subsídios organizados para cada publicação</li>
+            <li>Articulação com servidores docentes e com a rede de escolas</li>
+            <li>Roteiro e finalidade pedagógica das gravações educacionais</li>
+            <li>Mensuração e relatórios de resultados</li>
+          </ul>
+        </div>
+        <div class="card b rv" style="--d:.1s"><span class="who">SCS / CNJ</span>
+          <ul style="margin-top:8px">
+            <li>Estratégia de comunicação e decisão sobre canais e formatos</li>
+            <li>Identidade visual e padrões editoriais institucionais</li>
+            <li>Criação, gestão técnica, aprovação e publicação das peças</li>
+            <li>Moderação dos canais e avaliação dos resultados</li>
+          </ul>
+        </div>
       </div>
-      <div class="card scs">
-        <span class="who">SCS / CNJ</span>
-        <ul>
-          <li>Estratégia de comunicação e decisão sobre canais e formatos</li>
-          <li>Identidade visual e padrões editoriais institucionais</li>
-          <li>Criação, gestão técnica, aprovação e publicação</li>
-          <li>Moderação, monitoramento e aferição oficial de resultados</li>
-        </ul>
+      <div class="g4" style="margin-top:18px">
+        <div class="card step rv" style="--d:.16s"><span class="k">PASSO 1</span><h3>Reunião de alinhamento</h3><p>Apreciação da proposta pela SCS e definição conjunta do método de trabalho.</p></div>
+        <div class="card step rv" style="--d:.22s"><span class="k">PASSO 2</span><h3>Consolidação do plano</h3><p>Escolha dos eixos, metas e calendário, conforme a avaliação da Secretaria.</p></div>
+        <div class="card step rv" style="--d:.28s"><span class="k">PASSO 3</span><h3>Piloto de 90 dias</h3><p>Implantação da presença digital com calendário mensal e acompanhamento quinzenal.</p></div>
+        <div class="card step rv" style="--d:.34s"><span class="k">PASSO 4</span><h3>Avaliação conjunta</h3><p>Análise dos indicadores e decisão sobre continuidade, ampliação ou ajuste.</p></div>
       </div>
     </div>
-    <div class="timeline">
-      <div class="step"><span class="k">PASSO 1</span><h3>Reunião de alinhamento</h3><p>Apreciação da proposta pela SCS e definição conjunta do método de trabalho.</p></div>
-      <div class="step"><span class="k">PASSO 2</span><h3>Consolidação do plano</h3><p>Escolha dos eixos, metas e calendário, conforme a avaliação da Secretaria.</p></div>
-      <div class="step"><span class="k">PASSO 3</span><h3>Piloto de 90 dias</h3><p>Implantação da presença digital com calendário mensal e acompanhamento quinzenal.</p></div>
-      <div class="step"><span class="k">PASSO 4</span><h3>Avaliação conjunta</h3><p>Análise dos indicadores e decisão sobre continuidade, ampliação ou ajuste.</p></div>
-    </div>
-  </div>
-</section>
+    <footer><span>Resolução CNJ n. 640/2025 · Política de Comunicação Social do Poder Judiciário</span><span>09 · Governança</span></footer>
+  </section>
 
-<section>
-  <div class="wrap reveal">
-    <div class="pedido">
-      <span class="eyebrow" style="color:#8FB4E4">Solicitação</span>
-      <h2>Um pedido de apoio à SCS</h2>
-      <p>A ENAJU dispõe de conteúdo, dados, corpo técnico-pedagógico e uma agenda permanente de entregas educacionais. Falta à Escola a capacidade técnica de comunicação que é a especialidade da SCS. Por isso, esta proposta é apresentada como solicitação de apoio: que a Secretaria avalie o diagnóstico, aprimore ou substitua os eixos sugeridos e conduza, em conjunto com a Escola, a construção do plano que considerar mais adequado.</p>
-      <p style="margin-top:14px">A expectativa é que, com esse apoio, a mudança de patamar promovida pela Resolução CNJ n. 643/2025 se consolide ainda na atual gestão, com a ENAJU reconhecida como referência nacional em educação corporativa do setor público.</p>
-      <p class="sig">Escola Nacional do Judiciário · Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação</p>
+  <!-- 10 ----------------------------------------------------------------- -->
+  <section class="slide dark">
+    <header><span class="kick">Solicitação</span><span class="no">10</span></header>
+    <h2>Um pedido de apoio à SCS</h2>
+    <div class="rule"></div>
+    <div class="body stack">
+      <p class="big rv">A ENAJU dispõe de conteúdo, dados, corpo técnico-pedagógico e uma agenda permanente de entregas educacionais. Falta à Escola a capacidade técnica de comunicação que é a especialidade da SCS.</p>
+      <p class="big rv" style="--d:.1s">Por isso, esta proposta é apresentada como solicitação de apoio: que a Secretaria avalie o diagnóstico, aprimore ou substitua os eixos sugeridos e conduza, em conjunto com a Escola, a construção do plano que considerar mais adequado.</p>
+      <p class="big rv" style="--d:.2s">A expectativa é que, com esse apoio, a mudança de patamar promovida pela Resolução CNJ n. 643/2025 se consolide ainda na atual gestão, com a ENAJU reconhecida como referência nacional em educação corporativa do setor público.</p>
     </div>
-  </div>
-</section>
+    <footer><span>Escola Nacional do Judiciário · Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação</span><span>10 · Solicitação</span></footer>
+  </section>
 
-<footer class="page">
-  <div class="wrap">
-    Minuta de apresentação institucional · julho de 2026 · Documento de trabalho para apreciação da Secretaria de Comunicação Social do CNJ.<br>
-    As simulações de tela são meramente ilustrativas e não vinculam a SCS. Valores do levantamento comparativo obtidos em perfis e páginas públicas.
-  </div>
-</footer>
+</div>
+</div>
+
+<button class="navbtn" id="prev" type="button" aria-label="Slide anterior">‹</button>
+<button class="navbtn" id="next" type="button" aria-label="Próximo slide">›</button>
+<div id="counter"><span id="cur">1</span> / <span id="tot">10</span></div>
+<div id="hint"><kbd>setas</kbd> navegar · <kbd>F</kbd> tela cheia</div>
 
 <script>
-  document.documentElement.classList.add("js");
-  const igData = [
-    ["Enfam", 20.1],
-    ["Esmape", 16],
-    ["EJ do Pará", 13],
-    ["ESMESC", 13],
-    ["EJUD TJPI", 11],
-    ["ESMAT", 9.5],
-    ["EJEF", 6.9]
-  ];
-  const liData = [
-    ["ENAP", 27000],
-    ["Enfam", 1166],
-    ["EJUS TJSP", 44]
-  ];
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const stage=document.getElementById('stage');
+  const bar=document.querySelector('#progress i');
+  const cur=document.getElementById('cur');
+  document.getElementById('tot').textContent=slides.length;
+  let i=0, flow=false;
 
-  function fmt(v, mil) {
-    return mil ? String(v).replace(".", ",") + " mil" : v.toLocaleString("pt-BR");
+  /* Responsividade: o deck escala para caber. Se a escala ficar pequena
+     demais para leitura confortavel, o conteudo passa a fluir como documento. */
+  function layout(){
+    const s=Math.min(innerWidth/1280,innerHeight/720)*.98;
+    const wantFlow = s<0.62 || innerWidth<860;
+    if(wantFlow!==flow){
+      flow=wantFlow;
+      document.body.classList.toggle('flow',flow);
+      if(flow){ slides.forEach(sl=>sl.classList.add('active')); }
+      else { go(i,false); }
+    }
+    if(!flow) stage.style.setProperty('--s',s);
   }
 
-  function renderBars(el, data, mil) {
-    const max = Math.max(...data.map(d => d[1]));
-    el.innerHTML = data.map(([name, v]) => {
-      const w = Math.max(0.6, v / max * 100);
-      return `<div class="brow">
-        <span class="bl">${name}</span>
-        <span class="btrack">
-          <span class="bar" style="width:${w * 0.78}%" data-name="${name}" data-v="${fmt(v, mil)}"></span>
-          <span class="bv" style="left:calc(${w * 0.78}% + 8px)">${fmt(v, mil)}</span>
-        </span>
-      </div>`;
-    }).join("");
+  function go(n,push=true){
+    if(flow) return;
+    n=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>{
+      s.classList.toggle('active',k===n);
+      s.classList.toggle('prev',k<n);
+    });
+    i=n; cur.textContent=n+1;
+    bar.style.width=((n+1)/slides.length*100)+'%';
+    if(push)history.replaceState(null,'','#'+(n+1));
   }
 
-  renderBars(document.getElementById("chart-ig"), igData, true);
-  renderBars(document.getElementById("chart-li"), liData, false);
-
-  const tip = document.getElementById("tooltip");
-  document.addEventListener("mousemove", e => {
-    const bar = e.target.closest(".bar");
-    if (bar) {
-      tip.style.display = "block";
-      tip.textContent = bar.dataset.name + ": " + bar.dataset.v + " seguidores";
-      tip.style.left = (e.clientX + 14) + "px";
-      tip.style.top = (e.clientY - 10) + "px";
-    } else {
-      tip.style.display = "none";
+  addEventListener('keydown',e=>{
+    if(flow) return;
+    switch(e.key){
+      case'ArrowRight':case'ArrowDown':case'PageDown':go(i+1);e.preventDefault();break;
+      case' ':go(e.shiftKey?i-1:i+1);e.preventDefault();break;
+      case'ArrowLeft':case'ArrowUp':case'PageUp':go(i-1);e.preventDefault();break;
+      case'Home':go(0);e.preventDefault();break;
+      case'End':go(slides.length-1);e.preventDefault();break;
+      case'f':case'F':document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();break;
     }
   });
+  document.getElementById('prev').onclick=()=>go(i-1);
+  document.getElementById('next').onclick=()=>go(i+1);
 
-  document.querySelectorAll(".tabs button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".tabs button").forEach(b => {
-        b.classList.toggle("active", b === btn);
-        b.setAttribute("aria-selected", b === btn ? "true" : "false");
-      });
-      document.querySelectorAll(".mock-panel").forEach(p =>
-        p.classList.toggle("active", p.id === "tab-" + btn.dataset.tab));
-    });
-  });
+  /* toque: arrastar para navegar (tablets em modo deck) */
+  let x0=null,y0=null;
+  addEventListener('touchstart',e=>{if(e.touches.length===1){x0=e.touches[0].clientX;y0=e.touches[0].clientY}},{passive:true});
+  addEventListener('touchend',e=>{
+    if(flow||x0===null)return;
+    const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0;
+    if(Math.abs(dx)>52&&Math.abs(dx)>Math.abs(dy)) go(dx<0?i+1:i-1);
+    x0=y0=null;
+  },{passive:true});
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) en.target.classList.add("visible"); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  addEventListener('resize',layout);
+  addEventListener('orientationchange',layout);
+  layout();
+  const h=parseInt(location.hash.slice(1),10);
+  if(!flow) go(isNaN(h)?0:h-1,false);
+  else { bar.style.width='100%'; }
+})();
 </script>
 </body>
 </html>
