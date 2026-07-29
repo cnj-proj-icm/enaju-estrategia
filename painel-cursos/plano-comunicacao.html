@@ -148,9 +148,9 @@
   .mock-panel.active { display: grid; place-items: center; animation: fadein .4s ease; }
   @keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
-  .mockshell { position: relative; }
+  .mockshell { position: relative; width: fit-content; max-width: 100%; }
   .ribbon {
-    position: absolute; z-index: 5; top: 18px; right: -14px;
+    position: absolute; z-index: 5; top: -14px; right: -18px;
     background: var(--gold); color: #fff; font-size: 11px; font-weight: 700;
     letter-spacing: 1.4px; padding: 6px 16px; border-radius: 6px;
     transform: rotate(6deg); box-shadow: 0 6px 16px rgba(200,135,27,.4);
@@ -196,13 +196,14 @@
 
   /* LinkedIn card */
   .li-card {
-    width: min(560px, 100%); background: #fff; border: 1px solid var(--rule);
+    width: 560px; max-width: 100%; background: #fff; border: 1px solid var(--rule);
     border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px rgba(14,31,58,.18);
   }
   .li-banner { height: 96px; background: linear-gradient(120deg, #0E2450, #245A9E 60%, #2AA3DC); position: relative; }
   .li-banner .logo-name { position: absolute; right: 18px; bottom: 12px; color: #fff; font-size: 16px; opacity: .9; }
   .li-body { padding: 0 22px 20px; }
   .li-avatar {
+    position: relative; z-index: 2;
     width: 84px; height: 84px; border-radius: 12px; border: 3px solid #fff;
     margin-top: -42px; background: linear-gradient(150deg, var(--sky), var(--deep));
     display: grid; place-items: center;
