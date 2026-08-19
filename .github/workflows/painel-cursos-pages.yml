@@ -1,10 +1,11 @@
-name: Publicar Painel de Cursos
+name: Publicar site da ENAJU
 
 on:
   push:
     branches: [main]
     paths:
       - "painel-cursos/**"
+      - "governanca/**"
       - ".github/workflows/painel-cursos-pages.yml"
   workflow_dispatch:
 
@@ -30,10 +31,22 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Montar site
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          cp -r painel-cursos/. _site/
+          if [ -d governanca ]; then
+            mkdir -p _site/governanca
+            cp -r governanca/. _site/governanca/
+          fi
+          find _site -maxdepth 2 -type f -name "*.html" | sort
+
       - name: Preparar site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "painel-cursos"
+          path: "_site"
 
       - name: Publicar
         id: deployment
